@@ -1,6 +1,1073 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>1 .信息形化</title>
+    <url>/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h2><p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210104031453.png" alt="image-20191210104031453"></p>
+<p>作用：将数据划分为互有明显区分的几个组。</p>
+<p>使用场景：</p>
+<ul>
+<li>展示数据相对频数</li>
+</ul>
+<blockquote>
+<h3 id="频数"><a href="#频数" class="headerlink" title="频数"></a><strong>频数</strong></h3><p>表示在一个特定组,或者说在一个特定区间内的统计对象的数目, 类似于数数</p>
+</blockquote>
+<p>缺点：各组比例相差无几，难以比较</p>
+<a id="more"></a>
+
+<h2 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h2><p>相比较饼图，更精准，更容易发现细小的差别</p>
+<h3 id="垂直条形图"><a href="#垂直条形图" class="headerlink" title="垂直条形图"></a>垂直条形图</h3><p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210104158183.png" alt="image-20191210104158183"></p>
+<h3 id="水平条形图"><a href="#水平条形图" class="headerlink" title="水平条形图"></a>水平条形图</h3><p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210104214642.png" alt="image-20191210104214642"></p>
+<h3 id="堆积条形图"><a href="#堆积条形图" class="headerlink" title="堆积条形图"></a>堆积条形图</h3><p>处理多批数据时候</p>
+<p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210104249566.png" alt="image-20191210104249566"></p>
+<h3 id="分段条形图"><a href="#分段条形图" class="headerlink" title="分段条形图"></a>分段条形图</h3><p>堆积条形图无法反应频数及百分数</p>
+<p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210104402459.png" alt="image-20191210104402459"></p>
+<blockquote>
+<h3 id="标度的影响力"><a href="#标度的影响力" class="headerlink" title="标度的影响力"></a><strong>标度的影响力</strong></h3><p>利用“标度”能让你创建强大的条形图,凸显你希望别人注意的主要事实。标度同样能隐匿与数据有关的重要事实。</p>
+</blockquote>
+<blockquote>
+<h3 id="类别与数字"><a href="#类别与数字" class="headerlink" title="类别与数字"></a>类别与数字</h3><h4 id="类别数据-定性数椐"><a href="#类别数据-定性数椐" class="headerlink" title="类别数据(定性数椐)"></a>类别数据(定性数椐)</h4><p>目前我们讲过的大部分数据都是类别数据。数据被划分为各种类别,用以描述某类的性质或特征。因此, 类别数据也称为定性数据。游戏种类就是定性数据的一个实例一每个游戏种类形成一个独立的类别关于定性数据,请记住一个重点:不能将数据值理解为数字。</p>
+<h4 id="数值型数据-定置数椐"><a href="#数值型数据-定置数椐" class="headerlink" title="数值型数据(定置数椐)"></a>数值型数据(定置数椐)</h4><p>数值型数据不同,它所涉及的是数字。数值型数据中的数值具有数字的意义,但还涉及计量或计数。由于数值型数据描述的是数量,所以也称为定量数据。</p>
+</blockquote>
+<h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><p>与条形图的区别</p>
+<ul>
+<li>每个长方形的面积与频数成比例</li>
+<li>图上的长方形之间没有间隔</li>
+</ul>
+<p>直方图的特点</p>
+<ul>
+<li>长方形面积表示频率</li>
+</ul>
+<h3 id="不等宽区间图"><a href="#不等宽区间图" class="headerlink" title="不等宽区间图"></a>不等宽区间图</h3><p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210105829433.png" alt="image-20191210105829433"></p>
+<ul>
+<li><p>长方形的面积=每组的频数</p>
+</li>
+<li><p>频数=长方形宽度*长方形高度</p>
+</li>
+<li><p>$频度密度（长方形的高度）=\frac{频数}{长方形宽度}$</p>
+</li>
+</ul>
+<blockquote>
+<h4 id="频数密度"><a href="#频数密度" class="headerlink" title="频数密度"></a>频数密度</h4><p>数据中的数值密集度</p>
+</blockquote>
+<h2 id="累计频数图"><a href="#累计频数图" class="headerlink" title="累计频数图"></a>累计频数图</h2><p><img src="/2020/01/20/1.%20%E4%BF%A1%E6%81%AF%E5%8C%96/image20191210111643779.png" alt="image-20191210111643779"></p>
+<p>累积频数决不会减小</p>
+<h2 id="折线图"><a href="#折线图" class="headerlink" title="折线图"></a>折线图</h2><p>优点：很好的体现数据的趋势</p>
+<p>缺点：不如条形图清洗</p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2. 集中趋势的量度</title>
+    <url>/2020/01/20/2.%20%E9%9B%86%E4%B8%AD%E8%B6%8B%E5%8A%BF%E7%9A%84%E9%87%8F%E5%BA%A6/</url>
+    <content><![CDATA[<h2 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h2><ul>
+<li><p>平均数的一般量度</p>
+</li>
+<li><p>将所有数字加起来，除以数字个数</p>
+</li>
+</ul>
+<ol>
+<li><p>求和</p>
+<p>$x_1+x_2+……+x_n=\sum x$</p>
+</li>
+<li><p>平均值</p>
+<p>$\mu=\frac{sum_x}{x}$</p>
+</li>
+</ol>
+<h2 id="频数均值"><a href="#频数均值" class="headerlink" title="频数均值"></a>频数均值</h2><p>$\mu=\frac{\sum fx}{\sum_f}$</p>
+<ul>
+<li><p>$\sum fx$表示每个数字乘以其频数，然后相加</p>
+</li>
+<li><p>$\sum f$表示每个数频数相加</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<blockquote>
+<h3 id="异常值"><a href="#异常值" class="headerlink" title="异常值"></a>异常值</h3><p>与其他数据格格不入的极高值或者极低值</p>
+<h3 id="偏斜数据"><a href="#偏斜数据" class="headerlink" title="偏斜数据"></a>偏斜数据</h3><p>当异常值将数据向左或向右“拉”时即产生偏斜数据</p>
+<p><strong>中位数均值同偏移的关系</strong></p>
+<ul>
+<li>向右偏斜<br><img src="/2020/01/20/2.%20%E9%9B%86%E4%B8%AD%E8%B6%8B%E5%8A%BF%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210113836558.png" alt="image-20191210113836558"></li>
+<li>向左偏斜<br><img src="/2020/01/20/2.%20%E9%9B%86%E4%B8%AD%E8%B6%8B%E5%8A%BF%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210114242519.png" alt="image-20191210114242519"></li>
+<li>对称数椐<br><img src="/2020/01/20/2.%20%E9%9B%86%E4%B8%AD%E8%B6%8B%E5%8A%BF%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210114300105.png" alt="image-20191210114300105"></li>
+</ul>
+</blockquote>
+<h2 id="中位数"><a href="#中位数" class="headerlink" title="中位数"></a>中位数</h2><p>当偏斜数据和异常值使均值产生误导时,我们就需要用其他方式表示典型值。我们可以取中间值，中位数永近处于中间,它是个中间值。</p>
+<p>*<em>求中位数三步法: *</em></p>
+<ol>
+<li><p>按顺序排列数字:从最小値排列到最大値。</p>
+</li>
+<li><p>如果奇数个数,则中位数为位于中间的数値。位置为$\frac{m+1}{2}$</p>
+</li>
+<li><p>如果偶数个数,将两个中间数相加,然后除以2。位置为$\frac{m\pm1}{2}$</p>
+</li>
+</ol>
+<p><strong>中位数与偏移的关系</strong>：</p>
+<p><img src="/2020/01/20/2.%20%E9%9B%86%E4%B8%AD%E8%B6%8B%E5%8A%BF%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210115448774.png" alt="image-20191210115448774"></p>
+<h2 id="众数"><a href="#众数" class="headerlink" title="众数"></a>众数</h2><ul>
+<li>数据集中的数</li>
+<li>出现最频繁的数值</li>
+<li>可能不止一个（有个众数：双峰数据）</li>
+<li>既能用于数值数据，又能用于类别数据</li>
+</ul>
+<p><strong>众数的计算</strong></p>
+<ul>
+<li>不同类别的数值或类别找出</li>
+<li>列出频数</li>
+<li>找出最值</li>
+</ul>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3. 分散性与变异性的量度</title>
+    <url>/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/</url>
+    <content><![CDATA[<h1 id="分散性"><a href="#分散性" class="headerlink" title="分散性"></a>分散性</h1><h2 id="量度全距"><a href="#量度全距" class="headerlink" title="量度全距"></a>量度全距</h2><p>极差，用于量度数据集分散程度的方法。</p>
+<p>$全距=上界-下界$即$=MAX-MIN$</p>
+<blockquote>
+<p>全距很容易受异常值影响</p>
+</blockquote>
+<p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210140221531.png" alt="image-20191210140221531"></p>
+<h2 id="四分位数"><a href="#四分位数" class="headerlink" title="四分位数"></a>四分位数</h2><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210140431884.png" alt="image-20191210140431884"></p>
+<p>构建迷你距的一个办法是:仅使用数据中心周边的数值。</p>
+<a id="more"></a>
+
+<ul>
+<li>升序排列数据</li>
+<li>分成相等四个数据块</li>
+</ul>
+<p><strong>四分位数的计算</strong>：</p>
+<ul>
+<li>中位数同上</li>
+<li>下四分位数<ul>
+<li>$\frac{n}{4}$若为整数取这个数及下个数平均值</li>
+<li>$\frac{n}{4}$不是整数，向上取整</li>
+</ul>
+</li>
+<li>上四分位数<ul>
+<li>计算$\frac{3n}{4}$判断</li>
+</ul>
+</li>
+</ul>
+<h3 id="四分位距"><a href="#四分位距" class="headerlink" title="四分位距"></a>四分位距</h3><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210141228977.png" alt="image-20191210141228977"></p>
+<p>$$四分位距=上四分位数一下四分位数 $$</p>
+<ul>
+<li>与全距相比,较少受到异常值的影响。</li>
+</ul>
+<h2 id="百分位数"><a href="#百分位数" class="headerlink" title="百分位数"></a>百分位数</h2><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210141250132.png" alt="image-20191210141250132"></p>
+<p>若数据被分成10份,因此起分割作用的数值被称为十分位数。 我们可以用百分位数构建一个新的距,称为<strong>百分位距</strong>。</p>
+<p><strong>百分位数的计算</strong>：</p>
+<ul>
+<li>升序</li>
+<li>$$k\frac{n}{100}$$其中$k$为第$k$百分位数</li>
+<li>判断计算</li>
+</ul>
+<h3 id="箱线图绘制各种“距”"><a href="#箱线图绘制各种“距”" class="headerlink" title="箱线图绘制各种“距”"></a>箱线图绘制各种“距”</h3><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210141530933.png" alt="image-20191210141530933"></p>
+<blockquote>
+<p>以上利用分散性看到稳定程度，同时也希望看到数据的变异性</p>
+</blockquote>
+<h1 id="变异性"><a href="#变异性" class="headerlink" title="变异性"></a>变异性</h1><h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><p>量度数据变异性的方法</p>
+<p>$方差=\frac{\sum(x-\mu)^2}{n}$</p>
+<p>方差是数据值与均值的距离的平方数的平均值</p>
+<blockquote>
+<p><strong>快速计算方法</strong>$方差=\frac{\sum x^2}{n}-\mu^2$</p>
+</blockquote>
+<h2 id="标准差"><a href="#标准差" class="headerlink" title="标准差"></a>标准差</h2><p>不用距离的平方来指出分散性</p>
+<p>$\sigma=\sqrt{方差}=\sqrt{\frac{\sum(x-\mu)^2}{n}}$</p>
+<h2 id="标准分"><a href="#标准分" class="headerlink" title="标准分"></a>标准分</h2><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210143601097.png" alt="image-20191210143601097"></p>
+<p><strong>特定数据值的标准分</strong></p>
+<p>$z=\frac{x-\mu}{\sigma}$</p>
+<p>$\mu,\sigma$为数据所在数据集的均值，标准差</p>
+<h3 id="标准分的作用"><a href="#标准分的作用" class="headerlink" title="标准分的作用"></a>标准分的作用</h3><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210144156051.png" alt="image-20191210144156051"></p>
+<ul>
+<li><p>用于对比不用数据集的数据，他将数据转化为通用的新分布形态，新的分布均值为0，标准差为1</p>
+</li>
+<li><p><img src="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/image20191210144331623.png" alt="image-20191210144331623"></p>
+</li>
+<li><p>用距离均值若干个标准差表示某个特定数值的相对位置</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4. 概率计算</title>
+    <url>/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/</url>
+    <content><![CDATA[<h2 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h2><p><strong>定义</strong></p>
+<p>量度某事发生几率的一种数量指标。你可以用概率衡量发生某件事的可能性</p>
+<p><strong>求解</strong></p>
+<p>$概率=\frac{发生事件可能数目}{所有可能结果的数目}$  即  $P(A)=\frac{n(A)}{n(S)}$</p>
+<ol>
+<li>S被称为概率空间,或称样本空间,是表示所有可能结果的一种简便表示法。可能发生的事件都是S的子集。</li>
+<li>概率只是对事件发生可能性的一种表达,概率并非担保。</li>
+</ol>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>事件就是人们能指出其发生可能性的任何事情</p>
+<a id="more"></a>
+
+<h3 id="事件的分类："><a href="#事件的分类：" class="headerlink" title="事件的分类："></a>事件的分类：</h3><p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210145338876.png" alt="image-20191210145338876"></p>
+<blockquote>
+<h3 id="维恩图"><a href="#维恩图" class="headerlink" title="维恩图"></a>维恩图</h3><p>画一个方框代表样本空间S,然后画几个圆圈代表各个相关事件, 这种图称为维恩图。</p>
+</blockquote>
+<h4 id="对立事件"><a href="#对立事件" class="headerlink" title="对立事件"></a>对立事件</h4><p>“A不发生”事件有一种简便表示方法一一A。A被称为A的对立事件。<br>$P(A)+P(A’)=1$<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage004.gif" alt="img "></p>
+<h4 id="互斥事件"><a href="#互斥事件" class="headerlink" title="互斥事件"></a>互斥事件</h4><ul>
+<li>如果两个事件是互斥事件,则只有其中ー个事件会发生。<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage006.gif" alt="img"></li>
+</ul>
+<h4 id="相交事件"><a href="#相交事件" class="headerlink" title="相交事件"></a>相交事件</h4><p>交集带来的问题<br>    * 如果两个事件相交, 则这两个事件有可能同时发生。<br> <img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage008.gif" alt="img"></p>
+<blockquote>
+<p><strong>例</strong><br>停球结果为黑色或偶数为相关事件。不能相加<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage010.gif" alt="img"><br>当将两个概率相加时,我们将停球结果为“黑色兼偶数”的概率算了两次。<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage012.gif" alt="img"></p>
+</blockquote>
+<blockquote>
+<h3 id="交集与并集的表示"><a href="#交集与并集的表示" class="headerlink" title="交集与并集的表示"></a>交集与并集的表示</h3><ul>
+<li>A与B的交集，$A\bigcap B$，理解为“与”，表示不同事件的共同要素。</li>
+<li>A与B的并集，$A\bigcup B$，理解为“或”，表示A与B的所有要素</li>
+<li>若$P(A\bigcup B)=1$,A与B<strong>穷举</strong><br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210151325703.png" alt="image-20191210151325703"></li>
+</ul>
+</blockquote>
+<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>以另一个事件的发生为条件的某个事件的发生概率,我们就用“|”符号表示“已知条件”,于是,“以事件B 为已知条件的事件A的概率”就可以简写为:</p>
+<p>$P(A|B)$</p>
+<p>在已知B已经发生的条件下A的概率</p>
+<p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210152846859.png" alt="image-20191210152846859"></p>
+<p>现在要用一种通用方法来计算$P(A|B)$。我们感兴趣的是A和B 同时发生的次数与B发生的所有次数相除的结果。观察维恩图, 得到:</p>
+<p>$P(A|B)=\frac{P(A\bigcap B)}{P(B)}$</p>
+<p>变化得到：$P(A\bigcap B)= P(A|B) * P(B)$</p>
+<p>$P(A\bigcap B)$同样也是$P(B\bigcap A)$,即可得：</p>
+<p>$P(B\bigcap A)= P(B|A) * P(A)$</p>
+<h2 id="概率树"><a href="#概率树" class="headerlink" title="概率树"></a>概率树</h2><p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210153717011.png" alt="image-20191210153717011"></p>
+<p><strong>利用概率树计算条件概率</strong></p>
+<p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210153743870.png" alt="image-20191210153743870"></p>
+<h3 id="概率树计算概率步骤"><a href="#概率树计算概率步骤" class="headerlink" title="概率树计算概率步骤"></a>概率树计算概率步骤</h3><ol>
+<li>分出计算概率的层级<br>如：$P(A|B)$则在第一级中涵盖B，第二级中涵盖A</li>
+<li>填写已知部分概率</li>
+<li>检验<br>每一级分支的概率总和为1，$P(A)=1-P(A’)$</li>
+<li>记住公式<br>$P(A|B)=\frac{P(A\bigcap B )}{P(B)}$</li>
+</ol>
+<h2 id="运用（利用已知概率，求新的概率）"><a href="#运用（利用已知概率，求新的概率）" class="headerlink" title="运用（利用已知概率，求新的概率）"></a>运用（利用已知概率，求新的概率）</h2><p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210155316206.png" alt="image-20191210155316206"></p>
+<p>已知$P(偶|黑)$,算$P(黑|偶)$**</p>
+<p>$P(黑|偶)=\frac{P(黑\bigcap偶)}{P(偶)}$</p>
+<ol>
+<li><p>求$P(黑\bigcap偶)$</p>
+<p>$P(黑\bigcap偶)=P(黑)*P(偶|黑)$</p>
+<p>$P(黑|偶)=\frac{P(黑)*P(偶|黑)}{P(偶)}$</p>
+</li>
+<li><p>求$P(偶)$<br>小球停在偶数球位上的情况包括:球位既是黑色又是偶数,或者球位既是红色又是偶数。这两种情况就是小球停在偶数球位上的方式。<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210155703107.png" alt="image-20191210155703107"></p>
+</li>
+<li><p>求$P(黑|偶)$</p>
+<p>$P(黑|偶)=\frac{P(黑\bigcap偶)}{P(偶)}$<br>$=\frac{P(黑)<em>P(偶|黑)}{P(黑)</em>P(偶|黑)+P(红)*P(偶|红)}$</p>
+</li>
+</ol>
+<h2 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h2><p><strong>利用已有的概率, 求出要的概率</strong></p>
+<p>已知$P(A)$,且已知$P(B｜A)$和$P(B｜A’)$，求出$P(A | B)$</p>
+<p>$P(A|B)=\frac{P(A\bigcap B)}{P(B)}$</p>
+<p>$P(A|B)=\frac{P(A)<em>P(B|A)}{P(A)</em>P(B|A)+P(A’)*P(B|A’)}$</p>
+<p><strong>这就是所谓的贝叶斯定理。</strong></p>
+<p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210160422999.png" alt="image-20191210160422999"></p>
+<h2 id="条件概率下事件分类"><a href="#条件概率下事件分类" class="headerlink" title="条件概率下事件分类"></a>条件概率下事件分类</h2><h3 id="相关事件"><a href="#相关事件" class="headerlink" title="相关事件"></a>相关事件</h3><p>如果用通用术语表达就是:如果    $P(AIB)$与$P(A)$不等,则我们说事件A与事件B是相关事件一这等于说事件A与事件B 的概率相互影响。</p>
+<h3 id="独立事件"><a href="#独立事件" class="headerlink" title="独立事件"></a>独立事件</h3><p> 如果事件A和事件B相互独立,则事件A的概率不受事件B的影响, 换句话说,对于独立事件来说:<br>$P(A｜B)= P(A)$<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage0021575965131650.gif" alt="img"></p>
+<h3 id="独立事件概率计算"><a href="#独立事件概率计算" class="headerlink" title="独立事件概率计算"></a>独立事件概率计算</h3><p>$P(A｜B)= \frac{P(A\bigcap B)}{P(B)}$</p>
+<ul>
+<li>如果A和B是独立事件,则$P(AIB)$与$P(A)$相同。即对于独立事件来说:</li>
+</ul>
+<p>$P(A∩B)=P(A)*P(B)$</p>
+<ul>
+<li>即,如果两个事件相互独立,则通过将两个事件各自的概率相乘,可以算出同时发生这两件事的概率。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5. 离散概率分布的运用</title>
+    <url>/2020/01/20/5.%20%E7%A6%BB%E6%95%A3%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/</url>
+    <content><![CDATA[<p>利用概率预测长期结果，量度预测结果的确定性。</p>
+<h2 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h2><p>一个可以等于一系列数值的变量</p>
+<h2 id="概率分布"><a href="#概率分布" class="headerlink" title="概率分布"></a>概率分布</h2><p>随机变量的概率分布，即每一个<strong>随机变量</strong>所对应的概率的集合。</p>
+<ul>
+<li>随机变量用大写字母表示，如X或者Y</li>
+<li>变量能采用的特定数值，用小写字母表示，如x或y</li>
+</ul>
+<p>$P（X=x）$表示变量X取特定数值x的概率。</p>
+<a id="more"></a>
+
+<p><img src="/2020/01/20/5.%20%E7%A6%BB%E6%95%A3%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20191211113723410.png" alt="image-20191211113723410"></p>
+<p>这个变量具有<strong>离散性</strong>，变量只能取确定数值。</p>
+<blockquote>
+<p> <strong>概率分布的作用</strong>利用概率分布确定预期结果。</p>
+</blockquote>
+<h2 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h2><ul>
+<li>类似均值，用于描述概率分布。</li>
+</ul>
+<p>求解：将每个数值乘数值发生的概率，将所有乘积求和。</p>
+<p>$E（X）=\sum xP(X=x)$</p>
+<h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><ul>
+<li>结果的分散性<br>期望指出一个变量的典型值或平均值，并不提供数值分散性的任何信息。利用方差来度量这种分散性。</li>
+</ul>
+<p>$Var(X)=E(X-\mu)^2$  计算类比期望的计算，可以得到：</p>
+<p>$E(X-\mu)^2=\sum (x-\mu)^2P(X=x)$</p>
+<ul>
+<li>取每个数x，求出$（x-\mu）^2$,所得结果乘发生概率</li>
+<li>将乘积相加</li>
+</ul>
+<p>$Var(X)$量度收益的变化范围。</p>
+<h2 id="标准差"><a href="#标准差" class="headerlink" title="标准差"></a>标准差</h2><p>$\sigma = \sqrt{Var(X)}$</p>
+<h2 id="概率分布计算"><a href="#概率分布计算" class="headerlink" title="概率分布计算"></a>概率分布计算</h2><h3 id="线性变化"><a href="#线性变化" class="headerlink" title="线性变化"></a>线性变化</h3><p>X（旧随机变量）与Y（新随机变量）存在线性关系，$Y=aX+b$</p>
+<ul>
+<li>$E(Y)=a E(X)+b$</li>
+<li>$Var(Y)=a^2Var(X)$</li>
+</ul>
+<h3 id="独立观测值"><a href="#独立观测值" class="headerlink" title="独立观测值"></a>独立观测值</h3><p>赌博机中，每一局称为事件，每一局的结果称为观测值，每个观测值具有相同的期望和方差</p>
+<p>​     $X_1$   第一局的观测值</p>
+<p>​    $X_2$   第二局的观测值</p>
+<p>​    $X_1,X_2$具有相同的概率分布</p>
+<p>结果应该为：</p>
+<ul>
+<li><p>$E(X_1+X_2+X_3+…+X_n)=nE(X)$</p>
+</li>
+<li><p>$Var(X_1+X_2+X_3+…+X_n)=nVar(X)$</p>
+</li>
+</ul>
+<blockquote>
+<p>$X_1+X_2$表示两个观测值，2X表示一个观测值，可能数值翻倍，二者为<strong>两个概念</strong></p>
+</blockquote>
+<h2 id="随机变量加减计算"><a href="#随机变量加减计算" class="headerlink" title="随机变量加减计算"></a>随机变量加减计算</h2><blockquote>
+<p> X，Y相互独立</p>
+</blockquote>
+<ul>
+<li><p>加法</p>
+<ul>
+<li><p>$E(X)+E(Y)=E(X+Y)$</p>
+</li>
+<li><p>$E(X+Y)=E(X)+E(Y)$</p>
+</li>
+<li><p>$Var(X+Y)=Var(X)+Var(Y)$</p>
+<p><img src="/2020/01/20/5.%20%E7%A6%BB%E6%95%A3%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20191211141631239.png" alt="image-20191211141631239"></p>
+</li>
+</ul>
+</li>
+<li><p>减法</p>
+<ul>
+<li><p>$E(X-Y)=E(X)-E(Y)$</p>
+</li>
+<li><p><strong>$Var(X-Y)=Var(X)+Var(Y)$</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>若将两个随机变量相减，方差要相加</strong></p>
+</blockquote>
+<ul>
+<li><p>线性变化相加</p>
+<ul>
+<li><p>$E(aX+bY)=aE(X)+bE(Y)$</p>
+</li>
+<li><p>$Var(aX+bY)=a^2Var(X)+b^2Var(Y)$</p>
+</li>
+</ul>
+</li>
+<li><p>线性变化相加</p>
+<ul>
+<li><p>$E(aX-bY)=aE(X)-bE(Y)$</p>
+</li>
+<li><p>$Var(aX-bY)=a^2Var(X)+b^2Var(Y)$</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6. 排列与组合</title>
+    <url>/2020/01/20/6.%20%E6%8E%92%E5%88%97%E4%B8%8E%E7%BB%84%E5%90%88/</url>
+    <content><![CDATA[<h2 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h2><p>若有n个独立对象性行排名，则排名方式共计$n!$（n的阶乘）种。</p>
+<h2 id="圆形排位"><a href="#圆形排位" class="headerlink" title="圆形排位"></a>圆形排位</h2><blockquote>
+<p>例：若让四匹马围一个圈，求出所有可能排位方式的数目。<strong>关键在于吧其中一匹马的位置固定下来</strong>，计算其余3匹马的排位方式。</p>
+</blockquote>
+<p>如果有n个对象进行圆形排位，可能的排位数据为$(n-1)!$</p>
+<blockquote>
+<p>$0!$等于1，可以理解为“0个对象只有一种排列方式”</p>
+</blockquote>
+<h2 id="按类型排位"><a href="#按类型排位" class="headerlink" title="按类型排位"></a>按类型排位</h2><p>若为n个对象排位，其中，第一类对象为k个，第二类对象为j个，第三类对象为m个，……则排位方式的数目计算为：</p>
+<p>$$\frac{n!}{j!k!m!…}$$</p>
+<p>利用总排位方式数据（$n!$）除以每一类类似对象的排列组合方式数目。</p>
+<h2 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h2><p>从一个较大的（n个）对象群体中取出一定数目（r个）对象进行排序，并得出排序方式总数目。</p>
+<p>$^nP_r=\frac{n!}{(n-r)!}$ </p>
+<ul>
+<li>n为对象总数</li>
+<li>$^nP_n$为要计算的对象数目</li>
+</ul>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>从n个对象中选取r个对象的选取方式的数目，不考虑所选对象的确切顺序。</p>
+<p>$$^nC_r=\frac{n!}{r!(n-r)!}$$</p>
+<blockquote>
+<ul>
+<li>$^nC_r$数字越大，位置越高</li>
+<li>另一种表示方式$\dbinom{n}{r}$</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7. 几何分布，二项分布及泊松分布</title>
+    <url>/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/</url>
+    <content><![CDATA[<p>特殊的概率分布，固定的模式，方便计算概率，期望，方差</p>
+<h2 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h2><blockquote>
+<ul>
+<li><p>$P(X=x)$表示x能取概率分布的任何值</p>
+</li>
+<li><p>$P(X=r)$表示x等于特定值r</p>
+</li>
+<li><p>即x可以取任何值，包括固定值r</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$P(X=r)=q^{r-1}p$</p>
+<ul>
+<li>p代表成功的概率</li>
+<li>q代表失败的概率，q=1-p</li>
+</ul>
+<p><strong>表示</strong>取得第r次首次成功所需要进行的试验次数的概率</p>
+<h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><ul>
+<li>一系列相互独立试验</li>
+<li>均有成功，失败的可能，且单次概率相同</li>
+<li>求得<strong>为取得第一次成功所需要进行多少次试验</strong>（用变量X表示）<a id="more"></a>
+
+</li>
+</ul>
+<h3 id="图像特点"><a href="#图像特点" class="headerlink" title="图像特点"></a>图像特点</h3><p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219143908430.png" alt="image-20191219143908430"></p>
+<ul>
+<li>当r=1时，P（X=r）达到最大值，随着r的增加，P（X=r）逐渐减少</li>
+<li>任何几何分布的众数都是1，因为1时，具有的概率最大</li>
+<li>第一次尝试，可能性最大</li>
+</ul>
+<h3 id="不等式几何分布"><a href="#不等式几何分布" class="headerlink" title="不等式几何分布"></a>不等式几何分布</h3><p>$$P(X&gt;r)=q^r$$</p>
+<ul>
+<li>X表示为取得第一次成功所需要进行多少次试验</li>
+<li>r表示试验进行的次数</li>
+</ul>
+<p>$$P(X≤r)=1-q^r$$</p>
+<ul>
+<li>表示为了取得一次成功需要尝试r次或r次的以下概率</li>
+<li>$P(X≤r)+P(X&gt;r)=1$</li>
+</ul>
+<p>如果一个变量X的概率符合几何分布，单次成功的概率为p，写作</p>
+<p>$X$~$Geo(p)$</p>
+<h3 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h3><p>X~$Geo(0.2)$时，E(X)可以通过$\sum xP(X=x)$进行计算：</p>
+<p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219151744306.png" alt="image-20191219151744306"></p>
+<p>$\sum xP(X=x)$图</p>
+<p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219152414904.png" alt="image-20191219152414904"></p>
+<p>$E(X)=\frac{1}{p}$</p>
+<p>期望等于1除以成功概率</p>
+<h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><p>X~$Geo(0.2)$时，E(X)可以通过$x^2 P(X=x)$进行计算：</p>
+<p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219152807044.png" alt="image-20191219152807044"></p>
+<p>$x^2 P(X=x)$图</p>
+<p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219152822776.png" alt="image-20191219152822776"></p>
+<p>$Var(X)=E(X^2)-E^2(X)=x^2 P(X=x)-E^2(X)$,得到方差分布图</p>
+<p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219153245765.png" alt="image-20191219153245765"></p>
+<p>如果X~$Gep(p)$，则$Var(X)=\frac{q}{p^2}$</p>
+<h2 id="二项式分布"><a href="#二项式分布" class="headerlink" title="二项式分布"></a>二项式分布</h2><h3 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h3><p>$P(X=r)=^nC_r<em>p^r</em>q^{n-r}$</p>
+<p>其中$^nC_r=\frac{n!}{r!(n-r)!}$</p>
+<blockquote>
+<p>每道题答对的概率是p</p>
+<p>答错的概率是q=1-p</p>
+</blockquote>
+<h3 id="条件-1"><a href="#条件-1" class="headerlink" title="条件"></a>条件</h3><ul>
+<li>独立试验</li>
+<li>均有成功，失败的可能，且单次概率相同</li>
+<li><strong>试验次数有限</strong></li>
+</ul>
+<p>p是没一次试验的成功概率，n是试验次数。写作：X~$B(n,p)$</p>
+<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219155524567.png" alt="image-20191219155524567"></p>
+<h3 id="期望-1"><a href="#期望-1" class="headerlink" title="期望"></a>期望</h3><p>$E(X)=np$</p>
+<h3 id="方差-1"><a href="#方差-1" class="headerlink" title="方差"></a>方差</h3><p>$Var(X)=npq$</p>
+<h2 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h2><h3 id="条件-2"><a href="#条件-2" class="headerlink" title="条件"></a>条件</h3><ul>
+<li>单独时间在给定区间（时间或者空间）内随机、独立地发生</li>
+<li>已知改区间的时间平均发生次数（发生率）通常用$\lambda$(lambda)表示</li>
+</ul>
+<p>每个区间内平均发生$\lambda$次，或者说发生率为$\lambda$，写作X~$Po(\lambda)$</p>
+<h3 id="公式-2"><a href="#公式-2" class="headerlink" title="公式"></a>公式</h3><p>$P(X=r)=\frac{e^{-\lambda}\lambda ^r}{r!}$</p>
+<ul>
+<li>$e$是数学的常数，一般为2.718</li>
+</ul>
+<h3 id="期望-2"><a href="#期望-2" class="headerlink" title="期望"></a>期望</h3><p>$E(X)=\lambda$</p>
+<h3 id="方差-2"><a href="#方差-2" class="headerlink" title="方差"></a>方差</h3><p>$Var(X)=\lambda$</p>
+<h3 id="图形"><a href="#图形" class="headerlink" title="图形"></a>图形</h3><p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219161311269.png" alt="image-20191219161311269"></p>
+<ul>
+<li>$\lambda $值小，分布向右</li>
+<li>$\lambda $值大，分布逐渐变得对称</li>
+<li>$\lambda $值为整数，众数为$\lambda $和$\lambda -1$</li>
+</ul>
+<h3 id="x-y泊松分布"><a href="#x-y泊松分布" class="headerlink" title="x+y泊松分布"></a>x+y泊松分布</h3><p>如果X和Y是独立随机变量，则：</p>
+<p>$P(X+Y)=P(X)+P(Y)$</p>
+<p>$E(X+Y)=E(X)+E(Y)$</p>
+<p>即如果X~ $Po(\lambda_x)$且Y~ $Po(\lambda_y)$，则：</p>
+<p>X+Y~ $Po(\lambda_x+\lambda_y)$</p>
+<p>如果X和Y都复合泊松分布，则X+Y也符合泊松分布</p>
+<h3 id="使用二项式分布替代"><a href="#使用二项式分布替代" class="headerlink" title="使用二项式分布替代"></a>使用二项式分布替代</h3><blockquote>
+<p>当n很大且p很小时，可以用X<del>$Po(np)$ 近似代替X</del>$B(n,p)$.</p>
+</blockquote>
+<p><img src="/2020/01/20/7.%20%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83%EF%BC%8C%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E5%8F%8A%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/image-20191219163735633.png" alt="image-20191219163735633"></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>8. 正太分布的运用</title>
+    <url>/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="离散与连续数据"><a href="#离散与连续数据" class="headerlink" title="离散与连续数据"></a>离散与连续数据</h2><p><strong>离散数据</strong>：</p>
+<ul>
+<li>数据由==单独数值==组成，每个数有相应概率</li>
+<li>为数值型数据，只取确切值</li>
+<li>往往以某种方式技术</li>
+</ul>
+<p><strong>连续数据</strong>：</p>
+<ul>
+<li>包含一个数据范围，数值可无穷无尽</li>
+<li>通过测量得到，结果取决于测量精度</li>
+</ul>
+<a id="more"></a>
+<h2 id="概率密度函数"><a href="#概率密度函数" class="headerlink" title="概率密度函数"></a>概率密度函数</h2><blockquote>
+<p>连续数据概率分布：</p>
+<ul>
+<li>特定精度水平</li>
+<li>数值范围的概率</li>
+</ul>
+</blockquote>
+<h3 id="概率密度函数-1"><a href="#概率密度函数-1" class="headerlink" title="概率密度函数"></a>概率密度函数</h3><ul>
+<li><p><strong>描述连续随机变量的概率分布</strong></p>
+</li>
+<li><p>求出一个数据范围内某各连续变量的概率</p>
+</li>
+</ul>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108093904546-1578448220082.png" alt="image-20200108093904546"></p>
+<h3 id="概率计算"><a href="#概率计算" class="headerlink" title="概率计算"></a>概率计算</h3><p><strong>连续随机变量的概率用面积来表示</strong></p>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108094221742-1578448220083.png" alt="image-20200108094221742"></p>
+<blockquote>
+<p>对于任何概率分布，总概率必须等于1，即面积必须等于1。</p>
+<p>==处理连续数据，计算的是一个数值范围的概率。==</p>
+</blockquote>
+<h2 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h2><p>连续数据的理想模型</p>
+<ul>
+<li><p>钟形曲线，曲线对称，中央部位的概率密度最大。 </p>
+</li>
+<li><p>越是偏离均值 ， 概率密度减小。 </p>
+</li>
+<li><p>均值和中位数均位于中央 ， 具有最大概率密度。</p>
+</li>
+</ul>
+<p>==通过参数$\mu$和$\sigma ^2$进行定义。 $\mu$指出曲线的中央位置， $\sigma$指出分散性。==</p>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108095726653.png" alt="image-20200108095726653"></p>
+<blockquote>
+<ul>
+<li>$\sigma^2$越大，正态分布越扁平</li>
+<li>概率密度无限接近于但不等于0</li>
+</ul>
+</blockquote>
+<h3 id="正态概率计算"><a href="#正态概率计算" class="headerlink" title="正态概率计算"></a>正态概率计算</h3><ul>
+<li>求介于a和b之间的概率（借助概率表）</li>
+</ul>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108100104983.png" alt="image-20200108100104983"></p>
+<ol>
+<li><p>确定概率分布与范围</p>
+<ul>
+<li>计算均值,标准差</li>
+<li>需要求出那一部分概率</li>
+</ul>
+</li>
+<li><p>标准化$N(0,1)$</p>
+<ul>
+<li>移动均值</li>
+</ul>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108101731843.png" alt="image-20200108101731843"></p>
+<ul>
+<li>收窄</li>
+</ul>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108101806797.png" alt="image-20200108101806797"></p>
+<blockquote>
+<p><strong>概率表仅给出N(0,1)分布的概率</strong>，需要进行标准化</p>
+</blockquote>
+</li>
+</ol>
+<p>$$Z=\frac{X-\mu}{\sigma}$$ <strong>（即CH3中的标准分）</strong></p>
+<p>X：求的概率变量</p>
+<p>$\mu$ :X的均值</p>
+<p>$\sigma$:X的标准差</p>
+<ol start="3">
+<li>查找概率</li>
+</ol>
+<p><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108102633264.png" alt="image-20200108102633264"></p>
+<blockquote>
+<p><strong>注</strong>：概率分布表查找的为$P(Z&lt;z)$的概率<br><img src="/2020/01/20/8.%20%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108102806152.png" alt="image-20200108102806152"></p>
+</blockquote>
+<p><strong>若已知（两组）概率，求均值，方差。可以列出方程组求解。</strong></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>9. 再谈正态分布的运用</title>
+    <url>/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="正态分布计算"><a href="#正态分布计算" class="headerlink" title="正态分布计算"></a>正态分布计算</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><blockquote>
+<p><strong>离散概率分布</strong>：</p>
+<p>$E(X+Y)=E(X)+E(Y)$</p>
+<p>$Var(X+Y)=Var(X)+Var(Y)$</p>
+</blockquote>
+<p><strong>已知 $X$<del>$N(\mu_x,\sigma_x^2)$ 且  $Y$</del>$N(\mu_y,\sigma_y^2)，$</strong>则==X+Y~$N(\mu,\sigma^2)$==</p>
+<p>其中 $\mu=\mu_x+\mu_y$  ，$\sigma^2=\sigma_x^2+\sigma_y^2$</p>
+<p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108104627553.png" alt="image-20200108104627553"></p>
+<p>变量相加后，变异性（$\sigma$ ）增加，图形变扁，总面积仍小于1</p>
+<h3 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h3><p>减法同加法相同</p>
+<h3 id="线性变化"><a href="#线性变化" class="headerlink" title="线性变化"></a>线性变化</h3><p>==线性变化描述了数据的基本变化==</p>
+<p>$aX+b$~$N(a\mu+b,a^2\sigma^2)$</p>
+<h3 id="独立观测结果"><a href="#独立观测结果" class="headerlink" title="独立观测结果"></a>独立观测结果</h3><a id="more"></a>
+
+<p>==独立观察结果描述你有多少数值==</p>
+<p>$X_1+X_2+…+X_n$~$N(n\mu,n\sigma^2)$</p>
+<blockquote>
+<p><strong>注</strong>：</p>
+<p>若一位成年人的体重分布为X~$N(180,625)$,计算4位成年人的综合体重概率分布</p>
+<ul>
+<li><p>线性变化<br>若使用4X，实际描述的是一位成年人体重放大4倍后的效果</p>
+</li>
+<li><p>独立观测</p>
+<p>$X_1+X_2+X_3+X_4$</p>
+<p>$X_1$,$X_2$,$X_3$,$X_4$是X的独立观察结果</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="二项分布近似替代"><a href="#二项分布近似替代" class="headerlink" title="二项分布近似替代"></a>二项分布近似替代</h2><h3 id="替代条件"><a href="#替代条件" class="headerlink" title="替代条件"></a>替代条件</h3><p><strong>一般情况，当np和nq双双大于5时(n为次数，p为成功概率，q=1-p)，可以用正态分布近似替代二项分布。</strong></p>
+<p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108112501939.png" alt="image-20200108112501939"></p>
+<h3 id="替代场景"><a href="#替代场景" class="headerlink" title="替代场景"></a>替代场景</h3><p><strong>求解均值和方差</strong></p>
+<p>直接从二项分布的发哦均值与方差方便计算概率：</p>
+<p>$\mu=np$</p>
+<p>$\sigma^2=npq$</p>
+<p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108113637333.png" alt="image-20200108113637333"></p>
+<blockquote>
+<p>部分近似条件可能为np&gt;10,nq&gt;10</p>
+</blockquote>
+<h3 id="误差修正"><a href="#误差修正" class="headerlink" title="误差修正"></a>误差修正</h3><ul>
+<li>二项分布 P(X&lt;6)</li>
+</ul>
+<p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108114446054.png" alt="image-20200108114446054"></p>
+<ul>
+<li>正态分布 P(X&lt;6)</li>
+</ul>
+<p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108114517904.png" alt="image-20200108114517904"></p>
+<ul>
+<li>两者存在误差</li>
+</ul>
+<p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108114553609.png" alt="image-20200108114553609"></p>
+<p><strong>误差原因:</strong>离散数值为6,转化连续标度,考虑所有取整后等于6的数,即要考虑从5.5-6.5的数字范围.</p>
+<p>计算P(X&lt;6)应该计算P(X&lt;5.5),这种调整称为<strong>连续性修正</strong></p>
+<table>
+<thead>
+<tr>
+<th>所求二项分布</th>
+<th>连续性修正后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P(X≤a)</td>
+<td>P(X&lt;a+0.5)</td>
+</tr>
+<tr>
+<td>P(X≥a)</td>
+<td>P(X&gt;a-0.5)</td>
+</tr>
+<tr>
+<td>P(a≤X≤b)</td>
+<td>P(a-0.5&lt;X&lt;b+0.5)</td>
+</tr>
+</tbody></table>
+<h2 id="泊松分布近似替代"><a href="#泊松分布近似替代" class="headerlink" title="泊松分布近似替代"></a>泊松分布近似替代</h2><p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108115833603.png" alt="image-20200108115833603"></p>
+<p>$X$~$Po(\lambda )$</p>
+<ul>
+<li>当$\lambda$&gt;15,可以用X~$N(\lambda,\lambda)$ 近似替代</li>
+</ul>
+<p><strong>如果用正态分布近似替代泊松分布,为保证结果正确,需要进行==连续性修正==</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="/2020/01/20/9.%20%E5%86%8D%E8%B0%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108120215036.png" alt="image-20200108120215036"></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10. 统计抽样的运用</title>
+    <url>/2020/01/20/10.%20%E7%BB%9F%E8%AE%A1%E6%8A%BD%E6%A0%B7%E7%9A%84%E8%BF%90%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="总体与样本"><a href="#总体与样本" class="headerlink" title="总体与样本"></a>总体与样本</h2><p><strong>总体</strong>：进行测量，研究或者分析的整个群体。</p>
+<p>普查：堆总体进行的研究或调查。</p>
+<p><strong>样本</strong>：总体中选取的部分对象。</p>
+<p>样本调查：对总体样本进行研究或调查</p>
+<h2 id="设计抽样"><a href="#设计抽样" class="headerlink" title="设计抽样"></a>设计抽样</h2><ol>
+<li>确定目标总体</li>
+<li>确定抽样单位<br>抽取哪一类对象</li>
+<li>确定抽样空间<br>编号好的抽样单位汇总表，可以选中样本</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="抽样偏倚"><a href="#抽样偏倚" class="headerlink" title="抽样偏倚"></a>抽样偏倚</h2><h3 id="无偏样本"><a href="#无偏样本" class="headerlink" title="无偏样本"></a>无偏样本</h3><p>可以代表目标总体，具有相似特性</p>
+<p><img src="/2020/01/20/10.%20%E7%BB%9F%E8%AE%A1%E6%8A%BD%E6%A0%B7%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108134955794.png" alt="image-20200108134955794"></p>
+<h3 id="偏倚样本"><a href="#偏倚样本" class="headerlink" title="偏倚样本"></a>偏倚样本</h3><p>无法代表总体，特性不相似</p>
+<p><img src="/2020/01/20/10.%20%E7%BB%9F%E8%AE%A1%E6%8A%BD%E6%A0%B7%E7%9A%84%E8%BF%90%E7%94%A8/image-20200108135029859.png" alt="image-20200108135029859"></p>
+<h3 id="偏倚产生的原因"><a href="#偏倚产生的原因" class="headerlink" title="偏倚产生的原因"></a>偏倚产生的原因</h3><ol>
+<li>抽样空间条目不齐全，未包含总体的所有对象</li>
+<li>抽样单位不正确</li>
+<li>为样本选取的一个个抽样单位未出现在实际样本中（并不是人人给你的问卷回应）</li>
+<li>问题设计不当</li>
+<li>缺乏随机性</li>
+</ol>
+<p>==归咎与样本选取方法==</p>
+<h2 id="抽样方法"><a href="#抽样方法" class="headerlink" title="抽样方法"></a>抽样方法</h2><ul>
+<li><strong>简单随机抽样</strong>：通过随机过程选取一个大小为n的样本，所有大小为n的可能样本被选中为可能性相同<ul>
+<li>重复抽样：选取一个抽样单位，再将这个单位放回总体</li>
+<li>不重复抽样：不将抽样单位放回总体</li>
+</ul>
+</li>
+<li><strong>分层抽样</strong>：将总体分割为几个相似的组，每个组具有类似的特征，每组称为==层==</li>
+<li><strong>整群抽样</strong>：总体中包括大量相似的组或群，对<strong>群或组</strong>进行简单随机抽样</li>
+<li><strong>系统抽样</strong>：按某中顺序列出总体名单，没k个单位进行一次调查，其中k为一个特殊数字<em>（缺点：若总体存在某种循环，样本将会偏倚）</em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>11. 总体和样本的估计</title>
+    <url>/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="点估计量估计总体参数"><a href="#点估计量估计总体参数" class="headerlink" title="点估计量估计总体参数"></a>点估计量估计总体参数</h2><p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200108142318040.png" alt="image-20200108142318040"></p>
+<p>样本的均值被称为总体均值的<strong>点估计量</strong></p>
+<h3 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h3><ul>
+<li><p>$\mu$为总体均值</p>
+</li>
+<li><p>$\hat{\mu}$为样本均值</p>
+<p>$\hat{\mu}=\bar{x}=\frac{\sum x}{n}$</p>
+</li>
+</ul>
+<h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><ul>
+<li>总体方差 $\sigma^2=\frac{\sum(x-\mu)^2}{n}$</li>
+<li>估计总体方差：$s^2=\hat{\sigma^2}=\frac{\sum(x-\bar{x})^2}{n}$</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="比例"><a href="#比例" class="headerlink" title="比例"></a>比例</h2><p>用X表示总体成功事件数量，X符合二项分布，n为总体中的人数，p为成功事件的比例</p>
+<p>总体成功比例的点估计量$\hat{p}=P_s=\frac{成功数目}{样本数目}$</p>
+<blockquote>
+<p>计算上，概率与比例相同</p>
+<p>p=probability(概率)=proportion(比例)</p>
+</blockquote>
+<h2 id="样本概率"><a href="#样本概率" class="headerlink" title="样本概率"></a>样本概率</h2><p>已知总体求样本概率</p>
+<ol>
+<li>查看与特定样本大小相同的所有样本</li>
+<li>观察样本比例形成的分布，求出比例的期望和方差</li>
+<li>利用分布求出概率</li>
+</ol>
+<blockquote>
+<p>例：每盒有100颗糖，糖总体中25%为红色，求每盒100颗糖中40颗为红色概率为多少？</p>
+<ul>
+<li>X代表样本中红糖数目，则X~B$(n,p)$，其中n=100，p=0.25</li>
+<li>样本中红糖比例取决与样本中红糖的数量X，比例本身为随机变量，记$P_s=\frac{X}{n}$</li>
+</ul>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113164134540.png" alt="image-20200113164134540"></p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113164147222.png" alt="image-20200113164147222"></p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113164225860.png" alt="image-20200113164225860"></p>
+<ul>
+<li>得出所有样本比例分布，称为<strong>比例的抽样分布</strong>，称为$P_s$分布</li>
+</ul>
+</blockquote>
+<p>利用比例的抽样分布，求出某个随机选择的，大小为n的样本的<strong>“成功比例”的概率</strong>。</p>
+<h3 id="P-s-的期望"><a href="#P-s-的期望" class="headerlink" title="$P_s$的期望"></a>$P_s$的期望</h3><p>$E(P_s)=E(\frac{X}{n})=\frac{E(X)}{n}$</p>
+<ul>
+<li>样本比例等于红球的数量除以样本糖球的总数</li>
+</ul>
+<p>由$E(X)=np$，故$E(P_s)=p$</p>
+<h3 id="P-s-的方差"><a href="#P-s-的方差" class="headerlink" title="$P_s$的方差"></a>$P_s$的方差</h3><p>$Var(P_s)=Var(\frac{X}{n})=\frac{Var(X)}{n^2}$</p>
+<p>$Var(X)=npq$</p>
+<p>得到$Var(P_s)=\frac{pq}{n}$</p>
+<p>$P_s$的标准差=比例标准误差=$\sqrt{\frac{pq}{n}}$</p>
+<h3 id="P-s-的分布"><a href="#P-s-的分布" class="headerlink" title="$P_s$的分布"></a>$P_s$的分布</h3><p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113171713958.png" alt="image-20200113171713958"></p>
+<p>==当n很大时，$P_s$的分布接近正态分布（n$\geqq$30），n越大越接近正态分布==</p>
+<p>当n很大时，$P_s$~$N(p,\frac{pq}{n})$</p>
+<ul>
+<li>利用正态分布计算概率</li>
+<li>需要对抽样分布进行连续性修正</li>
+</ul>
+<blockquote>
+<p>连续性修正：</p>
+<ul>
+<li>用X表示样本中成功的数目，X的正态连续性修正为$\pm\frac{1}{2n}$</li>
+<li>如果n很大，则可以忽略连续性修正</li>
+</ul>
+</blockquote>
+<h2 id="样本均值的分布"><a href="#样本均值的分布" class="headerlink" title="样本均值的分布"></a>样本均值的分布</h2><blockquote>
+<p>例：小袋糖果均值为10，方差为1</p>
+</blockquote>
+<ol>
+<li><p>研究样本大小相同的所有可能样本</p>
+</li>
+<li><p>查看样本分布，样本均值的期望和方差</p>
+</li>
+<li><p>利用分布求出概率</p>
+</li>
+</ol>
+<ul>
+<li><p>取n包糖，$X_1,X_2,\dots,X_n$</p>
+</li>
+<li><p>每个$X_i$都是一个独立观察结果，期望为$\mu$，方差为$\sigma^2$</p>
+<p>$\bar X=\frac{X_1+X_2+\dots+X_n}{n}$</p>
+</li>
+</ul>
+<p>$\bar X$ 为均值的抽样分布，计算样本均值的概率方法</p>
+<h3 id="bar-X-的期望"><a href="#bar-X-的期望" class="headerlink" title="$\bar X$ 的期望"></a>$\bar X$ 的期望</h3><p>$$E(\bar X)=E(\frac{X_1+X_2+\dots+X_n}{n})\\qquad =E(\frac{1}{n}X_1+\frac{1}{n}X_1X_2+\dots+\frac{1}{n}X_1X_n)\\qquad =\frac{1}{n}(E(X_1)+E(X_1)+E(X_2)+\dots+E(X_n))$$</p>
+<p>由每个$X_i$都是一个独立观察值，且$E(X)=\mu$,即$$E(\bar X)=\mu$$</p>
+<h3 id="bar-X-的方差"><a href="#bar-X-的方差" class="headerlink" title="$\bar X$ 的方差"></a>$\bar X$ 的方差</h3><p>同理可得：</p>
+<p>$$Var(\bar X)=Var(\frac{X_1+X_2+\dots+X_n}{n})\\quad=(\frac{1}{n})^2(Var(X_1)+Var(X_2)+\dots+Var(X_n))\\quad =\frac{\sigma^2}{n}$$</p>
+<p>$$均值标准误差=\frac{\sigma}{\sqrt n}$$</p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200114100541065.png" alt="image-20200114100541065"></p>
+<h3 id="bar-X-的分布"><a href="#bar-X-的分布" class="headerlink" title="$\bar X$ 的分布"></a>$\bar X$ 的分布</h3><ul>
+<li>若X为正态分布，$\bar X$ 符合正态分布，即：</li>
+</ul>
+<p>X<del>$N(\mu,\sigma^2)$，则$\bar X$</del>$N(\mu,\frac{\sigma^2}{n})$</p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200114100832825.png" alt="image-20200114100832825"></p>
+<ul>
+<li>若X不符合正态分布，当n很大的时候，$\bar X$仍用正态分布</li>
+</ul>
+<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>如果从一个非正态总体X中取出一个样本，且样本很大，则$\bar X$的分布近似为正态分布，若总体的均值和方差为$\mu,\sigma^2$,且n很大，大于30，则：</p>
+<p>$\bar X$~$$N(\mu,\frac{\sigma^2}{n})$$</p>
+<h3 id="运用"><a href="#运用" class="headerlink" title="运用"></a>运用</h3><ol>
+<li>二项分布</li>
+</ol>
+<ul>
+<li>总体X~$B(n,p)$ 其中n&gt;30</li>
+<li>$\mu=np$</li>
+<li>$\sigma^2=npq$</li>
+</ul>
+<p>$\bar X$~$N(np,pq)$</p>
+<ol start="2">
+<li>泊松分布</li>
+</ol>
+<ul>
+<li>总体 X~$Po(\lambda)$，其中n&gt;30</li>
+<li>$\mu=\sigma^2=\lambda$</li>
+</ul>
+<p>$\bar X$~$N(\lambda,\frac{\lambda}{n})$</p>
+<blockquote>
+<p>利用正态分布表查找概率</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>12. 置信区间的构建</title>
+    <url>/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/</url>
+    <content><![CDATA[<p><strong>点估计有价值，但存在误差</strong></p>
+<h2 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h2><p>不给出确定数值，指定两个数值（期望值介于中间）</p>
+<p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105053852.png" alt="image-20200114105053852"></p>
+<p>若令区间包含总体均值的几率为95%，使得：$P(a&lt;\mu&lt;b)=0.95$</p>
+<p>$(a,b)$称为<strong>置信区间</strong></p>
+<h3 id="求解置信区间"><a href="#求解置信区间" class="headerlink" title="求解置信区间"></a>求解置信区间</h3><ol>
+<li><p>选择总体统计量</p>
+</li>
+<li><p>求出统计量抽样分布<br>$E(\bar X)=\mu \qquad Var(\bar X)=\frac{\sigma^2}{n}=\frac{s^2}{n}$</p>
+</li>
+<li><p>决定置信水平<br>置信水平越高，区间越宽，置信区间包含总体统计量的几率越大</p>
+</li>
+<li><p>求出置信上下限</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<p>   <img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105943611.png" alt="image-20200114105943611"></p>
+<p>   $\bar X$符合正态分布，$\bar X$~$N(\mu,0.25)$</p>
+<ul>
+<li>求出标准化正态分布Z</li>
+<li>求出$z_a,z_b$</li>
+</ul>
+<p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110350517.png" alt="image-20200114110350517"></p>
+<h3 id="置信区间的简便算法"><a href="#置信区间的简便算法" class="headerlink" title="置信区间的简便算法"></a>置信区间的简便算法</h3><p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110454895.png" alt="image-20200114110454895"></p>
+<p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110514744.png" alt="image-20200114110514744"></p>
+<p>一般情况下</p>
+<ul>
+<li>统计量$\pm$(误差范围)</li>
+</ul>
+<p>误差范围等于c与检验统计量的标准差的乘积</p>
+<ul>
+<li>误差范围=c * (统计量的标准差)</li>
+</ul>
+<p>==P500==</p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>《深入浅出统计学》</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5. excel图表</title>
+    <url>/2020/01/20/5.%20excel%E5%9B%BE%E8%A1%A8/</url>
+    <content><![CDATA[<h2 id="插入图表"><a href="#插入图表" class="headerlink" title="插入图表"></a>插入图表</h2><p><img src="/2020/01/20/5.%20excel%E5%9B%BE%E8%A1%A8/clipimage062.jpg" alt="img"> </p>
+<a id="more"></a>
+
+<h2 id="图表的坐标轴"><a href="#图表的坐标轴" class="headerlink" title="图表的坐标轴"></a>图表的坐标轴</h2><p><img src="/2020/01/20/5.%20excel%E5%9B%BE%E8%A1%A8/clipimage064.jpg" alt="img"> </p>
+<h2 id="图表的次坐标轴"><a href="#图表的次坐标轴" class="headerlink" title="图表的次坐标轴"></a>图表的次坐标轴</h2><p><img src="/2020/01/20/5.%20excel%E5%9B%BE%E8%A1%A8/clipimage066.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4. excel常见的函数</title>
+    <url>/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="了解函数"><a href="#了解函数" class="headerlink" title="了解函数"></a>了解函数</h2><p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage048.gif" alt="img"> </p>
+<a id="more"></a>
+
+<h2 id="求平均值"><a href="#求平均值" class="headerlink" title="求平均值"></a>求平均值</h2><p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage050.jpg" alt="img"></p>
+<h2 id="IF语句"><a href="#IF语句" class="headerlink" title="IF语句"></a>IF语句</h2><p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage052.jpg" alt="clipimage052"></p>
+<h2 id="VLOOKUP函数"><a href="#VLOOKUP函数" class="headerlink" title="VLOOKUP函数"></a>VLOOKUP函数</h2><p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage054.jpg" alt></p>
+<h2 id="函数错误修复"><a href="#函数错误修复" class="headerlink" title="函数错误修复"></a>函数错误修复</h2><p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage056.jpg" alt="clipimage056"></p>
+<p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage058.jpg" alt="img"></p>
+<p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/clipimage060.jpg" alt="img"> </p>
+<h2 id="OFFSET函数"><a href="#OFFSET函数" class="headerlink" title="OFFSET函数"></a>OFFSET函数</h2><p>offset（基准单元格，行位移，列位移，行高，列宽）</p>
+<p><img src="/2020/01/20/4.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%BD%E6%95%B0/15755973577389e7f2f6ab37144f8a768b8c68ef65c72.png" alt></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3. excel常见的操作</title>
+    <url>/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage032.gif" alt="img"> </p>
+<a id="more"></a>
+
+<p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage034.jpg" alt="img"></p>
+<h2 id="拆分"><a href="#拆分" class="headerlink" title="拆分"></a>拆分</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage037.gif" alt="img"> </p>
+<h2 id="排序和筛选"><a href="#排序和筛选" class="headerlink" title="排序和筛选"></a>排序和筛选</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage039.jpg" alt="img"></p>
+<p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage041.jpg" alt="img"> </p>
+<h2 id="下拉表"><a href="#下拉表" class="headerlink" title="下拉表"></a>下拉表</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage043.jpg" alt="img"> </p>
+<p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/clipimage045.jpg" alt="img"></p>
+<h2 id="单元格"><a href="#单元格" class="headerlink" title="单元格"></a>单元格</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/1575597357644fc7dbbbd70b14f05b14f0444dfe4294f.png" alt></p>
+<h2 id="查找和替换"><a href="#查找和替换" class="headerlink" title="查找和替换"></a>查找和替换</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/1575597357644fc7dbbbd70b14f05b14f0444dfe4294f15759.png" alt></p>
+<h2 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h2><p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/15755973576873f6834aaea2340f29561aecb4b91f198.png" alt></p>
+<h2 id="表格转表"><a href="#表格转表" class="headerlink" title="表格转表"></a>表格转表</h2><ul>
+<li>列是基础的数据字段</li>
+<li>易于处理大量数据</li>
+<li>关联外部数据</li>
+</ul>
+<p><img src="/2020/01/20/3.%20excel%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/15755973576873f6834aaea2340f29561aecb4b91f19815759.png" alt></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2. excel导入数据</title>
+    <url>/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h2 id="通过网站站导入数据"><a href="#通过网站站导入数据" class="headerlink" title="通过网站站导入数据"></a>通过网站站导入数据</h2><ul>
+<li><a href="https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data" target="_blank" rel="noopener">数据源</a></li>
+<li>具体步骤如下:<br><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage014.jpg" alt="img"> </li>
+</ul>
+<a id="more"></a>
+
+
+
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage016.jpg" alt="img"></p>
+<h2 id="导文本数据"><a href="#导文本数据" class="headerlink" title="导文本数据"></a>导文本数据</h2><p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage018.jpg" alt="img"></p>
+<p>选择对应的文本文件之后, 需要选择分隔符和新表所在位置就可以完成导入数据</p>
+<h2 id="导入MySQL数据库数据"><a href="#导入MySQL数据库数据" class="headerlink" title="导入MySQL数据库数据"></a>导入MySQL数据库数据</h2><p>需要安装MySQL connect/net工具</p>
+<ol>
+<li>提前准备好需要连接的数据库 demo</li>
+</ol>
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage020.jpg" alt="img"></p>
+<ol start="2">
+<li><p>选择数据 —&gt; 新建查询</p>
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage021.jpg" alt="img"> </p>
+</li>
+<li><p>选择从MySQL数据库中获取数据</p>
+</li>
+</ol>
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage023.jpg" alt="img"></p>
+<ol start="4">
+<li>输入连接的服务器和数据库名称</li>
+</ol>
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage025.jpg" alt="img"> </p>
+<ol start="5">
+<li>不要使用默认的windows服务, 选择数据库服务, 输用户户名和密码</li>
+</ol>
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage027.jpg" alt="img"></p>
+<ol start="6">
+<li>数据加载成功</li>
+</ol>
+<p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/clipimage029.jpg" alt="img"></p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p><img src="/2020/01/20/2.%20excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/157559735762576a31e55c01e483f8ee315acbc9fd55d.png" alt></p>
+]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.认识excel</title>
     <url>/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/</url>
     <content><![CDATA[<h2 id="Excel的常见对象"><a href="#Excel的常见对象" class="headerlink" title="Excel的常见对象"></a>Excel的常见对象</h2><ul>

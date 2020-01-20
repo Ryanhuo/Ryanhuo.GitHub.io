@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    11. 总体和样本的估计 |  Ryan
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/huo.ico" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-11. 总体和样本的估计" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  11. 总体和样本的估计
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/" class="article-date">
+  <time datetime="2020-01-20T03:50:54.258Z" itemprop="datePublished">2020-01-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/data-analytics/">data analytics</a>
+  </div>
+
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">978字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">4分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h2 id="点估计量估计总体参数"><a href="#点估计量估计总体参数" class="headerlink" title="点估计量估计总体参数"></a>点估计量估计总体参数</h2><p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200108142318040.png" alt="image-20200108142318040"></p>
+<p>样本的均值被称为总体均值的<strong>点估计量</strong></p>
+<h3 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h3><ul>
+<li><p>$\mu$为总体均值</p>
+</li>
+<li><p>$\hat{\mu}$为样本均值</p>
+<p>$\hat{\mu}=\bar{x}=\frac{\sum x}{n}$</p>
+</li>
+</ul>
+<h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><ul>
+<li>总体方差 $\sigma^2=\frac{\sum(x-\mu)^2}{n}$</li>
+<li>估计总体方差：$s^2=\hat{\sigma^2}=\frac{\sum(x-\bar{x})^2}{n}$</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="比例"><a href="#比例" class="headerlink" title="比例"></a>比例</h2><p>用X表示总体成功事件数量，X符合二项分布，n为总体中的人数，p为成功事件的比例</p>
+<p>总体成功比例的点估计量$\hat{p}=P_s=\frac{成功数目}{样本数目}$</p>
+<blockquote>
+<p>计算上，概率与比例相同</p>
+<p>p=probability(概率)=proportion(比例)</p>
+</blockquote>
+<h2 id="样本概率"><a href="#样本概率" class="headerlink" title="样本概率"></a>样本概率</h2><p>已知总体求样本概率</p>
+<ol>
+<li>查看与特定样本大小相同的所有样本</li>
+<li>观察样本比例形成的分布，求出比例的期望和方差</li>
+<li>利用分布求出概率</li>
+</ol>
+<blockquote>
+<p>例：每盒有100颗糖，糖总体中25%为红色，求每盒100颗糖中40颗为红色概率为多少？</p>
+<ul>
+<li>X代表样本中红糖数目，则X~B$(n,p)$，其中n=100，p=0.25</li>
+<li>样本中红糖比例取决与样本中红糖的数量X，比例本身为随机变量，记$P_s=\frac{X}{n}$</li>
+</ul>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113164134540.png" alt="image-20200113164134540"></p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113164147222.png" alt="image-20200113164147222"></p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113164225860.png" alt="image-20200113164225860"></p>
+<ul>
+<li>得出所有样本比例分布，称为<strong>比例的抽样分布</strong>，称为$P_s$分布</li>
+</ul>
+</blockquote>
+<p>利用比例的抽样分布，求出某个随机选择的，大小为n的样本的<strong>“成功比例”的概率</strong>。</p>
+<h3 id="P-s-的期望"><a href="#P-s-的期望" class="headerlink" title="$P_s$的期望"></a>$P_s$的期望</h3><p>$E(P_s)=E(\frac{X}{n})=\frac{E(X)}{n}$</p>
+<ul>
+<li>样本比例等于红球的数量除以样本糖球的总数</li>
+</ul>
+<p>由$E(X)=np$，故$E(P_s)=p$</p>
+<h3 id="P-s-的方差"><a href="#P-s-的方差" class="headerlink" title="$P_s$的方差"></a>$P_s$的方差</h3><p>$Var(P_s)=Var(\frac{X}{n})=\frac{Var(X)}{n^2}$</p>
+<p>$Var(X)=npq$</p>
+<p>得到$Var(P_s)=\frac{pq}{n}$</p>
+<p>$P_s$的标准差=比例标准误差=$\sqrt{\frac{pq}{n}}$</p>
+<h3 id="P-s-的分布"><a href="#P-s-的分布" class="headerlink" title="$P_s$的分布"></a>$P_s$的分布</h3><p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200113171713958.png" alt="image-20200113171713958"></p>
+<p>==当n很大时，$P_s$的分布接近正态分布（n$\geqq$30），n越大越接近正态分布==</p>
+<p>当n很大时，$P_s$~$N(p,\frac{pq}{n})$</p>
+<ul>
+<li>利用正态分布计算概率</li>
+<li>需要对抽样分布进行连续性修正</li>
+</ul>
+<blockquote>
+<p>连续性修正：</p>
+<ul>
+<li>用X表示样本中成功的数目，X的正态连续性修正为$\pm\frac{1}{2n}$</li>
+<li>如果n很大，则可以忽略连续性修正</li>
+</ul>
+</blockquote>
+<h2 id="样本均值的分布"><a href="#样本均值的分布" class="headerlink" title="样本均值的分布"></a>样本均值的分布</h2><blockquote>
+<p>例：小袋糖果均值为10，方差为1</p>
+</blockquote>
+<ol>
+<li><p>研究样本大小相同的所有可能样本</p>
+</li>
+<li><p>查看样本分布，样本均值的期望和方差</p>
+</li>
+<li><p>利用分布求出概率</p>
+</li>
+</ol>
+<ul>
+<li><p>取n包糖，$X_1,X_2,\dots,X_n$</p>
+</li>
+<li><p>每个$X_i$都是一个独立观察结果，期望为$\mu$，方差为$\sigma^2$</p>
+<p>$\bar X=\frac{X_1+X_2+\dots+X_n}{n}$</p>
+</li>
+</ul>
+<p>$\bar X$ 为均值的抽样分布，计算样本均值的概率方法</p>
+<h3 id="bar-X-的期望"><a href="#bar-X-的期望" class="headerlink" title="$\bar X$ 的期望"></a>$\bar X$ 的期望</h3><p>$$E(\bar X)=E(\frac{X_1+X_2+\dots+X_n}{n})\\qquad =E(\frac{1}{n}X_1+\frac{1}{n}X_1X_2+\dots+\frac{1}{n}X_1X_n)\\qquad =\frac{1}{n}(E(X_1)+E(X_1)+E(X_2)+\dots+E(X_n))$$</p>
+<p>由每个$X_i$都是一个独立观察值，且$E(X)=\mu$,即$$E(\bar X)=\mu$$</p>
+<h3 id="bar-X-的方差"><a href="#bar-X-的方差" class="headerlink" title="$\bar X$ 的方差"></a>$\bar X$ 的方差</h3><p>同理可得：</p>
+<p>$$Var(\bar X)=Var(\frac{X_1+X_2+\dots+X_n}{n})\\quad=(\frac{1}{n})^2(Var(X_1)+Var(X_2)+\dots+Var(X_n))\\quad =\frac{\sigma^2}{n}$$</p>
+<p>$$均值标准误差=\frac{\sigma}{\sqrt n}$$</p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200114100541065.png" alt="image-20200114100541065"></p>
+<h3 id="bar-X-的分布"><a href="#bar-X-的分布" class="headerlink" title="$\bar X$ 的分布"></a>$\bar X$ 的分布</h3><ul>
+<li>若X为正态分布，$\bar X$ 符合正态分布，即：</li>
+</ul>
+<p>X<del>$N(\mu,\sigma^2)$，则$\bar X$</del>$N(\mu,\frac{\sigma^2}{n})$</p>
+<p><img src="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/image-20200114100832825.png" alt="image-20200114100832825"></p>
+<ul>
+<li>若X不符合正态分布，当n很大的时候，$\bar X$仍用正态分布</li>
+</ul>
+<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>如果从一个非正态总体X中取出一个样本，且样本很大，则$\bar X$的分布近似为正态分布，若总体的均值和方差为$\mu,\sigma^2$,且n很大，大于30，则：</p>
+<p>$\bar X$~$$N(\mu,\frac{\sigma^2}{n})$$</p>
+<h3 id="运用"><a href="#运用" class="headerlink" title="运用"></a>运用</h3><ol>
+<li>二项分布</li>
+</ol>
+<ul>
+<li>总体X~$B(n,p)$ 其中n&gt;30</li>
+<li>$\mu=np$</li>
+<li>$\sigma^2=npq$</li>
+</ul>
+<p>$\bar X$~$N(np,pq)$</p>
+<ol start="2">
+<li>泊松分布</li>
+</ol>
+<ul>
+<li>总体 X~$Po(\lambda)$，其中n&gt;30</li>
+<li>$\mu=\sigma^2=\lambda$</li>
+</ul>
+<p>$\bar X$~$N(\lambda,\frac{\lambda}{n})$</p>
+<blockquote>
+<p>利用正态分布表查找概率</p>
+</blockquote>
+
+      
+      <!-- 打赏 -->
+      
+      <div id="reward-btn">
+        打赏
+      </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ryanhuo.github.io/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/" data-id="ck5lxcded0001zcfz10p8gqja"
+        class="article-share-link"></a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2020/01/20/10.%20%E7%BB%9F%E8%AE%A1%E6%8A%BD%E6%A0%B7%E7%9A%84%E8%BF%90%E7%94%A8/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            10. 统计抽样的运用
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">12. 置信区间的构建</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        John Doe
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/huo.svg" alt="Ryan"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/data-analytics">数据分析</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+<script src="/js/ayer.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>
