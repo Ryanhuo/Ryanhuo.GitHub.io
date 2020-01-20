@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>关于我</title>
-    <url>/2020/01/19/%E5%85%B3%E4%BA%8E%E6%88%91/</url>
-    <content><![CDATA[<p><img src="/2020/01/19/%E5%85%B3%E4%BA%8E%E6%88%91/image-20200120102036403.png" alt="image-20200120102036403"></p>
-<p>你好，这是我本人！</p>
-<p><img src="/2020/01/19/%E5%85%B3%E4%BA%8E%E6%88%91/image-20200120104653766.png" alt="image-20200120104653766"></p>
+    <title>1.认识excel</title>
+    <url>/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/</url>
+    <content><![CDATA[<h2 id="Excel的常见对象"><a href="#Excel的常见对象" class="headerlink" title="Excel的常见对象"></a>Excel的常见对象</h2><ul>
+<li>工作簿: 工作表的集合</li>
+<li>工作表 (数据的集合)</li>
+<li>字段: 数据的列标题</li>
+<li>记录: 一行数据</li>
+</ul>
+<a id="more"></a>
+
+<p><img src="/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/clipimage009.jpg" alt="img"></p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li><p>基本数据类型</p>
+<p>文本型</p>
+<p>数值型</p>
+<p>整数型</p>
+<p>小数型</p>
+<p>日期型</p>
+<p>布尔型</p>
+<p>其他类型</p>
+</li>
+<li><p>变量类型</p>
+<p>名义型：没有顺序，只表示分类（男女）</p>
+<p>有序型：优良中差</p>
+<p>连续型：身高，体重……</p>
+<p>星期属于有序型，时间属于连续型</p>
+</li>
+</ul>
+<p><img src="/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/15755973575563ccce84116434250b142855add4fd1d5.png" alt></p>
+<p><img src="/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/clipimage011.jpg" alt="img"></p>
+<blockquote>
+<p>注: 如果将纯数字存储为文本格式将导致无法计算, 此时可以通过 某列 * 1来快速修改数据类型</p>
+</blockquote>
+<p><img src="/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/15755973575802db39373188546f886725305392087fe.png" alt></p>
+<p><img src="/2020/01/20/1.%20%E8%AE%A4%E8%AF%86excel/1575597357601457ecb632c28490e9942f7e3cd5905ea.png" alt></p>
 ]]></content>
+      <categories>
+        <category>data analytics</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+      </tags>
   </entry>
 </search>
