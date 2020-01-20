@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>12. 置信区间的构建 | Ryan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="点估计有价值，但存在误差 置信区间不给出确定数值，指定两个数值（期望值介于中间）  若令区间包含总体均值的几率为95%，使得：$P(a&lt;\mu&lt;b)&#x3D;0.95$ $(a,b)$称为置信区间 求解置信区间 选择总体统计量  求出统计量抽样分布$E(\bar X)&#x3D;\mu \qquad Var(\bar X)&#x3D;\frac{\sigma^2}{n}&#x3D;\frac{s^2}{n}$  决定置信水">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12. 置信区间的构建">
+<meta property="og:url" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Ryan">
+<meta property="og:description" content="点估计有价值，但存在误差 置信区间不给出确定数值，指定两个数值（期望值介于中间）  若令区间包含总体均值的几率为95%，使得：$P(a&lt;\mu&lt;b)&#x3D;0.95$ $(a,b)$称为置信区间 求解置信区间 选择总体统计量  求出统计量抽样分布$E(\bar X)&#x3D;\mu \qquad Var(\bar X)&#x3D;\frac{\sigma^2}{n}&#x3D;\frac{s^2}{n}$  决定置信水">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105053852.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105943611.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110350517.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110454895.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110514744.png">
+<meta property="article:published_time" content="2020-01-20T03:50:54.220Z">
+<meta property="article:modified_time" content="2020-01-20T03:56:47.723Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="《深入浅出统计学》">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105053852.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Ryan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ryan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我是一个在黑暗中大雪纷飞的人</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ryanhuo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><section class="outer">
+    <article id="post-12. 置信区间的构建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/" class="article-date">
+  <time datetime="2020-01-20T03:50:54.220Z" itemprop="datePublished">2020-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/data-analytics/">data analytics</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      12. 置信区间的构建
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>点估计有价值，但存在误差</strong></p>
+<h2 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h2><p>不给出确定数值，指定两个数值（期望值介于中间）</p>
+<p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105053852.png" alt="image-20200114105053852"></p>
+<p>若令区间包含总体均值的几率为95%，使得：$P(a&lt;\mu&lt;b)=0.95$</p>
+<p>$(a,b)$称为<strong>置信区间</strong></p>
+<h3 id="求解置信区间"><a href="#求解置信区间" class="headerlink" title="求解置信区间"></a>求解置信区间</h3><ol>
+<li><p>选择总体统计量</p>
+</li>
+<li><p>求出统计量抽样分布<br>$E(\bar X)=\mu \qquad Var(\bar X)=\frac{\sigma^2}{n}=\frac{s^2}{n}$</p>
+</li>
+<li><p>决定置信水平<br>置信水平越高，区间越宽，置信区间包含总体统计量的几率越大</p>
+</li>
+<li><p>求出置信上下限</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<p>   <img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114105943611.png" alt="image-20200114105943611"></p>
+<p>   $\bar X$符合正态分布，$\bar X$~$N(\mu,0.25)$</p>
+<ul>
+<li>求出标准化正态分布Z</li>
+<li>求出$z_a,z_b$</li>
+</ul>
+<p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110350517.png" alt="image-20200114110350517"></p>
+<h3 id="置信区间的简便算法"><a href="#置信区间的简便算法" class="headerlink" title="置信区间的简便算法"></a>置信区间的简便算法</h3><p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110454895.png" alt="image-20200114110454895"></p>
+<p><img src="/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/image-20200114110514744.png" alt="image-20200114110514744"></p>
+<p>一般情况下</p>
+<ul>
+<li>统计量$\pm$(误差范围)</li>
+</ul>
+<p>误差范围等于c与检验统计量的标准差的乘积</p>
+<ul>
+<li>误差范围=c * (统计量的标准差)</li>
+</ul>
+<p>==P500==</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ryanhuo.github.io/2020/01/20/12.%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E7%9A%84%E6%9E%84%E5%BB%BA/" data-id="ck5m3tyka0015q8fz05oc3jh0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/20/11.%20%E6%80%BB%E4%BD%93%E5%92%8C%E6%A0%B7%E6%9C%AC%E7%9A%84%E4%BC%B0%E8%AE%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          11. 总体和样本的估计
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/20/5.%20excel%E5%9B%BE%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">5. excel图表</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  </section></section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/data-analytics/">data analytics</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%BA%93/" rel="tag">python库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag">python爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/excel/" style="font-size: 13.33px;">excel</a> <a href="/tags/python%E5%9F%BA%E7%A1%80/" style="font-size: 16.67px;">python基础</a> <a href="/tags/python%E5%BA%93/" style="font-size: 10px;">python库</a> <a href="/tags/python%E7%88%AC%E8%99%AB/" style="font-size: 13.33px;">python爬虫</a> <a href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" style="font-size: 20px;">《深入浅出统计学》</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/20/git%E5%90%8C%E6%AD%A5github%E7%9B%B8%E5%85%B3/">git同步github相关</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/2.%20numpy/">2. numpy</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/3.%20pandas/">3. pandas</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/1.%20matplotlib/">1. matplotlib</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/5.%20json/">5. Json</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

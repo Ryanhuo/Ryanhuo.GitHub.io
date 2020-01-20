@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>5.python面向对象 | Ryan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="匿名函数顾名思义就是函数没有名字，使用lambda关键字定义的函数就是匿名函数,简化代码，增加运行效率。 特点： 匿名函数只适合做一下简单的操作，返回值不需要加上return。 1234#普通函数def func(a,b,c):    return a+b+cprint(func(1,3,4))  8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5.python面向对象">
+<meta property="og:url" content="https://ryanhuo.github.io/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
+<meta property="og:site_name" content="Ryan">
+<meta property="og:description" content="匿名函数顾名思义就是函数没有名字，使用lambda关键字定义的函数就是匿名函数,简化代码，增加运行效率。 特点： 匿名函数只适合做一下简单的操作，返回值不需要加上return。 1234#普通函数def func(a,b,c):    return a+b+cprint(func(1,3,4))  8">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.13.jpg">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.14.jpg">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.15.jpg">
+<meta property="article:published_time" content="2020-01-20T07:00:53.177Z">
+<meta property="article:modified_time" content="2020-01-20T07:00:23.938Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ryanhuo.github.io/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.13.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Ryan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ryan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我是一个在黑暗中大雪纷飞的人</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ryanhuo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><section class="outer">
+    <article id="post-5.python面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-01-20T07:00:53.177Z" itemprop="datePublished">2020-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/data-analytics/">data analytics</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      5.python面向对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>顾名思义就是函数没有名字，使用lambda关键字定义的函数就是匿名函数,简化代码，增加运行效率。 特点： 匿名函数只适合做一下简单的操作，返回值不需要加上return。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#普通函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(a,b,c)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> a+b+c</span><br><span class="line">print(func(<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>8</code></pre><a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#匿名函数</span></span><br><span class="line">result=(<span class="keyword">lambda</span> a,b,c:a+b+c)(<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="comment"># 匿名函数也是函数</span></span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<pre><code>8</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对字典列表排序的时候还可以使用匿名函数</span></span><br><span class="line">my_list=&#123;<span class="string">'age'</span>:<span class="number">23</span>,<span class="string">'name'</span>:<span class="string">'张三'</span>&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_value</span><span class="params">(item)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> item[<span class="string">'age'</span>]</span><br><span class="line"></span><br><span class="line">get_value(my_list)</span><br><span class="line"></span><br><span class="line"><span class="comment"># my_list.sort(key=get_value,reverse=True)print(my_list)</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>23</code></pre><h2 id="面向对象的编程"><a href="#面向对象的编程" class="headerlink" title="面向对象的编程"></a>面向对象的编程</h2><p>面向对象编程——Object Oriented Programming，简称<strong>OOP</strong>，是一种程序设计思想。OOP把对象作为程序的<strong>基本单元</strong>，一个对象包含了数据和操作数据的函数。</p>
+<p><strong>面向过程</strong>的程序设计把计算机程序视为一系列的命令集合，即一组函数的顺序执行。为了简化程序设计，面向过程把函数继续切分为子函数，即把大块函数通过切割成小块函数来降低系统的复杂度。</p>
+<p>而<strong>面向对象</strong>的程序设计把计算机程序视为一组对象的集合，而每个对象都可以接收其他对象发过来的消息，并处理这些消息，计算机程序的执行就是一系列消息在各个对象之间传递。</p>
+<p>在Python中，<strong>所有数据类型都可以视为对象</strong>，当然也可以自定义对象。自定义的对象数据类型就是面向对象中的类（Class）的概念。</p>
+<p>我们以一个例子来说明面向过程和面向对象在程序流程上的不同之处。</p>
+<p>假设我们要处理学生的成绩表，为了表示一个学生的成绩，面向过程的程序可以用一个dict表示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std1 = &#123; <span class="string">'name'</span>: <span class="string">'Curry'</span>, <span class="string">'score'</span>: <span class="number">98</span> &#125;</span><br><span class="line">std2 = &#123; <span class="string">'name'</span>: <span class="string">'James'</span>, <span class="string">'score'</span>: <span class="number">81</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>而处理学生成绩可以通过函数实现，比如打印学生的成绩：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_score</span><span class="params">(std)</span>:</span></span><br><span class="line">    print(<span class="string">'%s: %s'</span> % (std[<span class="string">'name'</span>], std[<span class="string">'score'</span>]))</span><br></pre></td></tr></table></figure>
+
+<p>如果采用<strong>面向对象的程序设计思想</strong>，我们首选思考的不是程序的执行流程，而是Student这种数据类型应该被视为一个对象，这个对象拥有name和score这两个<strong>属性</strong>（Property）。如果要打印一个学生的成绩，首先必须创建出这 个学生对应的对象，然后，给对象发一个print_score消息，让对象自己把自己的数据打印出来。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">init</span> <span class="params">(self, name, score)</span>:</span> </span><br><span class="line">        self.name = name</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_score</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'%s: %s'</span> % (self.name, self.score))</span><br></pre></td></tr></table></figure>
+
+<p>给对象发消息实际上就是调用对象对应的关联函数，我们称之为对象的<strong>方法</strong>（Method）。面向对象的程序写出来就像这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bart &#x3D; Student(&#39;Bart Simpson&#39;, 59) </span><br><span class="line">lisa &#x3D; Student(&#39;Lisa Simpson&#39;, 87) </span><br><span class="line">bart.print_score() </span><br><span class="line">lisa.print_score()</span><br></pre></td></tr></table></figure>
+
+<p>面向对象的设计思想是从自然界中来的，因为在自然界中，<strong>类</strong>（Class）和<strong>实例</strong>（Instance）的概念是很自然的。</p>
+<p>Class是一种抽象概念，比如我们定义的Class——Student，是指学生这个概念，而<strong>实例（**</strong>Instance<strong>**）</strong>则是一个个具  体的Student，比如，Bart Simpson和Lisa Simpson是两个具体的Student。</p>
+<p>所以，面向对象的设计思想是抽象出Class，根据Class创建Instance。</p>
+<p>面向对象的抽象程度又比函数要高，因为一个Class既包含数据，又包含操作数据的方法。</p>
+<h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><p><strong>面向对象编程</strong>的2个非常重要的概念：<strong>类和对象</strong></p>
+<p><strong>对象</strong>是面向对象编程的核心，在使用对象的过程中，为了将具有共同特征和行为的一组对象抽象定义，提出了另外一个新的概念——<strong>类</strong></p>
+<p><strong>类</strong>就相当于制造飞机时的图纸，用它来进行创建的飞机就相当于<strong>对象</strong>。</p>
+<blockquote>
+<p><strong>补充：</strong></p>
+<ul>
+<li>需求：做一道西红柿炒鸡蛋</li>
+</ul>
+<p><strong>方法1</strong>：按步骤一步一步制作（面向过程）——<strong>[将每个过程打包成函数，需要时依次调用]</strong></p>
+<p><strong>方法2</strong>：制作一台机器人，告诉机器人炒菜（面向对象）——<strong>[打包成类与对象]</strong></p>
+<p><strong>类</strong>作为母版制作出很多<strong>对象</strong></p>
+</blockquote>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>人以类聚物以群分。 具有相似内部状态和运动规律的实体的集合(或统称为抽象)。 具有相同<strong>属性</strong>和<strong>行为</strong>事物的统称类是抽象的,在使用的时候通常会找到这个类的一个具体的存在,使用这个具体的存在。<strong>一个类可以找到多个对象</strong></p>
+<p><img src="/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.13.jpg" alt></p>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>某一个具体事物的存在 ,在现实世界中可以是看得见摸得着的。 可以是直接使用的</p>
+<p><img src="/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.14.jpg" alt></p>
+<h3 id="类和对象之间的关系"><a href="#类和对象之间的关系" class="headerlink" title="类和对象之间的关系"></a>类和对象之间的关系</h3><p><img src="/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.15.jpg" alt></p>
+<h3 id="定义类和创建对象"><a href="#定义类和创建对象" class="headerlink" title="定义类和创建对象"></a>定义类和创建对象</h3><p>定义一个类，格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class 类名:</span><br><span class="line"></span><br><span class="line">方法列表</span><br><span class="line"></span><br><span class="line"># class Hero: # 经典类（旧式类）定义形式</span><br><span class="line"># class Hero():</span><br><span class="line"></span><br><span class="line">class Hero(object): # 新式类定义形式</span><br><span class="line">    def info(self): </span><br><span class="line">        print(&quot;hero&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>说明：</strong></p>
+<ul>
+<li><p>定义类时有2种形式：<strong>新式类和经典类</strong>，上面代码中的Hero为新式类，前两行注释部分则为经典类；</p>
+</li>
+<li><p>object 是Python 里所有类的最顶级父类； 类名 的命名规则按照”大驼峰命名法”；</p>
+</li>
+<li><p>info 是一个实例方法，第一个参数一般是self，表示实例对象本身，当然了可以将self换为其它的名字，其作用是一个变量 这个变量指向了实例对象.</p>
+</li>
+<li><p>python中，可以根据已经定义的类去创建出一个或多个对象。</p>
+</li>
+</ul>
+<p><strong>创建对象的格式为</strong></p>
+<p>对象名1 = 类名() </p>
+<p>对象名2 = 类名() </p>
+<p>对象名3 = 类名()</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hero</span><span class="params">(object)</span>:</span> <span class="comment"># 新式类定义形式</span></span><br><span class="line">    <span class="string">'''info 是一个实例方法，类对象可以调用实例方法，实例方法的第一个参数一定是self'''</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">'''当对象调用实例方法时，Python会自动将对象本身的引用做为参数， 传递到实例方法的第一个参数self里'''</span></span><br><span class="line">        print(self)</span><br><span class="line">        print(<span class="string">"self各不同，对象是出处。"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Hero这个类 实例化了一个对象</span></span><br><span class="line">hero = Hero()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对象调用实例方法info()，执行info()里的代码</span></span><br><span class="line"><span class="comment"># . 表示选择属性或者方法</span></span><br><span class="line">hero.info()</span><br><span class="line">print(hero) <span class="comment"># 打印对象，则默认打印对象在内存的地址，结果等同于info里的print(self)</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;__main__.Hero object at 0x0000000005413EF0&gt;
+self各不同，对象是出处。
+&lt;__main__.Hero object at 0x0000000005413EF0&gt;</code></pre><h3 id="补充：类与对象"><a href="#补充：类与对象" class="headerlink" title="补充：类与对象"></a>补充：类与对象</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#类的使用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 成绩单<span class="params">()</span>:</span></span><br><span class="line"><span class="meta">    @classmethod#类的方法（函数）同类的属性（变量）结合</span></span><br><span class="line">    <span class="comment">#类的属性作为类方法的参数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> 录入成绩单<span class="params">(cls)</span>:</span></span><br><span class="line">        cls.学生姓名=input(<span class="string">'请输入学生姓名：'</span>)</span><br><span class="line">        cls.语文_成绩=int(input(<span class="string">'请输入语文成绩：'</span>))</span><br><span class="line">        cls.数学_成绩=int(input(<span class="string">'请输入数学成绩：'</span>))</span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> 打印成绩单<span class="params">(cls)</span>:</span></span><br><span class="line">        print(cls.学生姓名+<span class="string">'的成绩如下：'</span>)</span><br><span class="line">        print(<span class="string">'语文成绩：'</span>+str(cls.语文_成绩))</span><br><span class="line">        print(<span class="string">'语文成绩：'</span>+str(cls.语文_成绩))</span><br><span class="line">    </span><br><span class="line">成绩单.录入成绩单()</span><br><span class="line">成绩单.打印成绩单()</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入学生姓名：Ryan
+请输入语文成绩：100
+请输入数学成绩：99
+Ryan的成绩如下：
+语文成绩：100
+语文成绩：100</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#实例化</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 成绩单<span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#①</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> 录入成绩单<span class="params">(self)</span>:</span><span class="comment">#②</span></span><br><span class="line">        self.学生姓名=input(<span class="string">'请输入学生姓名：'</span>)</span><br><span class="line">        self.语文_成绩=int(input(<span class="string">'请输入语文成绩：'</span>))</span><br><span class="line">        self.数学_成绩=int(input(<span class="string">'请输入数学成绩：'</span>))</span><br><span class="line"><span class="comment">#③</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> 打印成绩单<span class="params">(self)</span>:</span></span><br><span class="line">        print(self.学生姓名+<span class="string">'的成绩如下：'</span>)</span><br><span class="line">        print(<span class="string">'语文成绩：'</span>+str(self.语文_成绩))</span><br><span class="line">        print(<span class="string">'语文成绩：'</span>+str(self.语文_成绩))</span><br><span class="line"></span><br><span class="line"><span class="comment">#④</span></span><br><span class="line">成绩单<span class="number">1</span>=成绩单()<span class="comment">#实例化得到成绩单1</span></span><br><span class="line"><span class="comment">#调用实例化变量</span></span><br><span class="line">成绩单<span class="number">1.</span>录入成绩单()</span><br><span class="line">成绩单<span class="number">1.</span>打印成绩单()</span><br></pre></td></tr></table></figure>
+
+<pre><code>请输入学生姓名：Ryan
+请输入语文成绩：34
+请输入数学成绩：53
+Ryan的成绩如下：
+语文成绩：34
+语文成绩：34</code></pre><p><strong>对比分析</strong>：</p>
+<ul>
+<li><p>①是空着的，意思是这里不再需要@classmethod的声明</p>
+</li>
+<li><p>第②处，把cls替换成了 self.</p>
+</li>
+<li><p>实例化后再使用的格式，需要先赋值然后再调用(第③处)在第④步骤， 我们需要用实例名=类(的方式(实例名其实就是任取一个变量名)，为类创建一个实例， 然后再使用实例名函数0的方式调用对应的方法。</p>
+</li>
+</ul>
+<h2 id="对象的属性和方法"><a href="#对象的属性和方法" class="headerlink" title="对象的属性和方法"></a>对象的属性和方法</h2><h3 id="添加和获取对象的属性"><a href="#添加和获取对象的属性" class="headerlink" title="添加和获取对象的属性"></a>添加和获取对象的属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hero</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="string">"""定义了一个英雄类，可以移动和攻击"""</span> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""实例方法"""</span></span><br><span class="line">        print(<span class="string">"正在前往事发地点..."</span>)</span><br><span class="line"><span class="comment"># 实例化了一个英雄对象</span></span><br><span class="line"></span><br><span class="line">hero = Hero()</span><br><span class="line"><span class="comment"># 给对象添加属性，以及对应的属性值</span></span><br><span class="line">hero.name = <span class="string">"德玛西亚"</span> <span class="comment"># 姓名</span></span><br><span class="line">hero.hp = <span class="number">2600</span> <span class="comment"># 生 命 值</span></span><br><span class="line"><span class="comment"># 通过.成员选择运算符，获取对象的属性值</span></span><br><span class="line">print(<span class="string">"英雄 %s 的生命值 :%d"</span> % (hero.name, hero.hp))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过.成员选择运算符，获取对象的实例方法</span></span><br><span class="line">hero.move()</span><br></pre></td></tr></table></figure>
+
+<pre><code>英雄 德玛西亚 的生命值 :2600
+正在前往事发地点...</code></pre><h3 id="通过self获取对象属性"><a href="#通过self获取对象属性" class="headerlink" title="通过self获取对象属性"></a>通过self获取对象属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Hero</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="string">"""定义了一个英雄类，可以移动和攻击"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""实例方法"""</span></span><br><span class="line">        print(<span class="string">"正在前往事发地点..."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""在类的实例方法中，通过self获取该对象的属性"""</span></span><br><span class="line">        print(<span class="string">"英雄 %s 的生命值 :%d"</span> % (self.name, self.hp))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化了一个英雄对象</span></span><br><span class="line"> hero = Hero()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 给对象添加属性，以及对应的属性值</span></span><br><span class="line">hero.name = <span class="string">"德玛西亚"</span> <span class="comment"># 姓名</span></span><br><span class="line">hero.hp = <span class="number">2600</span> <span class="comment"># 生 命 值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过.成员选择运算符，获取对象的实例方法</span></span><br><span class="line"></span><br><span class="line">hero.info() <span class="comment"># 只需要调用实例方法info()，即可获取英雄的属性</span></span><br><span class="line">hero.move()</span><br></pre></td></tr></table></figure>
+
+<pre><code>英雄 德玛西亚 的生命值 :2600
+正在前往事发地点...</code></pre><h3 id="init魔法方法"><a href="#init魔法方法" class="headerlink" title="init魔法方法"></a>init魔法方法</h3><h4 id="init方法"><a href="#init方法" class="headerlink" title="init方法"></a>init方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Hero(object):</span><br><span class="line">    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;</span><br><span class="line">#Python 的类里提供的，两个下划线开始，两个下划线结束的方法，就是魔法方法， init ()就是一个魔法方法， 通常用来做属性初始化 或 赋值 操作。</span><br><span class="line"></span><br><span class="line"># 如果类面没有写__init__方法，Python会自动创建，但是不执行任何操作，</span><br><span class="line"></span><br><span class="line"># 如果为了能够在完成自己想要的功能，可以自己定义__init__方法，</span><br><span class="line"></span><br><span class="line"># 所以一个类里无论自己是否编写 __init__方法 一定有__init__方法。</span><br><span class="line"></span><br><span class="line">    def __init__(self):</span><br><span class="line">        &quot;&quot;&quot; 方法，用来做变量初始化 或 赋值 操作，在类实例化对象的时候，会被自动调用&quot;&quot;&quot; </span><br><span class="line">        self.name &#x3D; &quot;hero&quot; # 姓 名</span><br><span class="line">        self.hp &#x3D; 2600 # 生命值</span><br><span class="line">    def move(self):</span><br><span class="line">        &quot;&quot;&quot;实例方法&quot;&quot;&quot;</span><br><span class="line">        print(&quot;正在前往事发地点...&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 实例化了一个英雄对象，并自动调用 init ()方法</span><br><span class="line">hero &#x3D; Hero()</span><br><span class="line"></span><br><span class="line"># 通过.成员选择运算符，获取对象的实例方法</span><br><span class="line">hero.info() # 只需要调用实例方法info()，即可获取英雄的属性</span><br><span class="line">hero.move()</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong></p>
+<ul>
+<li>_<em>init_</em>()方法，在创建一个对象时默认被调用，不需要手动调用</li>
+<li>_<em>init_</em>(self)中的self参数，不需要开发者传递，python解释器会自动把当前的对象引用传递过去。</li>
+</ul>
+<h4 id="有参数的init（）方法"><a href="#有参数的init（）方法" class="headerlink" title="有参数的init（）方法"></a>有参数的init（）方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hero</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="string">"""定义了一个英雄类，可以移动和攻击"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, hp)</span>:</span></span><br><span class="line">        <span class="string">""" init () 方法，用来做变量初始化 或 赋值操作"""</span></span><br><span class="line"><span class="comment"># 英雄名</span></span><br><span class="line">        self.name = name</span><br><span class="line"><span class="comment"># 生命值：</span></span><br><span class="line">        self.hp = hp</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""实例方法"""</span></span><br><span class="line">        print(<span class="string">"%s 正在前往事发地点..."</span> % self.name)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"英雄 %s 的生命值 :%d"</span> % (self.name, self.hp))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#实例化英雄对象时，参数会传递到对象的 init()方法里</span></span><br><span class="line">blind = Hero(<span class="string">'瞎哥'</span>,<span class="number">2600</span>) </span><br><span class="line">gailun = Hero(<span class="string">"盖伦"</span>,<span class="number">4200</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#print(gailun)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#print(blind)</span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 不同对象的属性值的单独保存</span></span><br><span class="line">print(id(blind.name)) </span><br><span class="line">print(id(gailun.name))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 同一个类的不同对象，实例方法共享</span></span><br><span class="line">print(id(blind.move())) </span><br><span class="line">print(id(gailun.move()))</span><br></pre></td></tr></table></figure>
+
+<pre><code>87554072
+87555744
+瞎哥 正在前往事发地点...
+2004853904
+盖伦 正在前往事发地点...
+2004853904</code></pre><p><strong>注意：</strong></p>
+<ul>
+<li>通过一个类，可以创建多个对象，就好比 通过一个模具创建多个实体一样</li>
+<li>_<em>init_</em>(self)中，默认有1个参数名字为self，如果在创建对象时传递了2个实参，那么init (self)中出了self作为第一个形参外还需要2个形参，例如 init (self,x,y)</li>
+<li>在类内部获取 属性 和 实例方法，通过self获取；</li>
+<li>在类外部获取 属性 和 实例方法，通过对象名获取。</li>
+<li>如果一个类有多个对象，每个对象的属性是各自保存的，都有各自独立的地址；</li>
+<li>但是实例方法是所有对象共享的，只占用一份内存空间。类会通过self来判断是哪个对象调用了实例方法。</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li>在程序中，<strong>继承</strong>描述的是多个类之间的所属关系。</li>
+<li>如果一个类A里面的属性和方法可以复用，则可以通过继承的方式，<strong>传递</strong>到类B里。 </li>
+<li>那么类A就是<strong>基类</strong>，也叫做<strong>父类</strong>；类B就是<strong>派生类</strong>，也叫做<strong>子类</strong>。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 父 类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.num = <span class="number">10</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_num</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.num + <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子 类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span> </span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">b = B()</span><br><span class="line">print(b.num) </span><br><span class="line">b.print_num()</span><br></pre></td></tr></table></figure>
+
+<pre><code>10
+20</code></pre><h3 id="单继承"><a href="#单继承" class="headerlink" title="单继承"></a>单继承</h3><p>子类只能继承一个父类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义一个Person类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="comment"># 属 性</span></span><br><span class="line">        self.name = <span class="string">"女娲"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">make_person</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">" &lt;%s&gt; 造了一个人..."</span> % self.name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义Teacher类，继承了 Person，则Teacher是子类，Person是父类。</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span><span class="params">(Person)</span>:</span></span><br><span class="line"><span class="comment"># 子类可以继承父类所有的属性和方法，哪怕子类没有自己的属性和方法，也可以使用父类的属性和方法。</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">panda = Teacher() </span><br><span class="line">    <span class="comment"># 创建子类实例对象</span></span><br><span class="line">print(panda.name) </span><br><span class="line">    <span class="comment"># 子类对象可以直接使用父类的属性</span></span><br><span class="line">panda.make_person() </span><br><span class="line">    <span class="comment"># 子类对象可以直接使用父类的方法</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>女娲
+ &lt;女娲&gt; 造了一个人...</code></pre><p><strong>总结</strong></p>
+<ul>
+<li>虽然子类没有定义 init 方法初始化属性，也没有定义实例方法，但是父类有。所以只要创建子类的对象，就默认执行了那个继承过来的 init 方法</li>
+<li>子类在继承的时候，在定义类时，小括号()中为父类的名字</li>
+<li>父类的<strong>属性、方法</strong>，会被继承给子类</li>
+</ul>
+<h3 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h3><p>子类继承多个父类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Women</span><span class="params">(object)</span>:</span> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">"女娲"</span> <span class="comment"># 实例变量，属性</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">make_person</span><span class="params">(self)</span>:</span>          <span class="comment"># 实例方法，方法</span></span><br><span class="line">        print(<span class="string">" &lt;%s&gt; 造了一个人..."</span> % self.name)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"移动.."</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Man</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">"亚当"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">make_person</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"&lt;%s&gt; 造了一个人..."</span> % self.name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"跑.."</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(Women, Man)</span>:</span> <span class="comment"># 多继承，继承了多个父类</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">ls = Person() </span><br><span class="line">print(ls.name) </span><br><span class="line">ls.make_person()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子类的魔法属性 mro 决定了属性和方法的查找顺序</span></span><br><span class="line">print(Person. mro)</span><br></pre></td></tr></table></figure>
+
+<pre><code>女娲
+ &lt;女娲&gt; 造了一个人...
+&lt;built-in method mro of type object at 0x0000000004376698&gt;</code></pre><p><strong>结论：</strong></p>
+<ul>
+<li><p>多继承可以继承多个父类，也继承了所有父类的属性和方法</p>
+</li>
+<li><p><strong>注意：</strong>如果多个父类中有同名的 属性和方法，则默认使用第一个父类的属性和方法（根据类的魔法属性mro 的顺序来查找）</p>
+</li>
+<li><p>多个父类中，不重名的属性和方法，不会有任何影响。</p>
+</li>
+</ul>
+<h3 id="重写父类方法"><a href="#重写父类方法" class="headerlink" title="重写父类方法"></a>重写父类方法</h3><p>子类继承父类，父类的方法满足不了子类的需要可以对父类的方法进行重写</p>
+<p>*<em>重写的特点: *</em></p>
+<ol>
+<li>继承关系，</li>
+<li>方法名相同</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"跑起来了"</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(Person)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age)</span>:</span> </span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line"><span class="comment"># 因为父类的方法满足不了子类的需要，对其进行重写</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"%s跑起来了"</span> % self.name)</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">"王五"</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用方法的时候先从本类去找，如果本来没有再去父类去找，会遵循mro的特点</span></span><br><span class="line"></span><br><span class="line">stu.run()</span><br></pre></td></tr></table></figure>
+
+<pre><code>王五跑起来了</code></pre><h3 id="属性方法"><a href="#属性方法" class="headerlink" title="属性方法"></a>属性方法</h3><h4 id="类属性和实例属性"><a href="#类属性和实例属性" class="headerlink" title="类属性和实例属性"></a>类属性和实例属性</h4><p><strong>类属性</strong>就是类对象所拥有的属性，它被所有类对象的实例对象所共有，在内存中只存在一个副本，这个和C++中类的静态成员变量有点类似。对于公有的类属性，在类外可以通过类对象和实例对象访问</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span></span><br><span class="line">    name = <span class="string">'Tom'</span><span class="comment"># 公有的类属性</span></span><br><span class="line">    __age = <span class="number">12</span><span class="comment"># 私有的类属性</span></span><br><span class="line"></span><br><span class="line">p = People() </span><br><span class="line">print(p.name)	<span class="comment"># 正 确</span></span><br><span class="line">print(People.name)	<span class="comment"># 正 确</span></span><br><span class="line"><span class="comment"># print(p.__age)	# 错误，不能在类外通过实例对象访问私有的类属性</span></span><br><span class="line"><span class="comment"># print(People.__age) # 错误，不能在类外通过类对象访问私有的类属性实例属性(对象属性)</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span></span><br><span class="line">    address = <span class="string">'山东'</span>	<span class="comment"># 类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">'xiaowang'</span>	<span class="comment"># 实例属性</span></span><br><span class="line">        self.age = <span class="number">20</span>	<span class="comment"># 实例属性</span></span><br><span class="line"></span><br><span class="line">p = People()</span><br><span class="line">p.age = <span class="number">12</span>	<span class="comment"># 实例属性</span></span><br><span class="line">print(p.address)	<span class="comment"># 正 确</span></span><br><span class="line">print(p.name)		<span class="comment"># 正 确</span></span><br><span class="line">print(p.age)	<span class="comment"># 正 确</span></span><br><span class="line">print(People.address)	<span class="comment"># 正 确</span></span><br><span class="line"><span class="comment">#print(People.name)		# 错 误</span></span><br><span class="line"><span class="comment">#print(People.age)	# 错 误</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#通过实例(对象)去修改类属性</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span></span><br><span class="line">    country = <span class="string">'china'</span> <span class="comment">#类属性</span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">print(People.country) </span><br><span class="line">p = People() </span><br><span class="line">print(p.country) </span><br><span class="line"></span><br><span class="line">p.country = <span class="string">'japan'</span></span><br><span class="line">print(p.country)	<span class="comment"># 实例属性会屏蔽掉同名的类属性</span></span><br><span class="line">print(People.country)</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> p.country <span class="comment"># 删除实例属性</span></span><br><span class="line">print(p.country)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Tom
+Tom
+山东
+xiaowang
+12
+山东
+china
+china
+japan
+china
+china</code></pre><p><strong>总结</strong><br>如果需要在类外修改类属性，必须通过类对象去引用然后进行修改。如果通过实例对象去引用，会产生一个同名的实例属性，这种方式修改的是实例属性，不会影响到类属性，并且之后如果通过实例对象去引用该名称的属性，实例属性会强制屏蔽掉类属性，即引用的是实例属性，除非删除了该实例属性。</p>
+<h4 id="静态方法和类方法"><a href="#静态方法和类方法" class="headerlink" title="静态方法和类方法"></a>静态方法和类方法</h4><p><strong>1.类方法</strong></p>
+<p>是类对象所拥有的方法，需要用修饰器@classmethod来标识其为类方法，对于类方法，第一个参数必须是类对象，  一般以cls作为第一个参数（当然可以用其他名称的变量作为其第一个参数，但是大部分人都习惯以’cls’作为第一个参数的名字，就最好用’cls’了），能够通过实例对象和类对象去访问。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span> </span><br><span class="line">    country = <span class="string">'china'</span></span><br><span class="line"><span class="comment">#类方法，用classmethod来进行修饰</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_country</span><span class="params">(cls)</span>:</span> </span><br><span class="line">        <span class="keyword">return</span> cls.country</span><br><span class="line"></span><br><span class="line">p = People()</span><br><span class="line">print(p.get_country())	<span class="comment">#可以用过实例对象引用print(People.get_country())	#可以通过类对象引用类方法还有一个用途就是可以对类属性进行修改：</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span> </span><br><span class="line">    country = <span class="string">'china'</span></span><br><span class="line"><span class="comment">#类方法，用classmethod来进行修饰</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_country</span><span class="params">(cls)</span>:</span> </span><br><span class="line">        <span class="keyword">return</span> cls.country</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_country</span><span class="params">(cls,country)</span>:</span> </span><br><span class="line">        cls.country = country</span><br><span class="line"></span><br><span class="line">p = People()</span><br><span class="line">print(p.get_country())	<span class="comment">#可以用过实例对象访问print(People.get_country())	#可以通过类访问</span></span><br><span class="line"></span><br><span class="line">p.set_country(<span class="string">'japan'</span>)</span><br><span class="line"></span><br><span class="line">print(p.get_country()) </span><br><span class="line">print(People.get_country())</span><br><span class="line"><span class="comment">#结果显示在用类方法对类属性修改之后，通过类对象和实例对象访问都发生了改变</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>china
+china
+japan
+japan</code></pre><p><strong>2. 静态方法</strong></p>
+<p>需要通过修饰器@staticmethod来进行修饰，静态方法不需要多定义参数，可以通过对象和类来访问。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span> </span><br><span class="line">    country = <span class="string">'china'</span></span><br><span class="line"><span class="meta">    @staticmethod #静态方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_country</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">return</span> People.country</span><br><span class="line"></span><br><span class="line">p = People()</span><br><span class="line"><span class="comment"># 通过对象访问静态方法</span></span><br><span class="line">p.get_country()</span><br><span class="line"><span class="comment"># 通过类访问静态方法</span></span><br><span class="line">print(People.get_country())</span><br></pre></td></tr></table></figure>
+
+<pre><code>china</code></pre><p><strong>总结</strong><br>从类方法和实例方法以及静态方法的定义形式就可以看出来，类方法的第一个参数是类对象cls，那么通过cls引用的   必定是类对象的属性和方法；  实例方法的第一个参数是实例对象self，那么通过self引用的可能是类属性、也有可能是实例属性（这个需要具体分析），不过在存在相同名称的类属性和实例属性的情况下，实例属性优先级更高。  静态方法中不需要额外定义参数，因此在静态方法中引用类属性的话，必须通过类实例对象来引用</p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ul>
+<li>多态, 不同的子类对象调用相同的父类方法，产生不同的执行结果，可以增加代码的外部调用灵活度</li>
+<li>多态以继承和重写父类方法为前提</li>
+<li>多态是调用方法的技巧，不会影响到类的内部设计</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span><span class="params">(object)</span>:</span> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'Animal is running...'</span>) </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'Dog is running...'</span>) </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'Cat is running...'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_twice</span><span class="params">(animal)</span>:</span> </span><br><span class="line">    animal.run() </span><br><span class="line">    animal.run()</span><br><span class="line"></span><br><span class="line">dog = Dog() </span><br><span class="line">cat = Cat()</span><br><span class="line"></span><br><span class="line">run_twice(dog) </span><br><span class="line">run_twice(cat)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Dog is running...
+Dog is running...
+Cat is running...
+Cat is running...</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ryanhuo.github.io/2020/01/20/5.python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" data-id="ck5m3tyke0019q8fzavsba4wg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/20/6.%20python%E5%8C%85%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AF%BB%E5%86%99/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          6. python包的使用及读写
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/20/4.%20python%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">4. python函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  </section></section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/data-analytics/">data analytics</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%BA%93/" rel="tag">python库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag">python爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/excel/" style="font-size: 13.33px;">excel</a> <a href="/tags/python%E5%9F%BA%E7%A1%80/" style="font-size: 16.67px;">python基础</a> <a href="/tags/python%E5%BA%93/" style="font-size: 10px;">python库</a> <a href="/tags/python%E7%88%AC%E8%99%AB/" style="font-size: 13.33px;">python爬虫</a> <a href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" style="font-size: 20px;">《深入浅出统计学》</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/20/git%E5%90%8C%E6%AD%A5github%E7%9B%B8%E5%85%B3/">git同步github相关</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/2.%20numpy/">2. numpy</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/3.%20pandas/">3. pandas</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/1.%20matplotlib/">1. matplotlib</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/5.%20json/">5. Json</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

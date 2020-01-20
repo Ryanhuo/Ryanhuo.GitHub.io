@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>4. 概率计算 | Ryan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概率定义 量度某事发生几率的一种数量指标。你可以用概率衡量发生某件事的可能性 求解 $概率&#x3D;\frac{发生事件可能数目}{所有可能结果的数目}$  即  $P(A)&#x3D;\frac{n(A)}{n(S)}$  S被称为概率空间,或称样本空间,是表示所有可能结果的一种简便表示法。可能发生的事件都是S的子集。 概率只是对事件发生可能性的一种表达,概率并非担保。  事件事件就是人们能指出其发生可能性的任何">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4. 概率计算">
+<meta property="og:url" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/index.html">
+<meta property="og:site_name" content="Ryan">
+<meta property="og:description" content="概率定义 量度某事发生几率的一种数量指标。你可以用概率衡量发生某件事的可能性 求解 $概率&#x3D;\frac{发生事件可能数目}{所有可能结果的数目}$  即  $P(A)&#x3D;\frac{n(A)}{n(S)}$  S被称为概率空间,或称样本空间,是表示所有可能结果的一种简便表示法。可能发生的事件都是S的子集。 概率只是对事件发生可能性的一种表达,概率并非担保。  事件事件就是人们能指出其发生可能性的任何">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210145338876.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage004.gif">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage006.gif">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage008.gif">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage010.gif">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage012.gif">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210151325703.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210152846859.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210153717011.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210153743870.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210155316206.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210155703107.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210160422999.png">
+<meta property="og:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage0021575965131650.gif">
+<meta property="article:published_time" content="2020-01-20T03:50:54.369Z">
+<meta property="article:modified_time" content="2020-01-20T03:59:12.264Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="《深入浅出统计学》">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210145338876.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Ryan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ryan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我是一个在黑暗中大雪纷飞的人</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ryanhuo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><section class="outer">
+    <article id="post-4. 概率计算" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/" class="article-date">
+  <time datetime="2020-01-20T03:50:54.369Z" itemprop="datePublished">2020-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/data-analytics/">data analytics</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      4. 概率计算
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h2><p><strong>定义</strong></p>
+<p>量度某事发生几率的一种数量指标。你可以用概率衡量发生某件事的可能性</p>
+<p><strong>求解</strong></p>
+<p>$概率=\frac{发生事件可能数目}{所有可能结果的数目}$  即  $P(A)=\frac{n(A)}{n(S)}$</p>
+<ol>
+<li>S被称为概率空间,或称样本空间,是表示所有可能结果的一种简便表示法。可能发生的事件都是S的子集。</li>
+<li>概率只是对事件发生可能性的一种表达,概率并非担保。</li>
+</ol>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>事件就是人们能指出其发生可能性的任何事情</p>
+<a id="more"></a>
+
+<h3 id="事件的分类："><a href="#事件的分类：" class="headerlink" title="事件的分类："></a>事件的分类：</h3><p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210145338876.png" alt="image-20191210145338876"></p>
+<blockquote>
+<h3 id="维恩图"><a href="#维恩图" class="headerlink" title="维恩图"></a>维恩图</h3><p>画一个方框代表样本空间S,然后画几个圆圈代表各个相关事件, 这种图称为维恩图。</p>
+</blockquote>
+<h4 id="对立事件"><a href="#对立事件" class="headerlink" title="对立事件"></a>对立事件</h4><p>“A不发生”事件有一种简便表示方法一一A。A被称为A的对立事件。<br>$P(A)+P(A’)=1$<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage004.gif" alt="img "></p>
+<h4 id="互斥事件"><a href="#互斥事件" class="headerlink" title="互斥事件"></a>互斥事件</h4><ul>
+<li>如果两个事件是互斥事件,则只有其中ー个事件会发生。<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage006.gif" alt="img"></li>
+</ul>
+<h4 id="相交事件"><a href="#相交事件" class="headerlink" title="相交事件"></a>相交事件</h4><p>交集带来的问题<br>    * 如果两个事件相交, 则这两个事件有可能同时发生。<br> <img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage008.gif" alt="img"></p>
+<blockquote>
+<p><strong>例</strong><br>停球结果为黑色或偶数为相关事件。不能相加<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage010.gif" alt="img"><br>当将两个概率相加时,我们将停球结果为“黑色兼偶数”的概率算了两次。<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage012.gif" alt="img"></p>
+</blockquote>
+<blockquote>
+<h3 id="交集与并集的表示"><a href="#交集与并集的表示" class="headerlink" title="交集与并集的表示"></a>交集与并集的表示</h3><ul>
+<li>A与B的交集，$A\bigcap B$，理解为“与”，表示不同事件的共同要素。</li>
+<li>A与B的并集，$A\bigcup B$，理解为“或”，表示A与B的所有要素</li>
+<li>若$P(A\bigcup B)=1$,A与B<strong>穷举</strong><br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210151325703.png" alt="image-20191210151325703"></li>
+</ul>
+</blockquote>
+<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>以另一个事件的发生为条件的某个事件的发生概率,我们就用“|”符号表示“已知条件”,于是,“以事件B 为已知条件的事件A的概率”就可以简写为:</p>
+<p>$P(A|B)$</p>
+<p>在已知B已经发生的条件下A的概率</p>
+<p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210152846859.png" alt="image-20191210152846859"></p>
+<p>现在要用一种通用方法来计算$P(A|B)$。我们感兴趣的是A和B 同时发生的次数与B发生的所有次数相除的结果。观察维恩图, 得到:</p>
+<p>$P(A|B)=\frac{P(A\bigcap B)}{P(B)}$</p>
+<p>变化得到：$P(A\bigcap B)= P(A|B) * P(B)$</p>
+<p>$P(A\bigcap B)$同样也是$P(B\bigcap A)$,即可得：</p>
+<p>$P(B\bigcap A)= P(B|A) * P(A)$</p>
+<h2 id="概率树"><a href="#概率树" class="headerlink" title="概率树"></a>概率树</h2><p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210153717011.png" alt="image-20191210153717011"></p>
+<p><strong>利用概率树计算条件概率</strong></p>
+<p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210153743870.png" alt="image-20191210153743870"></p>
+<h3 id="概率树计算概率步骤"><a href="#概率树计算概率步骤" class="headerlink" title="概率树计算概率步骤"></a>概率树计算概率步骤</h3><ol>
+<li>分出计算概率的层级<br>如：$P(A|B)$则在第一级中涵盖B，第二级中涵盖A</li>
+<li>填写已知部分概率</li>
+<li>检验<br>每一级分支的概率总和为1，$P(A)=1-P(A’)$</li>
+<li>记住公式<br>$P(A|B)=\frac{P(A\bigcap B )}{P(B)}$</li>
+</ol>
+<h2 id="运用（利用已知概率，求新的概率）"><a href="#运用（利用已知概率，求新的概率）" class="headerlink" title="运用（利用已知概率，求新的概率）"></a>运用（利用已知概率，求新的概率）</h2><p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210155316206.png" alt="image-20191210155316206"></p>
+<p>已知$P(偶|黑)$,算$P(黑|偶)$**</p>
+<p>$P(黑|偶)=\frac{P(黑\bigcap偶)}{P(偶)}$</p>
+<ol>
+<li><p>求$P(黑\bigcap偶)$</p>
+<p>$P(黑\bigcap偶)=P(黑)*P(偶|黑)$</p>
+<p>$P(黑|偶)=\frac{P(黑)*P(偶|黑)}{P(偶)}$</p>
+</li>
+<li><p>求$P(偶)$<br>小球停在偶数球位上的情况包括:球位既是黑色又是偶数,或者球位既是红色又是偶数。这两种情况就是小球停在偶数球位上的方式。<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210155703107.png" alt="image-20191210155703107"></p>
+</li>
+<li><p>求$P(黑|偶)$</p>
+<p>$P(黑|偶)=\frac{P(黑\bigcap偶)}{P(偶)}$<br>$=\frac{P(黑)<em>P(偶|黑)}{P(黑)</em>P(偶|黑)+P(红)*P(偶|红)}$</p>
+</li>
+</ol>
+<h2 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h2><p><strong>利用已有的概率, 求出要的概率</strong></p>
+<p>已知$P(A)$,且已知$P(B｜A)$和$P(B｜A’)$，求出$P(A | B)$</p>
+<p>$P(A|B)=\frac{P(A\bigcap B)}{P(B)}$</p>
+<p>$P(A|B)=\frac{P(A)<em>P(B|A)}{P(A)</em>P(B|A)+P(A’)*P(B|A’)}$</p>
+<p><strong>这就是所谓的贝叶斯定理。</strong></p>
+<p><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/image20191210160422999.png" alt="image-20191210160422999"></p>
+<h2 id="条件概率下事件分类"><a href="#条件概率下事件分类" class="headerlink" title="条件概率下事件分类"></a>条件概率下事件分类</h2><h3 id="相关事件"><a href="#相关事件" class="headerlink" title="相关事件"></a>相关事件</h3><p>如果用通用术语表达就是:如果    $P(AIB)$与$P(A)$不等,则我们说事件A与事件B是相关事件一这等于说事件A与事件B 的概率相互影响。</p>
+<h3 id="独立事件"><a href="#独立事件" class="headerlink" title="独立事件"></a>独立事件</h3><p> 如果事件A和事件B相互独立,则事件A的概率不受事件B的影响, 换句话说,对于独立事件来说:<br>$P(A｜B)= P(A)$<br><img src="/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/clipimage0021575965131650.gif" alt="img"></p>
+<h3 id="独立事件概率计算"><a href="#独立事件概率计算" class="headerlink" title="独立事件概率计算"></a>独立事件概率计算</h3><p>$P(A｜B)= \frac{P(A\bigcap B)}{P(B)}$</p>
+<ul>
+<li>如果A和B是独立事件,则$P(AIB)$与$P(A)$相同。即对于独立事件来说:</li>
+</ul>
+<p>$P(A∩B)=P(A)*P(B)$</p>
+<ul>
+<li>即,如果两个事件相互独立,则通过将两个事件各自的概率相乘,可以算出同时发生这两件事的概率。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ryanhuo.github.io/2020/01/20/4.%20%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/" data-id="ck5m3tykm001lq8fzc2387zv3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/20/3.%20%E5%88%86%E6%95%A3%E6%80%A7%E4%B8%8E%E5%8F%98%E5%BC%82%E6%80%A7%E7%9A%84%E9%87%8F%E5%BA%A6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          3. 分散性与变异性的量度
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/20/5.%20%E7%A6%BB%E6%95%A3%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E7%9A%84%E8%BF%90%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">5. 离散概率分布的运用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  </section></section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/data-analytics/">data analytics</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%BA%93/" rel="tag">python库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag">python爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/excel/" style="font-size: 13.33px;">excel</a> <a href="/tags/python%E5%9F%BA%E7%A1%80/" style="font-size: 16.67px;">python基础</a> <a href="/tags/python%E5%BA%93/" style="font-size: 10px;">python库</a> <a href="/tags/python%E7%88%AC%E8%99%AB/" style="font-size: 13.33px;">python爬虫</a> <a href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" style="font-size: 20px;">《深入浅出统计学》</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/20/git%E5%90%8C%E6%AD%A5github%E7%9B%B8%E5%85%B3/">git同步github相关</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/2.%20numpy/">2. numpy</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/3.%20pandas/">3. pandas</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/1.%20matplotlib/">1. matplotlib</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/5.%20json/">5. Json</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

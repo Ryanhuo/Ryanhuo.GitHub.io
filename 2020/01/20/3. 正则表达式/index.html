@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>3. 正则表达式 | Ryan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="正则表达.ipynb  正则表达式的介绍正则表达式是对字符串操作的一种逻辑公式，就是用实现定义好的一些特定的字符、及这些特定的字符的组合，组成  一个“规则字符串“，这个“规则字符串“用来表达对字符串的一种过滤逻辑。 注意： 正则表达式并不是Python独有的，Python中使用re模块实现。 常见匹配模式参考链接   元字符 描述    \w 匹配字母数字及下划线   \W 匹配非字母数字下划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3. 正则表达式">
+<meta property="og:url" content="https://ryanhuo.github.io/2020/01/20/3.%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Ryan">
+<meta property="og:description" content="正则表达.ipynb  正则表达式的介绍正则表达式是对字符串操作的一种逻辑公式，就是用实现定义好的一些特定的字符、及这些特定的字符的组合，组成  一个“规则字符串“，这个“规则字符串“用来表达对字符串的一种过滤逻辑。 注意： 正则表达式并不是Python独有的，Python中使用re模块实现。 常见匹配模式参考链接   元字符 描述    \w 匹配字母数字及下划线   \W 匹配非字母数字下划">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-01-20T07:24:41.246Z">
+<meta property="article:modified_time" content="2020-01-20T07:33:45.347Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python爬虫">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Ryan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ryan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我是一个在黑暗中大雪纷飞的人</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ryanhuo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><section class="outer">
+    <article id="post-3. 正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/20/3.%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time datetime="2020-01-20T07:24:41.246Z" itemprop="datePublished">2020-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/data-analytics/">data analytics</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      3. 正则表达式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> <a href="附件\正则表达.ipynb">正则表达.ipynb</a> </p>
+<h2 id="正则表达式的介绍"><a href="#正则表达式的介绍" class="headerlink" title="正则表达式的介绍"></a>正则表达式的介绍</h2><p>正则表达式是对字符串操作的一种逻辑公式，就是用实现定义好的一些特定的字符、及这些特定的字符的组合，组成  一个“规则字符串“，这个“规则字符串“用来表达对字符串的一种过滤逻辑。</p>
+<p><strong>注意：</strong> 正则表达式并不是Python独有的，Python中使用re模块实现。</p>
+<h2 id="常见匹配模式参考链接"><a href="#常见匹配模式参考链接" class="headerlink" title="常见匹配模式参考链接"></a>常见匹配模式<a href="http://deerchao.net/tutorials/regex/regex-1.htm" target="_blank" rel="noopener"><strong>参考链接</strong></a></h2><table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\w</td>
+<td>匹配字母数字及下划线</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配非字母数字下划线</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意的空白符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任意非空白符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配任意非数字的字符</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除换行符以外的任意字符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串的开始</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串的结束</td>
+</tr>
+<tr>
+<td>*</td>
+<td>重复零次或更多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>重复一次或更多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td>重复零次或一次</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>重复n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>重复n次或更多次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>重复n到m次</td>
+</tr>
+<tr>
+<td>a|b</td>
+<td>匹配a或b</td>
+</tr>
+<tr>
+<td>()</td>
+<td>匹配括号内的表达式，也表示一个组</td>
+</tr>
+</tbody></table>
+ <a id="more"></a>
+
+<h2 id="re-match"><a href="#re-match" class="headerlink" title="re.match()"></a>re.match()</h2><p>尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配的话，match（）就会返回None 语法： re.match(正则表达式，要匹配的字符串,匹配方式)</p>
+<h3 id="常用匹配方式"><a href="#常用匹配方式" class="headerlink" title="常用匹配方式"></a>常用匹配方式</h3><p>re.I 使匹配对大小写不敏感 re.S 使 . 匹配包括换行在内的所有字符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'www.kaikeba.com'</span> </span><br><span class="line">result = re.match(<span class="string">'www'</span>,str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取匹配的结果</span></span><br><span class="line">print(result.group())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取匹配字符串的长度范围</span></span><br><span class="line">print(result.span())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不在起始位置匹配,返回None</span></span><br><span class="line">print(re.match(<span class="string">'kaikeba'</span>,str1))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认大小写是敏感的</span></span><br><span class="line">print(re.match(<span class="string">'WWW'</span>,str1))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置匹配模式，忽略大小写</span></span><br><span class="line">print(re.match(<span class="string">'WWW'</span>,str1,re.I))</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="多种匹配方式"><a href="#多种匹配方式" class="headerlink" title="多种匹配方式"></a>多种匹配方式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">str2 = <span class="string">'abc 123 def'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常规匹配</span></span><br><span class="line"></span><br><span class="line">print(re.match(<span class="string">'^abc\s\d\d\d\sdef$'</span>,str2).group()) print(re.match(<span class="string">'^abc\s\d&#123;3&#125;\sdef$'</span>,str2).group())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 范匹配</span></span><br><span class="line">print(re.match(<span class="string">'^abc\s.*\sdef$'</span>,str2).group())</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取指定的字符</span></span><br><span class="line">print(re.match(<span class="string">'^abc\s(.*)\sdef$'</span>,str2).group(<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 通过re.group()获得结果后，如果正则表达式中有括号，则re.group(1)获取的就是第一个括号中匹配的结果</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="贪婪和非贪婪"><a href="#贪婪和非贪婪" class="headerlink" title="贪婪和非贪婪"></a>贪婪和非贪婪</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 贪婪匹配</span></span><br><span class="line">content= <span class="string">"hello 1234567 World Demo"</span></span><br><span class="line">result= re.match(<span class="string">'^hello.*(\d+).*Demo'</span>,content) </span><br><span class="line">print(result)</span><br><span class="line">print(result.group(<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 这种情况的原因是前面的.* 给匹配掉了， .*在这里会尽可能的匹配多的内容，也就是我们所说的贪婪匹配</span></span><br><span class="line">result= re.match(<span class="string">'^hello.*?(\d+).*Demo'</span>,content)</span><br><span class="line">print(result) </span><br><span class="line">print(result.group(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 很多时候匹配的内容是存在换行的问题的，这个时候的就需要用到匹配模式re.S来匹配换行的内容</span></span><br><span class="line"></span><br><span class="line">content = <span class="string">"""hello 123456 world demo"""</span></span><br><span class="line"></span><br><span class="line">result =re.match(<span class="string">'^he.*?(\d+).*?demo$'</span>,content,re.S) </span><br><span class="line">print(result)</span><br><span class="line">print(result.group()) </span><br><span class="line">print(result.group(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当我们要匹配的内容中存在特殊字符的时候，就需要用到转移符号\ </span></span><br><span class="line">content= <span class="string">"price is $5.00"</span></span><br><span class="line">result = re.match(<span class="string">'price is \$5\.00'</span>,content) </span><br><span class="line">print(result)</span><br><span class="line">print(result.group())</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="re-search"><a href="#re-search" class="headerlink" title="re.search()"></a>re.search()</h2><p>re.search扫描整个字符串返回第一个成功匹配的结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">html = <span class="string">'''&lt;div id="songs-list"&gt;</span></span><br><span class="line"><span class="string">	&lt;h2 class="title"&gt;经典老歌&lt;/h2&gt;</span></span><br><span class="line"><span class="string">	&lt;p class="introduction"&gt;</span></span><br><span class="line"><span class="string">		经典老歌列表</span></span><br><span class="line"><span class="string">	&lt;/p&gt;</span></span><br><span class="line"><span class="string">	&lt;ul id="list" class="list-group"&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="2"&gt;一路上有你&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="7"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/2.mp3" singer="任贤齐"&gt;沧海一声笑&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="4" class="active"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/3.mp3" singer="齐秦"&gt;往事随风&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="6"&gt;&lt;a href="/4.mp3" singer="beyond"&gt;光辉岁月&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="5"&gt;&lt;a href="/5.mp3" singer="陈慧琳"&gt;记事本&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="5"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/6.mp3" singer="邓丽君"&gt;但愿人长久&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">	&lt;/ul&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;'''</span></span><br><span class="line"></span><br><span class="line">result = re.search(<span class="string">'&lt;li.*?active.*?singer="(.*?)"&gt;(.*?)&lt;/a&gt;'</span>,html,re.S) </span><br><span class="line">print(result)</span><br><span class="line">print(result.groups()) </span><br><span class="line">print(result.group(<span class="number">1</span>)) </span><br><span class="line">print(result.group(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所以为了匹配方便，我们会更多的用search，不用match,match必须匹配头部，所以很多时候不是特别方便</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="re-findall"><a href="#re-findall" class="headerlink" title="re.findall()"></a>re.findall()</h2><p>搜索字符串，以列表的形式返回全部能匹配的子串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">html =  <span class="string">'''&lt;div id="songs-list"&gt;</span></span><br><span class="line"><span class="string">	&lt;h2 class="title"&gt;经典老歌&lt;/h2&gt;</span></span><br><span class="line"><span class="string">	&lt;p class="introduction"&gt;</span></span><br><span class="line"><span class="string">		经典老歌列表</span></span><br><span class="line"><span class="string">	&lt;/p&gt;</span></span><br><span class="line"><span class="string">	&lt;ul id="list" class="list-group"&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="2"&gt;一路上有你&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="7"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/2.mp3" singer="任贤齐"&gt;沧海一声笑&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="4" class="active"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/3.mp3" singer="齐秦"&gt;往事随风&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="6"&gt;&lt;a href="/4.mp3" singer="beyond"&gt;光辉岁月&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="5"&gt;&lt;a href="/5.mp3" singer="陈慧琳"&gt;记事本&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="5"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/6.mp3" singer="邓丽君"&gt;但愿人长久&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">	&lt;/ul&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;'''</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">results = re.findall(<span class="string">'&lt;li.*?href="(.*?)".*?singer="(.*?)"&gt;(.*?)&lt;/a&gt;'</span>, html, re.S) </span><br><span class="line">print(results)</span><br><span class="line">print(type(results)) </span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">	print(result)</span><br><span class="line">	print(result[<span class="number">0</span>], result[<span class="number">1</span>], result[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="re-compile"><a href="#re-compile" class="headerlink" title="re.compile()"></a>re.compile()</h2><p>将正则字符串编译成正则表达式对象，以便于复用该匹配模式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">html = <span class="string">'''&lt;div id="songs-list"&gt;</span></span><br><span class="line"><span class="string">	&lt;h2 class="title"&gt;经典老歌&lt;/h2&gt;</span></span><br><span class="line"><span class="string">	&lt;p class="introduction"&gt;</span></span><br><span class="line"><span class="string">		经典老歌列表</span></span><br><span class="line"><span class="string">	&lt;/p&gt;</span></span><br><span class="line"><span class="string">	&lt;ul id="list" class="list-group"&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="2"&gt;一路上有你&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="7"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/2.mp3" singer="任贤齐"&gt;沧海一声笑&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="4" class="active"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/3.mp3" singer="齐秦"&gt;往事随风&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="6"&gt;&lt;a href="/4.mp3" singer="beyond"&gt;光辉岁月&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="5"&gt;&lt;a href="/5.mp3" singer="陈慧琳"&gt;记事本&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">		&lt;li data-view="5"&gt;</span></span><br><span class="line"><span class="string">			&lt;a href="/6.mp3" singer="邓丽君"&gt;但愿人长久&lt;/a&gt;</span></span><br><span class="line"><span class="string">		&lt;/li&gt;</span></span><br><span class="line"><span class="string">	&lt;/ul&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;'''</span></span><br><span class="line"></span><br><span class="line">pattern = re.compile(<span class="string">'&lt;li.*?href="(.*?)".*?singer="(.*?)"&gt;(.*?)&lt;/a&gt;'</span>,re.S) </span><br><span class="line">results = re.findall(pattern, html)</span><br><span class="line">print(results) </span><br><span class="line">print(type(results)) </span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">	print(result)</span><br><span class="line">	print(result[<span class="number">0</span>], result[<span class="number">1</span>], result[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="拓展（re-sub）"><a href="#拓展（re-sub）" class="headerlink" title="拓展（re.sub）"></a>拓展（re.sub）</h2><p>替换字符串中每一个匹配的子串后返回替换后的字符串 </p>
+<p><strong>语法：</strong>re.sub(正则表达式，替换成的字符串，原字符串)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">content = <span class="string">"hello 123456 World"</span></span><br><span class="line"><span class="comment"># content = re.sub('\d+','',content) # print(content)</span></span><br><span class="line"><span class="comment">#有些情况下我们替换字符的时候，还想获取我们匹配的字符串，然后在后面添加一些内容</span></span><br><span class="line"><span class="comment">#需要注意的一个问题是\1是获取第一个匹配的结果，为了防止转义字符的问题，我们需要在前面加上r</span></span><br><span class="line">content = re.sub(<span class="string">'(\d+)'</span>,<span class="string">r'\1 7890'</span>,content) </span><br><span class="line">print(content)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ryanhuo.github.io/2020/01/20/3.%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ck5m4w841000f38fzhw5chyko" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag">python爬虫</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/20/4.%20python%E8%A7%A3%E6%9E%90%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          4. python解析库的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/20/1.%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">1. 网络爬虫简介</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  </section></section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/data-analytics/">data analytics</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%BA%93/" rel="tag">python库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag">python爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" rel="tag">《深入浅出统计学》</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/excel/" style="font-size: 13.33px;">excel</a> <a href="/tags/python%E5%9F%BA%E7%A1%80/" style="font-size: 16.67px;">python基础</a> <a href="/tags/python%E5%BA%93/" style="font-size: 10px;">python库</a> <a href="/tags/python%E7%88%AC%E8%99%AB/" style="font-size: 13.33px;">python爬虫</a> <a href="/tags/%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E3%80%8B/" style="font-size: 20px;">《深入浅出统计学》</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/20/git%E5%90%8C%E6%AD%A5github%E7%9B%B8%E5%85%B3/">git同步github相关</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/2.%20numpy/">2. numpy</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/3.%20pandas/">3. pandas</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/1.%20matplotlib/">1. matplotlib</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/20/5.%20json/">5. Json</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
