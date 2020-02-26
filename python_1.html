@@ -1,0 +1,2795 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  python - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15822327222566.html">
+                
+                  <h1>5.python面向对象</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">匿名函数</h2>
+
+<p>顾名思义就是函数没有名字，使用lambda关键字定义的函数就是匿名函数,简化代码，增加运行效率。 特点： 匿名函数只适合做一下简单的操作，返回值不需要加上return。</p>
+
+<pre><code class="language-python">#普通函数
+def func(a,b,c):
+    return a+b+c
+print(func(1,3,4))
+</code></pre>
+
+<pre><code class="language-text">8
+</code></pre>
+
+<pre><code class="language-python">#匿名函数
+result=(lambda a,b,c:a+b+c)(1,3,4)
+# 匿名函数也是函数
+print(result)
+</code></pre>
+
+<pre><code class="language-text">8
+</code></pre>
+
+<pre><code class="language-python"># 对字典列表排序的时候还可以使用匿名函数
+my_list={&#39;age&#39;:23,&#39;name&#39;:&#39;张三&#39;}
+def get_value(item):
+    return item[&#39;age&#39;]
+
+get_value(my_list)
+
+# my_list.sort(key=get_value,reverse=True)print(my_list)
+</code></pre>
+
+<pre><code class="language-text">23
+</code></pre>
+
+<h2 id="toc_1">面向对象的编程</h2>
+
+<p>面向对象编程——Object Oriented Programming，简称<strong>OOP</strong>，是一种程序设计思想。OOP把对象作为程序的<strong>基本单元</strong>，一个对象包含了数据和操作数据的函数。</p>
+
+<p><strong>面向过程</strong>的程序设计把计算机程序视为一系列的命令集合，即一组函数的顺序执行。为了简化程序设计，面向过程把函数继续切分为子函数，即把大块函数通过切割成小块函数来降低系统的复杂度。</p>
+
+<p>而<strong>面向对象</strong>的程序设计把计算机程序视为一组对象的集合，而每个对象都可以接收其他对象发过来的消息，并处理这些消息，计算机程序的执行就是一系列消息在各个对象之间传递。</p>
+
+<p>在Python中，<strong>所有数据类型都可以视为对象</strong>，当然也可以自定义对象。自定义的对象数据类型就是面向对象中的类（Class）的概念。</p>
+
+<p>我们以一个例子来说明面向过程和面向对象在程序流程上的不同之处。</p>
+
+<p>假设我们要处理学生的成绩表，为了表示一个学生的成绩，面向过程的程序可以用一个dict表示：</p>
+
+<pre><code class="language-python">std1 = { &#39;name&#39;: &#39;Curry&#39;, &#39;score&#39;: 98 }
+std2 = { &#39;name&#39;: &#39;James&#39;, &#39;score&#39;: 81 }
+</code></pre>
+
+<p>而处理学生成绩可以通过函数实现，比如打印学生的成绩：</p>
+
+<pre><code class="language-python">def print_score(std):
+    print(&#39;%s: %s&#39; % (std[&#39;name&#39;], std[&#39;score&#39;]))
+</code></pre>
+
+<p>如果采用<strong>面向对象的程序设计思想</strong>，我们首选思考的不是程序的执行流程，而是Student这种数据类型应该被视为一个对象，这个对象拥有name和score这两个<strong>属性</strong>（Property）。如果要打印一个学生的成绩，首先必须创建出这 个学生对应的对象，然后，给对象发一个print_score消息，让对象自己把自己的数据打印出来。</p>
+
+<pre><code class="language-python">class Student(object):
+    def init (self, name, score): 
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print(&#39;%s: %s&#39; % (self.name, self.score))
+</code></pre>
+
+<p>给对象发消息实际上就是调用对象对应的关联函数，我们称之为对象的<strong>方法</strong>（Method）。面向对象的程序写出来就像这样：</p>
+
+<pre><code class="language-text">bart = Student(&#39;Bart Simpson&#39;, 59) 
+lisa = Student(&#39;Lisa Simpson&#39;, 87) 
+bart.print_score() 
+lisa.print_score()
+</code></pre>
+
+<p>面向对象的设计思想是从自然界中来的，因为在自然界中，<strong>类</strong>（Class）和<strong>实例</strong>（Instance）的概念是很自然的。</p>
+
+<p>Class是一种抽象概念，比如我们定义的Class——Student，是指学生这个概念，而<strong>实例（</strong><strong>Instance</strong><strong>）</strong>则是一个个具  体的Student，比如，Bart Simpson和Lisa Simpson是两个具体的Student。</p>
+
+<p>所以，面向对象的设计思想是抽象出Class，根据Class创建Instance。</p>
+
+<p>面向对象的抽象程度又比函数要高，因为一个Class既包含数据，又包含操作数据的方法。</p>
+
+<h2 id="toc_2">类和对象</h2>
+
+<p><strong>面向对象编程</strong>的2个非常重要的概念：<strong>类和对象</strong></p>
+
+<p><strong>对象</strong>是面向对象编程的核心，在使用对象的过程中，为了将具有共同特征和行为的一组对象抽象定义，提出了另外一个新的概念——<strong>类</strong></p>
+
+<p><strong>类</strong>就相当于制造飞机时的图纸，用它来进行创建的飞机就相当于<strong>对象</strong>。</p>
+
+<blockquote>
+<p><strong>补充：</strong></p>
+
+<ul>
+<li>需求：做一道西红柿炒鸡蛋</li>
+</ul>
+
+<p><strong>方法1</strong>：按步骤一步一步制作（面向过程）——<strong>[将每个过程打包成函数，需要时依次调用]</strong></p>
+
+<p><strong>方法2</strong>：制作一台机器人，告诉机器人炒菜（面向对象）——<strong>[打包成类与对象]</strong></p>
+
+<p><strong>类</strong>作为母版制作出很多<strong>对象</strong></p>
+</blockquote>
+
+<h3 id="toc_3">类</h3>
+
+<p>人以类聚物以群分。 具有相似内部状态和运动规律的实体的集合(或统称为抽象)。 具有相同<strong>属性</strong>和<strong>行为</strong>事物的统称类是抽象的,在使用的时候通常会找到这个类的一个具体的存在,使用这个具体的存在。<strong>一个类可以找到多个对象</strong></p>
+
+<p><img src="media/15822327222566/1.13.jpg" alt=""/></p>
+
+<h3 id="toc_4">对象</h3>
+
+<p>某一个具体事物的存在 ,在现实世界中可以是看得见摸得着的。 可以是直接使用的</p>
+
+<p><img src="media/15822327222566/1.14.jpg" alt=""/></p>
+
+<h3 id="toc_5">类和对象之间的关系</h3>
+
+<p><img src="media/15822327222566/1.15.jpg" alt=""/></p>
+
+<h3 id="toc_6">定义类和创建对象</h3>
+
+<p>定义一个类，格式如下：</p>
+
+<pre><code class="language-text">class 类名:
+
+方法列表
+
+# class Hero: # 经典类（旧式类）定义形式
+# class Hero():
+
+class Hero(object): # 新式类定义形式
+    def info(self): 
+        print(&quot;hero&quot;)
+</code></pre>
+
+<p><strong>说明：</strong></p>
+
+<ul>
+<li><p>定义类时有2种形式：<strong>新式类和经典类</strong>，上面代码中的Hero为新式类，前两行注释部分则为经典类；</p></li>
+<li><p>object 是Python 里所有类的最顶级父类； 类名 的命名规则按照&quot;大驼峰命名法&quot;；</p></li>
+<li><p>info 是一个实例方法，第一个参数一般是self，表示实例对象本身，当然了可以将self换为其它的名字，其作用是一个变量 这个变量指向了实例对象.</p></li>
+<li><p>python中，可以根据已经定义的类去创建出一个或多个对象。</p></li>
+</ul>
+
+<p><strong>创建对象的格式为</strong></p>
+
+<p>对象名1 = 类名() </p>
+
+<p>对象名2 = 类名() </p>
+
+<p>对象名3 = 类名()</p>
+
+<pre><code class="language-python">class Hero(object): # 新式类定义形式
+    &#39;&#39;&#39;info 是一个实例方法，类对象可以调用实例方法，实例方法的第一个参数一定是self&#39;&#39;&#39;
+    def info(self):
+        &#39;&#39;&#39;当对象调用实例方法时，Python会自动将对象本身的引用做为参数， 传递到实例方法的第一个参数self里&#39;&#39;&#39;
+        print(self)
+        print(&quot;self各不同，对象是出处。&quot;)
+
+# Hero这个类 实例化了一个对象
+hero = Hero()
+
+# 对象调用实例方法info()，执行info()里的代码
+# . 表示选择属性或者方法
+hero.info()
+print(hero) # 打印对象，则默认打印对象在内存的地址，结果等同于info里的print(self)
+</code></pre>
+
+<pre><code class="language-text">&lt;__main__.Hero object at 0x0000000005413EF0&gt;
+self各不同，对象是出处。
+&lt;__main__.Hero object at 0x0000000005413EF0&gt;
+</code></pre>
+
+<h3 id="toc_7">补充：类与对象</h3>
+
+<pre><code class="language-python">#类的使用
+class 成绩单():
+    @classmethod#类的方法（函数）同类的属性（变量）结合
+    #类的属性作为类方法的参数
+    def 录入成绩单(cls):
+        cls.学生姓名=input(&#39;请输入学生姓名：&#39;)
+        cls.语文_成绩=int(input(&#39;请输入语文成绩：&#39;))
+        cls.数学_成绩=int(input(&#39;请输入数学成绩：&#39;))
+    @classmethod
+    def 打印成绩单(cls):
+        print(cls.学生姓名+&#39;的成绩如下：&#39;)
+        print(&#39;语文成绩：&#39;+str(cls.语文_成绩))
+        print(&#39;语文成绩：&#39;+str(cls.语文_成绩))
+    
+成绩单.录入成绩单()
+成绩单.打印成绩单()
+</code></pre>
+
+<pre><code class="language-text">请输入学生姓名：Ryan
+请输入语文成绩：100
+请输入数学成绩：99
+Ryan的成绩如下：
+语文成绩：100
+语文成绩：100
+</code></pre>
+
+<pre><code class="language-python">#实例化
+class 成绩单():
+    #①
+    def 录入成绩单(self):#②
+        self.学生姓名=input(&#39;请输入学生姓名：&#39;)
+        self.语文_成绩=int(input(&#39;请输入语文成绩：&#39;))
+        self.数学_成绩=int(input(&#39;请输入数学成绩：&#39;))
+#③
+    def 打印成绩单(self):
+        print(self.学生姓名+&#39;的成绩如下：&#39;)
+        print(&#39;语文成绩：&#39;+str(self.语文_成绩))
+        print(&#39;语文成绩：&#39;+str(self.语文_成绩))
+
+#④
+成绩单1=成绩单()#实例化得到成绩单1
+#调用实例化变量
+成绩单1.录入成绩单()
+成绩单1.打印成绩单()
+</code></pre>
+
+<pre><code class="language-text">请输入学生姓名：Ryan
+请输入语文成绩：34
+请输入数学成绩：53
+Ryan的成绩如下：
+语文成绩：34
+语文成绩：34
+</code></pre>
+
+<p><strong>对比分析</strong>：</p>
+
+<ul>
+<li><p>①是空着的，意思是这里不再需要@classmethod的声明</p></li>
+<li><p>第②处，把cls替换成了 self.</p></li>
+<li><p>实例化后再使用的格式，需要先赋值然后再调用(第③处)在第④步骤， 我们需要用实例名=类(的方式(实例名其实就是任取一个变量名)，为类创建一个实例， 然后再使用实例名函数0的方式调用对应的方法。</p></li>
+</ul>
+
+<h2 id="toc_8">对象的属性和方法</h2>
+
+<h3 id="toc_9">添加和获取对象的属性</h3>
+
+<pre><code class="language-python">class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot; 
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;正在前往事发地点...&quot;)
+# 实例化了一个英雄对象
+
+hero = Hero()
+# 给对象添加属性，以及对应的属性值
+hero.name = &quot;德玛西亚&quot; # 姓名
+hero.hp = 2600 # 生 命 值
+# 通过.成员选择运算符，获取对象的属性值
+print(&quot;英雄 %s 的生命值 :%d&quot; % (hero.name, hero.hp))
+
+# 通过.成员选择运算符，获取对象的实例方法
+hero.move()
+
+</code></pre>
+
+<pre><code class="language-text">英雄 德玛西亚 的生命值 :2600
+正在前往事发地点...
+</code></pre>
+
+<h3 id="toc_10">通过self获取对象属性</h3>
+
+<pre><code class="language-python"> class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;正在前往事发地点...&quot;)
+
+    def info(self):
+        &quot;&quot;&quot;在类的实例方法中，通过self获取该对象的属性&quot;&quot;&quot;
+        print(&quot;英雄 %s 的生命值 :%d&quot; % (self.name, self.hp))
+
+# 实例化了一个英雄对象
+ hero = Hero()
+
+# 给对象添加属性，以及对应的属性值
+hero.name = &quot;德玛西亚&quot; # 姓名
+hero.hp = 2600 # 生 命 值
+
+# 通过.成员选择运算符，获取对象的实例方法
+
+hero.info() # 只需要调用实例方法info()，即可获取英雄的属性
+hero.move()
+
+</code></pre>
+
+<pre><code class="language-text">英雄 德玛西亚 的生命值 :2600
+正在前往事发地点...
+</code></pre>
+
+<h3 id="toc_11">init魔法方法</h3>
+
+<h4 id="toc_12">init方法</h4>
+
+<pre><code class="language-text">class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;
+#Python 的类里提供的，两个下划线开始，两个下划线结束的方法，就是魔法方法， init ()就是一个魔法方法， 通常用来做属性初始化 或 赋值 操作。
+
+# 如果类面没有写__init__方法，Python会自动创建，但是不执行任何操作，
+
+# 如果为了能够在完成自己想要的功能，可以自己定义__init__方法，
+
+# 所以一个类里无论自己是否编写 __init__方法 一定有__init__方法。
+
+    def __init__(self):
+        &quot;&quot;&quot; 方法，用来做变量初始化 或 赋值 操作，在类实例化对象的时候，会被自动调用&quot;&quot;&quot; 
+        self.name = &quot;hero&quot; # 姓 名
+        self.hp = 2600 # 生命值
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;正在前往事发地点...&quot;)
+
+
+# 实例化了一个英雄对象，并自动调用 init ()方法
+hero = Hero()
+
+# 通过.成员选择运算符，获取对象的实例方法
+hero.info() # 只需要调用实例方法info()，即可获取英雄的属性
+hero.move()
+
+</code></pre>
+
+<p><strong>总结</strong></p>
+
+<ul>
+<li>__init__()方法，在创建一个对象时默认被调用，不需要手动调用</li>
+<li>__init__(self)中的self参数，不需要开发者传递，python解释器会自动把当前的对象引用传递过去。</li>
+</ul>
+
+<h4 id="toc_13">有参数的init（）方法</h4>
+
+<pre><code class="language-python">class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;
+    def __init__(self, name, hp):
+        &quot;&quot;&quot; init () 方法，用来做变量初始化 或 赋值操作&quot;&quot;&quot;
+# 英雄名
+        self.name = name
+# 生命值：
+        self.hp = hp
+
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;%s 正在前往事发地点...&quot; % self.name)
+    def info(self):
+        print(&quot;英雄 %s 的生命值 :%d&quot; % (self.name, self.hp))
+
+
+
+#实例化英雄对象时，参数会传递到对象的 init()方法里
+blind = Hero(&#39;瞎哥&#39;,2600) 
+gailun = Hero(&quot;盖伦&quot;,4200)
+
+#print(gailun)
+
+#print(blind)
+
+  
+
+# 不同对象的属性值的单独保存
+print(id(blind.name)) 
+print(id(gailun.name))
+
+# 同一个类的不同对象，实例方法共享
+print(id(blind.move())) 
+print(id(gailun.move()))
+
+
+</code></pre>
+
+<pre><code class="language-text">87554072
+87555744
+瞎哥 正在前往事发地点...
+2004853904
+盖伦 正在前往事发地点...
+2004853904
+</code></pre>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+<li>通过一个类，可以创建多个对象，就好比 通过一个模具创建多个实体一样</li>
+<li>__init__(self)中，默认有1个参数名字为self，如果在创建对象时传递了2个实参，那么init (self)中出了self作为第一个形参外还需要2个形参，例如 init (self,x,y)</li>
+<li>在类内部获取 属性 和 实例方法，通过self获取；</li>
+<li>在类外部获取 属性 和 实例方法，通过对象名获取。</li>
+<li>如果一个类有多个对象，每个对象的属性是各自保存的，都有各自独立的地址；</li>
+<li>但是实例方法是所有对象共享的，只占用一份内存空间。类会通过self来判断是哪个对象调用了实例方法。</li>
+</ul>
+
+<h2 id="toc_14">继承</h2>
+
+<ul>
+<li>在程序中，<strong>继承</strong>描述的是多个类之间的所属关系。</li>
+<li>如果一个类A里面的属性和方法可以复用，则可以通过继承的方式，<strong>传递</strong>到类B里。 </li>
+<li>那么类A就是<strong>基类</strong>，也叫做<strong>父类</strong>；类B就是<strong>派生类</strong>，也叫做<strong>子类</strong>。</li>
+</ul>
+
+<pre><code class="language-python"># 父 类
+class A(object):
+    def __init__(self):
+        self.num = 10
+        
+    def print_num(self):
+        print(self.num + 10)
+
+# 子 类
+class B(A): 
+    pass
+
+b = B()
+print(b.num) 
+b.print_num()
+
+</code></pre>
+
+<pre><code class="language-text">10
+20
+</code></pre>
+
+<h3 id="toc_15">单继承</h3>
+
+<p>子类只能继承一个父类</p>
+
+<pre><code class="language-python">#定义一个Person类
+class Person(object): 
+    def __init__(self):
+# 属 性
+        self.name = &quot;女娲&quot;
+
+    # 实例方法
+    def make_person(self):
+        print(&quot; &lt;%s&gt; 造了一个人...&quot; % self.name)
+
+# 定义Teacher类，继承了 Person，则Teacher是子类，Person是父类。
+class Teacher(Person):
+# 子类可以继承父类所有的属性和方法，哪怕子类没有自己的属性和方法，也可以使用父类的属性和方法。
+    pass
+
+panda = Teacher() 
+    # 创建子类实例对象
+print(panda.name) 
+    # 子类对象可以直接使用父类的属性
+panda.make_person() 
+    # 子类对象可以直接使用父类的方法
+    
+
+</code></pre>
+
+<pre><code class="language-text">女娲
+ &lt;女娲&gt; 造了一个人...
+</code></pre>
+
+<p><strong>总结</strong></p>
+
+<ul>
+<li>虽然子类没有定义 init 方法初始化属性，也没有定义实例方法，但是父类有。所以只要创建子类的对象，就默认执行了那个继承过来的 init 方法</li>
+<li>子类在继承的时候，在定义类时，小括号()中为父类的名字</li>
+<li>父类的<strong>属性、方法</strong>，会被继承给子类</li>
+</ul>
+
+<h3 id="toc_16">多继承</h3>
+
+<p>子类继承多个父类</p>
+
+<pre><code class="language-python">class Women(object): 
+    def __init__(self):
+        self.name = &quot;女娲&quot; # 实例变量，属性
+
+    def make_person(self):          # 实例方法，方法
+        print(&quot; &lt;%s&gt; 造了一个人...&quot; % self.name)
+    
+    def move(self):
+        print(&quot;移动..&quot;)
+
+class Man(object):
+    def __init__(self):
+        self.name = &quot;亚当&quot;
+
+    def make_person(self):
+        print(&quot;&lt;%s&gt; 造了一个人...&quot; % self.name)
+
+    def run(self):
+        print(&quot;跑..&quot;)
+
+class Person(Women, Man): # 多继承，继承了多个父类
+    pass
+
+ls = Person() 
+print(ls.name) 
+ls.make_person()
+
+# 子类的魔法属性 mro 决定了属性和方法的查找顺序
+print(Person. mro)
+
+</code></pre>
+
+<pre><code class="language-text">女娲
+ &lt;女娲&gt; 造了一个人...
+&lt;built-in method mro of type object at 0x0000000004376698&gt;
+</code></pre>
+
+<p><strong>结论：</strong></p>
+
+<ul>
+<li><p>多继承可以继承多个父类，也继承了所有父类的属性和方法</p></li>
+<li><p><strong>注意：</strong>如果多个父类中有同名的 属性和方法，则默认使用第一个父类的属性和方法（根据类的魔法属性mro 的顺序来查找）</p></li>
+<li><p>多个父类中，不重名的属性和方法，不会有任何影响。</p></li>
+</ul>
+
+<h3 id="toc_17">重写父类方法</h3>
+
+<p>子类继承父类，父类的方法满足不了子类的需要可以对父类的方法进行重写</p>
+
+<p>**重写的特点: **</p>
+
+<ol>
+<li>继承关系，</li>
+<li>方法名相同</li>
+</ol>
+
+<pre><code class="language-python">class Person(object): 
+    def run(self):
+        print(&quot;跑起来了&quot;)
+
+class Student(Person):
+    def __init__(self, name, age): 
+        self.name = name
+        self.age = age
+
+# 因为父类的方法满足不了子类的需要，对其进行重写
+    def run(self):
+        print(&quot;%s跑起来了&quot; % self.name)
+
+stu = Student(&quot;王五&quot;, 10)
+
+# 调用方法的时候先从本类去找，如果本来没有再去父类去找，会遵循mro的特点
+
+stu.run()
+
+</code></pre>
+
+<pre><code class="language-text">王五跑起来了
+</code></pre>
+
+<h3 id="toc_18">属性方法</h3>
+
+<h4 id="toc_19">类属性和实例属性</h4>
+
+<p><strong>类属性</strong>就是类对象所拥有的属性，它被所有类对象的实例对象所共有，在内存中只存在一个副本，这个和C++中类的静态成员变量有点类似。对于公有的类属性，在类外可以通过类对象和实例对象访问</p>
+
+<pre><code class="language-python">class People(object):
+    name = &#39;Tom&#39;# 公有的类属性
+    __age = 12# 私有的类属性
+
+p = People() 
+print(p.name)   # 正 确
+print(People.name)  # 正 确
+# print(p.__age)    # 错误，不能在类外通过实例对象访问私有的类属性
+# print(People.__age) # 错误，不能在类外通过类对象访问私有的类属性实例属性(对象属性)
+
+class People(object):
+    address = &#39;山东&#39;  # 类属性
+    def __init__(self):
+        self.name = &#39;xiaowang&#39;  # 实例属性
+        self.age = 20   # 实例属性
+
+p = People()
+p.age = 12  # 实例属性
+print(p.address)    # 正 确
+print(p.name)       # 正 确
+print(p.age)    # 正 确
+print(People.address)   # 正 确
+#print(People.name)     # 错 误
+#print(People.age)  # 错 误
+
+#通过实例(对象)去修改类属性
+class People(object):
+    country = &#39;china&#39; #类属性
+
+    
+print(People.country) 
+p = People() 
+print(p.country) 
+
+p.country = &#39;japan&#39;
+print(p.country)    # 实例属性会屏蔽掉同名的类属性
+print(People.country)
+
+del p.country # 删除实例属性
+print(p.country)
+
+</code></pre>
+
+<pre><code class="language-text">Tom
+Tom
+山东
+xiaowang
+12
+山东
+china
+china
+japan
+china
+china
+</code></pre>
+
+<p><strong>总结</strong><br/>
+如果需要在类外修改类属性，必须通过类对象去引用然后进行修改。如果通过实例对象去引用，会产生一个同名的实例属性，这种方式修改的是实例属性，不会影响到类属性，并且之后如果通过实例对象去引用该名称的属性，实例属性会强制屏蔽掉类属性，即引用的是实例属性，除非删除了该实例属性。</p>
+
+<h4 id="toc_20">静态方法和类方法</h4>
+
+<p><strong>1.类方法</strong></p>
+
+<p>是类对象所拥有的方法，需要用修饰器@classmethod来标识其为类方法，对于类方法，第一个参数必须是类对象，  一般以cls作为第一个参数（当然可以用其他名称的变量作为其第一个参数，但是大部分人都习惯以&#39;cls&#39;作为第一个参数的名字，就最好用&#39;cls&#39;了），能够通过实例对象和类对象去访问。</p>
+
+<pre><code class="language-python">class People(object): 
+    country = &#39;china&#39;
+#类方法，用classmethod来进行修饰
+    @classmethod
+    def get_country(cls): 
+        return cls.country
+
+p = People()
+print(p.get_country())  #可以用过实例对象引用print(People.get_country())  #可以通过类对象引用类方法还有一个用途就是可以对类属性进行修改：
+
+class People(object): 
+    country = &#39;china&#39;
+#类方法，用classmethod来进行修饰
+    @classmethod
+    def get_country(cls): 
+        return cls.country
+
+    @classmethod
+    def set_country(cls,country): 
+        cls.country = country
+
+p = People()
+print(p.get_country())  #可以用过实例对象访问print(People.get_country())  #可以通过类访问
+
+p.set_country(&#39;japan&#39;)
+
+print(p.get_country()) 
+print(People.get_country())
+#结果显示在用类方法对类属性修改之后，通过类对象和实例对象访问都发生了改变
+
+</code></pre>
+
+<pre><code class="language-text">china
+china
+japan
+japan
+</code></pre>
+
+<p><strong>2. 静态方法</strong></p>
+
+<p>需要通过修饰器@staticmethod来进行修饰，静态方法不需要多定义参数，可以通过对象和类来访问。</p>
+
+<pre><code class="language-python">class People(object): 
+    country = &#39;china&#39;
+    @staticmethod #静态方法
+    def get_country():
+        return People.country
+
+p = People()
+# 通过对象访问静态方法
+p.get_country()
+# 通过类访问静态方法
+print(People.get_country())
+
+</code></pre>
+
+<pre><code class="language-text">china
+</code></pre>
+
+<p><strong>总结</strong><br/>
+从类方法和实例方法以及静态方法的定义形式就可以看出来，类方法的第一个参数是类对象cls，那么通过cls引用的   必定是类对象的属性和方法；  实例方法的第一个参数是实例对象self，那么通过self引用的可能是类属性、也有可能是实例属性（这个需要具体分析），不过在存在相同名称的类属性和实例属性的情况下，实例属性优先级更高。  静态方法中不需要额外定义参数，因此在静态方法中引用类属性的话，必须通过类实例对象来引用</p>
+
+<h2 id="toc_21">多态</h2>
+
+<ul>
+<li>多态, 不同的子类对象调用相同的父类方法，产生不同的执行结果，可以增加代码的外部调用灵活度</li>
+<li>多态以继承和重写父类方法为前提</li>
+<li>多态是调用方法的技巧，不会影响到类的内部设计</li>
+</ul>
+
+<pre><code class="language-python">class Animal(object): 
+    def run(self):
+        print(&#39;Animal is running...&#39;) 
+
+        
+class Dog(object):
+    def run(self):
+        print(&#39;Dog is running...&#39;) 
+    
+    
+class Cat(object):
+    def run(self):
+        print(&#39;Cat is running...&#39;)
+
+# 定义一个方法
+def run_twice(animal): 
+    animal.run() 
+    animal.run()
+
+dog = Dog() 
+cat = Cat()
+
+run_twice(dog) 
+run_twice(cat)
+
+</code></pre>
+
+<pre><code class="language-text">Dog is running...
+Dog is running...
+Cat is running...
+Cat is running...
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327222611.html">
+                
+                  <h1>4. python函数</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">函数的简介</h2>
+
+<p>如果在开发程序时，需要某块代码多次，但是为了提高编写的效率以及代码的重用，所以把具有独立功能的代码块组织为一个小模块，这就是函数。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
+
+<p>例如：我们知道圆的面积计算公式为：\(S = πr^2\)</p>
+
+<p>当我们知道半径r的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
+
+<pre><code class="language-text">r1 = 12.34
+r2 = 9.08
+r3 = 73.1
+s1 = 3.14 * r1 * r1 s2 = 3.14 * r2 * r2 s3 = 3.14 * r3 * r3
+</code></pre>
+
+<p>当代码出现有规律的重复的时候，你就需要当心了，每次写3.14 * x * x不仅很麻烦，而且，如果要把3.14改成3.14159265359的时候，得全部替换。</p>
+
+<p>有了函数，我们就不再每次写s = 3.14 * x * x，而是写成更有意义的函数调用s = area_of_circle(x)， 而函数area_of_circle本身只需要写一次，就可以多次调用。</p>
+
+<p>基本上所有的高级语言都支持函数，Python也不例外。Python不但能非常灵活地定义函数，而且本身内置了很多有用的函数，可以直接调用。</p>
+
+<h2 id="toc_1">函数定义和调用</h2>
+
+<h3 id="toc_2">定义函数</h3>
+
+<pre><code class="language-text">def 函数名(): 代码
+# 定义一个函数，能够完成打印信息的功能
+def printInfo():
+print(&#39; &#39;)
+print(&#39; 人生苦短，我用Python&#39;)
+print(&#39; &#39;)
+</code></pre>
+
+<h3 id="toc_3">调用函数</h3>
+
+<p>定义了函数之后，就相当于有了一个具有某些功能的代码，想要让这些代码能够执行，需要调用它调用函数很简单的，通过 函数名() 即可完成调用</p>
+
+<pre><code class="language-text"># 定义完函数后，函数是不会自动执行的，需要调用它才可以
+printInfo()
+</code></pre>
+
+<p><strong>注意:</strong></p>
+
+<ul>
+<li>每次调用函数时，函数都会从头开始执行，当这个函数中的代码执行完毕后，意味着调用结束了<br/></li>
+<li>当然了如果函数中执行到了return也会结束函数</li>
+</ul>
+
+<h2 id="toc_4">函数的文档说明</h2>
+
+<pre><code class="language-python">def test(a,b):
+    &#39;&#39;&#39;用来完成对2个数求和&#39;&#39;&#39;
+    print(&quot;%d&quot;%(a+b))
+
+test(11,22) 
+
+help(test)
+</code></pre>
+
+<pre><code class="language-text">33
+Help on function test in module __main__:
+
+test(a, b)
+    用来完成对2个数求和
+</code></pre>
+
+<p>还可以用test. doc 直接查看文档说明</p>
+
+<pre><code class="language-python">def test(a,b):
+    &quot;用来完成对2个数求和&quot;
+    print(&quot;%d&quot;%(a+b))
+
+    print(test. doc )
+</code></pre>
+
+<p>来完成对两个数的求和</p>
+
+<h2 id="toc_5">函数的参数</h2>
+
+<p>Python的函数定义非常简单，但灵活度却非常大。除了正常定义的必选参数外，还可以使用默认参数、可变参数和关   键字参数，使得函数定义出来的接口，不但能处理复杂的参数，还可以简化调用者的代码。</p>
+
+<h3 id="toc_6">位置参数</h3>
+
+<p>我们先写一个计算x<sup>2</sup> 的函数：</p>
+
+<pre><code class="language-python">def power(x):
+    return x * x
+</code></pre>
+
+<p>对于power(x)函数，参数x就是一个位置参数。<br/>
+当我们调用power函数时，必须传入有且仅有的一个<strong>参数x</strong>：</p>
+
+<pre><code class="language-python">power(5)
+</code></pre>
+
+<pre><code class="language-text">25
+</code></pre>
+
+<p>现在，如果我们要计算\(x^3\)怎么办？可以再定义一个power3函数，但是如果要计算 \(x^4\) 、 \(x^5\) ……怎么办？我们不可能定义无限多个函数。<br/>
+你也许想到了，可以把power(x)修改为power(x, n)，用来计\(x^n\) ，说干就干：</p>
+
+<pre><code class="language-python">def power(x, n): 
+    s = 1
+    while n &gt; 0:
+        n = n - 1 
+        s = s * x
+    return s
+</code></pre>
+
+<p>对于这个修改后的power(x, n)函数，可以计算任意n次方：</p>
+
+<pre><code class="language-python">power(5,2)
+</code></pre>
+
+<pre><code class="language-text">25
+</code></pre>
+
+<p>修改后的power(x, n)函数有两个参数：x和n，这两个参数都是位置参数，调用函数时，传入的两个值按照位置顺序依次赋给参数x和n。</p>
+
+<h3 id="toc_7">默认参数</h3>
+
+<p>新的power(x, n)函数定义没有问题，但是，旧的调用代码失败了，原因是我们增加了一个参数，导致旧的代码因为缺少一个参数而无法正常调用：</p>
+
+<pre><code class="language-python">power(5)
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-89-4cd340f296c6&gt; in &lt;module&gt;()
+----&gt; 1 power(5)
+
+
+TypeError: power() missing 1 required positional argument: &#39;n&#39;
+</code></pre>
+
+<p>Python的错误信息很明确：调用函数power()缺少了一个位置参数n。<br/>
+这个时候，默认参数就排上用场了。由于我们经常计算 x<sup>2</sup> ，所以，完全可以把第二个参数n的默认值设定为2：</p>
+
+<pre><code class="language-python">def power(x, n=2): 
+    s = 1
+    while n &gt; 0:
+        n = n - 1 
+        s = s * x
+    return s
+</code></pre>
+
+<p>这样，当我们调用power(5)时，相当于调用power(5, 2)：</p>
+
+<pre><code class="language-python">power(5)
+
+</code></pre>
+
+<pre><code class="language-text">25
+</code></pre>
+
+<p>而对于n &gt; 2的其他情况，就必须明确地传入n，比如power(5, 3)。</p>
+
+<pre><code class="language-python">power(5,3)
+
+</code></pre>
+
+<pre><code class="language-text">125
+</code></pre>
+
+<p>从上面的例子可以看出，默认参数可以简化函数的调用。设置默认参数时，有几点要注意： </p>
+
+<ul>
+<li>一是必选参数在前，默认参数在后，否则Python的解释器会报错；</li>
+<li>二是当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。</li>
+</ul>
+
+<h3 id="toc_8">使用默认参数有什么好处？</h3>
+
+<p>举个例子，我们写个一年级小学生注册的函数，需要传入name和gender两个参数：</p>
+
+<pre><code class="language-python">def enroll(name, gender): 
+    print(&#39;name:&#39;, name) 
+    print(&#39;gender:&#39;, gender)
+
+</code></pre>
+
+<pre><code class="language-python"># 调用
+enroll(&#39;张三&#39;,&#39;M&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">name: 张三
+gender: M
+</code></pre>
+
+<p>如果要继续传入年龄、城市等信息怎么办？这样会使得调用函数的复杂度大大增加。 我们可以把年龄和城市设为默认参数：</p>
+
+<pre><code class="language-python">def enroll(name, gender,city=&#39;amoy&#39;): 
+    print(&#39;name:&#39;, name) 
+    print(&#39;gender:&#39;, gender)
+    print(&#39;city:&#39;, city)
+    
+enroll(&#39;李四&#39;,&#39;F&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">name: 李四
+gender: F
+city: amoy
+</code></pre>
+
+<p>这样，大多数学生注册时不需要提供年龄和城市，只提供必须的两个参数,只有与默认参数不符的学生才需要提供额外的信息.</p>
+
+<pre><code class="language-python">enroll(&#39;李四&#39;,&#39;F&#39;,&#39;chengdu&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">name: 李四
+gender: F
+city: chengdu
+</code></pre>
+
+<p>可见，默认参数降低了<strong>函数调用的难度</strong>，而一旦需要更复杂的调用时，又可以传递更多的参数来实现。无论是简单调用还是复杂调用，函数只需要定义一个。</p>
+
+<p>有多个默认参数时，调用的时候，既可以按顺序提供默认参数，比如调用enroll(&#39;Bob&#39;, &#39;M&#39;,  7)，意思是，除了name，gender这两个参数外，最后1个参数应用在参数age上，city参数由于没有提供，仍然使用默认值。</p>
+
+<p>也可以不按顺序提供部分默认参数。当不按顺序提供部分默认参数时，需要把参数名写上。比如调用enroll(&#39;Adam&#39;, &#39;M&#39;,  city=&#39;Tianjin&#39;)，意思是，city参数用传进去的值，其他默认参数继续使用默认值。</p>
+
+<p><strong>注意</strong>：默认参数有个最大的坑，演示如下：</p>
+
+<p>先定义一个函数，传入一个list，添加一个END再返回：</p>
+
+<pre><code class="language-python">def add_end(L=[]): 
+    L.append(&#39;END&#39;)
+    return L
+
+#调用
+add_end([1,24,4])
+
+</code></pre>
+
+<pre><code class="language-text">[1, 24, 4, &#39;END&#39;]
+</code></pre>
+
+<pre><code class="language-python">#默认参数调用的时候
+add_end()
+add_end()
+add_end()
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;END&#39;, &#39;END&#39;, &#39;END&#39;, &#39;END&#39;]
+</code></pre>
+
+<p>很多初学者很疑惑，默认参数是[]，但是函数似乎每次都“记住了”上次添加了&#39;END&#39;后的list。 原因解释如下：</p>
+
+<p>Python函数在定义的时候，默认参数L的值就被计算出来了，即[]，因为默认参数L也是一个变量，它指向对象[]，  每次调用该函数，如果改变了L的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的[]了。</p>
+
+<p>定义默认参数要牢记一点：<strong>默认参数必须指向不变对象！</strong></p>
+
+<p>要修改上面的例子，我们可以用None这个不变对象来实现：</p>
+
+<pre><code class="language-python">def add_end(L=None): 
+    if L is None:
+        L = []
+    L.append(&#39;END&#39;) 
+    return L
+#调用
+add_end()
+add_end()
+add_end()
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;END&#39;]
+</code></pre>
+
+<p>为什么要设计str、None这样的不变对象呢？因为不变对象一旦创建，对象内部的数据就不能修改，这样就减少了由于修改数据导致的错误。此外，由于对象不变，多任务环境下同时读取对象不需要加锁，同时读一点问题都没有。我们在编写程序时，如果可以设计一个不变对象，那就尽量设计成不变对象。</p>
+
+<h3 id="toc_9">可变参数</h3>
+
+<p>在Python函数中，还可以定义可变参数。顾名思义，可变参数就是传入的参数个数是可变的，可以是1个、2个到任意个，还可以是0个。<br/>
+我们以数学题为例子，给定一组数字a，b，c……，请计算\(a^2 + b^2 + c^2 +....\)。</p>
+
+<p>要定义出这个函数，我们必须确定输入的参数。由于参数个数不确定，我们首先想到可以把a，b，c……作为一个list或tuple传进来，这样，函数可以定义如下：</p>
+
+<pre><code class="language-python">def calc(numbers): 
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n 
+    return sum
+
+#调用
+calc([1,3,5])
+
+</code></pre>
+
+<pre><code class="language-text">35
+</code></pre>
+
+<p>所以，我们把函数的参数改为可变参数：</p>
+
+<pre><code class="language-python">def calc(*numbers): 
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n 
+    return sum
+
+</code></pre>
+
+<p>定义可变参数和定义一个list或tuple参数相比，仅仅在参数前面加了一个号。在函数内部，参数numbers接收到的是一个tuple，因此，函数代码完全不变。但是，调用该函数时，可以传入任意个参数，包括0个参数：</p>
+
+<pre><code class="language-python">calc(1,2)
+
+</code></pre>
+
+<pre><code class="language-text">5
+</code></pre>
+
+<pre><code class="language-python">calc()
+
+</code></pre>
+
+<pre><code class="language-text">0
+</code></pre>
+
+<p>如果已经有一个list或者tuple，要调用一个可变参数怎么办？可以这样做：</p>
+
+<pre><code class="language-python">nums = [1, 2, 3]
+calc(nums[0], nums[1], nums[2])
+
+</code></pre>
+
+<pre><code class="language-text">14
+</code></pre>
+
+<p>这种写法当然是可行的，问题是太繁琐，所以Python允许你在list或tuple前面加一个*号，把list或tuple的元素变成可变参数传进去：</p>
+
+<pre><code class="language-python">nums=[1,2,3]
+calc(*nums)
+
+</code></pre>
+
+<pre><code class="language-text">14
+</code></pre>
+
+<p>*nums表示把nums这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。</p>
+
+<h3 id="toc_10">命名关键字参数</h3>
+
+<p>对于关键字参数，函数的调用者可以传入任意不受限制的关键字参数。至于到底传入了哪些，就需要在函数内部通过kw检查。</p>
+
+<p>仍以person()函数为例，我们希望检查是否有city和job参数：</p>
+
+<pre><code class="language-python">def person(name, age, **kw): 
+    if &#39;city&#39; in kw:# 有city参数
+        pass
+    if &#39;job&#39; in kw:# 有job参数
+        pass
+    print(&#39;name:&#39;, name, &#39;age:&#39;, age, &#39;other:&#39;, kw)
+
+</code></pre>
+
+<p>但是调用者仍可以传入不受限制的关键字参数：</p>
+
+<pre><code class="language-python">person(&#39;Jack&#39;, 24, city=&#39;Beijing&#39;, addr=&#39;Chaoyang&#39;, zipcode=123456)
+
+</code></pre>
+
+<pre><code class="language-text">name: Jack age: 24 other: {&#39;city&#39;: &#39;Beijing&#39;, &#39;addr&#39;: &#39;Chaoyang&#39;, &#39;zipcode&#39;: 123456}
+</code></pre>
+
+<p>如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收city和job作为关键字参数。这种方式定义的函数如下：</p>
+
+<pre><code class="language-python">def person(name, age, *, city, job): 
+    print(name, age, city, job)
+
+</code></pre>
+
+<p>和关键字参数kw不同，命名关键字参数需要一个特殊分隔符<em>，</em>后面的参数被视为命名关键字参数。调用方式如下：</p>
+
+<pre><code class="language-python"> person(&#39;Jack&#39;, 24, city=&#39;Beijing&#39;, job=&#39;Engineer&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">Jack 24 Beijing Engineer
+</code></pre>
+
+<p>如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*了：</p>
+
+<pre><code class="language-python">def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
+
+</code></pre>
+
+<p>命名关键字参数必须传入参数名，这和位置参数不同。如果没有传入参数名，调用将报错：</p>
+
+<pre><code class="language-python"> person(&#39;Jack&#39;, 24, &#39;Beijing&#39;,&#39;Engineer&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-17-7465e072842a&gt; in &lt;module&gt;()
+----&gt; 1 person(&#39;Jack&#39;, 24, &#39;Beijing&#39;,&#39;Engineer&#39;)
+
+
+
+TypeError: person() missing 2 required keyword-only arguments: &#39;city&#39; and &#39;job&#39;
+</code></pre>
+
+<p>由于调用时缺少参数名city和job，Python解释器把这4个参数均视为位置参数，但person()函数仅接受2个位置参数。</p>
+
+<p>命名关键字参数可以有缺省值，从而简化调用：</p>
+
+<pre><code class="language-python">def person(name, age, *, city=&#39;Beijing&#39;, job): 
+    print(name, age, city, job)
+   
+
+# 利用默认值，调用时可以不用传入
+person(&#39;Jack&#39;, 24, job=&#39;Engineer&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">Jack 24 Beijing Engineer
+</code></pre>
+
+<p>使用命名关键字参数时，要特别注意，如果没有可变参数，就必须加一个<em>作为特殊分隔符。如果缺少</em>，Python解释器将无法识别位置参数和命名关键字参数：</p>
+
+<pre><code class="language-text">def person(name, age, city, job):
+
+# 缺少 *，city和job被视为位置参数 pass
+
+</code></pre>
+
+<h3 id="toc_11">参数组合</h3>
+
+<p>在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。但是请注意，参数定义的顺序必须是：<strong>必选参数</strong>、<strong>默认参数</strong>、<strong>可变参数</strong>、<strong>命名关键字参数</strong>和<strong>关键字参数</strong>。</p>
+
+<p>比如定义一个函数，包含上述若干种参数：</p>
+
+<pre><code class="language-python">def f1(a, b, c=0, *args, **kw):
+    print(&#39;a =&#39;, a, &#39;b =&#39;, b, &#39;c =&#39;, c, &#39;args =&#39;, args, &#39;kw =&#39;, kw)
+    
+def f2(a, b, c=0, *, d, **kw):
+    print(&#39;a =&#39;, a, &#39;b =&#39;, b, &#39;c =&#39;, c, &#39;d =&#39;, d, &#39;kw =&#39;, kw)
+
+#调用
+f1(1,2)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 0 args = () kw = {}
+</code></pre>
+
+<pre><code class="language-python">f1(1,2,c=3)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = () kw = {}
+</code></pre>
+
+<pre><code class="language-python">f1(1,2,3,&#39;a&#39;,&#39;b&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = (&#39;a&#39;, &#39;b&#39;) kw = {}
+</code></pre>
+
+<pre><code class="language-python">f1(1,2,3,&#39;a&#39;,&#39;b&#39;,x=99)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = (&#39;a&#39;, &#39;b&#39;) kw = {&#39;x&#39;: 99}
+</code></pre>
+
+<pre><code class="language-python">f2(1, 2, d=99, ext=None)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 0 d = 99 kw = {&#39;ext&#39;: None}
+</code></pre>
+
+<p>最神奇的是通过一个tuple和dict，你也可以调用上述函数：</p>
+
+<pre><code class="language-python">args = (1, 2, 3, 4)
+kw = {&#39;d&#39;: 99, &#39;x&#39;: &#39;#&#39;}
+f1(*args, **kw)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = (4,) kw = {&#39;d&#39;: 99, &#39;x&#39;: &#39;#&#39;}
+</code></pre>
+
+<pre><code class="language-python">args = (1, 2, 3)
+kw = {&#39;d&#39;: 88, &#39;x&#39;: &#39;#&#39;}
+f2(*args, **kw)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 d = 88 kw = {&#39;x&#39;: &#39;#&#39;}
+</code></pre>
+
+<p>所以，对于任意函数，都可以通过类似func(<em>args, *</em>kw)的形式调用它，无论它的参数是如何定义的。虽然可以组合多达5种参数，但不要同时使用太多的组合，否则函数接口的可理解性很差。</p>
+
+<h2 id="toc_12">函数返回值</h2>
+
+<h3 id="toc_13">“返回值”介绍</h3>
+
+<ul>
+<li>现实生活中的场景:</li>
+</ul>
+
+<p>我给儿子10块钱，让他给我买包烟。这个例子中，10块钱是我给儿子的，就相当于调用函数时传递到参数，让儿子买烟这个事情最终的目标是，让他把烟给你带回来然后给你对么，此时烟就是返回值</p>
+
+<ul>
+<li>开发中的场景：</li>
+</ul>
+
+<p>定义了一个函数，完成了获取室内温度，想一想是不是应该把这个结果给调用者，只有调用者拥有了这个返回值，才能够根据当前的温度做适当的调整所谓“<strong>返回值</strong>”，就是程序中函数完成一件事情后，最后给调用者的结果</p>
+
+<h3 id="toc_14">带有返回值的函数</h3>
+
+<p>想要在函数中把结果返回给调用者，需要在函数中使用return如下示例:</p>
+
+<pre><code class="language-python">   def add2num(a, b): 
+   c = a+b
+   return c
+
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-text">   def add2num(a, b): 
+   return a+b
+
+</code></pre>
+
+<h3 id="toc_15">保存函数的返回值</h3>
+
+<p>在“买烟”的例子中，最后儿子给你烟时，你一定是从儿子手中接过来 对么，程序也是如此，如果一个函数返回了一个数据，那么想要用这个数据，那么就需要保存.</p>
+
+<p>保存函数的返回值示例如下:</p>
+
+<pre><code class="language-python">#定义函数
+
+def add2num(a, b):
+    return a+b
+#调用函数，顺便保存函数的返回值 
+
+result = add2num(100,98)
+print(result)
+
+</code></pre>
+
+<pre><code class="language-text">198
+</code></pre>
+
+<h3 id="toc_16">如何返回多个值</h3>
+
+<h4 id="toc_17">多个ruturn？</h4>
+
+<pre><code class="language-python">def create_nums(): 
+    print(&quot;---1---&quot;)
+    return 1 # 函数中下面的代码不会被执行，因为return除了能够将数据返回之外，还有一个隐藏的功能：结束函数
+    print(&quot;---2---&quot;) 
+    return 2
+    print(&quot;---3---&quot;)
+
+</code></pre>
+
+<p><strong>总结1</strong>一个函数中可以有多个return语句，但是只要有一个return语句被执行到，那么这个函数就会结束了，因此后面的return没有什么用处 如果程序设计为如下，是可以的因为不同的场景下执行不同的return</p>
+
+<pre><code class="language-python">def create_nums(num): 
+    print(&quot;---1---&quot;) 
+    if num == 100:
+        print(&quot;---2---&quot;)
+        return num+1 # 函数中下面的代码不会被执行，因为return除了能够将数据返回之外，还有一个隐藏的功能：结束函数
+    else:
+        print(&quot;---3---&quot;) 
+        return num+2
+    print(&quot;---4---&quot;)
+
+
+
+result1 = create_nums(100)
+print(result1) # 打印101 
+result2 = create_nums(200) 
+print(result2) # 打印202
+
+</code></pre>
+
+<pre><code class="language-text">---1---
+---2---
+101
+---1---
+---3---
+202
+</code></pre>
+
+<h4 id="toc_18">一个函数返回多个数据的方式</h4>
+
+<pre><code class="language-python">def divid(a, b):
+    shang = a//b 
+    yushu = a%b
+    return shang, yushu #默认是元组
+
+
+result = divid(5, 2) 
+print(result) # 输 出 (2, 1)
+
+</code></pre>
+
+<pre><code class="language-text">(2, 1)
+</code></pre>
+
+<p><strong>总结2</strong>： return后面可以是元组，列表、字典等，只要是能够存储多个数据的类型，就可以一次性返回多个数据</p>
+
+<pre><code class="language-python">def function():
+# return [1, 2, 3]
+# return (1, 2, 3)
+    return {&quot;num1&quot;: 1, &quot;num2&quot;: 2, &quot;num3&quot;: 3}
+
+</code></pre>
+
+<p>如果return后面有多个数据，那么默认是元组</p>
+
+<pre><code class="language-text">In [1]: a = 1, 2
+
+In [2]: a
+
+Out[2]: (1, 2)
+
+
+
+In [3]:
+
+In [3]: b = (1, 2)
+
+In [4]: b
+
+Out[4]: (1, 2)
+
+
+</code></pre>
+
+<h2 id="toc_19">递归函数</h2>
+
+<p>在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是<strong>递归函数</strong>。</p>
+
+<p>举个例子，我们来计算阶乘n! = 1 x 2 x 3 x ... x n，用函数fact(n)表示，可以看出：</p>
+
+<p>\(fact(n) = n! = 1 x 2 x 3 x ... x (n-1) x n = (n-1)! x n = fact(n-1) x n\)</p>
+
+<p>所以，fact(n)可以表示为n x fact(n-1)，只有n=1时需要特殊处理。于是，fact(n)用递归的方式写出来就是：</p>
+
+<pre><code class="language-python">def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n - 1)
+
+</code></pre>
+
+<pre><code class="language-python">fact(2)
+
+</code></pre>
+
+<pre><code class="language-text">2
+</code></pre>
+
+<pre><code class="language-python">fact(4)
+
+</code></pre>
+
+<pre><code class="language-text">24
+</code></pre>
+
+<pre><code class="language-python">fact(1)
+
+</code></pre>
+
+<pre><code class="language-text">1
+</code></pre>
+
+<p>递归函数的<strong>优点</strong>是定义简单，逻辑清晰。理论上，所有的递归函数都可以写成循环的方式，但循环的逻辑不如递归清晰。</p>
+
+<p>使用递归函数需要<strong>注意</strong>防止栈溢出。在计算机中，函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出。可以试试</p>
+
+<pre><code class="language-python">fact(10000)
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+RecursionError                            Traceback (most recent call last)
+
+&lt;ipython-input-37-0b1842e84853&gt; in &lt;module&gt;()
+----&gt; 1 fact(10000)
+
+
+
+&lt;ipython-input-32-6cee500c0290&gt; in fact(n)
+      2     if n==1:
+      3         return 1
+----&gt; 4     return n * fact(n - 1)
+
+
+
+... last 1 frames repeated, from the frame below ...
+
+
+
+&lt;ipython-input-32-6cee500c0290&gt; in fact(n)
+      2     if n==1:
+      3         return 1
+----&gt; 4     return n * fact(n - 1)
+
+
+
+RecursionError: maximum recursion depth exceeded in comparison
+</code></pre>
+
+<p>解决递归调用栈溢出的方法是通过<strong>尾递归</strong>优化，事实上尾递归和循环的效果是一样的，所以，把循环看成是一种特殊的尾递归函数也是可以的。</p>
+
+<p><strong>尾递归</strong>是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。</p>
+
+<p>上面的fact(n)函数由于return n * fact(n - 1)引入了乘法表达式，所以就不是尾递归了。要改成尾递归方式，需要多一点代码，主要是要把每一步的乘积传入到递归函数中：</p>
+
+<pre><code class="language-python">def fact(n):
+    return fact_iter(n, 1)
+
+def fact_iter(num, product): 
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)
+
+</code></pre>
+
+<p>可以看到，return fact_iter(num - 1, num * product)仅返回递归函数本身，num - 1和num*product在函数调用前就会被计算，不影响函数调用。</p>
+
+<p>尾递归调用时，如果做了优化，栈不会增长，因此，无论多少次调用也不会导致栈溢出。</p>
+
+<p>遗憾的是，大多数编程语言没有针对尾递归做优化，Python解释器也没有做优化，所以，即使把上面的fact(n)函数改成尾递归方式，也会导致栈溢出<br/>
+<strong>小结</strong></p>
+
+<ul>
+<li><p>使用递归函数的优点是逻辑简单清晰，缺点是过深的调用会导致栈溢出。</p></li>
+<li><p>针对尾递归优化的语言可以通过尾递归防止栈溢出。尾递归事实上和循环是等价的，没有循环语句的编程语言只能通过尾递归实现循环。</p></li>
+<li><p>Python标准的解释器没有针对尾递归做优化，任何递归函数都存在栈溢出的问题。</p></li>
+</ul>
+
+<h2 id="toc_20">局部变量</h2>
+
+<ul>
+<li> 局部变量，就是在函数内部定义的变量。</li>
+<li> <strong>作用范围</strong>是这个函数内部，即只能在这个函数中使用，在函数的外部是不能使用的。因为其作用范围只是在自己的函数内部，所以不同的函数可以定义相同名字的局部变量（打个比方，把你、我是当做成函数，把局部变量理解为每个人手里的手机，你可有个iPhone8，我当然也可以有个iPhone8了， 互不相关）</li>
+<li> 局部变量的作用，为了临时保存数据需要在函数中定义变量来进行存储。</li>
+<li> 当函数调用时，局部变量被创建，当函数调用完成后这个变量就不能够使用了。函数调用时，局部变量被创建，当函数调用完成后这个变量就不能够使用了。</li>
+</ul>
+
+<pre><code class="language-python">def show():
+# 局部变量
+    score = 100
+    print(&quot;分数:&quot;, score) 
+show()
+
+</code></pre>
+
+<pre><code class="language-text">分数: 100
+</code></pre>
+
+<pre><code class="language-python">print(score)
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-41-4405d376f933&gt; in &lt;module&gt;()
+----&gt; 1 print(score)
+
+
+
+NameError: name &#39;score&#39; is not defined
+</code></pre>
+
+<h2 id="toc_21">全局变量</h2>
+
+<p>如果一个变量，既能在一个函数中使用，也能在其他的函数中使用，这样的变量就是<strong>全局变量</strong>。</p>
+
+<p><strong>例如</strong>：有2个兄弟 各自都有手机，各自有自己的小秘密在手机里，不让另外一方使用（可以理解为<strong>局部变量</strong>）；但是家里的电话是2个兄弟都可以随便使用的（可以理解为<strong>全局变量</strong>）</p>
+
+<pre><code class="language-python"># 定义全局变量
+
+a = 100
+
+def test1():
+
+    print(a) # 虽然没有定义变量a但是依然可以获取其数据
+
+
+
+def test2():
+
+    print(a) # 虽然没有定义变量a但是依然可以获取其数据
+
+# 调用函数
+
+test1()
+test2()
+
+</code></pre>
+
+<pre><code class="language-text">100
+100
+</code></pre>
+
+<p><strong>总结</strong>:</p>
+
+<ul>
+<li>在函数外边定义的变量叫做全局变量</li>
+<li>全局变量能够在所有的函数中进行访问</li>
+</ul>
+
+<h3 id="toc_22">全局变量和局部变量名字相同问题</h3>
+
+<pre><code class="language-python"># 定义全局变量
+a = 100
+def test1():
+# 定义局部变量
+    a = 300
+    print(&#39;---test1---%d&#39;%a)
+test1()
+#修改
+a = 200
+print(&#39;修改后的%d&#39;%a)
+
+def test2():
+    print(&#39;a = %d&#39;%a)
+
+test2()
+
+</code></pre>
+
+<pre><code class="language-text">---test1---300
+修改后的200
+a = 200
+</code></pre>
+
+<p><strong>总结</strong>:</p>
+
+<ul>
+<li>当函数内出现局部变量和全局变量相同名字时，函数内部中的 变量名 = 数据 此时理解为定义了一个局部变量，而不是修改全局变量的值</li>
+</ul>
+
+<h3 id="toc_23">修改全局变量</h3>
+
+<p>函数中进行使用<strong>全局变量</strong>时可否进行修改呢？</p>
+
+<pre><code class="language-python"># 定义全局变量
+a = 100
+def test1():
+# 定义局部变量
+    global a
+    print(&#39;修改之前：%d&#39;%a)
+
+#修改
+a = 200
+print(&#39;修改后的%d&#39;%a)
+
+
+def test2():
+    print(&#39;a = %d&#39;%a)
+
+test1() 
+test2()
+
+</code></pre>
+
+<pre><code class="language-text">修改后的200
+修改之前：200
+a = 200
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327222638.html">
+                
+                  <h1>0.Python 速查</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><a href="media/15822327222638/Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E9%80%9F%E6%9F%A5%E8%A1%A8.pdf">Python数据科学速查表</a></p>
+
+<p><a href="media/15822327222638/0.%E9%A3%8E%E5%8F%98%E7%BC%96%E7%A8%8B-Python%E5%9F%BA%E7%A1%80%EF%BC%88%E6%95%B4%E7%90%86%E7%89%88%EF%BC%89.pdf">0.风变编程-Python基础（整理版）</a></p>
+
+<h1 id="toc_0">Python基础速查</h1>
+
+<h2 id="toc_1">常规</h2>
+
+<ul>
+<li>Python 对大小写敏感</li>
+<li>Python 的索引从 0 开始</li>
+<li>Python 使用空白符（制表符或空格）来缩进代码，而不是使用花括号</li>
+</ul>
+
+<h3 id="toc_2">获取帮助</h3>
+
+<ul>
+<li>获取主页帮助：<code>help()</code></li>
+<li>获取函数帮助：<code>help(str.replace)</code></li>
+<li>获取模块帮助：<code>help(re)</code></li>
+</ul>
+
+<h3 id="toc_3">模块(库)</h3>
+
+<p>Python的模块只是一个简单地以 <code>.py</code> 为后缀的文件。</p>
+
+<ul>
+<li>列出模块内容：<code>dir(module1)</code></li>
+<li>导入模块：<code>import module</code></li>
+<li>调用模块中的函数：<code>module1.func1()</code></li>
+</ul>
+
+<blockquote>
+<p><strong>注</strong>：<code>import</code>语句会创建一个新的命名空间(namespace)，并且在该命名空间内执行<code>.py</code>文件中的所有语句。如果你想把模块内容导入到当前命名空间，请使用<code>from module1 import *</code>语句。</p>
+</blockquote>
+
+<h2 id="toc_4">数值类类型</h2>
+
+<p>查看变量的数据类型：<code>type(variable)</code></p>
+
+<h3 id="toc_5">六种经常使用的数据类型</h3>
+
+<ol>
+<li><strong>int/long</strong>：过大的 <code>int</code> 类型会被自动转化为 <code>long</code> 类型</li>
+<li><strong>float</strong>：64 位，Python 中没有 <code>double</code> 类型</li>
+<li><strong>bool</strong>：真或假</li>
+<li><p><strong>str</strong>：在 Python 2 中默认以 ASCII 编码，而在 Python 3 中默认以 Unicode 编码</p>
+<ul>
+<li>字符串可置于单/双/三引号中</li>
+<li>字符串是字符的序列，因此可以像处理其他序列一样处理字符串</li>
+<li><p>特殊字符可通过 <code>\</code> 或者前缀 <code>r</code> 实现：</p>
+<pre><code class="language-python">str1 = r&#39;this\f?ff&#39;
+</code></pre></li>
+<li><p>字符串可通过多种方式格式化：</p>
+<pre><code class="language-python">template = &#39;%.2f %s haha $%d&#39;;
+str1 = template % (4.88, &#39;hola&#39;, 2)
+</code></pre></li>
+</ul></li>
+<li><p><strong>NoneType(None)</strong>：Python “null”值（<code>None</code>对象<strong>只</strong>存在一个实例）</p>
+<ul>
+<li><code>None</code>不是一个保留关键字，而是<code>NoneType</code>的一个唯一实例</li>
+<li><p><code>None</code>通常是可选函数参数的默认值：</p>
+<pre><code class="language-python">def func1(a, b, c=None)
+</code></pre></li>
+<li><p><code>None</code>的常见用法：</p>
+<pre><code class="language-python">if variable is None :
+</code></pre></li>
+</ul></li>
+<li><p><strong>datetime</strong>：Python内置的<code>datetime</code>模块提供了<code>datetime</code>、<code>data</code>以及<code>time</code>类型。</p>
+<ul>
+<li><code>datetime</code>组合了存储于<code>date</code>和<code>time</code>中的信息
+<code>python
+# 从字符串中创建 datetime<br/>
+dt1 = datetime.strptime(&#39;20091031&#39;, &#39;%Y%m%d&#39;)<br/>
+# 获取 date 对象<br/>
+dt1.date()<br/>
+# 获取 time 对象<br/>
+dt1.time()<br/>
+# 将 datetime 格式化为字符串<br/>
+dt1.strftime(&#39;%m/%d/%Y%H:%M&#39;)<br/>
+# 更改字段值<br/>
+dt2 = dt1.replace(minute=0, second=30)<br/>
+# 做差, diff 是一个 datetime.timedelta 对象<br/>
+diff = dt1 - dt2
+</code></li>
+</ul></li>
+</ol>
+
+<blockquote>
+<p><strong>注</strong>：</p>
+
+<ul>
+<li><code>str</code>、<code>bool</code>、<code>int</code>和<code>float</code>同时也是显式类型转换函数。</li>
+<li>除字符串和元组外，Python 中的绝大多数对象都是可变的。</li>
+</ul>
+</blockquote>
+
+<h2 id="toc_6">数据结构</h2>
+
+<blockquote>
+<p><strong>注</strong>：所有的“非只读(non-Get)”函数调用，比如下面例子中的<code>list1.sort()</code>，除非特别声明，都是原地操作(不会创建新的对象)。</p>
+</blockquote>
+
+<h3 id="toc_7">元组</h3>
+
+<p>元组是 Python 中任何类型的对象的一个一维、固定长度、<strong>不可变</strong>的序列。</p>
+
+<pre><code class="language-python"># 创建元组
+tup1 = 4, 5, 6
+tup1 = (6, 7, 8)
+# 创建嵌套元组
+tup1 = (4, 5, 6), (7, 8)
+# 将序列或迭代器转化为元组
+tuple([1, 0, 2])
+# 连接元组
+tup1 + tup2
+# 解包元组
+a, b, c = tup1
+</code></pre>
+
+<p><strong>元组应用</strong>：</p>
+
+<pre><code class="language-python"># 交换两个变量的值
+a, b = b, a
+</code></pre>
+
+<h3 id="toc_8">列表</h3>
+
+<p>列表是 Python 中任何类型的对象的一个一维、非固定长度、<strong>可变</strong>（比如内容可以被修改）的序列。</p>
+
+<pre><code class="language-python"># 创建列表
+list1 = [1, &#39;a&#39;, 3]
+list1 = list(tup1)
+# 连接列表
+list1 + list2
+list1.extend(list2)
+# 追加到列表的末尾
+list1.append(&#39;b&#39;)
+# 插入指定位置
+list1.insert(PosIndex, &#39;a&#39;)
+# 反向插入，即弹出给定位置的值/删除
+ValueAtIdx = list1.pop(PosIndex)
+# 移除列表中的第一个值, a 必须是列表中第一个值
+list1.remove(&#39;a&#39;)
+# 检查成员
+3 in list1 =&gt; True or False
+# 对列表进行排序
+list1.sort()
+# 按特定方式排序
+list1.sort(key=len) # 按长度排序
+</code></pre>
+
+<blockquote>
+<ul>
+<li>使用 + 连接列表会有比较大的开支，因为这个过程中会创建一个新的列表，然后复制对象。因此，使用<code>extend()</code>是更明智的选择。</li>
+<li><code>insert</code>和<code>append</code>相比会有更大的开支（时间/空间）。</li>
+<li>在列表中检查是否包含一个值会比在字典和集合中慢很多，因为前者需要进行线性扫描，而后者是基于哈希表的，所以只需要花费常数时间。</li>
+</ul>
+</blockquote>
+
+<h4 id="toc_9">内置的<code>bisect</code>模块</h4>
+
+<ul>
+<li>对一个排序好的列表进行二分查找或插入</li>
+<li><code>bisect.bisect</code>找到元素在列表中的位置，<code>bisect.insort</code>将元素插入到相应位置。</li>
+<li>用法：
+<code>python
+import bisect<br/>
+list1 = list(range(10))<br/>
+#找到 5 在 list1 中的位置，从 1 开始，因此 position = index + 1<br/>
+bisect.bisect(list1, 5)<br/>
+#将 3.5 插入 list1 中合适位置<br/>
+bisect.insort(list1, 3.5)
+</code></li>
+</ul>
+
+<blockquote>
+<p><strong>注</strong>：<code>bisect</code> 模块中的函数并不会去检查列表是否排序好，因为这会花费很多时间。所以，对未排序好的列表使用这些函数也不会报错，但可能会返回不正确的结果。</p>
+</blockquote>
+
+<h3 id="toc_10">针对序列类型的切片</h3>
+
+<blockquote>
+<p>序列类型包括<code>str</code>、<code>array</code>、<code>tuple</code>、<code>list</code>等。</p>
+</blockquote>
+
+<p>用法：</p>
+
+<pre><code class="language-python">list1[start:stop]
+# 如果使用 step
+list1[start:stop:step]
+</code></pre>
+
+<blockquote>
+<p><strong>注</strong>：</p>
+
+<ul>
+<li>切片结果包含 <code>start</code> 索引，但不包含 <code>stop</code> 索引</li>
+<li><code>start/stop</code> 索引可以省略，如果省略，则默认为序列从开始到结束，如 <code>list1 == list1[:]</code> 。</li>
+</ul>
+</blockquote>
+
+<p><code>step</code> 的应用：</p>
+
+<pre><code class="language-python"># 取出奇数位置的元素
+list1[::2]
+# 反转字符串
+str1[::-1]
+</code></pre>
+
+<h3 id="toc_11">字典（哈希表）</h3>
+
+<pre><code class="language-python"># 创建字典
+dict1 = {&#39;key1&#39;: &#39;value1&#39;, 2: [3, 2]}
+# 从序列创建字典
+dict(zip(KeyList, ValueList))
+# 获取/设置/插入元素
+dict1[&#39;key1&#39;]
+dict1[&#39;key1&#39;] = &#39;NewValue&#39;
+# get 提供默认值
+dict1.get(&#39;key1&#39;, DefaultValue)
+# 检查键是否存在
+&#39;key1&#39; in dict1
+# 获取键列表
+dict1.keys()
+# 获取值列表
+dict1.values()
+# 更新值
+dict1.update(dict2)  # dict1 的值被 dict2 替换
+</code></pre>
+
+<blockquote>
+<ul>
+<li>如果键不存在，则会出现 <code>KeyError Exception</code> 。</li>
+<li>当键不存在时，如果 <code>get()</code>不提供默认值则会返回 <code>None</code> 。</li>
+<li>以相同的顺序返回键列表和值列表，但顺序不是特定的，也就是说极大可能非排序。</li>
+</ul>
+</blockquote>
+
+<h4 id="toc_12">有效字典键类型</h4>
+
+<ul>
+<li>键必须是不可变的，比如标量类型(<code>int</code>、<code>float</code>、<code>string</code>)或者元组（元组中的所有对象也必须是不可变的）。</li>
+<li>这儿涉及的技术术语是“可哈希(hashability)”。可以用函数<code>hash()</code>来检查一个对象是否是可哈希的，比如 <code>hash(&#39;This is a string&#39;)</code>会返回一个哈希值，而<code>hash([1,2])</code>则会报错（不可哈希）。</li>
+</ul>
+
+<h3 id="toc_13">集合</h3>
+
+<ul>
+<li>一个集合是一些<strong>无序</strong>且唯一的元素的聚集；</li>
+<li><p>你可以把它看成只有键的字典；</p>
+<pre><code class="language-python"># 创建集合
+set([3, 6, 3])<br/>
+{3, 6, 3}<br/>
+# 子集测试<br/>
+set1.issubset(set2)<br/>
+# 超集测试<br/>
+set1.issuperset(set2)<br/>
+# 测试两个集合中的元素是否完全相同<br/>
+set1 == set2
+</code></pre></li>
+<li><p><strong>集合操作</strong></p>
+<ul>
+<li>并（或）：<code>set1 | set2</code></li>
+<li>交（与）：<code>set1 &amp; set2</code></li>
+<li>差：<code>set1 - set2</code></li>
+<li>对称差（异或）：<code>set1 ^ set2</code></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_14">函数</h2>
+
+<p>Python 的函数参数传递是通过<strong>引用传递</strong>。</p>
+
+<ul>
+<li><p>基本形式</p>
+<pre><code class="language-python">def func1(posArg1, keywordArg1=1, ..)
+</code></pre>
+<blockquote>
+<p><strong>注</strong>：</p>
+<ul>
+<li>关键字参数必须跟在位置参数的后面；</li>
+<li>默认情况下，Python 不会“延迟求值”，表达式的值会立刻求出来。</li>
+</ul>
+</blockquote></li>
+<li><p>函数调用机制</p>
+<ol>
+<li>所有函数均位于模块内部作用域。见“模块”部分。</li>
+<li>在调用函数时，参数被打包成一个元组和一个字典，函数接收一个元组<code>args</code>和一个字典<code>kwargs</code>，然后在函数内部解包。</li>
+</ol></li>
+<li><p>“函数是对象”的常见用法：</p>
+<pre><code class="language-python">def func1(ops = [str.strip, user_define_func, ..], ..):
+for function in ops:<br/>
+    value = function(value)
+</code></pre></li>
+</ul>
+
+<h3 id="toc_15">返回值</h3>
+
+<ul>
+<li>如果函数直到结束都没有<code>return</code>语句，则返回<code>None</code>。</li>
+<li>如果有多个返回值则通过<strong>一个</strong>元组来实现。
+<code>python
+return (value1, value2)<br/>
+value1, value2 = func1(..)
+</code></li>
+</ul>
+
+<h3 id="toc_16">匿名函数（又称 LAMBDA 函数）</h3>
+
+<ul>
+<li>什么是匿名函数？</li>
+</ul>
+
+<p>匿名函数是一个只包含一条语句的简单函数。</p>
+
+<pre><code class="language-python">lambda x : x * 2
+# def func1(x) : return x * 2
+</code></pre>
+
+<ul>
+<li>匿名函数的应用：“柯里化(curring)”，即利用已存在函数的部分参数来派生新的函数。
+<code>python
+ma60 = lambda x : pd.rolling_mean(x, 60)
+</code></li>
+</ul>
+
+<h3 id="toc_17">一些有用的函数（针对数据结构）</h3>
+
+<ol>
+<li><p><strong>Enumerate</strong> 返回一个序列<code>(i, value)</code>元组，<code>i</code> 是当前 <code>item</code> 的索引。</p>
+<pre><code class="language-python">for i, value in enumerate(collection):
+</code></pre>
+<ul>
+<li>应用：创建一个序列中值与其在序列中的位置的字典映射（假设每一个值都是唯一的）。</li>
+</ul></li>
+<li><p><strong>Sorted</strong> 可以从任意序列中返回一个排序好的序列。</p>
+<pre><code class="language-python">sorted([2, 1, 3]) =&gt; [1, 2, 3]
+</code></pre>
+<ul>
+<li>应用：
+<code>python
+sorted(set(&#39;abc bcd&#39;)) =&gt; [&#39; &#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]<br/>
+# 返回一个字符串排序后无重复的字母序列
+</code></li>
+</ul></li>
+<li><p><strong>Zip</strong> 函数可以把许多列表、元组或其他序列的元素配对起来创建一系列的元组。</p>
+<pre><code class="language-python">zip(seq1, seq2) =&gt; [(&#39;seq1_1&#39;, &#39;seq2_1&#39;), (..), ..]
+</code></pre>
+<ul>
+<li><code>zip()</code>可以接收任意数量的序列作为参数，但是产生的元素的数目取决于最短的序列。</li>
+<li><p>应用：多个序列同时迭代：</p>
+<pre><code class="language-python">for i, (a, b) in enumerate(zip(seq1, seq2)):
+</code></pre></li>
+<li><p><code>unzip</code>：另一种思考方式是把一些行转化为一些列：</p>
+<pre><code class="language-python">seq1, seq2 = unzip(zipOutput)
+</code></pre></li>
+</ul></li>
+<li><p><strong>Reversed</strong> 将一个序列的元素以逆序迭代。</p>
+<pre><code class="language-python">list(reversed(range(10)))
+</code></pre>
+<blockquote>
+<p><code>reversed()</code> 会返回一个迭代器，<code>list()</code> 使之成为一个列表。</p>
+</blockquote></li>
+</ol>
+
+<h2 id="toc_18">控制流</h2>
+
+<ol>
+<li>用于 <code>if-else</code> 条件中的操作符：<br/>
+```python<br/>
+var1 is var2  # 检查两个变量是否是相同的对象</li>
+</ol>
+
+<p>var1 is not var2  # 检查两个变量是否是不同的对象</p>
+
+<p>var1 == var2  # 检查两个变量的值是否相等</p>
+
+<pre><code class="language-text">&gt; **注**：Python 中使用 `and`、`or`、`not` 来组合条件，而不是使用 `&amp;&amp;`、`||`、`!` 。
+
+2. `for`循环的常见用法：
+```python
+for element in iterator:  # 可迭代对象（list、tuple）或迭代器
+    pass
+
+for a, b, c in iterator:  # 如果元素是可以解包的序列
+    pass
+</code></pre>
+
+<ol>
+<li><code>pass</code>：无操作语句，在不需要进行任何操作的块中使用。</li>
+<li><p>三元表达式，又称简洁的 <code>if-else</code>，基本形式：</p>
+<pre><code class="language-python">value = true-expr if condition else false-expr
+</code></pre></li>
+<li><p>Python 中没有 <code>switch/case</code> 语句，请使用 <code>if/elif</code>。</p></li>
+</ol>
+
+<h2 id="toc_19">面向对象编程</h2>
+
+<ol>
+<li><strong>对象</strong>是 Python 中所有类型的根。</li>
+<li>万物（数字、字符串、函数、类、模块等）皆为对象，每个对象均有一个“类型(type)”。对象变量是一个指向变量在内存中位置的指针。</li>
+<li><p>所有对象均会被<strong>引用计数</strong>。</p>
+<pre><code class="language-python">sys.getrefcount(5) =&gt; x
+a = 5, b = a<br/>
+# 上式会在等号的右边创建一个对象的引用，因此 a 和 b 均指向 5<br/>
+sys.getrefcount(5)<br/>
+=&gt; x + 2<br/>
+del(a); sys.getrefcount(5) =&gt; x + 1
+</code></pre></li>
+<li><p>类的基本形式：</p>
+<pre><code class="language-python">class MyObject(object):
+# &#39;self&#39; 等价于 Java/C++ 中的 &#39;this&#39;<br/>
+def __init__(self, name):<br/>
+    self.name = name<br/>
+def memberFunc1(self, arg1):<br/>
+    pass<br/>
+@staticmethod<br/>
+def classFunc2(arg1):<br/>
+    pass<br/>
+obj1 = MyObject(&#39;name1&#39;)<br/>
+obj1.memberFunc1(&#39;a&#39;)<br/>
+MyObject.classFunc2(&#39;b&#39;)
+</code></pre></li>
+<li><p>有用的交互式工具：</p>
+<pre><code class="language-python">dir(variable1)  # 列出对象的所有可用方法
+</code></pre></li>
+</ol>
+
+<h2 id="toc_20">常见字符串操作</h2>
+
+<pre><code class="language-python"># 通过分隔符连接列表/元组
+&#39;, &#39;.join([ &#39;v1&#39;, &#39;v2&#39;, &#39;v3&#39;]) =&gt; &#39;v1, v2, v3&#39;
+
+# 格式化字符串
+string1 = &#39;My name is {0}　{name}&#39;
+newString1 = string1.format(&#39;Sean&#39;, name =　&#39;Chen&#39;)
+
+# 分裂字符串
+sep = &#39;-&#39;;
+stringList1 =　string1.split(sep)
+
+# 获取子串
+start = 1;
+string1[start:8]
+
+# 补 &#39;0&#39; 向右对齐字符串
+month = &#39;5&#39;;
+month.zfill(2) =&gt; &#39;05&#39;
+month = &#39;12&#39;;
+month.zfill(2) =&gt; &#39;12&#39;
+month.zfill(3) =&gt; &#39;012&#39;
+</code></pre>
+
+<h2 id="toc_21">异常处理</h2>
+
+<ol>
+<li><p>基本形式：</p>
+<pre><code class="language-python">try:
+pass<br/>
+except ValueError as e:<br/>
+print e<br/>
+except (TypeError, AnotherError):<br/>
+pass<br/>
+except:<br/>
+pass<br/>
+finally:<br/>
+pass  # 清理，比如 close db;
+</code></pre></li>
+<li><p>手动引发异常：</p>
+<pre><code class="language-python">raise AssertionError  # 断言失败
+raise SystemExit<br/>
+# 请求程序退出<br/>
+raise RuntimeError(&#39;错误信息 :..&#39;)
+</code></pre></li>
+</ol>
+
+<h2 id="toc_22">列表、字典以及元组的推导表达式</h2>
+
+<p>使代码更加易读易写的语法糖。</p>
+
+<ol>
+<li><p><strong>列表推导</strong></p>
+<ul>
+<li>用一个简练的表达式，通过筛选一个数据集并且转换经过筛选的元素的方式来简明地生成新列表。</li>
+<li>基本形式：
+<code>python
+[expr for val in collection if condition]
+</code>
+等价于
+<code>python
+result = []<br/>
+for val in collection:<br/>
+if condition:<br/>
+result.append(expr)
+</code>
+可以省略过滤条件，只留下表达式。</li>
+</ul></li>
+<li><p><strong>字典推导</strong></p>
+<ul>
+<li>基本形式：
+<code>python
+{key-expr : value-expr for value in collection if condition}
+</code></li>
+</ul></li>
+<li><p><strong>集合推导</strong></p>
+<ul>
+<li>基本形式：和列表推导一样，不过是用 <code>()</code> 而不是 <code>[]</code> 。</li>
+</ul></li>
+<li><p><strong>嵌套列表</strong></p>
+<ul>
+<li>基本形式：
+<code>python
+[expr for val in collection for innerVal in val if condition]
+</code></li>
+</ul></li>
+</ol>
+
+<h2 id="toc_23">单元测试</h2>
+
+<p>Python自带<code>unittest</code>模块，可供我们编写单元测试。</p>
+
+<pre><code class="language-python">import unittest
+</code></pre>
+
+<p>我们可以编写继承于<code>unittest.TestCase</code>测试类的子类，并在子类中编写具体的测试函数。测试函数命必须以<code>test_</code>开头，否则不会被识别为测试函数，进而不会在运行单元测试时被运行。</p>
+
+<pre><code class="language-python">class TestSubclass(unittest.TestCase):
+
+    def test_func(self):
+        self.assertEqual(0, 0)
+        # 可以通过msg关键字参数提供测试失败时的提示消息
+        self.assertEqual(0, 0, msg=&#39;modified message&#39;)
+        self.assertGreater(1, 0)
+        self.assertIn(0, [0])
+        self.assertTrue(True)
+        # 测试是否会抛出异常
+        with self.assertRaises(KeyError):
+            _ = dict()[1]
+
+    # 被@unittest.skip装饰器装饰的测试类或测试函数会被跳过
+    @unittest.skip(reason=&#39;just skip&#39;)
+    def test_skip(self):
+        raise Exception(&#39;I shall never be tested&#39;)
+</code></pre>
+
+<p>另外，<code>unittest.TestCase</code>中还有两个特殊的成员函数，他们分别会在调用每一个测试函数的前后运行。在测试前连接数据库并在测试完成后断开连接是一种常见的使用场景。</p>
+
+<pre><code class="language-python">def setUp(self):
+    # To do: connect to the database
+    pass
+
+def tearDown(self):
+    # To do: release the connection
+    pass
+
+def test_database(self):
+    # To do: test the database
+    pass
+</code></pre>
+
+<p>测试类编写完毕后，可以通过添加以下代码来将当前文件当成正常的Python脚本使用</p>
+
+<pre><code class="language-python">if __name__ == &#39;__main__&#39;:
+  unittest.main()
+</code></pre>
+
+<h1 id="toc_24">Python数据科学速查表</h1>
+
+<p><a href="%E9%99%84%E4%BB%B6Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E9%80%9F%E6%9F%A5%E8%A1%A8.pdf">Python数据科学速查表</a> </p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   <a href="python.html">&laquo; Prev Page</a>  
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			 <a href="python_2.html">&raquo; Next Page</a> 
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,619 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  1.1 机器学习 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>1.1 机器学习</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E5%90%B4%E6%81%A9%E8%BE%BE_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html'>吴恩达_机器学习</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <h1 id="toc_0">机器学习的应用</h1>
+
+<ul>
+<li><strong>数据库挖掘。</strong>机器学习被用于数据挖掘的原因之一是网络和自动化技术的增长，这意味着，我们有史上最大的数据集比如说，大量的硅谷公司正在收集<strong>web</strong>上的单击数据，也称为点击流数据，并尝试使用机器学习算法来分析数据，更好的了解用户，并为用户提供更好的服务。这在硅谷有巨大的市场。再比如，医疗记录。随着自动化的出现，我们现在有了电子医疗记录。如果我们可以把医疗记录变成医学知识，我们就可以更好地理解疾病。再如，</li>
+<li><strong>计算生物学。</strong>还是因为自动化技术，生物学家们收集的大量基因数据序列、<strong>DNA</strong>序列和等等，机器运行算法让我们更好地了解人类基因组，大家都知道这对人类意味着什么。再比如，工程方面，在工程的所有领域，我们有越来越大、越来越大的数据集，我们试图使用学习算法，来理解这些数据。另外，</li>
+<li><strong>机械应用</strong>。有些人不能直接操作。例如，我已经在无人直升机领域工作了许多年。我们不知道如何写一段程序让直升机自己飞。我们唯一能做的就是让计算机自己学习如何驾驶直升机。</li>
+<li><strong>手写识别。</strong>现在我们能够非常便宜地把信寄到这个美国甚至全世界的原因之一就是当你写一个像这样的信封，一种学习算法已经学会如何读你信封，它可以自动选择路径，所以我们只需要花几个美分把这封信寄到数千英里外。</li>
+</ul>
+
+<h1 id="toc_1">机器学习</h1>
+
+<p>在机器学习的历史上，一共出现了两种定义。</p>
+
+<ul>
+<li><p>1956 年，开发了西洋跳棋 AI 程序的 Arthur Samuel 在标志着人工智能学科诞生的达特茅斯会议上定义了 “机器学习” 这个词，定义为，“在没有明确设置的情况下，使计算机具有学习能力的研究领域”。</p></li>
+<li><p>1997 年，Tom Mitchell 提供了一个更现代的定义：“如果用 P 来测量程序在任务 T 中性能。若一个程序通过利用经验 E 在 T 任务中获得了性能改善，则我们就说关于任务 T 和 性能测量 P ，该程序对经验 E 进行了学习。”</p></li>
+</ul>
+
+<p>例如：玩跳棋。 </p>
+
+<p>E = 玩很多盘跳棋游戏的经验</p>
+
+<p>T = 玩跳棋的任务。</p>
+
+<p>P = 程序将赢得下一场比赛的概率。</p>
+
+<h1 id="toc_2">分类</h1>
+
+<p>一般来说，任何机器学习问题都可以分配到两大类中的一个：</p>
+
+<p>有监督学习 supervised learning 和无监督学习 unsupervised learning。</p>
+
+<p>简单的说，监督学习就是我们教计算机去做某件事情，无监督学习是我们让计算机自己学习。</p>
+
+<p><img src="media/15822402376778/machine-learning.png" alt="img"/></p>
+
+<p align='center'>
+<img src='../images/machine-learning.png'>
+</p>
+
+<h2 id="toc_3">监督学习</h2>
+
+<p>在监督式学习中，首先有一个数据集，并且已知正确的输出是什么，且输入和输出存在关联。 监督学习问题分为“回归 Regression”和“分类 Classification”问题。</p>
+
+<p>在回归问题中，我们试图预测连续输出中的结果，这意味着我们试图将输入变量映射到某个连续函数。例如给定一个人的照片，根据照片预测年龄，这就是一个回归的问题。</p>
+
+<p><img src="Week1_%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.assets/Linear_regression.svg" alt="img"/></p>
+
+<p>在分类问题中，我们试图预测离散输出中的结果。换句话说，我们试图将输入变量映射到离散类别中。例如给予患有肿瘤的患者，我们必须预测肿瘤是恶性的还是良性的。</p>
+
+<p><img src="media/15822402376778/Kernel_Machine.svg" alt="img"/></p>
+
+<h2 id="toc_4">无监督学习</h2>
+
+<p>无监督学习使我们能够很少或根本不知道我们的结果应该是什么样子。我们可以从数据中得出结构，我们不一定知道变量的影响。 我们可以通过基于数据中变量之间的关系对数据进行聚类来推导出这种结构。 在无监督学习的情况下，没有基于预测结果的反馈。无监督学习可以分为“聚类”和“非聚类”。</p>
+
+<p>聚类：获取1,000,000个不同基因的集合，并找到一种方法将这些基因自动分组成不同变量的相似或相关的组，例如寿命，位置，角色等。 </p>
+
+<p><img src="media/15822402376778/KMeans-Gaussian-data.svg" alt="img"/></p>
+
+<p>非聚类：“鸡尾酒会算法”，允许您在混乱的环境中查找结果。 （即在鸡尾酒会上识别来自声音网格的个人声音和音乐）。</p>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822402376673.html" 
+          title="Previous Post: 2.2 补充梯度下降理解">&laquo; 2.2 补充梯度下降理解</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822394457187.html" 
+          title="Next Post: 淘宝用户行为分析">淘宝用户行为分析 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

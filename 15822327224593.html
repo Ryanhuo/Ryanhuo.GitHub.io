@@ -1,0 +1,1117 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  2. 网页基本组成与结构 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>2. 网页基本组成与结构</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E7%88%AC%E8%99%AB.html'>爬虫</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <h2 id="toc_0">HTML简介</h2>
+
+<p>超级文本标记语言（HyperText Markup Language）是标准通用标记语言下的一个应用，也是一种规范和标准，它通过标记符号来标记要显示的网页中的各个部分。网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以  告诉浏览器如何显示其中的内容（如：文字如何处理，画面如何安排，图片如何显示等）。浏览器按顺序阅读网页文  件，然后根据标记符解释和显示其标记的内容，对书写出错的标记将不指出其错误，且不停止其解释执行过程，编制  者只能通过显示效果来分析出错原因和出错部位。但需要注意的是，对于不同的浏览器，对同一标记符可能会有不完  全相同的解释，因而可能会有不同的显示效果。</p>
+
+<p><strong>标签：</strong>用尖括号包围的关键词我们成为标签。通常HTML标签成对出现，如：、。</p>
+
+<p>Ø  开始标签：标签对中的第一个标签是开始标签，也成为开放标签。如。</p>
+
+<p>Ø  结束标签：标签对中的第二个标签是结束标签，也成为闭合标签。如。</p>
+
+<p><strong>元素：</strong>我们把匹配的标签对以及它们包围的内容称为元素。即（元素 = 开始标签 + 内容 + 结束标签）。</p>
+
+<p>Ø 块级元素：在浏览器默认显示时以新行来开始（和结束）的元素。</p>
+
+<p>Ø 内联元素：又称行内元素，在浏览器默认显示时在同一行按从左至右顺序显示，不单独占一行的元素。<br/>
+<strong>属性：</strong>开始标签中那些以名称/值对的形式出现的内容，我们称之为属性。</p>
+
+<h3 id="toc_1">HTML元素</h3>
+
+<h4 id="toc_2">根元素</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;doctype&gt;</code></th>
+<th>定义文档类型。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;html&gt;</code></td>
+<td>定义 HTML 文档。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_3">元数据元素</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;head&gt;</code></th>
+<th>定义关于文档的信息。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;meta&gt;</code></td>
+<td>定义关于 HTML 文档的元数据。</td>
+</tr>
+<tr>
+<td><code>&lt;link&gt;</code></td>
+<td>定义文档与外部资源之间的关系，一般用于引入样式表。</td>
+</tr>
+<tr>
+<td><code>&lt;base&gt;</code></td>
+<td>定义页面上所有链接的默认地址或默认目标。</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;</code></td>
+<td>定义文档标题。</td>
+</tr>
+<tr>
+<td><code>&lt;style&gt;</code></td>
+<td>定义文档的样式信息。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_4">脚本元素</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;script&gt;</code></th>
+<th>定义客户端脚本。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;noscript&gt;</code></td>
+<td>定义当浏览器不支持脚本的时候所显示的内容</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_5">块元素</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;body&gt;</code></th>
+<th>定义文档的主体。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;h1&gt;</code>、   <code>&lt;h2&gt;</code>...   <code>&lt;h6&gt;</code></td>
+<td>定义文档标题。</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>定义文档段落。</td>
+</tr>
+<tr>
+<td><code>&lt;blockquote&gt;</code></td>
+<td>定义块引用。</td>
+</tr>
+<tr>
+<td><code>&lt;ul&gt;</code>、   <code>&lt;ul&gt;</code>、   <code>&lt;dl&gt;</code></td>
+<td>定义列表。</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td>定义表格。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_6">列表元素</h4>
+
+<h5 id="toc_7">无序列表</h5>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;ul&gt;</code></th>
+<th>定义无序的列表。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;li&gt;</code></td>
+<td>定义列表项。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="toc_8">有序列表</h5>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;ol&gt;</code></th>
+<th>定义有序的列表。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;li&gt;</code></td>
+<td>定义列表项。</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="toc_9">定义列表</h5>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;dl&gt;</code></th>
+<th>定义定义列表。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;dt&gt;</code></td>
+<td>定义定义术语。</td>
+</tr>
+<tr>
+<td><code>&lt;dd&gt;</code></td>
+<td>定义定义描述。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_10">表格元素</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;table&gt;</code></th>
+<th>定义表格。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;thead&gt;</code></td>
+<td>定义表格的页眉。</td>
+</tr>
+<tr>
+<td><code>&lt;tbody&gt;</code></td>
+<td>定义表格的主体。</td>
+</tr>
+<tr>
+<td><code>&lt;tfoot&gt;</code></td>
+<td>定义表格的页脚。</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code></td>
+<td>定义表格的表头行。</td>
+</tr>
+<tr>
+<td><code>&lt;tr&gt;</code></td>
+<td>定义表格的行。</td>
+</tr>
+<tr>
+<td><code>&lt;td&gt;</code></td>
+<td>定义表格单元。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_11">文本元素</h4>
+
+<p>文本格式化元素</p>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;em&gt;</code></th>
+<th>定义着重文字。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;strong&gt;</code></td>
+<td>定义加重语气。</td>
+</tr>
+<tr>
+<td><code>&lt;sup&gt;</code></td>
+<td>定义上标字。</td>
+</tr>
+<tr>
+<td><code>&lt;sub&gt;</code></td>
+<td>定义下标字。</td>
+</tr>
+<tr>
+<td><code>&lt;ins&gt;</code></td>
+<td>定义插入字。</td>
+</tr>
+<tr>
+<td><code>&lt;del&gt;</code></td>
+<td>定义删除字。</td>
+</tr>
+<tr>
+<td><code>&lt;b&gt;</code></td>
+<td>定义粗体文本。</td>
+</tr>
+<tr>
+<td><code>&lt;i&gt;</code></td>
+<td>定义斜体文本。</td>
+</tr>
+<tr>
+<td><code>&lt;big&gt;</code></td>
+<td>定义大号字。</td>
+</tr>
+<tr>
+<td><code>&lt;small&gt;</code></td>
+<td>定义小号字。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_12">链接与图像</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;a&gt;</code></th>
+<th>定义超链接</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;img&gt;</code></td>
+<td>定义图像。</td>
+</tr>
+<tr>
+<td><code>&lt;map&gt;</code></td>
+<td>定义图像地图。</td>
+</tr>
+<tr>
+<td><code>&lt;area&gt;</code></td>
+<td>定义图像地图中的可点击区域。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_13"><code>&lt;div&gt;</code> 和    <code>&lt;span&gt;</code></h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;div&gt;</code></th>
+<th>定义文档中的分区或节（division/section）。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;span&gt;</code></td>
+<td>定义 span，用来组合文档中的行内元素。</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_14">表单元素</h4>
+
+<table>
+<thead>
+<tr>
+<th><code>&lt;form&gt;</code></th>
+<th>定义供用户输入的表单。</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&lt;input&gt;</code></td>
+<td>定义输入域。</td>
+</tr>
+<tr>
+<td><code>&lt;textarea&gt;</code></td>
+<td>定义文本域 (一个多行的输入控件)。</td>
+</tr>
+<tr>
+<td><code>&lt;lable&gt;</code></td>
+<td>定义一个控制的标签。</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td>定义一个选择列表。</td>
+</tr>
+<tr>
+<td><code>&lt;option&gt;</code></td>
+<td>定义下拉列表中的选项。</td>
+</tr>
+<tr>
+<td><code>&lt;optgroup&gt;</code></td>
+<td>定义选项组。</td>
+</tr>
+<tr>
+<td><code>&lt;button&gt;</code></td>
+<td>定义一个按钮。</td>
+</tr>
+<tr>
+<td><code>&lt;fieldset&gt;</code></td>
+<td>定义域。</td>
+</tr>
+<tr>
+<td><code>&lt;legend&gt;</code></td>
+<td>定义域的标题。</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_15">CSS</h2>
+
+<h3 id="toc_16">CSS简介</h3>
+
+<p>CSS是一种定义样式结构如字体、颜色、位置等的语言，用于描述网页上的信息格式化和现实的方式。CSS样式可以  直接存储于HTML网页或者单独的样式单文件。无论哪一种方式，样式单包含将样式应用到指定类型的元素的规则。  外部使用时，样式单规则被放置在一个带有文件扩展名_css的外部样式单文档中。</p>
+
+<h3 id="toc_17">2.2 CSS语法</h3>
+
+<ol>
+<li>css由两部分组成：选择器和声明。</li>
+</ol>
+
+<p><strong>选择器</strong>指定来声明应用于那个或者那些元素；声明用于设置元素的样式，用大括号括起来里面用分号隔开每一条。</p>
+
+<ol>
+<li><p>在   <code>&lt;head&gt;</code>中，可以用   <code>&lt;style&gt;</code>和   <code>&lt;link&gt;</code>标签。</p></li>
+<li><p>选择器中有多项时，在前一项的前提下，后一项的样式为声明的样式，其他情况无效。</p></li>
+<li><p>id选择器：</p>
+<ul>
+<li><p>css文件中：#red {color:red;}</p></li>
+<li><p>HTML文件中：    <code>&lt;p id=&quot;red&quot;&gt;</code> red    <code>&lt;/p&gt;</code></p></li>
+</ul></li>
+<li><p>类选择器：</p></li>
+</ol>
+
+<p>css文件中：.center {text-align:center}</p>
+
+<p>HTML文件中：   <code>&lt;h1 class=&quot;center&quot;&gt;</code> center    <code>&lt;/h1&gt;</code></p>
+
+<ol>
+<li>背景属性：</li>
+</ol>
+
+<p>background-color属性：（合理的英文颜色单词或#000000，默认值为transparent为透明）为元素设置背景色。background-image属性：（url（/i/emg_01.jpg），默认值为none）用图像做背景。</p>
+
+<p>background-repeat属性：（默认repeat在所有方向重复，repeat-x在水平方向重复，repeat-y垂直方向重复，no-repeat不重复）设定重复方式。</p>
+
+<p>background-position属性：（top、center、bottom每种情况的left、center、right三种位置共九种；（x，y），x和y由0%到100%从坐上到右下，也可以用数字表示像素，也可以混用）设置背景图像起始位置。</p>
+
+<p>background-attachment属性：（fixed当页面其他部分滚动时背景不变）固定背景图像。</p>
+
+<p>background-clip属性：（border-box背景被裁剪到边框盒，padding-box背景被裁剪到内边距框，content-box背景裁  剪到内容处）规定背景的绘制区域。</p>
+
+<p>background-origin属性：（border-box背景被裁剪到边框盒，padding-box背景被裁剪到内边距框，content-box背景  裁剪到内容处）规定background-position属性的位置相对于什么来定位。</p>
+
+<p>background-size属性：（x，y，可以为以父元素为基础的百分比或像素做单位；cover，扩展足够大，可能有的部分  无法显示；contain，扩展至适应内容区域的最大尺寸）设置背景图像的尺寸。</p>
+
+<ol>
+<li>文本属性：</li>
+</ol>
+
+<p>color属性：（合理英文颜色名，#00000，rgb（255，0，0））设定文本颜色。letter-spacing属性：（x，定义间距可以为负数单位像素）设定文本间距。</p>
+
+<p>line-height属性：（x，可为百分比和像素，不能为负值）设定文本行高。text-align属性：（left，right，center，justify两端对齐）设定对齐方式。</p>
+
+<p>text-decoration属性：（underline下划线，overline上划线，line-through横穿一条线，blink闪烁）文本划线样式修 饰。</p>
+
+<p>text-indent属性：（x，可为以父元素为基础的百分比和像素）规定文本块首行文本缩进。text-shadow属性：（<em>x,</em>y,z水平阴影位置，垂直阴影位置，模糊距离，颜色）文本阴影。word-spacing属性：（x，定义间距可以为负数单位像素）设定字间距，单词以空格分开算。word-wrap属性：（break-word）在长单词或URL地址内部进行换行。</p>
+
+<ol>
+<li>字体属性：</li>
+</ol>
+
+<p>font属性：在一个声明中可以设置所有的字体属性。</p>
+
+<p>font-style属性：（italic斜体，oblique倾斜，）设置字体倾斜样式。</p>
+
+<p>font-variant属性：（small-caps显示小型大写字母的字体）设置为小型大写字母。font-weight属性：（x，400为默认，700为bold粗体）设置文本粗细。</p>
+
+<p>font-size属性：（x，百分比或固定值）设置字体尺寸。font-family属性：为段落设置字体。</p>
+
+<ol>
+<li>链接定义：</li>
+</ol>
+
+<p>a:link {} 未被访问的链接</p>
+
+<p>a:visited {} 已被访问的链接a:hover {} 鼠标指针移动到链接上a:active {}正在被点击的链接</p>
+
+<p>hover要在link和visited之后，active要在hover之后。</p>
+
+<p>text-decoration属性：（none去掉下划线，underline出现下划线）设置下划线。background-color属性：规定链接的背景色。</p>
+
+<ol>
+<li>表格属性：</li>
+</ol>
+
+<p>border-collapse属性：（collapse将边框合并为一个单一的边框）边框样式。caption-side属性：（top在顶端，bottom在低端）表格标题位置。</p>
+
+<p>empty-cells属性：（hide不在空单元格周围绘制边框）是否显示空单元格。border-width属性：（x，y，z，w，上右下左，百分比或固定值）设置边框尺寸。border-color属性：（x，y，z，w，上右下左，四个颜色值）设置边框颜色。</p>
+
+<p>width属性、height属性：（x，百分比或固定值）设置表格宽度和高度。</p>
+
+<p>padding属性：（x，y，z，w，上右下左，四个位置内边距）声明所有的内边距，或者用padding-bottom，padding- left，padding-right，padding-top四个属性来替换。</p>
+
+<p>border-style属性：（none无，dotted点，dashed虚线）定义边框样式。</p>
+
+<p>margin属性：（x，y，z，w，上右下左，百分比或固定值）设置一个声明中的外边距。</p>
+
+<h3 id="toc_18">css类型</h3>
+
+<p>内联方式</p>
+
+<p>样式定义在单个的 HTML元素中内部样式表</p>
+
+<p>样式定义在 HTML 页的头元素中外部样式表</p>
+
+<p>将样式定义在一个外部的 CSS 文件中（.css 文件） 由 HTML 页面引用样式表文件</p>
+
+<h3 id="toc_19">css选择器</h3>
+
+<ol>
+<li><p>标签选择器（如：body,div,p,ul,li）</p></li>
+<li><p>类选择器（如：class=”head”,class=”head_logo”）</p></li>
+<li><p>ID选择器（如：id=”name”,id=”name_txt”）</p></li>
+<li><p>全局选择器（如：*号）</p></li>
+<li><p>组合选择器（如：.head .head_logo,注意两选择器用空格键分开）</p></li>
+<li><p>继承选择器（如：div p,注意两选择器用空格键分开）</p></li>
+<li><p>伪类选择器（如：就是链接样式,a元素的伪类，4种不同的状态：link、visited、active、hover。）</p></li>
+</ol>
+
+<h2 id="toc_20">JavaScript</h2>
+
+<h3 id="toc_21">JavaScript简介</h3>
+
+<p>JavaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户 提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的。</p>
+
+<ol>
+<li><p>是一种解释性脚本语言。</p></li>
+<li><p>主要用来向HTML（标准通用标记语言下的一个应用）页面添加交互行为。</p></li>
+<li><p>可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离。</p></li>
+<li><p>跨平台特性，在绝大多数浏览器的支持下，可以在多种平台下运行（如Windows、Linux、Mac、Android、</p></li>
+</ol>
+
+<p>iOS等）。</p>
+
+<h3 id="toc_22">JavaScript语法</h3>
+
+<ol>
+<li><p>js代码能直接嵌入网页的任何地方，通常放在   <code>&lt;head&gt;</code>   <code>&lt;/head&gt;</code>中，但会要求用户把所有js代码都下载解析执 行以后在呈现内容；</p></li>
+<li><p>可以把代码单独的放在一个.js文件中，同时，多个页面可以引用同一份.js文件；</p></li>
+<li><p>页面中可以多次编写   <code>&lt;script&gt;</code>   <code>&lt;/script&gt;</code>,但是浏览器会按照顺序执行这些JavaScript代码；</p></li>
+<li><p>JavaScript中每个语句以 ； 结尾 每个语句块以 {…..} 注释用//或/* */</p></li>
+<li><p>所有类型都是定义变量都是用 var， 如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量；</p></li>
+</ol>
+
+<p>hello.html</p>
+
+<pre><code class="language-markup"> &lt;html&gt;
+     &lt;head&gt;
+         &lt;title&gt;js \&lt;/title&gt;
+         &lt;script type=&quot;text/javascript&quot;&gt; console.log(&quot;Hello javascript&quot;)
+         &lt;/script&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+
+ 
+
+外部样式表
+
+test.js
+ 
+ alert(&#39;Hello JS&#39;)
+
+test.html
+
+ &lt;html&gt;
+
+     &lt;head&gt;
+         &lt;title&gt;js \&lt;/title&gt;
+         &lt;script type=&quot;text/javascript&quot; src=&#39;test.js&#39;&gt; \&lt;/script&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+
+<hr/>
+
+<blockquote>
+<p><strong>火火的总结</strong></p>
+
+<ul>
+<li>HTML展示内容，网页的骨架</li>
+<li>CSS美化页面｛｝</li>
+<li>JS让页面动起来，提高浏览体验。</li>
+</ul>
+</blockquote>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327224546.html" 
+          title="Previous Post: 1. 网络爬虫简介">&laquo; 1. 网络爬虫简介</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327224636.html" 
+          title="Next Post: 5. Json">5. Json &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

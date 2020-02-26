@@ -1,0 +1,675 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  5. Json - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>5. Json</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E7%88%AC%E8%99%AB.html'>爬虫</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <h2 id="toc_0">数据分类</h2>
+
+<p><strong>非结构化数据</strong>：html</p>
+
+<p>处理方法： re，Xpath，bs4等</p>
+
+<p><strong>结构化数据</strong>：json</p>
+
+<p>处理方法： 将json格式的数据转化成Python的数据类型</p>
+
+<h2 id="toc_1">JSON</h2>
+
+<p>JSON是一种轻量级的数据交换格式，它使得人们很容易进行阅读和编写。同时也方便了机器进行解析和生成，适用  于进行数据交互的场景，比如网站前台与后台之间的数据交互。</p>
+
+<p><img src="media/15822327224636/1575944804702-41dbd124-f440-414b-82a0-43ca65e04c66.jpeg" alt="clip_image001.jpg"/></p>
+
+<h3 id="toc_2">JSON语法规则</h3>
+
+<ul>
+<li>数据在名称/值对中</li>
+<li>数据由逗号分隔</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+
+<h3 id="toc_3">JSON 值</h3>
+
+<p>JSON 值可以是：</p>
+
+<ul>
+<li>数字（整数或浮点数）</li>
+<li>字符串（在双引号中）</li>
+<li>逻辑值（true 或 false）</li>
+<li>数组（在方括号中）</li>
+<li>对象（在花括号中）</li>
+<li>null</li>
+</ul>
+
+<h2 id="toc_4">JSON模块</h2>
+
+<p>通过Python的json模块，可以将字符串形式的json数据转化为字典，也可以将Python中的字典数据转化为字符串形式  的json数据。</p>
+
+<p>Json 模块提供了四个方法： dumps（重点）、dump、loads（重点）、load。</p>
+
+<h3 id="toc_5">dumps 和 dump</h3>
+
+<p>dumps(重点掌握)和dump 序列化方法</p>
+
+<p>dumps只完成了序列化为str</p>
+
+<p>dump必须传文件描述符，将序列化的str保存到文件中</p>
+
+<pre><code class="language-text"># dumps 将“obj” 数据类型 转换为 JSON格式的字符串
+dict1 = {
+    &#39;Code&#39;: 200,
+    &#39;Count&#39;: 657,
+    &#39;Posts&#39;: [
+                {
+                    &#39;Id&#39;: 0,
+                    &#39;PostId&#39;: &quot;1123178321664806912&quot;,
+                    &#39;RecruitPostId&#39;: 49691
+                },
+                {
+                    &#39;Id&#39;: 0,
+                    &#39;PostId&#39;: &quot;1123178321664806912&quot;,
+                    &#39;RecruitPostId&#39;: 49691
+                }
+            ]
+        }
+
+json_dict = json.dumps(dict1) 
+print(json_dict) 
+print(type(json_dict))
+
+ # dump 两个动作，一个动作是将”obj“转换为JSON格式的字符串，还有一个动作是将字符串写入到文件中，也就是说文件描述符fp是必须要的参数
+
+with open(&#39;./a.json&#39;,&#39;w&#39;) as f:
+    json_dict1 = json.dump(dict1,fp=f) 
+    print(json_dict1)
+    print(type(json_dict1))
+</code></pre>
+
+<h3 id="toc_6">loads 和 load</h3>
+
+<p>loads(重点掌握)和load 反序列化方法</p>
+
+<p>load 只接收文件描述符，完成了读取文件和反序列化</p>
+
+<p>loads 只完成了反序列化</p>
+
+<pre><code class="language-text"># loads 将包含str类型的JSON文档反序列化为一个python对象
+dic = json.loads(&#39;{&quot;name&quot;:&quot;Tom&quot;, &quot;age&quot;:23}&#39;) 
+print(dic)
+print(type(dic))
+
+# load 将一个包含JSON格式数据的可读文件饭序列化为一个python对象
+with open(&quot;./a.json&quot;, &quot;r&quot;,encoding=&#39;utf-8&#39;) as f:
+    aa = json.load(f)
+    print(aa) 
+    print(type(aa))
+</code></pre>
+
+<h3 id="toc_7">参数介绍</h3>
+
+<p>对应于load和loads，dump的第一个参数是对象字典，第二个参数是文件对象，可以直接将转换后的json数据写入文  件，dumps的第一个参数是对象字典，其余都是可选参数。</p>
+
+<p><strong>dump和dumps</strong>的可选参数相同，这些参数都相当实用，现将用到的参数记录如下：</p>
+
+<p><strong>ensure_ascii  默认为True</strong>，保证转换后的json字符串中全部是ascii字符，非ascii字符都会被转义。如果数据中存在中文或其他非ascii字符，最好将ensure_ascii设置为False，保证输出结果正常。</p>
+
+<p><strong>indent</strong> <strong>缩进，默认为None</strong>，没有缩进，设置为正整数时，输出的格式将按照indent指定的半角空格数缩进，相当实用。</p>
+
+<p><strong>separators</strong> 设置分隔符，默认的分隔符是(&#39;,&#39;, &#39;: &#39;)，如果需要自定义json中的分隔符，例如调整冒号前后的空格数，可以按照(item_separator, key_separator)的形式设置。</p>
+
+<p><strong>sort_keys</strong> 默认为False，设为True时，输出结果将按照字典中的key排序。</p>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327224593.html" 
+          title="Previous Post: 2. 网页基本组成与结构">&laquo; 2. 网页基本组成与结构</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327224673.html" 
+          title="Next Post: 3. 正则表达式">3. 正则表达式 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

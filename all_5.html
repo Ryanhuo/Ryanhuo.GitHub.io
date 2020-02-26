@@ -1,0 +1,2912 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15822327222638.html">
+                
+                  <h1>0.Python 速查</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><a href="media/15822327222638/Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E9%80%9F%E6%9F%A5%E8%A1%A8.pdf">Python数据科学速查表</a></p>
+
+<p><a href="media/15822327222638/0.%E9%A3%8E%E5%8F%98%E7%BC%96%E7%A8%8B-Python%E5%9F%BA%E7%A1%80%EF%BC%88%E6%95%B4%E7%90%86%E7%89%88%EF%BC%89.pdf">0.风变编程-Python基础（整理版）</a></p>
+
+<h1 id="toc_0">Python基础速查</h1>
+
+<h2 id="toc_1">常规</h2>
+
+<ul>
+<li>Python 对大小写敏感</li>
+<li>Python 的索引从 0 开始</li>
+<li>Python 使用空白符（制表符或空格）来缩进代码，而不是使用花括号</li>
+</ul>
+
+<h3 id="toc_2">获取帮助</h3>
+
+<ul>
+<li>获取主页帮助：<code>help()</code></li>
+<li>获取函数帮助：<code>help(str.replace)</code></li>
+<li>获取模块帮助：<code>help(re)</code></li>
+</ul>
+
+<h3 id="toc_3">模块(库)</h3>
+
+<p>Python的模块只是一个简单地以 <code>.py</code> 为后缀的文件。</p>
+
+<ul>
+<li>列出模块内容：<code>dir(module1)</code></li>
+<li>导入模块：<code>import module</code></li>
+<li>调用模块中的函数：<code>module1.func1()</code></li>
+</ul>
+
+<blockquote>
+<p><strong>注</strong>：<code>import</code>语句会创建一个新的命名空间(namespace)，并且在该命名空间内执行<code>.py</code>文件中的所有语句。如果你想把模块内容导入到当前命名空间，请使用<code>from module1 import *</code>语句。</p>
+</blockquote>
+
+<h2 id="toc_4">数值类类型</h2>
+
+<p>查看变量的数据类型：<code>type(variable)</code></p>
+
+<h3 id="toc_5">六种经常使用的数据类型</h3>
+
+<ol>
+<li><strong>int/long</strong>：过大的 <code>int</code> 类型会被自动转化为 <code>long</code> 类型</li>
+<li><strong>float</strong>：64 位，Python 中没有 <code>double</code> 类型</li>
+<li><strong>bool</strong>：真或假</li>
+<li><p><strong>str</strong>：在 Python 2 中默认以 ASCII 编码，而在 Python 3 中默认以 Unicode 编码</p>
+<ul>
+<li>字符串可置于单/双/三引号中</li>
+<li>字符串是字符的序列，因此可以像处理其他序列一样处理字符串</li>
+<li><p>特殊字符可通过 <code>\</code> 或者前缀 <code>r</code> 实现：</p>
+<pre><code class="language-python">str1 = r&#39;this\f?ff&#39;
+</code></pre></li>
+<li><p>字符串可通过多种方式格式化：</p>
+<pre><code class="language-python">template = &#39;%.2f %s haha $%d&#39;;
+str1 = template % (4.88, &#39;hola&#39;, 2)
+</code></pre></li>
+</ul></li>
+<li><p><strong>NoneType(None)</strong>：Python “null”值（<code>None</code>对象<strong>只</strong>存在一个实例）</p>
+<ul>
+<li><code>None</code>不是一个保留关键字，而是<code>NoneType</code>的一个唯一实例</li>
+<li><p><code>None</code>通常是可选函数参数的默认值：</p>
+<pre><code class="language-python">def func1(a, b, c=None)
+</code></pre></li>
+<li><p><code>None</code>的常见用法：</p>
+<pre><code class="language-python">if variable is None :
+</code></pre></li>
+</ul></li>
+<li><p><strong>datetime</strong>：Python内置的<code>datetime</code>模块提供了<code>datetime</code>、<code>data</code>以及<code>time</code>类型。</p>
+<ul>
+<li><code>datetime</code>组合了存储于<code>date</code>和<code>time</code>中的信息
+<code>python
+# 从字符串中创建 datetime<br/>
+dt1 = datetime.strptime(&#39;20091031&#39;, &#39;%Y%m%d&#39;)<br/>
+# 获取 date 对象<br/>
+dt1.date()<br/>
+# 获取 time 对象<br/>
+dt1.time()<br/>
+# 将 datetime 格式化为字符串<br/>
+dt1.strftime(&#39;%m/%d/%Y%H:%M&#39;)<br/>
+# 更改字段值<br/>
+dt2 = dt1.replace(minute=0, second=30)<br/>
+# 做差, diff 是一个 datetime.timedelta 对象<br/>
+diff = dt1 - dt2
+</code></li>
+</ul></li>
+</ol>
+
+<blockquote>
+<p><strong>注</strong>：</p>
+
+<ul>
+<li><code>str</code>、<code>bool</code>、<code>int</code>和<code>float</code>同时也是显式类型转换函数。</li>
+<li>除字符串和元组外，Python 中的绝大多数对象都是可变的。</li>
+</ul>
+</blockquote>
+
+<h2 id="toc_6">数据结构</h2>
+
+<blockquote>
+<p><strong>注</strong>：所有的“非只读(non-Get)”函数调用，比如下面例子中的<code>list1.sort()</code>，除非特别声明，都是原地操作(不会创建新的对象)。</p>
+</blockquote>
+
+<h3 id="toc_7">元组</h3>
+
+<p>元组是 Python 中任何类型的对象的一个一维、固定长度、<strong>不可变</strong>的序列。</p>
+
+<pre><code class="language-python"># 创建元组
+tup1 = 4, 5, 6
+tup1 = (6, 7, 8)
+# 创建嵌套元组
+tup1 = (4, 5, 6), (7, 8)
+# 将序列或迭代器转化为元组
+tuple([1, 0, 2])
+# 连接元组
+tup1 + tup2
+# 解包元组
+a, b, c = tup1
+</code></pre>
+
+<p><strong>元组应用</strong>：</p>
+
+<pre><code class="language-python"># 交换两个变量的值
+a, b = b, a
+</code></pre>
+
+<h3 id="toc_8">列表</h3>
+
+<p>列表是 Python 中任何类型的对象的一个一维、非固定长度、<strong>可变</strong>（比如内容可以被修改）的序列。</p>
+
+<pre><code class="language-python"># 创建列表
+list1 = [1, &#39;a&#39;, 3]
+list1 = list(tup1)
+# 连接列表
+list1 + list2
+list1.extend(list2)
+# 追加到列表的末尾
+list1.append(&#39;b&#39;)
+# 插入指定位置
+list1.insert(PosIndex, &#39;a&#39;)
+# 反向插入，即弹出给定位置的值/删除
+ValueAtIdx = list1.pop(PosIndex)
+# 移除列表中的第一个值, a 必须是列表中第一个值
+list1.remove(&#39;a&#39;)
+# 检查成员
+3 in list1 =&gt; True or False
+# 对列表进行排序
+list1.sort()
+# 按特定方式排序
+list1.sort(key=len) # 按长度排序
+</code></pre>
+
+<blockquote>
+<ul>
+<li>使用 + 连接列表会有比较大的开支，因为这个过程中会创建一个新的列表，然后复制对象。因此，使用<code>extend()</code>是更明智的选择。</li>
+<li><code>insert</code>和<code>append</code>相比会有更大的开支（时间/空间）。</li>
+<li>在列表中检查是否包含一个值会比在字典和集合中慢很多，因为前者需要进行线性扫描，而后者是基于哈希表的，所以只需要花费常数时间。</li>
+</ul>
+</blockquote>
+
+<h4 id="toc_9">内置的<code>bisect</code>模块</h4>
+
+<ul>
+<li>对一个排序好的列表进行二分查找或插入</li>
+<li><code>bisect.bisect</code>找到元素在列表中的位置，<code>bisect.insort</code>将元素插入到相应位置。</li>
+<li>用法：
+<code>python
+import bisect<br/>
+list1 = list(range(10))<br/>
+#找到 5 在 list1 中的位置，从 1 开始，因此 position = index + 1<br/>
+bisect.bisect(list1, 5)<br/>
+#将 3.5 插入 list1 中合适位置<br/>
+bisect.insort(list1, 3.5)
+</code></li>
+</ul>
+
+<blockquote>
+<p><strong>注</strong>：<code>bisect</code> 模块中的函数并不会去检查列表是否排序好，因为这会花费很多时间。所以，对未排序好的列表使用这些函数也不会报错，但可能会返回不正确的结果。</p>
+</blockquote>
+
+<h3 id="toc_10">针对序列类型的切片</h3>
+
+<blockquote>
+<p>序列类型包括<code>str</code>、<code>array</code>、<code>tuple</code>、<code>list</code>等。</p>
+</blockquote>
+
+<p>用法：</p>
+
+<pre><code class="language-python">list1[start:stop]
+# 如果使用 step
+list1[start:stop:step]
+</code></pre>
+
+<blockquote>
+<p><strong>注</strong>：</p>
+
+<ul>
+<li>切片结果包含 <code>start</code> 索引，但不包含 <code>stop</code> 索引</li>
+<li><code>start/stop</code> 索引可以省略，如果省略，则默认为序列从开始到结束，如 <code>list1 == list1[:]</code> 。</li>
+</ul>
+</blockquote>
+
+<p><code>step</code> 的应用：</p>
+
+<pre><code class="language-python"># 取出奇数位置的元素
+list1[::2]
+# 反转字符串
+str1[::-1]
+</code></pre>
+
+<h3 id="toc_11">字典（哈希表）</h3>
+
+<pre><code class="language-python"># 创建字典
+dict1 = {&#39;key1&#39;: &#39;value1&#39;, 2: [3, 2]}
+# 从序列创建字典
+dict(zip(KeyList, ValueList))
+# 获取/设置/插入元素
+dict1[&#39;key1&#39;]
+dict1[&#39;key1&#39;] = &#39;NewValue&#39;
+# get 提供默认值
+dict1.get(&#39;key1&#39;, DefaultValue)
+# 检查键是否存在
+&#39;key1&#39; in dict1
+# 获取键列表
+dict1.keys()
+# 获取值列表
+dict1.values()
+# 更新值
+dict1.update(dict2)  # dict1 的值被 dict2 替换
+</code></pre>
+
+<blockquote>
+<ul>
+<li>如果键不存在，则会出现 <code>KeyError Exception</code> 。</li>
+<li>当键不存在时，如果 <code>get()</code>不提供默认值则会返回 <code>None</code> 。</li>
+<li>以相同的顺序返回键列表和值列表，但顺序不是特定的，也就是说极大可能非排序。</li>
+</ul>
+</blockquote>
+
+<h4 id="toc_12">有效字典键类型</h4>
+
+<ul>
+<li>键必须是不可变的，比如标量类型(<code>int</code>、<code>float</code>、<code>string</code>)或者元组（元组中的所有对象也必须是不可变的）。</li>
+<li>这儿涉及的技术术语是“可哈希(hashability)”。可以用函数<code>hash()</code>来检查一个对象是否是可哈希的，比如 <code>hash(&#39;This is a string&#39;)</code>会返回一个哈希值，而<code>hash([1,2])</code>则会报错（不可哈希）。</li>
+</ul>
+
+<h3 id="toc_13">集合</h3>
+
+<ul>
+<li>一个集合是一些<strong>无序</strong>且唯一的元素的聚集；</li>
+<li><p>你可以把它看成只有键的字典；</p>
+<pre><code class="language-python"># 创建集合
+set([3, 6, 3])<br/>
+{3, 6, 3}<br/>
+# 子集测试<br/>
+set1.issubset(set2)<br/>
+# 超集测试<br/>
+set1.issuperset(set2)<br/>
+# 测试两个集合中的元素是否完全相同<br/>
+set1 == set2
+</code></pre></li>
+<li><p><strong>集合操作</strong></p>
+<ul>
+<li>并（或）：<code>set1 | set2</code></li>
+<li>交（与）：<code>set1 &amp; set2</code></li>
+<li>差：<code>set1 - set2</code></li>
+<li>对称差（异或）：<code>set1 ^ set2</code></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_14">函数</h2>
+
+<p>Python 的函数参数传递是通过<strong>引用传递</strong>。</p>
+
+<ul>
+<li><p>基本形式</p>
+<pre><code class="language-python">def func1(posArg1, keywordArg1=1, ..)
+</code></pre>
+<blockquote>
+<p><strong>注</strong>：</p>
+<ul>
+<li>关键字参数必须跟在位置参数的后面；</li>
+<li>默认情况下，Python 不会“延迟求值”，表达式的值会立刻求出来。</li>
+</ul>
+</blockquote></li>
+<li><p>函数调用机制</p>
+<ol>
+<li>所有函数均位于模块内部作用域。见“模块”部分。</li>
+<li>在调用函数时，参数被打包成一个元组和一个字典，函数接收一个元组<code>args</code>和一个字典<code>kwargs</code>，然后在函数内部解包。</li>
+</ol></li>
+<li><p>“函数是对象”的常见用法：</p>
+<pre><code class="language-python">def func1(ops = [str.strip, user_define_func, ..], ..):
+for function in ops:<br/>
+    value = function(value)
+</code></pre></li>
+</ul>
+
+<h3 id="toc_15">返回值</h3>
+
+<ul>
+<li>如果函数直到结束都没有<code>return</code>语句，则返回<code>None</code>。</li>
+<li>如果有多个返回值则通过<strong>一个</strong>元组来实现。
+<code>python
+return (value1, value2)<br/>
+value1, value2 = func1(..)
+</code></li>
+</ul>
+
+<h3 id="toc_16">匿名函数（又称 LAMBDA 函数）</h3>
+
+<ul>
+<li>什么是匿名函数？</li>
+</ul>
+
+<p>匿名函数是一个只包含一条语句的简单函数。</p>
+
+<pre><code class="language-python">lambda x : x * 2
+# def func1(x) : return x * 2
+</code></pre>
+
+<ul>
+<li>匿名函数的应用：“柯里化(curring)”，即利用已存在函数的部分参数来派生新的函数。
+<code>python
+ma60 = lambda x : pd.rolling_mean(x, 60)
+</code></li>
+</ul>
+
+<h3 id="toc_17">一些有用的函数（针对数据结构）</h3>
+
+<ol>
+<li><p><strong>Enumerate</strong> 返回一个序列<code>(i, value)</code>元组，<code>i</code> 是当前 <code>item</code> 的索引。</p>
+<pre><code class="language-python">for i, value in enumerate(collection):
+</code></pre>
+<ul>
+<li>应用：创建一个序列中值与其在序列中的位置的字典映射（假设每一个值都是唯一的）。</li>
+</ul></li>
+<li><p><strong>Sorted</strong> 可以从任意序列中返回一个排序好的序列。</p>
+<pre><code class="language-python">sorted([2, 1, 3]) =&gt; [1, 2, 3]
+</code></pre>
+<ul>
+<li>应用：
+<code>python
+sorted(set(&#39;abc bcd&#39;)) =&gt; [&#39; &#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]<br/>
+# 返回一个字符串排序后无重复的字母序列
+</code></li>
+</ul></li>
+<li><p><strong>Zip</strong> 函数可以把许多列表、元组或其他序列的元素配对起来创建一系列的元组。</p>
+<pre><code class="language-python">zip(seq1, seq2) =&gt; [(&#39;seq1_1&#39;, &#39;seq2_1&#39;), (..), ..]
+</code></pre>
+<ul>
+<li><code>zip()</code>可以接收任意数量的序列作为参数，但是产生的元素的数目取决于最短的序列。</li>
+<li><p>应用：多个序列同时迭代：</p>
+<pre><code class="language-python">for i, (a, b) in enumerate(zip(seq1, seq2)):
+</code></pre></li>
+<li><p><code>unzip</code>：另一种思考方式是把一些行转化为一些列：</p>
+<pre><code class="language-python">seq1, seq2 = unzip(zipOutput)
+</code></pre></li>
+</ul></li>
+<li><p><strong>Reversed</strong> 将一个序列的元素以逆序迭代。</p>
+<pre><code class="language-python">list(reversed(range(10)))
+</code></pre>
+<blockquote>
+<p><code>reversed()</code> 会返回一个迭代器，<code>list()</code> 使之成为一个列表。</p>
+</blockquote></li>
+</ol>
+
+<h2 id="toc_18">控制流</h2>
+
+<ol>
+<li>用于 <code>if-else</code> 条件中的操作符：<br/>
+```python<br/>
+var1 is var2  # 检查两个变量是否是相同的对象</li>
+</ol>
+
+<p>var1 is not var2  # 检查两个变量是否是不同的对象</p>
+
+<p>var1 == var2  # 检查两个变量的值是否相等</p>
+
+<pre><code class="language-text">&gt; **注**：Python 中使用 `and`、`or`、`not` 来组合条件，而不是使用 `&amp;&amp;`、`||`、`!` 。
+
+2. `for`循环的常见用法：
+```python
+for element in iterator:  # 可迭代对象（list、tuple）或迭代器
+    pass
+
+for a, b, c in iterator:  # 如果元素是可以解包的序列
+    pass
+</code></pre>
+
+<ol>
+<li><code>pass</code>：无操作语句，在不需要进行任何操作的块中使用。</li>
+<li><p>三元表达式，又称简洁的 <code>if-else</code>，基本形式：</p>
+<pre><code class="language-python">value = true-expr if condition else false-expr
+</code></pre></li>
+<li><p>Python 中没有 <code>switch/case</code> 语句，请使用 <code>if/elif</code>。</p></li>
+</ol>
+
+<h2 id="toc_19">面向对象编程</h2>
+
+<ol>
+<li><strong>对象</strong>是 Python 中所有类型的根。</li>
+<li>万物（数字、字符串、函数、类、模块等）皆为对象，每个对象均有一个“类型(type)”。对象变量是一个指向变量在内存中位置的指针。</li>
+<li><p>所有对象均会被<strong>引用计数</strong>。</p>
+<pre><code class="language-python">sys.getrefcount(5) =&gt; x
+a = 5, b = a<br/>
+# 上式会在等号的右边创建一个对象的引用，因此 a 和 b 均指向 5<br/>
+sys.getrefcount(5)<br/>
+=&gt; x + 2<br/>
+del(a); sys.getrefcount(5) =&gt; x + 1
+</code></pre></li>
+<li><p>类的基本形式：</p>
+<pre><code class="language-python">class MyObject(object):
+# &#39;self&#39; 等价于 Java/C++ 中的 &#39;this&#39;<br/>
+def __init__(self, name):<br/>
+    self.name = name<br/>
+def memberFunc1(self, arg1):<br/>
+    pass<br/>
+@staticmethod<br/>
+def classFunc2(arg1):<br/>
+    pass<br/>
+obj1 = MyObject(&#39;name1&#39;)<br/>
+obj1.memberFunc1(&#39;a&#39;)<br/>
+MyObject.classFunc2(&#39;b&#39;)
+</code></pre></li>
+<li><p>有用的交互式工具：</p>
+<pre><code class="language-python">dir(variable1)  # 列出对象的所有可用方法
+</code></pre></li>
+</ol>
+
+<h2 id="toc_20">常见字符串操作</h2>
+
+<pre><code class="language-python"># 通过分隔符连接列表/元组
+&#39;, &#39;.join([ &#39;v1&#39;, &#39;v2&#39;, &#39;v3&#39;]) =&gt; &#39;v1, v2, v3&#39;
+
+# 格式化字符串
+string1 = &#39;My name is {0}　{name}&#39;
+newString1 = string1.format(&#39;Sean&#39;, name =　&#39;Chen&#39;)
+
+# 分裂字符串
+sep = &#39;-&#39;;
+stringList1 =　string1.split(sep)
+
+# 获取子串
+start = 1;
+string1[start:8]
+
+# 补 &#39;0&#39; 向右对齐字符串
+month = &#39;5&#39;;
+month.zfill(2) =&gt; &#39;05&#39;
+month = &#39;12&#39;;
+month.zfill(2) =&gt; &#39;12&#39;
+month.zfill(3) =&gt; &#39;012&#39;
+</code></pre>
+
+<h2 id="toc_21">异常处理</h2>
+
+<ol>
+<li><p>基本形式：</p>
+<pre><code class="language-python">try:
+pass<br/>
+except ValueError as e:<br/>
+print e<br/>
+except (TypeError, AnotherError):<br/>
+pass<br/>
+except:<br/>
+pass<br/>
+finally:<br/>
+pass  # 清理，比如 close db;
+</code></pre></li>
+<li><p>手动引发异常：</p>
+<pre><code class="language-python">raise AssertionError  # 断言失败
+raise SystemExit<br/>
+# 请求程序退出<br/>
+raise RuntimeError(&#39;错误信息 :..&#39;)
+</code></pre></li>
+</ol>
+
+<h2 id="toc_22">列表、字典以及元组的推导表达式</h2>
+
+<p>使代码更加易读易写的语法糖。</p>
+
+<ol>
+<li><p><strong>列表推导</strong></p>
+<ul>
+<li>用一个简练的表达式，通过筛选一个数据集并且转换经过筛选的元素的方式来简明地生成新列表。</li>
+<li>基本形式：
+<code>python
+[expr for val in collection if condition]
+</code>
+等价于
+<code>python
+result = []<br/>
+for val in collection:<br/>
+if condition:<br/>
+result.append(expr)
+</code>
+可以省略过滤条件，只留下表达式。</li>
+</ul></li>
+<li><p><strong>字典推导</strong></p>
+<ul>
+<li>基本形式：
+<code>python
+{key-expr : value-expr for value in collection if condition}
+</code></li>
+</ul></li>
+<li><p><strong>集合推导</strong></p>
+<ul>
+<li>基本形式：和列表推导一样，不过是用 <code>()</code> 而不是 <code>[]</code> 。</li>
+</ul></li>
+<li><p><strong>嵌套列表</strong></p>
+<ul>
+<li>基本形式：
+<code>python
+[expr for val in collection for innerVal in val if condition]
+</code></li>
+</ul></li>
+</ol>
+
+<h2 id="toc_23">单元测试</h2>
+
+<p>Python自带<code>unittest</code>模块，可供我们编写单元测试。</p>
+
+<pre><code class="language-python">import unittest
+</code></pre>
+
+<p>我们可以编写继承于<code>unittest.TestCase</code>测试类的子类，并在子类中编写具体的测试函数。测试函数命必须以<code>test_</code>开头，否则不会被识别为测试函数，进而不会在运行单元测试时被运行。</p>
+
+<pre><code class="language-python">class TestSubclass(unittest.TestCase):
+
+    def test_func(self):
+        self.assertEqual(0, 0)
+        # 可以通过msg关键字参数提供测试失败时的提示消息
+        self.assertEqual(0, 0, msg=&#39;modified message&#39;)
+        self.assertGreater(1, 0)
+        self.assertIn(0, [0])
+        self.assertTrue(True)
+        # 测试是否会抛出异常
+        with self.assertRaises(KeyError):
+            _ = dict()[1]
+
+    # 被@unittest.skip装饰器装饰的测试类或测试函数会被跳过
+    @unittest.skip(reason=&#39;just skip&#39;)
+    def test_skip(self):
+        raise Exception(&#39;I shall never be tested&#39;)
+</code></pre>
+
+<p>另外，<code>unittest.TestCase</code>中还有两个特殊的成员函数，他们分别会在调用每一个测试函数的前后运行。在测试前连接数据库并在测试完成后断开连接是一种常见的使用场景。</p>
+
+<pre><code class="language-python">def setUp(self):
+    # To do: connect to the database
+    pass
+
+def tearDown(self):
+    # To do: release the connection
+    pass
+
+def test_database(self):
+    # To do: test the database
+    pass
+</code></pre>
+
+<p>测试类编写完毕后，可以通过添加以下代码来将当前文件当成正常的Python脚本使用</p>
+
+<pre><code class="language-python">if __name__ == &#39;__main__&#39;:
+  unittest.main()
+</code></pre>
+
+<h1 id="toc_24">Python数据科学速查表</h1>
+
+<p><a href="%E9%99%84%E4%BB%B6Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E9%80%9F%E6%9F%A5%E8%A1%A8.pdf">Python数据科学速查表</a> </p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327222660.html">
+                
+                  <h1>1. python简介及安装</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">python简介</h2>
+
+<p><strong>编程语言</strong>是用来定义 计算机程序 的形式语言。我们通过编程语言来编写程序代码，再通过语言处理程序执行向计算机发送指令，让计算机完成对应的工作。</p>
+
+<p>Python也是编程语言的一种,并且是高级的编程语言。Python语言可能是第一种即简单又功能强大的编程语言。</p>
+
+<h2 id="toc_1">python的优点</h2>
+
+<ol>
+<li><p><strong>简单</strong>：Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样，尽管这个英语的要求非常严格！Python的这种伪代码本质是它最大的优点之一。它使你能够专注于解决问题而不是去搞明白语言本身。</p></li>
+<li><p><strong>易学</strong>：就如同你即将看到的一样，Python极其容易上手。前面已经提到了，Python有极其简单的语法。</p></li>
+<li><p><strong>免费、开源</strong>：Python是FLOSS（自由/开放源码软件）之一。简单地说，你可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。这是为什什么Python如此优秀的原因之一—它是由一群希望看到一个更更加优秀的Python的人创造并经常改进着的。</p></li>
+<li><p><strong>层语言</strong>：当你用Python语言编写程序的时候，你无需考虑诸如如何管理理你的程序使用的内存一类的底层细节。</p></li>
+<li><p><strong>可移植性</strong>：由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不不同平台上）。如果你小心地避免使用依赖于系统的特性，那么你的所有Python程无需修改就可以在下述任何平台上面运行。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE甚至还有PocketPC、Symbian以及Google基于linux开发的Android平台！</p></li>
+<li><p><strong>解释性</strong>：这一点需要一些解释。一个用编译性语言比如C或C++写的程序可以从源文件（即C或C++语言）转换到一个你的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选项完成。当你运行你的程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中并且运行。而Python语言写的程序不不需要编译成二进制代码。你可以直接从源代码运行程序。在计算机内部，Python解释器把源代码转换成称为字节码的中间形式，然后再把它翻译成计算机使用的机器器语言并运行。事实上，由于你不再需要担心如何编译程序，如何确保连接转载正确的库等等，所有这一切使得使用Python更更加简单。由于你只需要把你的Python程序拷贝到另外一台计算机上，它就可以工作了，这也使得你的Python程序更加易于移植。</p></li>
+<li><p><strong>面向对象</strong>：Python既支持面向过程的编程也支持面向对象的编程。在“面向过程”的语言中，程序是由过程或仅仅是可重用代码的函数构建起来的。在“面向对象”的语言中，程序是由数据和功能组合而成的对象构建起来的。与其他主要的语言如C++和Java相比，Python以一种非常强大又简单的方式实现面向对象编程。</p></li>
+<li><p><strong>可扩展性</strong>：如果你需要你的一段关键代码运行得更快或者希望某些算法不不公开，你可以把你的部分程序用C或C++编写，然后在你的Python程序中使用它们。</p></li>
+<li><p><strong>丰富的库</strong>：Python标准库确实很庞大。它可以帮助你处理理各种工作，包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。记住，只要安装了Python，所有这些功能都是可用的。这被称作Python的“功能齐全”理念。除了标准库以外，还有许多其他高质量的库，如wxPython、Twisted和Python图像库等等。</p></li>
+<li><p><strong>规范的代码</strong>：Python采用强制缩进的方式使得代码具有极佳的可读性。</p></li>
+</ol>
+
+<h2 id="toc_2">pycharm安装激活</h2>
+
+<p>PyCharm是一 Python IDE，带有一 整套可以帮助用户在使用Python语言开发时提高其效率的工具，比如调试、语法高亮、Project管理、 代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了-些高级功能，以用于支持Django框架下的专业Web开发。</p>
+
+<h3 id="toc_3">下载安装</h3>
+
+<p><a href="https://www.jetbrains.com/pycharm/">官方下载地址</a></p>
+
+<h3 id="toc_4">激活</h3>
+
+<p>激活方式均选择License server。</p>
+
+<p><img src="media/15822327222660/1.0.jpg" alt=""/></p>
+
+<p>第一服务器License server address: <a href="http://39.105.114.41:1027">http://39.105.114.41:1027</a></p>
+
+<p>第二服务器License server address: <a href="http://36.110.99.11:3456">http://36.110.99.11:3456</a></p>
+
+<p>以上两台服务器任选一台。</p>
+
+<h2 id="toc_5">使用Anconda方式安装Python环境</h2>
+
+<p>Anaconda指的是一个开源的Python发行版本，其包含了conda、Python等180多个科学包及其依赖项。 因为包含了大量的科学包，Anaconda 的下载文件比较大（约 600 MB），如果只需要某些包，或者需要节省带宽或存储空间，也可以使用Miniconda这个较小的发行版（仅包含conda和 Python）。</p>
+
+<h3 id="toc_6">下载</h3>
+
+<p><a href="https://www.continuum.io/downloads">Python3.6版本</a></p>
+
+<h3 id="toc_7">安装</h3>
+
+<p>根据安装步骤下一步安装完成即可</p>
+
+<p>anaconda自带python3.6环境不需要自己再次去官网下载python了。</p>
+
+<h4 id="toc_8">注意： Windows如果忘记勾选添加环境变量选项需要可以进行一下操作</h4>
+
+<p><img src="media/15822327222660/1.1.png" alt=""/><br/>
+<img src="media/15822327222660/1.2.png" alt=""/><br/>
+<img src="media/15822327222660/1.3.png" alt=""/></p>
+
+<h4 id="toc_9">注意： Mac 添加环境变量</h4>
+
+<pre><code class="language-text">export PATH=&quot;~/anaconda3/bin:$PATH&quot;
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-text">vim~/.bash_profile
+</code></pre>
+
+<p>点进入编辑模式，进行编辑然后添加</p>
+
+<pre><code class="language-text">export PATH=&quot;~/anaconda3/bin:$PATH&quot;
+</code></pre>
+
+<p>编辑完成后，点esc 退出</p>
+
+<p>直接输入 ：:wq! 这四个字符后，回车即可保存。</p>
+
+<h3 id="toc_10">使用</h3>
+
+<h4 id="toc_11">界面介绍</h4>
+
+<p><img src="media/15822327222660/1.4.png" alt=""/></p>
+
+<h4 id="toc_12">工具介绍</h4>
+
+<p><img src="media/15822327222660/1.5.png" alt=""/></p>
+
+<h4 id="toc_13">添加快捷键</h4>
+
+<p><img src="media/15822327222660/1.6.png" alt=""/></p>
+
+<h2 id="toc_14">创建jupyter虚拟环境</h2>
+
+<h3 id="toc_15">Windows</h3>
+
+<h4 id="toc_16">conda关于环境的几个常用命令</h4>
+
+<p>anaconda国内下载源：<a href="https://repo.continuum.io/archive/">https://repo.continuum.io/archive/</a></p>
+
+<p>查看当前的环境列列表：</p>
+
+<pre><code class="language-text">$ conda env list
+
+创建新的python环境，并且还可以指定python的版本
+
+$ conda create -n myenv python=3.7 激活、进入某个环境： $ activate test 退出环境： $ deactivate
+
+删除环境： $ conda remove --name test --all
+
+</code></pre>
+
+<h4 id="toc_17">创建想要添加的虚拟环境</h4>
+
+<pre><code class="language-text">conda create -n myenv python=3.5
+</code></pre>
+
+<p>创建好以后可以在C:\ProgramData\Anaconda3\envs\（具体与自己安装的anaconda路路径为准）  下找到新创建的环境</p>
+
+<h4 id="toc_18">将新的环境添加到jupyter中</h4>
+
+<p>第一：首先到C:\ProgramData\Anaconda3\share\jupyter\kernels 文件夹下，会有一个自带的Python3文件夹；</p>
+
+<p>第二：然后在Python3  文件夹同级目录下创建一个文件夹test文件夹（名字自己随便取，记得是英文）；</p>
+
+<p>第三：将Python3文件夹下的kernel.json文件复制到test文件夹下； </p>
+
+<p>第四：用记事本打开后</p>
+
+<pre><code class="language-text">{ &quot;argv&quot;: [ &quot;C:\\ProgramData\\Anaconda3\\python.exe&quot;, &quot;-m&quot;, &quot;ipykernel_launcher&quot;, &quot;-f&quot;, &quot;
+{connection_ﬁle}&quot; ], &quot;display_name&quot;: &quot;Python 3&quot;, &quot;language&quot;: &quot;python&quot; }
+</code></pre>
+
+<p>将路径改成新创建的环境路路径，然后Python 3改成jupyter中想显示的名字。</p>
+
+<p>第五：重启jupyter-notebook,选择新建会出现你想要的环境。</p>
+
+<h4 id="toc_19">安装ipykernel库</h4>
+
+<p>第一： activate myenv 激活你的虚拟环境</p>
+
+<p>第二： conda install ipykernel , 中间会出现&lt;[y]/n&gt;? 在后面直接输入y,回车。</p>
+
+<h4 id="toc_20">重启jupyter即可</h4>
+
+<h3 id="toc_21">Mac</h3>
+
+<h4 id="toc_22">mac中激活和退出某个环境的命令</h4>
+
+<p>激活、进入某个环境： <br/>
+$ source activate test</p>
+
+<p>注意： 最新的anaconda 命令改成了conda activate test<br/>
+退出环境： $ source deactivate</p>
+
+<p>注意： 最新的anaconda 命令改成了conda deactivate</p>
+
+<h4 id="toc_23">创建想要添加的虚拟环境</h4>
+
+<p>$ conda create -n myenv python=3.5</p>
+
+<h4 id="toc_24">查找kernel.json文件</h4>
+
+<p>$ ﬁnd . -name &quot;kernel.json&quot;</p>
+
+<p>第一：然后在 ./Library/Jupyter/kernels/ 目录下<strong>手动创建一个文件夹</strong>，然后创建一个名为 kernel.json 的文件，让该文件和已有的虚拟环境相关联，即可使用该虚拟环境。该json文件的内容大概如此：/Users/mac/Library/Jupyter/kernels/python37</p>
+
+<p>{ &quot;display_name&quot;: &quot;py35&quot;, &quot;language&quot;: &quot;python&quot;, &quot;argv&quot;: [ &quot;/Users/mac/Library/Jupyter/kernels/python37/bin/python&quot;, &quot;-m&quot;, &quot;ipykernel_launcher&quot;, &quot;-f&quot;, &quot;{connection_ﬁle}&quot; ] }</p>
+
+<p>第二： 重启jupyter，就会出现新的环境</p>
+
+<p>注意： 上面操作完成之后，会提示/Users/mac/anaconda3/envs/python37/bin/python3.7: No module named ipykernel_launcher</p>
+
+<p>第三：激活虚拟环境，然后conda install ipykernel</p>
+
+<p>第四： 重启</p>
+
+<h2 id="toc_25">Anaconda安装拓拓展</h2>
+
+<p>第一： 终端输入</p>
+
+<pre><code class="language-text">$ pip install jupyter_contrib_nbextensions
+$ pip install jupyter_nbextensions_conﬁgurator
+$ jupyter contrib nbextension install --user
+</code></pre>
+
+<p>第二： 重启jupyter</p>
+
+<p><a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_code_prettify.html">关 于 插 件 的 介 绍 </a></p>
+
+<p>例如： Hinterland 代码提示</p>
+
+<h2 id="toc_26">jupyter汉化问题</h2>
+
+<h3 id="toc_27">Mac</h3>
+
+<p>jupyter在浏览器器的显示语言是根据终端语言自适应的，如果你的终端是中文，那么启动jupyter后，浏览器器就以中文显示</p>
+
+<ol>
+<li> 终端是中文状态，jupyter是中文</li>
+</ol>
+
+<p><img src="media/15822327222660/1.7.png" alt=""/></p>
+
+<ol>
+<li> 如果想显示英文，有两种方式可以设置</li>
+</ol>
+
+<h4 id="toc_28">一种是临时的</h4>
+
+<p>终端中依次输入以下命令：</p>
+
+<pre><code class="language-text">export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+</code></pre>
+
+<p>然后在当前终端输入<code>jupyter notebook</code> 启动jupyter；</p>
+
+<p>注意：以上的命令设置只对当前终端生效，如果在新的终端启动jupyter，还是会显示中文，目前没有对所有终端生效的方法。</p>
+
+<h4 id="toc_29">一种是永久的</h4>
+
+<ol>
+<li> 在终端中输入locale查看系统默认的语言设置；</li>
+<li> 使用vim编辑bash_proﬁle文件，修改设置，终端输入
+<code>vim~/.bash_profile</code></li>
+</ol>
+
+<p><img src="media/15822327222660/1.8.png" alt=""/></p>
+
+<ol>
+<li><p>在最后一行添加<code>export LANG=en_US.UTF-8</code>这一行</p></li>
+<li><p>保存文件退出，然后在终端输入<code>source ~/.bash_profile</code> ，让设置生效，然后启动</p></li>
+</ol>
+
+<p><img src="media/15822327222660/1.9.png" alt=""/></p>
+
+<h3 id="toc_30">windows</h3>
+
+<p>windows中在cmd中启动jupyter，默认以英文显示，如果想要中文，需要下载git。</p>
+
+<ol>
+<li> 下载地址：<a href="https://www.git-scm.com/download/win">https://www.git-scm.com/download/win</a></li>
+<li> 一路路next，进行安装；</li>
+<li> 安装完毕，搜索git bash并打开；</li>
+<li> 打开Git bash输入命令<code>jupyter notebook</code>启动jupyter.</li>
+</ol>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327223909.html">
+                
+                  <h1>2. numpy</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">NumPy介绍</h2>
+
+<p>Numpy（Numerical Python）是一个开源的Python科学计算库，用于快速处理任意维度的数组。<br/>
+Numpy支持常见的数组和矩阵操作。对于同样的数值计算任务，使用Numpy比直接使用Python要简洁的多。<br/>
+Numpy使用ndarray对象来处理多维数组，该对象是一个快速而灵活的大数据容器。</p>
+
+<h2 id="toc_1">NumPy优点</h2>
+
+<ol>
+<li> 快速</li>
+<li> 方便</li>
+<li><p>科学计算的基础库</p></li>
+</ol>
+
+<ul>
+<li><p>对于同样的数值计算任务，使用NumPy要比直接编写Python代码便捷得多；</p></li>
+<li><p>NumPy中的数组的存储效率和输入输出性能均远远优于Python中等价的基本数据结构，且其能够提升的性能是   与数组中的元素成比例的；</p></li>
+<li><p>NumPy的大部分代码都是用C语言写的，其底层算法在设计时就有着优异的性能，这使得NumPy比纯Python代  码高效得多</p></li>
+</ul>
+
+<h2 id="toc_2">安装</h2>
+
+<pre><code class="language-text">pip install numpy
+</code></pre>
+
+<h2 id="toc_3">与原生list运算效率对比</h2>
+
+<pre><code class="language-python">import random 
+import time 
+import numpy as np
+a = []
+for i in range(100000000): 
+    a.append(random.random())
+t1 = time.time() 
+sum1=sum(a) 
+t2=time.time()
+
+b=np.array(a) 
+t4=time.time() 
+sum3=np.sum(b) 
+t5=time.time() 
+
+print(t2-t1, t5-t4)
+</code></pre>
+
+<pre><code class="language-text">45.5947265625 2.542968988418579
+</code></pre>
+
+<h2 id="toc_4">NumPy 的Ndarray 对象</h2>
+
+<p>NumPy 最重要的一个特点是其 N 维数组对象 ndarray，它是一系列同类型数据的集合，以 0 下标为开始进行集合中元素的索引。ndarray 对象是用于存放同类型元素的多维数组。</p>
+
+<h3 id="toc_5">创建一维数组</h3>
+
+<p>多种样式创建一维数组</p>
+
+<h4 id="toc_6">直接传入列表</h4>
+
+<pre><code class="language-python">import numpy as np
+list=[1,2,3,4]
+Array_1=np.array(list)
+print(Array_1,type(Array_1))
+</code></pre>
+
+<pre><code class="language-text">[1 2 3 4] &lt;class &#39;numpy.ndarray&#39;&gt;
+</code></pre>
+
+<h4 id="toc_7">传入range生成序列</h4>
+
+<pre><code class="language-python">Array_2=np.array(range(1,10))
+print(Array_2,type(Array_2))
+</code></pre>
+
+<pre><code class="language-text">[1 2 3 4 5 6 7 8 9] &lt;class &#39;numpy.ndarray&#39;&gt;
+</code></pre>
+
+<h4 id="toc_8">利用numpy自带的np.arange（）</h4>
+
+<pre><code class="language-python">Array_3=np.arange(1,10)
+print(Array_3,type(Array_3))
+</code></pre>
+
+<pre><code class="language-text">[1 2 3 4 5 6 7 8 9] &lt;class &#39;numpy.ndarray&#39;&gt;
+</code></pre>
+
+<h2 id="toc_9">创建二维数组</h2>
+
+<pre><code class="language-python">list2=[[1,2,3],[4,5,6],[7,8,9]]
+
+t1=np.array(list2)
+print(t1,type(t1))
+</code></pre>
+
+<pre><code class="language-text">[[1 2 3]
+ [4 5 6]
+ [7 8 9]] &lt;class &#39;numpy.ndarray&#39;&gt;
+</code></pre>
+
+<h3 id="toc_10">常用属性</h3>
+
+<pre><code class="language-python"># 获取数组的维度（与函数的参数相似）
+print(t1.ndim)
+</code></pre>
+
+<pre><code class="language-text">2
+</code></pre>
+
+<pre><code class="language-python">#形状(行，列)
+print(t1.shape)
+</code></pre>
+
+<pre><code class="language-text">(3, 3)
+</code></pre>
+
+<pre><code class="language-python">#元素个数
+print(t1.size)
+</code></pre>
+
+<pre><code class="language-text">9
+</code></pre>
+
+<h3 id="toc_11">调整数组的形状</h3>
+
+<pre><code class="language-python">t2= np.array([[1,2,3],[4,5,6]])
+# 修改的是原有的four.shape = (3,2)
+print(t2)
+
+# 返回一个新的数组
+t2 = t2.reshape(3,2) 
+print(t2)
+
+# 将多维变成一维数组
+t3= t2.reshape((6,),order=&#39;F&#39;)
+# 默认情况下‘C’以行为主的顺序展开，‘F’（Fortran风格）意味着以列的顺序展开
+
+t4 = t2.flatten(order=&#39;F&#39;) 
+print(t3)
+print(t4)
+
+</code></pre>
+
+<pre><code class="language-text">[[1 2 3]
+ [4 5 6]]
+[[1 2]
+ [3 4]
+ [5 6]]
+[1 3 5 2 4 6]
+[1 3 5 2 4 6]
+</code></pre>
+
+<pre><code class="language-python"># 拓展：数组的形状
+t = np.arange(24)
+print(t) 
+print(t.shape)
+
+
+# 转换成二维
+t1 = t.reshape((4,6))
+print(t1) 
+print(t1.shape)
+
+
+# 转成三维
+t2 = t.reshape((2,3,4)) 
+print(t2) 
+print(t2.shape)
+
+</code></pre>
+
+<pre><code class="language-text">[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+(24,)
+[[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+(4, 6)
+[[[ 0  1  2  3]
+  [ 4  5  6  7]
+  [ 8  9 10 11]]
+
+ [[12 13 14 15]
+  [16 17 18 19]
+  [20 21 22 23]]]
+(2, 3, 4)
+</code></pre>
+
+<h3 id="toc_12">将数组转成list</h3>
+
+<pre><code class="language-python">a= np.array([9, 12, 88, 14, 25])
+list_a = a.tolist() 
+print(list_a) 
+print(type(list_a))
+
+</code></pre>
+
+<pre><code class="language-text">[9, 12, 88, 14, 25]
+&lt;class &#39;list&#39;&gt;
+</code></pre>
+
+<h2 id="toc_13">NumPy的数据类型</h2>
+
+<pre><code class="language-python">f = np.array([1,2,3,4,5], dtype = np.int16)
+
+# 返回数组中每个元素的字节单位长度
+print(f.itemsize) # 1 np.int8(一个字节)
+
+</code></pre>
+
+<pre><code class="language-text">2
+</code></pre>
+
+<pre><code class="language-python"># 获取数据类型
+print(f.dtype)
+
+</code></pre>
+
+<pre><code class="language-text">int16
+</code></pre>
+
+<pre><code class="language-python"># 调整数据类型
+f1 = f.astype(np.int64) 
+print(f1.dtype)
+
+</code></pre>
+
+<pre><code class="language-text">int64
+</code></pre>
+
+<pre><code class="language-python"># 拓展随机生成小数
+# 使用python语法，保留两位
+print(round(random.random(),2))
+
+arr = np.array([random.random() for i in range(10)])
+# 取小数点后两位
+print(np.round(arr,2))
+
+
+</code></pre>
+
+<pre><code class="language-text">0.02
+[0.29 0.82 0.01 0.23 0.89 0.46 0.44 0.4  0.58 0.17]
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>bool</td>
+<td>用一个字节存储的布尔类型（True或False）</td>
+</tr>
+<tr>
+<td>inti</td>
+<td>由所在平台决定其大小的整数（一般为int32或int64）</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>一个字节大小，-128 至 127</td>
+</tr>
+<tr>
+<td>int16</td>
+<td>整数，-32768 至 32767</td>
+</tr>
+<tr>
+<td>int32</td>
+<td>整数，-2 ** 31 至 2 ** 32 -1</td>
+</tr>
+<tr>
+<td>int64</td>
+<td>整数，-2 ** 63 至 2 ** 63 - 1</td>
+</tr>
+<tr>
+<td>uint8</td>
+<td>无符号整数，0 至 255</td>
+</tr>
+<tr>
+<td>uint16</td>
+<td>无符号整数，0 至 65535</td>
+</tr>
+<tr>
+<td>uint32</td>
+<td>无符号整数，0 至 2 ** 32 - 1</td>
+</tr>
+<tr>
+<td>uint64</td>
+<td>无符号整数，0 至 2 ** 64 - 1</td>
+</tr>
+<tr>
+<td>float16</td>
+<td>半精度浮点数：16位，正负号1位，指数5位，精度10位</td>
+</tr>
+<tr>
+<td>float32</td>
+<td>单精度浮点数：32位，正负号1位，指数8位，精度23位</td>
+</tr>
+<tr>
+<td>float64或float</td>
+<td>双精度浮点数：64位，正负号1位，指数11位，精度52位</td>
+</tr>
+<tr>
+<td>complex64</td>
+<td>复数，分别用两个32位浮点数表示实部和虚部</td>
+</tr>
+<tr>
+<td>complex128或complex</td>
+<td>复数，分别用两个64位浮点数表示实部和虚部</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_14">数组的计算</h2>
+
+<h3 id="toc_15">数组和数的计算</h3>
+
+<p>由于numpy的广播机机制在运算过程中，加减乘除的值被广播到所有的元素上面。</p>
+
+<pre><code class="language-python">t1 = np.arange(24).reshape((6,4)) 
+print(t1+2)
+print(t1*2) 
+print(t1/2)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 2  3  4  5]
+ [ 6  7  8  9]
+ [10 11 12 13]
+ [14 15 16 17]
+ [18 19 20 21]
+ [22 23 24 25]]
+[[ 0  2  4  6]
+ [ 8 10 12 14]
+ [16 18 20 22]
+ [24 26 28 30]
+ [32 34 36 38]
+ [40 42 44 46]]
+[[ 0.   0.5  1.   1.5]
+ [ 2.   2.5  3.   3.5]
+ [ 4.   4.5  5.   5.5]
+ [ 6.   6.5  7.   7.5]
+ [ 8.   8.5  9.   9.5]
+ [10.  10.5 11.  11.5]]
+</code></pre>
+
+<h3 id="toc_16">数组与数组之间的操作</h3>
+
+<p>同种形状的数组(对应位置进行计算操作)</p>
+
+<pre><code class="language-python">t1 = np.arange(24).reshape((6,4))
+t2 = np.arange(100,124).reshape((6,4))
+
+print(t1+t2) 
+print(t1*t2)
+
+</code></pre>
+
+<pre><code class="language-text">[[100 102 104 106]
+ [108 110 112 114]
+ [116 118 120 122]
+ [124 126 128 130]
+ [132 134 136 138]
+ [140 142 144 146]]
+[[   0  101  204  309]
+ [ 416  525  636  749]
+ [ 864  981 1100 1221]
+ [1344 1469 1596 1725]
+ [1856 1989 2124 2261]
+ [2400 2541 2684 2829]]
+</code></pre>
+
+<p>不种形状的多维数组不能计算</p>
+
+<pre><code class="language-python">t1 = np.arange(24).reshape((4,6)) 
+t2 = np.arange(18).reshape((3,6)) 
+print(t1)
+print(t2) 
+print(t1-t2)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+[[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]]
+
+
+
+
+---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-32-8e6819c2b1e3&gt; in &lt;module&gt;()
+      3 print(t1)
+      4 print(t2)
+----&gt; 5 print(t1-t2)
+
+
+
+ValueError: operands could not be broadcast together with shapes (4,6) (3,6) 
+</code></pre>
+
+<p>行数或者列数相同的一维数组和多维数组可以进行计算： </p>
+
+<p>行形状相同（会与每一行数组的对应位相操作)</p>
+
+<pre><code class="language-python">t1 = np.arange(24).reshape((4,6)) 
+t2 = np.arange(0,6)
+
+print(t1-t2)
+
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0  0  0  0  0  0]
+ [ 6  6  6  6  6  6]
+ [12 12 12 12 12 12]
+ [18 18 18 18 18 18]]
+</code></pre>
+
+<p>列形状相同（会与每一个相同维度的数组的对应位相操作)</p>
+
+<pre><code class="language-python">t1 = np.arange(24).reshape((4,6)) 
+t2 = np.arange(4).reshape((4,1))
+
+print(t1-t2)
+
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0  1  2  3  4  5]
+ [ 5  6  7  8  9 10]
+ [10 11 12 13 14 15]
+ [15 16 17 18 19 20]]
+</code></pre>
+
+<h2 id="toc_17">数组中的轴</h2>
+
+<ol>
+<li><p>什么是轴： 在numpy中可以理解为方向，使用0，1，2数字表示，对于一个一维数组，只有一个0轴， 对于2维数组（shape（2，2))有0轴和1轴， 对于3维数组（shape（2，2，3））有0，1，2轴</p></li>
+<li><p>为什么要学习轴：有了轴的概念后，我们计算会更加方便，比如计算一个2维数组的平均值，必须指定是计算哪个方向上面的数字的平均值。</p></li>
+</ol>
+
+<p><img src="media/15822327223909/20191127155610-1577075803629.png" alt="20191127155610"/></p>
+
+<p><img src="media/15822327223909/20191127155642-1577075815036.png" alt="20191127155642"/></p>
+
+<pre><code class="language-python">import numpy as np
+a = np.array([[1,2,3],[4,5,6]])
+
+print(np.sum(a,axis=0)) # [5 7 9]
+
+print(np.sum(a,axis = 1)) # [ 6 15]
+
+print(np.sum(a))# 计算所有的值的和
+
+
+</code></pre>
+
+<pre><code class="language-text">[5 7 9]
+[ 6 15]
+21
+</code></pre>
+
+<pre><code class="language-python">#三维的数据
+a = np.arange(27).reshape((3,3,3))
+print(a)
+
+</code></pre>
+
+<pre><code class="language-text">[[[ 0  1  2]
+  [ 3  4  5]
+  [ 6  7  8]]
+
+ [[ 9 10 11]
+  [12 13 14]
+  [15 16 17]]
+
+ [[18 19 20]
+  [21 22 23]
+  [24 25 26]]]
+</code></pre>
+
+<pre><code class="language-python">b = np.sum(a, axis=0)
+print(b)
+
+
+</code></pre>
+
+<pre><code class="language-text">[[27 30 33]
+ [36 39 42]
+ [45 48 51]]
+</code></pre>
+
+<pre><code class="language-python">c = np.sum(a, axis=1)
+print(c)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 9 12 15]
+ [36 39 42]
+ [63 66 69]]
+</code></pre>
+
+<pre><code class="language-python">c = np.sum(a, axis=2)
+print(c)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 3 12 21]
+ [30 39 48]
+ [57 66 75]]
+</code></pre>
+
+<p><strong>总结：</strong>在计算的时候可以想象成是每一个坐标轴，分别计算这个轴上面的每一个刻度上的值，或者在二维数组中记住0表示列1表示行.</p>
+
+<h2 id="toc_18">数组的索引和切片</h2>
+
+<p>一维数组的操作方法</p>
+
+<pre><code class="language-python">import numpy as np
+
+a = np.arange(10)
+# 冒号分隔切片参数 start:stop:step 来进行切片操作
+
+print(a[2:7:2])# 从索引 2 开始到索引 7 停止，间隔为 2
+
+# 如果只放置一个参数，如 [2]，将返回与该索引相对应的单个元素
+print(a[2],a)
+
+# 如果为 [2:]，表示从该索引开始以后的所有项都将被提取
+print(a[2:])
+
+
+</code></pre>
+
+<pre><code class="language-text">[2 4 6]
+2 [0 1 2 3 4 5 6 7 8 9]
+[2 3 4 5 6 7 8 9]
+</code></pre>
+
+<p>多维数组的操作方法</p>
+
+<pre><code class="language-python">import numpy as np
+t1 = np.arange(24).reshape(4,6) 
+print(t1)
+print(&#39;*&#39;*20)
+print(t1[1]) # 取一行(一行代表是一条数据，索引也是从0开始的) 
+print(t1[1,:]) # 取一行
+
+print(t1[1:])# 取连续的多行
+print(t1[1:3,:])# 取连续的多行
+
+print(t1[[0,2,3]])# 取不连续的多行
+print(t1[[0,2,3],:])# 取不连续的多行
+
+print(t1[:,1])# 取一列
+print(t1[:,1:])# 连续的多列
+print(t1[:,[0,2,3]])# 取不连续的多列
+print(t1[2,3])# # 取某一个值,三行四列
+print(t1[[0,1,1],[0,1,3]])# 取多个不连续的值，[[行，行。。。],[列，列。。。]]
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+********************
+[ 6  7  8  9 10 11]
+[ 6  7  8  9 10 11]
+[[ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+[[ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]]
+[[ 0  1  2  3  4  5]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+[[ 0  1  2  3  4  5]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+[ 1  7 13 19]
+[[ 1  2  3  4  5]
+ [ 7  8  9 10 11]
+ [13 14 15 16 17]
+ [19 20 21 22 23]]
+[[ 0  2  3]
+ [ 6  8  9]
+ [12 14 15]
+ [18 20 21]]
+15
+[0 7 9]
+</code></pre>
+
+<h2 id="toc_19">组中的数值修改</h2>
+
+<pre><code class="language-python">t = np.arange(24).reshape(4,6)
+
+# 修改某一行的值
+t[1,:]=0
+
+# 修改某一列的值
+t[:,1]=0
+
+# 修改连续多行
+t[1:3,:]=0
+
+# 修改连续多列
+t[:,1:4]=0
+
+# 修改多行多列，取第二行到第四行，第三列到第五列
+t[1:4,2:5]=0
+
+# 修改多个不相邻的点
+t[[0,1],[0,3]]=0
+
+# 可以根据条件修改，比如讲小于10的值改掉
+t[t&lt;10]=0
+
+# 使用逻辑判断
+# np.logical_and    &amp; 
+# np.logical_or |
+# np.logical_not        ~ 
+
+t[(t&gt;2)&amp;(t&lt;6)]=0    # 与
+t[(t&lt;2)|(t&gt;6)]=0    # 或
+t[~(t&gt;6)]=0 # 非
+print(t)
+
+# 拓 展
+# 三目运算（ np.where(condition, x, y)满足条件(condition)，输出x，不满足输出y。)）
+# score = np.array([[80,88],[82,81],[75,81]])
+# result = np.where(score&gt;80,True,False) 
+# print(result)
+
+</code></pre>
+
+<pre><code class="language-text">[[0 0 0 0 0 0]
+ [0 0 0 0 0 0]
+ [0 0 0 0 0 0]
+ [0 0 0 0 0 0]]
+</code></pre>
+
+<h2 id="toc_20">数组的添加、删除和去重</h2>
+
+<h3 id="toc_21">数组的添加</h3>
+
+<ol>
+<li>numpy.append 函数在数组的末尾添加值。 追加操作会分配整个数组，并把原来的数组复制到新数组中。 此外，输入数组的维度必须匹配否则将生成ValueError。</li>
+</ol>
+
+<p><strong>参数说明：</strong></p>
+
+<ul>
+<li>arr：输入数组</li>
+<li>values：要向arr添加的值，需要和arr形状相同（除了要添加的轴）</li>
+<li>axis：默认为 None。当axis无定义时，是横向加成，返回总是为一维数组！当axis有定义的时候，分别为0和1的时候。当</li>
+<li>axis有定义的时候，分别为0和1的时候（列数要相同）。当axis为1时，数组是加在右边（行数要相同）。</li>
+</ul>
+
+<pre><code class="language-python">a = np.array([[1,2,3],[4,5,6]])
+
+print (&#39;第一个数组：&#39;)
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39; 向 数 组 添 加 元 素 ：&#39;) 
+print (np.append(a, [7,8,9])) 
+print (&#39;\n&#39;)
+
+print (&#39;沿轴 0 添加元素：&#39;)
+print (np.append(a, [[7,8,9]],axis = 0)) 
+print (&#39;\n&#39;)
+
+print (&#39;沿轴 1 添加元素：&#39;)
+print (np.append(a, [[5,5,5],[7,8,9]],axis = 1))
+
+
+</code></pre>
+
+<pre><code class="language-text">第一个数组：
+[[1 2 3]
+ [4 5 6]]
+</code></pre>
+
+<p>​<br/><br/>
+​     向 数 组 添 加 元 素 ：<br/>
+​    [1 2 3 4 5 6 7 8 9]</p>
+
+<p>​<br/><br/>
+​    沿轴 0 添加元素：<br/>
+​    [[1 2 3]<br/>
+​     [4 5 6]<br/>
+​     [7 8 9]]</p>
+
+<p>​<br/><br/>
+​    沿轴 1 添加元素：<br/>
+​    [[1 2 3 5 5 5]<br/>
+​     [4 5 6 7 8 9]]</p>
+
+<ol>
+<li><p>numpy.insert 函数在给定索引之前，沿给定轴在输入数组中插入值。</p>
+<p>如果值的类型转换为要插入，则它与输入数组不同。 插入没有原地的，函数会返回一个新数组。 此外，如果未提供轴，则输入数组会被展开。</p></li>
+</ol>
+
+<pre><code class="language-python">a = np.array([[1,2],[3,4],[5,6]])
+
+print (&#39;第一个数组：&#39;) 
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39;未传递 Axis 参数。 在插入之前输入数组会被展开。&#39;) 
+print (np.insert(a,3,[11,12]))
+print (&#39;\n&#39;)
+print (&#39;传递了 Axis 参数。 会广播值数组来配输入数组。&#39;)
+
+print (&#39;沿轴  0 广播：&#39;)
+print (np.insert(a,1,[11],axis = 0)) 
+print (&#39;\n&#39;)
+
+print (&#39;沿轴  1 广播：&#39;)
+print (np.insert(a,1,11,axis = 1))
+
+
+</code></pre>
+
+<pre><code class="language-text">第一个数组：
+[[1 2]
+ [3 4]
+ [5 6]]
+</code></pre>
+
+<p>​<br/><br/>
+​    未传递 Axis 参数。 在插入之前输入数组会被展开。<br/>
+​    [ 1  2  3 11 12  4  5  6]</p>
+
+<p>​<br/><br/>
+​    传递了 Axis 参数。 会广播值数组来配输入数组。<br/>
+​    沿轴  0 广播：<br/>
+​    [[ 1  2]<br/>
+​     [11 11]<br/>
+​     [ 3  4]<br/>
+​     [ 5  6]]</p>
+
+<p>​<br/><br/>
+​    沿轴  1 广播：<br/>
+​    [[ 1 11  2]<br/>
+​     [ 3 11  4]<br/>
+​     [ 5 11  6]]</p>
+
+<h3 id="toc_22">数组中的删除</h3>
+
+<p>numpy.delete 函数返回从输入数组中删除指定子数组的新数组。 与 insert() 函数的情况一样，如果未提供轴参数， 则输入数组将展开。</p>
+
+<p><strong>参数说明：</strong></p>
+
+<ul>
+<li><p>arr： 输入数组  </p></li>
+<li><p>obj：可以被切片，整数或者整数数组，表明要从输入数组删除的子数组</p></li>
+<li><p>axis：沿着它删除给定子数组的轴，如果未提供，则输入数组会被展开</p></li>
+</ul>
+
+<pre><code class="language-python">a = np.arange(12).reshape(3,4)
+print (&#39;第一个数组：&#39;)
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39;未传递 Axis 参数。 在删除之前输入数组会被展开。&#39;) 
+print (np.delete(a,5))
+print (&#39;\n&#39;)
+
+print (&#39;删除每一行中的第二列：&#39;)
+print (np.delete(a,1,axis = 1)) 
+print (&#39;\n&#39;)
+
+
+</code></pre>
+
+<pre><code class="language-text">第一个数组：
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+</code></pre>
+
+<p>​<br/><br/>
+​    未传递 Axis 参数。 在删除之前输入数组会被展开。<br/>
+​    [ 0  1  2  3  4  6  7  8  9 10 11]</p>
+
+<p>​<br/><br/>
+​    删除每一行中的第二列：<br/>
+​    [[ 0  2  3]<br/>
+​     [ 4  6  7]<br/>
+​     [ 8 10 11]]</p>
+
+<p>​<br/><br/>
+​    </p>
+
+<h3 id="toc_23">数组去重</h3>
+
+<p>numpy.unique 函数用于去除数组中的重复元素。</p>
+
+<ul>
+<li>arr：输入数组 ，如果不是一维数组则会展开                         * return_index：如果为true，返回新列表元素在旧列表中的位置（下标），并以列表形式储</li>
+<li>return_inverse：如果为true，返回旧列表元素在新列表中的位置（下标），并以列表形式储</li>
+<li>return_counts：如果为true，返回去重数组中的元素在原数组中的出现次数</li>
+</ul>
+
+<pre><code class="language-python">a = np.array([5,2,6,2,7,5,6,8,2,9])
+print (&#39;第一个数组：&#39;) 
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39;第一个数组的去重值：&#39;) 
+u = np.unique(a)
+print (u)
+print (&#39;\n&#39;)
+
+
+print (&#39;去重数组的索引数组：&#39;)
+u,indices = np.unique(a, return_index = True) 
+print (indices)
+print (&#39;\n&#39;)
+
+print (&#39;我们可以看到每个和原数组下标对应的数值：&#39;) 
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39;去重数组的下标：&#39;)
+u,indices = np.unique(a,return_inverse = True) 
+print (u)
+print (indices) 
+print (&#39;\n&#39;)
+
+print (&#39;返回去重元素的重复数量：&#39;)
+u,indices = np.unique(a,return_counts = True) # print (u)
+print (indices)
+
+</code></pre>
+
+<pre><code class="language-text">第一个数组：
+[5 2 6 2 7 5 6 8 2 9]
+</code></pre>
+
+<p>​<br/><br/>
+​    第一个数组的去重值：<br/>
+​    [2 5 6 7 8 9]</p>
+
+<p>​<br/><br/>
+​    去重数组的索引数组：<br/>
+​    [1 0 2 4 7 9]</p>
+
+<p>​<br/><br/>
+​    我们可以看到每个和原数组下标对应的数值：<br/>
+​    [5 2 6 2 7 5 6 8 2 9]</p>
+
+<p>​<br/><br/>
+​    去重数组的下标：<br/>
+​    [2 5 6 7 8 9]<br/>
+​    [1 0 2 0 3 1 2 4 0 5]</p>
+
+<p>​<br/><br/>
+​    返回去重元素的重复数量：<br/>
+​    [3 2 2 1 1 1]</p>
+
+<h2 id="toc_24">numpy的计算</h2>
+
+<pre><code class="language-python">score = np.array([[80,88],[82,81],[75,81]])
+print(score)
+
+</code></pre>
+
+<pre><code class="language-text">[[80 88]
+ [82 81]
+ [75 81]]
+</code></pre>
+
+<h3 id="toc_25">获取所有数据最大值</h3>
+
+<pre><code class="language-python">print(np.max(score))
+
+</code></pre>
+
+<pre><code class="language-text">88
+</code></pre>
+
+<h3 id="toc_26">获取某个轴上的数据最大值</h3>
+
+<pre><code class="language-python">print(np.max(score,axis=0))
+
+</code></pre>
+
+<pre><code class="language-text">[82 88]
+</code></pre>
+
+<h3 id="toc_27">获取最小值</h3>
+
+<pre><code class="language-python">print(np.min(score))
+
+</code></pre>
+
+<pre><code class="language-text">75
+</code></pre>
+
+<h3 id="toc_28">获取某个轴上最小值</h3>
+
+<pre><code class="language-python">print(np.min(score,axis=0))
+
+</code></pre>
+
+<pre><code class="language-text">[75 81]
+</code></pre>
+
+<h3 id="toc_29">数据的比较</h3>
+
+<pre><code class="language-python">t1=[1,2,3,4,5,6,7,8]
+print(t1)
+
+</code></pre>
+
+<pre><code class="language-text">[1, 2, 3, 4, 5, 6, 7, 8]
+</code></pre>
+
+<pre><code class="language-python">print(np.maximum(t1,0)) # 第一个参数中的每一个数与第二个参数比较返回大的
+
+</code></pre>
+
+<pre><code class="language-text">[1 2 3 4 5 6 7 8]
+</code></pre>
+
+<pre><code class="language-python">print(np.minimum(t1,0))# 第一个参数中的每一个数与第二个参数比较返回小的
+
+</code></pre>
+
+<pre><code class="language-text">[0 0 0 0 0 0 0 0]
+</code></pre>
+
+<pre><code class="language-python"># 接受的两个参数，也可以大小一致;第二个参数只是一个单独的值时，其实是用到了维度的广播机制
+print(np.maximum(t1,[2,4,6,8,9,1,3,5]))
+
+</code></pre>
+
+<pre><code class="language-text">[2 4 6 8 9 6 7 8]
+</code></pre>
+
+<h3 id="toc_30">求平均值</h3>
+
+<pre><code class="language-python">print(np.mean(t1))# 获取所有数据的平均值
+
+</code></pre>
+
+<pre><code class="language-text">4.5
+</code></pre>
+
+<pre><code class="language-python">print(np.mean(score,axis=0))
+
+</code></pre>
+
+<pre><code class="language-text">[79.         83.33333333]
+</code></pre>
+
+<h3 id="toc_31">求前缀和</h3>
+
+<pre><code class="language-python">arr = np.array([[1,2,3], [4,5,6]]) 
+print(arr)
+print(&#39;*&#39;*20)
+print(&#39;&#39;&#39;
+[1, 2, 3]------&gt;    |  1   |  2   |  3  |
+[4, 5, 6]------&gt;    |5=1+4 |7=2+5 |9=3+6| &#39;&#39;&#39;)
+print(&#39;*&#39;*20)
+print(arr.cumsum(0))
+
+</code></pre>
+
+<pre><code class="language-text">[[1 2 3]
+ [4 5 6]]
+********************
+
+[1, 2, 3]------&gt;    |  1   |  2   |  3  |
+[4, 5, 6]------&gt;    |5=1+4 |7=2+5 |9=3+6| 
+********************
+[[1 2 3]
+ [5 7 9]]
+</code></pre>
+
+<pre><code class="language-python">print(&#39;&#39;&#39;
+[1, 2, 3]------&gt;    |1  |2+1    |3+2+1  |
+[4, 5, 6]------&gt;    |4  |4+5    |4+5+6  | &#39;&#39;&#39;)
+print(&#39;*&#39;*20)
+print(arr.cumsum(1)) 
+
+</code></pre>
+
+<pre><code class="language-text">[1, 2, 3]------&gt;    |1  |2+1    |3+2+1  |
+[4, 5, 6]------&gt;    |4  |4+5    |4+5+6  | 
+********************
+[[ 1  3  6]
+ [ 4  9 15]]
+</code></pre>
+
+<h3 id="toc_32">求最小索引值</h3>
+
+<pre><code class="language-python">print(np.argmin(score,axis=0))
+
+</code></pre>
+
+<pre><code class="language-text">[2 1]
+</code></pre>
+
+<h3 id="toc_33">求每一列的标准差</h3>
+
+<p>标准差是一组数据平均值分散程度的一种度量。一个较大的标准差，代表大部分数值和其平均值之间差异较大；</p>
+
+<p>一个较小的标准差，代表这些数据较接近平均值反应出数据的波动稳定情况，越大表示波动越大，越不稳定。</p>
+
+<pre><code class="language-python">print(np.std(score,axis=0))
+
+</code></pre>
+
+<pre><code class="language-text">[2.94392029 3.29983165]
+</code></pre>
+
+<h3 id="toc_34">极 值</h3>
+
+<pre><code class="language-python">np.ptp(score,axis=None)# 就是最大值和最小值的差
+
+</code></pre>
+
+<pre><code class="language-text">13
+</code></pre>
+
+<h3 id="toc_35">拓展</h3>
+
+<ul>
+<li>方差var</li>
+<li>协方差cov</li>
+<li>计算平均值 average</li>
+<li>计算中位数 median</li>
+</ul>
+
+<h2 id="toc_36">通用函数</h2>
+
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>介绍</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>numpy.sqrt(array)</td>
+<td>平方根函数</td>
+</tr>
+<tr>
+<td>numpy.exp(array)</td>
+<td>e<sup>array[i]的数组</sup></td>
+</tr>
+<tr>
+<td>numpy.abs/fabs(array)</td>
+<td>计算绝对值</td>
+</tr>
+<tr>
+<td>numpy.square(array)</td>
+<td>计算各元素的平方 等于array**2</td>
+</tr>
+<tr>
+<td>numpy.log/log10/log2(array)</td>
+<td>计算各元素的各种对数</td>
+</tr>
+<tr>
+<td>numpy.sign(array)</td>
+<td>计算各元素正负号</td>
+</tr>
+<tr>
+<td>numpy.isnan(array)</td>
+<td>计算各元素是否为NaN</td>
+</tr>
+<tr>
+<td>numpy.isinf(array)</td>
+<td>计算各元素是否为NaN</td>
+</tr>
+<tr>
+<td>numpy.cos/cosh/sin/sinh/tan/tanh(array)</td>
+<td>三角函数</td>
+</tr>
+<tr>
+<td>numpy.modf(array)</td>
+<td>将array中值得整数和小数分离，作两个数组返回</td>
+</tr>
+<tr>
+<td>numpy.ceil(array)</td>
+<td>向上取整,也就是取比这个数大的整数</td>
+</tr>
+<tr>
+<td>numpy.floor(array)</td>
+<td>向下取整,也就是取比这个数小的整数</td>
+</tr>
+<tr>
+<td>numpy.rint(array)</td>
+<td>四舍五入</td>
+</tr>
+<tr>
+<td>numpy.trunc(array)</td>
+<td>向0取整</td>
+</tr>
+<tr>
+<td>numpy.cos(array)</td>
+<td>正弦值</td>
+</tr>
+<tr>
+<td>numpy.sin(array)</td>
+<td>余弦值</td>
+</tr>
+<tr>
+<td>numpy.tan(array)</td>
+<td>正切值</td>
+</tr>
+<tr>
+<td>numpy.add(array1,array2)</td>
+<td>元素级加法</td>
+</tr>
+<tr>
+<td>numpy.subtract(array1,array2)</td>
+<td>元素级减法</td>
+</tr>
+<tr>
+<td>numpy.multiply(array1,array2)</td>
+<td>元素级乘法</td>
+</tr>
+<tr>
+<td>numpy.divide(array1,array2)</td>
+<td>元素级除法 array1./array2</td>
+</tr>
+<tr>
+<td>numpy.power(array1,array2)</td>
+<td>元素级指数 array1.<sup>array2</sup></td>
+</tr>
+<tr>
+<td>numpy.maximum/minimum(array1,aray2)</td>
+<td>元素级最大值</td>
+</tr>
+<tr>
+<td>numpy.fmax/fmin(array1,array2)</td>
+<td>元素级最大值，忽略NaN</td>
+</tr>
+<tr>
+<td>numpy.mod(array1,array2)</td>
+<td>元素级求模</td>
+</tr>
+<tr>
+<td>numpy.copysign(array1,array2)</td>
+<td>将第二个数组中值得符号复制给第一个数组中值</td>
+</tr>
+<tr>
+<td>numpy.greater/greater_equal/less/less_equal/equal/not_equal  (array1,array2)</td>
+<td>元素级比较运算，产生布尔数组</td>
+</tr>
+<tr>
+<td>numpy.logical_end/logical_or/logic_xor(array1,array2)</td>
+<td>元素级的真值逻辑运算</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_37">数组的拼接</h2>
+
+<p>有的时候我们需要将两个数据加起来一起研究分析，我们就可以将其进行拼接然后分析</p>
+
+<h3 id="toc_38">根据轴连接的数组序列</h3>
+
+<pre><code class="language-python">a = np.array([[1,2],[3,4]])
+b = np.array([[5,6],[7,8]])
+
+#要求a,b两个数组的维度相同
+print (&#39;沿轴 0 连接两个数组：&#39;)
+print (np.concatenate((a,b),axis= 0))
+print (&#39;\n&#39;)
+print (&#39;沿轴 1 连接两个数组：&#39;)
+print (np.concatenate((a,b),axis = 1))
+
+</code></pre>
+
+<pre><code class="language-text">沿轴 0 连接两个数组：
+[[1 2]
+ [3 4]
+ [5 6]
+ [7 8]]
+</code></pre>
+
+<p>​<br/><br/>
+​    沿轴 1 连接两个数组：<br/>
+​    [[1 2 5 6]<br/>
+​     [3 4 7 8]]</p>
+
+<h3 id="toc_39">根据轴进行堆叠</h3>
+
+<pre><code class="language-python">print (&#39;沿轴 0 连接两个数组：&#39;)
+print (np.stack((a,b),axis= 0))
+print (&#39;\n&#39;)
+print (&#39;沿轴 1 连接两个数组：&#39;)
+print (np.stack((a,b),axis = 1))
+
+</code></pre>
+
+<pre><code class="language-text">沿轴 0 连接两个数组：
+[[[1 2]
+  [3 4]]
+
+ [[5 6]
+  [7 8]]]
+</code></pre>
+
+<p>​<br/><br/>
+​    沿轴 1 连接两个数组：<br/>
+​    [[[1 2]<br/>
+​      [5 6]]<br/>
+​<br/><br/>
+​     [[3 4]<br/>
+​      [7 8]]]</p>
+
+<h3 id="toc_40">矩阵垂直拼接</h3>
+
+<pre><code class="language-python">v1 = [[0,1,2,3,4,5],
+    [6,7,8,9,10,11]] 
+
+v2 = [[12,13,14,15,16,17],
+    [18,19,20,21,22,23]] 
+
+result = np.vstack((v1,v2)) 
+print(result)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0  1  2  3  4  5]
+ [ 6  7  8  9 10 11]
+ [12 13 14 15 16 17]
+ [18 19 20 21 22 23]]
+</code></pre>
+
+<h3 id="toc_41">矩阵水平拼接</h3>
+
+<pre><code class="language-python">result = np.hstack((v1,v2)) 
+print(result)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0  1  2  3  4  5 12 13 14 15 16 17]
+ [ 6  7  8  9 10 11 18 19 20 21 22 23]]
+</code></pre>
+
+<h2 id="toc_42">数组的分割</h2>
+
+<h3 id="toc_43">将一个数组分割为多个子数组</h3>
+
+<p><strong>参数说明：</strong></p>
+
+<ul>
+<li>ary： 被分割的数组<br/></li>
+<li>indices_or_sections：果是一个整数，就用该数平均切分，如果是一个数组，为沿轴切分的位置（左开右闭）</li>
+<li>axis：沿着哪个维度进行切向，默认为0，横向切分。为1时，纵向切分</li>
+</ul>
+
+<pre><code class="language-python">arr = np.arange(9).reshape(3,3)
+print (&#39;将数组分为三个大小相等的子数组：&#39;) 
+b= np.split(arr,3)
+print (b)
+
+</code></pre>
+
+<pre><code class="language-text">将数组分为三个大小相等的子数组：
+[array([[0, 1, 2]]), array([[3, 4, 5]]), array([[6, 7, 8]])]
+</code></pre>
+
+<h3 id="toc_44">numpy.hsplit 函数用于水平分割数组，通过指定要返回的相同形状的数组数量来拆分原数组。</h3>
+
+<pre><code class="language-python">harr = np.floor(10 * np.random.random((2, 6))) #
+print (&#39;原array：&#39;)
+print(harr)
+
+print (&#39;拆分后：&#39;)
+print(np.hsplit(harr, 3))
+
+</code></pre>
+
+<pre><code class="language-text">原array：
+[[6. 9. 3. 6. 1. 1.]
+ [8. 3. 1. 7. 4. 5.]]
+拆分后：
+[array([[6., 9.],
+       [8., 3.]]), array([[3., 6.],
+       [1., 7.]]), array([[1., 1.],
+       [4., 5.]])]
+</code></pre>
+
+<h3 id="toc_45">numpy.vsplit</h3>
+
+<p>沿着垂直轴分割</p>
+
+<pre><code class="language-python">a = np.arange(16).reshape(4,4)
+print (&#39;第一个数组：&#39;) 
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39;竖直分割：&#39;)
+b = np.vsplit(a,2) 
+print (b)
+
+</code></pre>
+
+<pre><code class="language-text">第一个数组：
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]
+ [12 13 14 15]]
+</code></pre>
+
+<p>​<br/><br/>
+​    竖直分割：<br/>
+​    [array([[0, 1, 2, 3],<br/>
+​           [4, 5, 6, 7]]), array([[ 8,  9, 10, 11],<br/>
+​           [12, 13, 14, 15]])]</p>
+
+<h2 id="toc_46">数组中nan和inf</h2>
+
+<p>C 语言中表示最大的正整数值是 0x7FFF FFFF，最小的负整数是 0x8000 0000。<br/>
+查阅资料后，发现 inf 表示无穷大，需要使用 float(‘inf’) 函数来转化，那么对应的就有  float(&#39;-inf&#39;) 表示无穷小了。这样你就可以使用任意数来判断和它的关系了。</p>
+
+<p>那什么时候会出现inf呢？ 比如一个数字除以0，Python中会报错，但是numpy中会是一个inf或者-inf</p>
+
+<p>另外还有 nan，这种写法在 pandans 中常见，表示缺失的数据，所以一般用 nan 来表示。任何与其做运算结果都是 nan</p>
+
+<pre><code class="language-python"># 创建一个nan和inf 
+a = np.nan 
+b = np.inf
+print(a,type(a)) 
+print(b,type(b))
+
+#--判断数组中为nan的个数
+t = np.arange(24,dtype=float).reshape(4,6)
+
+#将三行四列的数改成nan 
+t[3,4] = np.nan
+
+#可以使用np.count_nonzero() 来判断非零的个数
+print(np.count_nonzero(t))
+#并 且  np.nan != np.nan  结果 是TRUE
+#所以我们可以使用这两个结合使用判断nan的个数
+print(np.count_nonzero(t != t))
+
+#将nan替换为0
+t[np.isnan(t)] = 0 
+print(t)
+
+</code></pre>
+
+<pre><code class="language-text">nan &lt;class &#39;float&#39;&gt;
+inf &lt;class &#39;float&#39;&gt;
+23
+1
+[[ 0.  1.  2.  3.  4.  5.]
+ [ 6.  7.  8.  9. 10. 11.]
+ [12. 13. 14. 15. 16. 17.]
+ [18. 19. 20. 21.  0. 23.]]
+</code></pre>
+
+<pre><code class="language-python">#----------练习： 处理数组中nan
+t = np.arange(24).reshape(4,6).astype(&#39;float&#39;)
+#将数组中的一部分替换nan 
+t[1,3:] = np.nan
+print(t)
+#遍历每一列，然后判断每一列是否有nan 
+for i in range(t.shape[1]):
+#   #获取当前列数据
+    temp_col = t[:,i]
+#
+#   判断当前列的数据中是否含有nan
+    nan_num = np.count_nonzero(temp_col != temp_col)
+#
+    if nan_num != 0: #条件成立说明含有nan 
+    # 将这一列不为nan的数据拿出来
+        temp_col_not_nan = temp_col[temp_col==temp_col]
+# 将nan替换成这一列的平均值
+        temp_col[np.isnan(temp_col)] = np.mean(temp_col_not_nan)
+print(t)
+
+</code></pre>
+
+<pre><code class="language-text">[[ 0.  1.  2.  3.  4.  5.]
+ [ 6.  7.  8. nan nan nan]
+ [12. 13. 14. 15. 16. 17.]
+ [18. 19. 20. 21. 22. 23.]]
+[[ 0.  1.  2.  3.  4.  5.]
+ [ 6.  7.  8. 13. 14. 15.]
+ [12. 13. 14. 15. 16. 17.]
+ [18. 19. 20. 21. 22. 23.]]
+</code></pre>
+
+<h2 id="toc_47">二维数组的转置</h2>
+
+<pre><code class="language-python">#对换数组的维度
+a = np.arange(12).reshape(3,4) 
+print (&#39;原数组：&#39;)
+print (a )
+print (&#39;\n&#39;)
+
+print (&#39;对换数组：&#39;)
+print (np.transpose(a))
+
+# 与transpose一致
+a = np.arange(12).reshape(3,4)
+
+print (&#39;原数组：&#39;) 
+print (a)
+print (&#39;\n&#39;)
+
+print (&#39;转置数组：&#39;) 
+print (a.T)
+
+# 函数用于交换数组的两个轴
+t1 = np.arange(24).reshape(4,6)
+re = t1.swapaxes(1,0) 
+print (&#39; 原 数 组 ：&#39;) 
+print (t1)
+print (&#39;\n&#39;)
+
+print (&#39;调用 swapaxes 函数后的数组：&#39;) 
+print (re)
+
+</code></pre>
+
+<pre><code class="language-text">原数组：
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+</code></pre>
+
+<p>​<br/><br/>
+​    对换数组：<br/>
+​    [[ 0  4  8]<br/>
+​     [ 1  5  9]<br/>
+​     [ 2  6 10]<br/>
+​     [ 3  7 11]]<br/>
+​    原数组：<br/>
+​    [[ 0  1  2  3]<br/>
+​     [ 4  5  6  7]<br/>
+​     [ 8  9 10 11]]</p>
+
+<p>​<br/><br/>
+​    转置数组：<br/>
+​    [[ 0  4  8]<br/>
+​     [ 1  5  9]<br/>
+​     [ 2  6 10]<br/>
+​     [ 3  7 11]]<br/>
+​     原 数 组 ：<br/>
+​    [[ 0  1  2  3  4  5]<br/>
+​     [ 6  7  8  9 10 11]<br/>
+​     [12 13 14 15 16 17]<br/>
+​     [18 19 20 21 22 23]]</p>
+
+<p>​    调用 swapaxes 函数后的数组：<br/>
+​    [[ 0  6 12 18]<br/>
+​     [ 1  7 13 19]<br/>
+​     [ 2  8 14 20]<br/>
+​     [ 3  9 15 21]<br/>
+​     [ 4 10 16 22]<br/>
+​     [ 5 11 17 23]]</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%B8%B8%E7%94%A8%E5%BA%93.html'>常用库</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   <a href="all_4.html">&laquo; Prev Page</a>  
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			 <a href="all_6.html">&raquo; Next Page</a> 
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

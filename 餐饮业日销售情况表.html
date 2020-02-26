@@ -1,0 +1,989 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  餐饮业日销售情况表 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>餐饮业日销售情况表</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E9%A1%B9%E7%9B%AE.html'>项目</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p><img src="media/15822327224493/20191113174249.png" alt=""/></p>
+
+<h2 id="toc_0">理解数据</h2>
+
+<p><a href="media/15822327224493/-bill.csv">-bil</a></p>
+
+<p><a href="media/15822327224493/-order.csv">-orde</a></p>
+
+<p><a href="media/15822327224493/-shop.csv">-shop</a><br/>
+数据来自三个csv文件，包含字段如下：</p>
+
+<p>单号详细： Bill表 </p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">billdate</td>
+<td style="text-align: left">日期</td>
+</tr>
+<tr>
+<td style="text-align: left">billnumber</td>
+<td style="text-align: left">单号</td>
+</tr>
+<tr>
+<td style="text-align: left">shopname</td>
+<td style="text-align: left">店名</td>
+</tr>
+<tr>
+<td style="text-align: left">billdiscount</td>
+<td style="text-align: left">会员折扣</td>
+</tr>
+<tr>
+<td style="text-align: left">paytime</td>
+<td style="text-align: left">付费时间</td>
+</tr>
+<tr>
+<td style="text-align: left">tablenumber</td>
+<td style="text-align: left">桌号</td>
+</tr>
+<tr>
+<td style="text-align: left">peoplecount</td>
+<td style="text-align: left">来店人数</td>
+</tr>
+</tbody>
+</table>
+
+<p>点菜明细： OrderDetail表 </p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">billnumber</td>
+<td style="text-align: left">单号</td>
+</tr>
+<tr>
+<td style="text-align: left">detail</td>
+<td style="text-align: left">菜品明细</td>
+</tr>
+<tr>
+<td style="text-align: left">pay</td>
+<td style="text-align: left">消费金额</td>
+</tr>
+</tbody>
+</table>
+
+<p>店面情况： ShopDetail表 </p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">ShopName</td>
+<td style="text-align: left">店名</td>
+</tr>
+<tr>
+<td style="text-align: left">twotable</td>
+<td style="text-align: left">二人台数</td>
+</tr>
+<tr>
+<td style="text-align: left">threetable</td>
+<td style="text-align: left">三人台数</td>
+</tr>
+<tr>
+<td style="text-align: left">fourtable</td>
+<td style="text-align: left">四人及以上台数</td>
+</tr>
+<tr>
+<td style="text-align: left">alltable</td>
+<td style="text-align: left">总台数</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_1">提出问题</h2>
+
+<p>根据餐饮业日销售情况详细，拟定从下几个维度建立数据指标。 </p>
+
+<p><img src="media/15822327224493/20191113174255.png" alt=""/></p>
+
+<p>图中设计KPI指标情况具体见下表：</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">KPI</th>
+<th style="text-align: left">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">销售金额</td>
+<td style="text-align: left">当日店铺实际收入</td>
+</tr>
+<tr>
+<td style="text-align: left">折扣额</td>
+<td style="text-align: left">占销售总额的10%-20%</td>
+</tr>
+<tr>
+<td style="text-align: left">折扣率</td>
+<td style="text-align: left">10%-20%</td>
+</tr>
+<tr>
+<td style="text-align: left">台数</td>
+<td style="text-align: left">店铺总台(桌)数</td>
+</tr>
+<tr>
+<td style="text-align: left">翻台率</td>
+<td style="text-align: left">当日店铺每张桌子被使用的平均次数</td>
+</tr>
+<tr>
+<td style="text-align: left">单均消费</td>
+<td style="text-align: left">当日店铺所有缴费单的平均金额</td>
+</tr>
+<tr>
+<td style="text-align: left">座位数</td>
+<td style="text-align: left">店铺实际拥有座位的数量</td>
+</tr>
+<tr>
+<td style="text-align: left">上座率</td>
+<td style="text-align: left">当日店铺每个座位被使用的平均次数</td>
+</tr>
+<tr>
+<td style="text-align: left">人均消费</td>
+<td style="text-align: left">当日到店每个人的平均消费金额(销售总额/客流量)</td>
+</tr>
+<tr>
+<td style="text-align: left">销售KPI</td>
+<td style="text-align: left">每家店的销售金额与所有店的总平均金额的比</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_2">模型构建</h2>
+
+<h3 id="toc_3">创建单汇总金额表（OrderGroup）</h3>
+
+<p>以orderdetail表的billnumber字段为汇总依据，求出每条billnumber下pay的加总值。</p>
+
+<pre><code class="language-text">create table ordergroup(    select billnumber ,sum(pay) as pay from orderdetail    group by billnumber);
+</code></pre>
+
+<p>OrderGroup</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">billnumber</td>
+<td style="text-align: left">单号</td>
+</tr>
+<tr>
+<td style="text-align: left">sum（pay）</td>
+<td style="text-align: left">金额</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_4">创建新单号详细表（NewBill）</h3>
+
+<p>以billnumber为关键字段关联两表，将OrderGroup表中的pay字段合并到Bill表中，并使用pay与billdiscount字段计算出折扣金额。</p>
+
+<pre><code class="language-text">create table newbill (    select bill.*, pay，billdiscount * pay as rebate from bill     left join ordergroup on bill.billnumber = ordergroup.billnumber);
+</code></pre>
+
+<p>NewBill </p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">billdate</td>
+<td style="text-align: left">日期</td>
+</tr>
+<tr>
+<td style="text-align: left">billnumber</td>
+<td style="text-align: left">单号</td>
+</tr>
+<tr>
+<td style="text-align: left">shopname</td>
+<td style="text-align: left">店名</td>
+</tr>
+<tr>
+<td style="text-align: left">billdiscount</td>
+<td style="text-align: left">会员折扣</td>
+</tr>
+<tr>
+<td style="text-align: left">paytime</td>
+<td style="text-align: left">付费时间</td>
+</tr>
+<tr>
+<td style="text-align: left">tablenumber</td>
+<td style="text-align: left">桌号</td>
+</tr>
+<tr>
+<td style="text-align: left">peoplecount</td>
+<td style="text-align: left">来店人数</td>
+</tr>
+<tr>
+<td style="text-align: left">pay</td>
+<td style="text-align: left">金额</td>
+</tr>
+<tr>
+<td style="text-align: left">rebate</td>
+<td style="text-align: left">折扣金额</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_5">创建新店面情况表（NewShopDetail）</h3>
+
+<p>在原有shopdetail表字段基础上计算并添加allseats字段.allseats = twotable _ 2 + three _ 3 + fourtable * 6</p>
+
+<pre><code class="language-text">create table newshopdetail(    select *, (twotable*2+threetable*3+fourtable*4) as allseats from shopdetail);
+</code></pre>
+
+<p>New  ShopDetail </p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">ShopName</td>
+<td style="text-align: left">店名</td>
+</tr>
+<tr>
+<td style="text-align: left">twotable</td>
+<td style="text-align: left">二人台数</td>
+</tr>
+<tr>
+<td style="text-align: left">threetable</td>
+<td style="text-align: left">三人台数</td>
+</tr>
+<tr>
+<td style="text-align: left">fourtable</td>
+<td style="text-align: left">四人及以上台数</td>
+</tr>
+<tr>
+<td style="text-align: left">alltable</td>
+<td style="text-align: left">总台数</td>
+</tr>
+<tr>
+<td style="text-align: left">allseats</td>
+<td style="text-align: left">总座位数</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_6">创建新点菜明细表（NewOrderDetail）</h3>
+
+<p>以billnumber为关键字段关联两表，并用Bill表中的shopname与OrderDetail表中的所有字段组成新表</p>
+
+<pre><code class="language-sql">create table neworderdetail(    select orderdetail.*,bill.shopname from orderdetail left join bill on bill.billnumber= orderdetail.billnumber);
+</code></pre>
+
+<p>NewOrderDetail </p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">billnumber</td>
+<td style="text-align: left">单号</td>
+</tr>
+<tr>
+<td style="text-align: left">detail</td>
+<td style="text-align: left">菜品明细</td>
+</tr>
+<tr>
+<td style="text-align: left">pay</td>
+<td style="text-align: left">消费金额</td>
+</tr>
+<tr>
+<td style="text-align: left">shopname</td>
+<td style="text-align: left">店名</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>创建店汇总信息表（ShopTotal）</strong></p>
+
+<p>以shopname字段为关键字段关联两表，并以shopname字段为汇总条件建立表格。</p>
+
+<pre><code class="language-sql">create table shoptotal(    select newbill.shopname as 店名,    count(newbill.billnumber) as 单数,    sum(newbill.peoplecount) as 人数,    sum(newbill.rebate) as 折扣总金额,    sum(newbill.pay) as 店汇总金额,    sum(newbill.pay)/count(newbill.billnumber) as 单均消费,    sum(newbill.pay)/sum(newbill.peoplecount) as 人均消费,    newshopdetail.alltable as 总台数,    newshopdetail.allseats as 总座位数,    count(newbill.billnumber) /newshopdetail.alltable as 翻台率,    sum(newbill.peoplecount)/newshopdetail.allseats as 上座率,    sum(newbill.rebate)/sum(newbill.pay) as 折扣率    from newbill left join newshopdetail on newbill.shopname = newshopdetail.shopname    group by newbill.shopname);
+</code></pre>
+
+<p>ShopTotal</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">字段名</th>
+<th style="text-align: left">字段描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">店名</td>
+<td style="text-align: left">b.shopname</td>
+</tr>
+<tr>
+<td style="text-align: left">单数</td>
+<td style="text-align: left">b.billnumber的计数</td>
+</tr>
+<tr>
+<td style="text-align: left">人数</td>
+<td style="text-align: left">b.peoplecount的加总</td>
+</tr>
+<tr>
+<td style="text-align: left">折扣总金额</td>
+<td style="text-align: left">b.rebate的加总</td>
+</tr>
+<tr>
+<td style="text-align: left">店汇总金额</td>
+<td style="text-align: left">b.pay的加总</td>
+</tr>
+<tr>
+<td style="text-align: left">单均消费</td>
+<td style="text-align: left">b.pay的合计值/b.billnumber的计数值</td>
+</tr>
+<tr>
+<td style="text-align: left">人均消费</td>
+<td style="text-align: left">b.pay的合计值/b.peoplecount的合计值</td>
+</tr>
+<tr>
+<td style="text-align: left">总台数</td>
+<td style="text-align: left">s.alltable</td>
+</tr>
+<tr>
+<td style="text-align: left">总座位数</td>
+<td style="text-align: left">s.allseats</td>
+</tr>
+<tr>
+<td style="text-align: left">翻台率</td>
+<td style="text-align: left">b.billnumber的计数值/s.alltable</td>
+</tr>
+<tr>
+<td style="text-align: left">上座率</td>
+<td style="text-align: left">b.peoplecount的合计值/s.allseats</td>
+</tr>
+<tr>
+<td style="text-align: left">折扣率</td>
+<td style="text-align: left">b.rebate的合计值/b.pay的合计值</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_7">可视化报表展示</h2>
+
+<p><img src="media/15822327224493/20191113174318.png" alt=""/></p>
+
+<p>将结果shoptotal，neworderdetail，newbill导入power BI，利用shoptotal.店面，newbill.shopname,neworderdetail.shopname 关联三个表格。制作可视化报表。</p>
+
+<p><img src="media/15822327224493/20191113174323.png" alt=""/></p>
+
+<p>可视报表包括常见KPI指标情况，方面阅读者查看日常达成额；店面平均达成情况，结合其他店面平均确认店面销售水平；时间维度下销售额与销售数量情况，方便拟定用餐高低峰期情况；同时有各类菜品销量，销售金额占比及明细表，方便配比菜品，拟定价格。</p>
+
+<hr/>
+
+<p><a href="media/15822327224493/newbill.csv">newbil</a></p>
+
+<p><a href="media/15822327224493/neworderdetaill.csv">neworderdetail</a></p>
+
+<p><a href="media/15822327224493/shoptotal.csv">shoptota</a></p>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327224453.html" 
+          title="Previous Post: 当当图书爬虫">&laquo; 当当图书爬虫</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327224546.html" 
+          title="Next Post: 1. 网络爬虫简介">1. 网络爬虫简介 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

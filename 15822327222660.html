@@ -1,0 +1,809 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  1. python简介及安装 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>1. python简介及安装</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <h2 id="toc_0">python简介</h2>
+
+<p><strong>编程语言</strong>是用来定义 计算机程序 的形式语言。我们通过编程语言来编写程序代码，再通过语言处理程序执行向计算机发送指令，让计算机完成对应的工作。</p>
+
+<p>Python也是编程语言的一种,并且是高级的编程语言。Python语言可能是第一种即简单又功能强大的编程语言。</p>
+
+<h2 id="toc_1">python的优点</h2>
+
+<ol>
+<li><p><strong>简单</strong>：Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样，尽管这个英语的要求非常严格！Python的这种伪代码本质是它最大的优点之一。它使你能够专注于解决问题而不是去搞明白语言本身。</p></li>
+<li><p><strong>易学</strong>：就如同你即将看到的一样，Python极其容易上手。前面已经提到了，Python有极其简单的语法。</p></li>
+<li><p><strong>免费、开源</strong>：Python是FLOSS（自由/开放源码软件）之一。简单地说，你可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。这是为什什么Python如此优秀的原因之一—它是由一群希望看到一个更更加优秀的Python的人创造并经常改进着的。</p></li>
+<li><p><strong>层语言</strong>：当你用Python语言编写程序的时候，你无需考虑诸如如何管理理你的程序使用的内存一类的底层细节。</p></li>
+<li><p><strong>可移植性</strong>：由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不不同平台上）。如果你小心地避免使用依赖于系统的特性，那么你的所有Python程无需修改就可以在下述任何平台上面运行。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE甚至还有PocketPC、Symbian以及Google基于linux开发的Android平台！</p></li>
+<li><p><strong>解释性</strong>：这一点需要一些解释。一个用编译性语言比如C或C++写的程序可以从源文件（即C或C++语言）转换到一个你的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选项完成。当你运行你的程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中并且运行。而Python语言写的程序不不需要编译成二进制代码。你可以直接从源代码运行程序。在计算机内部，Python解释器把源代码转换成称为字节码的中间形式，然后再把它翻译成计算机使用的机器器语言并运行。事实上，由于你不再需要担心如何编译程序，如何确保连接转载正确的库等等，所有这一切使得使用Python更更加简单。由于你只需要把你的Python程序拷贝到另外一台计算机上，它就可以工作了，这也使得你的Python程序更加易于移植。</p></li>
+<li><p><strong>面向对象</strong>：Python既支持面向过程的编程也支持面向对象的编程。在“面向过程”的语言中，程序是由过程或仅仅是可重用代码的函数构建起来的。在“面向对象”的语言中，程序是由数据和功能组合而成的对象构建起来的。与其他主要的语言如C++和Java相比，Python以一种非常强大又简单的方式实现面向对象编程。</p></li>
+<li><p><strong>可扩展性</strong>：如果你需要你的一段关键代码运行得更快或者希望某些算法不不公开，你可以把你的部分程序用C或C++编写，然后在你的Python程序中使用它们。</p></li>
+<li><p><strong>丰富的库</strong>：Python标准库确实很庞大。它可以帮助你处理理各种工作，包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。记住，只要安装了Python，所有这些功能都是可用的。这被称作Python的“功能齐全”理念。除了标准库以外，还有许多其他高质量的库，如wxPython、Twisted和Python图像库等等。</p></li>
+<li><p><strong>规范的代码</strong>：Python采用强制缩进的方式使得代码具有极佳的可读性。</p></li>
+</ol>
+
+<h2 id="toc_2">pycharm安装激活</h2>
+
+<p>PyCharm是一 Python IDE，带有一 整套可以帮助用户在使用Python语言开发时提高其效率的工具，比如调试、语法高亮、Project管理、 代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了-些高级功能，以用于支持Django框架下的专业Web开发。</p>
+
+<h3 id="toc_3">下载安装</h3>
+
+<p><a href="https://www.jetbrains.com/pycharm/">官方下载地址</a></p>
+
+<h3 id="toc_4">激活</h3>
+
+<p>激活方式均选择License server。</p>
+
+<p><img src="media/15822327222660/1.0.jpg" alt=""/></p>
+
+<p>第一服务器License server address: <a href="http://39.105.114.41:1027">http://39.105.114.41:1027</a></p>
+
+<p>第二服务器License server address: <a href="http://36.110.99.11:3456">http://36.110.99.11:3456</a></p>
+
+<p>以上两台服务器任选一台。</p>
+
+<h2 id="toc_5">使用Anconda方式安装Python环境</h2>
+
+<p>Anaconda指的是一个开源的Python发行版本，其包含了conda、Python等180多个科学包及其依赖项。 因为包含了大量的科学包，Anaconda 的下载文件比较大（约 600 MB），如果只需要某些包，或者需要节省带宽或存储空间，也可以使用Miniconda这个较小的发行版（仅包含conda和 Python）。</p>
+
+<h3 id="toc_6">下载</h3>
+
+<p><a href="https://www.continuum.io/downloads">Python3.6版本</a></p>
+
+<h3 id="toc_7">安装</h3>
+
+<p>根据安装步骤下一步安装完成即可</p>
+
+<p>anaconda自带python3.6环境不需要自己再次去官网下载python了。</p>
+
+<h4 id="toc_8">注意： Windows如果忘记勾选添加环境变量选项需要可以进行一下操作</h4>
+
+<p><img src="media/15822327222660/1.1.png" alt=""/><br/>
+<img src="media/15822327222660/1.2.png" alt=""/><br/>
+<img src="media/15822327222660/1.3.png" alt=""/></p>
+
+<h4 id="toc_9">注意： Mac 添加环境变量</h4>
+
+<pre><code class="language-text">export PATH=&quot;~/anaconda3/bin:$PATH&quot;
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-text">vim~/.bash_profile
+</code></pre>
+
+<p>点进入编辑模式，进行编辑然后添加</p>
+
+<pre><code class="language-text">export PATH=&quot;~/anaconda3/bin:$PATH&quot;
+</code></pre>
+
+<p>编辑完成后，点esc 退出</p>
+
+<p>直接输入 ：:wq! 这四个字符后，回车即可保存。</p>
+
+<h3 id="toc_10">使用</h3>
+
+<h4 id="toc_11">界面介绍</h4>
+
+<p><img src="media/15822327222660/1.4.png" alt=""/></p>
+
+<h4 id="toc_12">工具介绍</h4>
+
+<p><img src="media/15822327222660/1.5.png" alt=""/></p>
+
+<h4 id="toc_13">添加快捷键</h4>
+
+<p><img src="media/15822327222660/1.6.png" alt=""/></p>
+
+<h2 id="toc_14">创建jupyter虚拟环境</h2>
+
+<h3 id="toc_15">Windows</h3>
+
+<h4 id="toc_16">conda关于环境的几个常用命令</h4>
+
+<p>anaconda国内下载源：<a href="https://repo.continuum.io/archive/">https://repo.continuum.io/archive/</a></p>
+
+<p>查看当前的环境列列表：</p>
+
+<pre><code class="language-text">$ conda env list
+
+创建新的python环境，并且还可以指定python的版本
+
+$ conda create -n myenv python=3.7 激活、进入某个环境： $ activate test 退出环境： $ deactivate
+
+删除环境： $ conda remove --name test --all
+
+</code></pre>
+
+<h4 id="toc_17">创建想要添加的虚拟环境</h4>
+
+<pre><code class="language-text">conda create -n myenv python=3.5
+</code></pre>
+
+<p>创建好以后可以在C:\ProgramData\Anaconda3\envs\（具体与自己安装的anaconda路路径为准）  下找到新创建的环境</p>
+
+<h4 id="toc_18">将新的环境添加到jupyter中</h4>
+
+<p>第一：首先到C:\ProgramData\Anaconda3\share\jupyter\kernels 文件夹下，会有一个自带的Python3文件夹；</p>
+
+<p>第二：然后在Python3  文件夹同级目录下创建一个文件夹test文件夹（名字自己随便取，记得是英文）；</p>
+
+<p>第三：将Python3文件夹下的kernel.json文件复制到test文件夹下； </p>
+
+<p>第四：用记事本打开后</p>
+
+<pre><code class="language-text">{ &quot;argv&quot;: [ &quot;C:\\ProgramData\\Anaconda3\\python.exe&quot;, &quot;-m&quot;, &quot;ipykernel_launcher&quot;, &quot;-f&quot;, &quot;
+{connection_ﬁle}&quot; ], &quot;display_name&quot;: &quot;Python 3&quot;, &quot;language&quot;: &quot;python&quot; }
+</code></pre>
+
+<p>将路径改成新创建的环境路路径，然后Python 3改成jupyter中想显示的名字。</p>
+
+<p>第五：重启jupyter-notebook,选择新建会出现你想要的环境。</p>
+
+<h4 id="toc_19">安装ipykernel库</h4>
+
+<p>第一： activate myenv 激活你的虚拟环境</p>
+
+<p>第二： conda install ipykernel , 中间会出现&lt;[y]/n&gt;? 在后面直接输入y,回车。</p>
+
+<h4 id="toc_20">重启jupyter即可</h4>
+
+<h3 id="toc_21">Mac</h3>
+
+<h4 id="toc_22">mac中激活和退出某个环境的命令</h4>
+
+<p>激活、进入某个环境： <br/>
+$ source activate test</p>
+
+<p>注意： 最新的anaconda 命令改成了conda activate test<br/>
+退出环境： $ source deactivate</p>
+
+<p>注意： 最新的anaconda 命令改成了conda deactivate</p>
+
+<h4 id="toc_23">创建想要添加的虚拟环境</h4>
+
+<p>$ conda create -n myenv python=3.5</p>
+
+<h4 id="toc_24">查找kernel.json文件</h4>
+
+<p>$ ﬁnd . -name &quot;kernel.json&quot;</p>
+
+<p>第一：然后在 ./Library/Jupyter/kernels/ 目录下<strong>手动创建一个文件夹</strong>，然后创建一个名为 kernel.json 的文件，让该文件和已有的虚拟环境相关联，即可使用该虚拟环境。该json文件的内容大概如此：/Users/mac/Library/Jupyter/kernels/python37</p>
+
+<p>{ &quot;display_name&quot;: &quot;py35&quot;, &quot;language&quot;: &quot;python&quot;, &quot;argv&quot;: [ &quot;/Users/mac/Library/Jupyter/kernels/python37/bin/python&quot;, &quot;-m&quot;, &quot;ipykernel_launcher&quot;, &quot;-f&quot;, &quot;{connection_ﬁle}&quot; ] }</p>
+
+<p>第二： 重启jupyter，就会出现新的环境</p>
+
+<p>注意： 上面操作完成之后，会提示/Users/mac/anaconda3/envs/python37/bin/python3.7: No module named ipykernel_launcher</p>
+
+<p>第三：激活虚拟环境，然后conda install ipykernel</p>
+
+<p>第四： 重启</p>
+
+<h2 id="toc_25">Anaconda安装拓拓展</h2>
+
+<p>第一： 终端输入</p>
+
+<pre><code class="language-text">$ pip install jupyter_contrib_nbextensions
+$ pip install jupyter_nbextensions_conﬁgurator
+$ jupyter contrib nbextension install --user
+</code></pre>
+
+<p>第二： 重启jupyter</p>
+
+<p><a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_code_prettify.html">关 于 插 件 的 介 绍 </a></p>
+
+<p>例如： Hinterland 代码提示</p>
+
+<h2 id="toc_26">jupyter汉化问题</h2>
+
+<h3 id="toc_27">Mac</h3>
+
+<p>jupyter在浏览器器的显示语言是根据终端语言自适应的，如果你的终端是中文，那么启动jupyter后，浏览器器就以中文显示</p>
+
+<ol>
+<li> 终端是中文状态，jupyter是中文</li>
+</ol>
+
+<p><img src="media/15822327222660/1.7.png" alt=""/></p>
+
+<ol>
+<li> 如果想显示英文，有两种方式可以设置</li>
+</ol>
+
+<h4 id="toc_28">一种是临时的</h4>
+
+<p>终端中依次输入以下命令：</p>
+
+<pre><code class="language-text">export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+</code></pre>
+
+<p>然后在当前终端输入<code>jupyter notebook</code> 启动jupyter；</p>
+
+<p>注意：以上的命令设置只对当前终端生效，如果在新的终端启动jupyter，还是会显示中文，目前没有对所有终端生效的方法。</p>
+
+<h4 id="toc_29">一种是永久的</h4>
+
+<ol>
+<li> 在终端中输入locale查看系统默认的语言设置；</li>
+<li> 使用vim编辑bash_proﬁle文件，修改设置，终端输入
+<code>vim~/.bash_profile</code></li>
+</ol>
+
+<p><img src="media/15822327222660/1.8.png" alt=""/></p>
+
+<ol>
+<li><p>在最后一行添加<code>export LANG=en_US.UTF-8</code>这一行</p></li>
+<li><p>保存文件退出，然后在终端输入<code>source ~/.bash_profile</code> ，让设置生效，然后启动</p></li>
+</ol>
+
+<p><img src="media/15822327222660/1.9.png" alt=""/></p>
+
+<h3 id="toc_30">windows</h3>
+
+<p>windows中在cmd中启动jupyter，默认以英文显示，如果想要中文，需要下载git。</p>
+
+<ol>
+<li> 下载地址：<a href="https://www.git-scm.com/download/win">https://www.git-scm.com/download/win</a></li>
+<li> 一路路next，进行安装；</li>
+<li> 安装完毕，搜索git bash并打开；</li>
+<li> 打开Git bash输入命令<code>jupyter notebook</code>启动jupyter.</li>
+</ol>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327222638.html" 
+          title="Previous Post: 0.Python 速查">&laquo; 0.Python 速查</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327223909.html" 
+          title="Next Post: 2. numpy">2. numpy &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

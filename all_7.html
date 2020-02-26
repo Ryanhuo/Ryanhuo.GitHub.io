@@ -1,0 +1,1174 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15822327224310.html">
+                
+                  <h1>厦门市集美区租房分析</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><img src="media/15822327224310/1245.png" alt=""/></p>
+
+<h2 id="toc_0">数据获取</h2>
+
+<p>数据来源基于贝壳租房，搜索集美区得到的数据（数据来源：<a href="https://xm.zu.ke.com/zufang/rs%E9%9B%86%E7%BE%8E%E5%8C%BA/%EF%BC%89">https://xm.zu.ke.com/zufang/rs%E9%9B%86%E7%BE%8E%E5%8C%BA/）</a></p>
+
+<p><img src="media/15822327224310/20191118141232.png" alt=""/></p>
+
+<p>本文利用<strong>web scraper</strong> 爬取网页数据。<strong>web scraper</strong>是一款浏览器插件，进行简单调试，可对浏览网页数据进行一定程度的获取。本文利用qq浏览器+<strong>web scraper</strong>插件对数据进行获取。</p>
+
+<h3 id="toc_1">创建sitemap</h3>
+
+<p><img src="media/15822327224310/20191118141451.png" alt=""/></p>
+
+<p>注意的是集美区房屋数据总计82页，尝试跳转页面之后发现页面参数在地址栏的位置，对其进行修改。（<a href="https://xm.zu.ke.com/zufang/jimei/pg%5B1-82%5Drs%E9%9B%86%E7%BE%8E%E5%8C%BA/#contentList%EF%BC%89">https://xm.zu.ke.com/zufang/jimei/pg[1-82]rs%E9%9B%86%E7%BE%8E%E5%8C%BA/#contentList）</a></p>
+
+<h3 id="toc_2">选择包含要素element</h3>
+
+<p><img src="media/15822327224310/20191118141716.png" alt=""/></p>
+
+<p>获取多数据情况，可以选择需要获取数据的element，再在element选项下，筛选合适的数据。</p>
+
+<h3 id="toc_3">选择需要的元素内容</h3>
+
+<p><img src="media/15822327224310/20191118142017.png" alt=""/></p>
+
+<p>筛选出需要分析字段，预览格式有效保存好字段选项。</p>
+
+<h3 id="toc_4">scrape</h3>
+
+<p><img src="media/15822327224310/20191118142222.png" alt=""/></p>
+
+<p>爬取格式见上图，点击sitemap下的scrape，开始获取数据，获取完全部数据将数据存为csv下载，到本地。</p>
+
+<p><a href="%E9%99%84%E4%BB%B6beike.csv">beike.csv</a> </p>
+
+<h2 id="toc_5">清洗数据</h2>
+
+<p><img src="media/15822327224310/20191118142617.png" alt=""/></p>
+
+<p>下载完数据打开格式如图，用excel打开对数据进行清理，总计2342行数据，同检索到结果相同。</p>
+
+<h3 id="toc_6">筛选数据</h3>
+
+<p>web-scraper-order，及web-scraper-start-url数据是获取数据过程中生成数据，对后续分析显著作用，予以剔除。</p>
+
+<h3 id="toc_7">数据分列</h3>
+
+<h5 id="toc_8">1. title</h5>
+
+<p>title下的数据包含租房方式，小区，具体位置，以及房间朝向情况，利用excel表格分类，分割符号：·对租房方式及其他选项分列，余下字段利用空格进行分裂即可。</p>
+
+<h5 id="toc_9">2. detail</h5>
+
+<p><img src="media/15822327224310/20191118143710.png" alt=""/></p>
+
+<p>detail字段下，包含字段信息较多，首先利用查找替换，将数据中存在换行符（ctrl+j）予以替换，依次分列出区域，具体位置，面积，朝向，房间，楼层字段。</p>
+
+<h3 id="toc_10">数据一致化</h3>
+
+<p>剔除重复列的字段，对于将价格，面积，楼层数转化为数值，其中，部分地下室楼房缺少楼层信息，补充标注为1。</p>
+
+<p>清洗完的数据如图所示：</p>
+
+<p><img src="media/15822327224310/20191118144532.png" alt=""/></p>
+
+<p><a href="%E9%99%84%E4%BB%B6%E6%B8%85%E6%B4%97.xlsx">清洗.xlsx</a> </p>
+
+<h2 id="toc_11">数据可视化</h2>
+
+<p><a href="%E9%99%84%E4%BB%B6%E5%8F%AF%E8%A7%86%E5%8C%96.twb">可视化.twb</a> </p>
+
+<p><img src="media/15822327224310/jm5.png" alt=""/></p>
+
+<p>总体租房方式以整租为主，少量房源为合租房。</p>
+
+<p><img src="media/15822327224310/jm3.png" alt=""/></p>
+
+<p>总体平均租房面积为91.51平方米，其中杏西房源相对平均面积较高，高达127.67平方米，而环海东寓房源面积53.81平方米，相较较低。</p>
+
+<p><img src="media/15822327224310/jm1.png" alt=""/></p>
+
+<p>房子朝向大多符合传统的“背北朝南”，阳光及通风较好。</p>
+
+<p><img src="media/15822327224310/jm4.png" alt=""/></p>
+
+<p>将各区域的房价，楼层情况，及平均月租价格来看，杏林桥头的总体水平处在较高层面。租房可以参照上图看价格合理情况。</p>
+
+<p><img src="media/15822327224310/jm2.png" alt=""/></p>
+
+<p>最后，各租房的平均单位租金进行分析来看，如果你在贝壳租房上找到合适的房子入住，平均你的一个垃圾桶一个月最低要花费你9.09元的租金。</p>
+
+<p><a href="media/15822327224310/%E6%B8%85%E6%B4%97.xlsx">清洗</a></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E9%A1%B9%E7%9B%AE.html'>项目</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327224405.html">
+                
+                  <h1>商铺数据加载及存储</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><a href="media/15822327224405/%E5%95%86%E9%93%BA%E6%95%B0%E6%8D%AE.csv">商铺数据</a></p>
+
+<p><img src="media/15822327224405/2019-11-03-133518.png" alt=""/></p>
+
+<blockquote>
+<p><strong>要求:</strong></p>
+
+<ol>
+<li>成功读取“商铺数据.csv”文件</li>
+<li>解析数据，存为list</li>
+<li><p>数据清洗：</p>
+<ul>
+<li>comment，price两个字段清洗成数字</li>
+<li>清除字段缺失的数据</li>
+<li>commentlist拆分成三个字段，并且清洗成数字</li>
+</ul></li>
+<li><p>结果存为.csv文件</p></li>
+</ol>
+</blockquote>
+
+<pre><code class="language-python"># 1.导入数据
+f=open(&#39;商铺数据.csv&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)
+#查看前6行数据函数
+def data(x):
+    if x==all:
+        for line in f.readlines()[:6] :#查看前5行数据
+            print(line.split(&#39;,&#39;))# 按,拆分
+    else:
+        for line in f.readlines()[:6] :
+            print(line.split(&#39;,&#39;)[x])
+    f.seek(0,0)
+data(all)
+</code></pre>
+
+<pre><code class="language-text">[&#39;\ufeffclassify&#39;, &#39;name&#39;, &#39;comment&#39;, &#39;star&#39;, &#39;price&#39;, &#39;address&#39;, &#39;commentlist\n&#39;]
+[&#39;美食&#39;, &#39;望蓉城老坛酸菜鱼(合生汇店)&#39;, &#39;我要点评&#39;, &#39;该商户暂无星级&#39;, &#39;人均                                        ￥125&#39;, &#39;翔殷路1099号合生汇5F&#39;, &#39;口味8.3                                环境8.4                                服务8.5\n&#39;]
+[&#39;美食&#39;, &#39;泰国街边料理&#39;, &#39;74                    条点评&#39;, &#39;准四星商户&#39;, &#39;人均                                        ￥48&#39;, &#39;黄兴路合生汇B2美食集市内&#39;, &#39;口味7.4                                环境7.6                                服务7.4\n&#39;]
+[&#39;美食&#39;, &#39;壹面如故(苏宁生活广场店)&#39;, &#39;265                    条点评&#39;, &#39;准四星商户&#39;, &#39;人均                                        ￥21&#39;, &#39;邯郸路585号苏宁生活广场B1层&#39;, &#39;口味7.0                                环境7.2                                服务7.2\n&#39;]
+[&#39;美食&#39;, &#39;鮨谷•Aburiya(合生汇店)&#39;, &#39;2748                    条点评&#39;, &#39;准五星商户&#39;, &#39;人均                                        ￥142&#39;, &#39;翔殷路1099号合生广场5楼23、28铺位&#39;, &#39;口味8.9                                环境8.5                                服务8.4\n&#39;]
+[&#39;美食&#39;, &#39;我们的烤肉我们的馕&#39;, &#39;5                    条点评&#39;, &#39;准四星商户&#39;, &#39;人均                                    -&#39;, &#39;邯郸路399-D3号&#39;, &#39;口味7.5                                环境6.8                                服务7.5\n&#39;]
+</code></pre>
+
+<h2 id="toc_0">清洗数据</h2>
+
+<p><a href="%E9%99%84%E4%BB%B6%E5%95%86%E9%93%BA%E6%95%B0%E6%8D%AE.csv">商铺数据.csv</a> </p>
+
+<h3 id="toc_1">清洗评论数量数据</h3>
+
+<pre><code class="language-python">f.seek(0,0)
+print(&#39;---原始数据预览---&#39;)
+data(2)#查看评论数据
+
+#定义清洗数据函数
+import re
+
+def comment_number(s):
+    if &#39;我要点评&#39; in s:
+        return &#39;无数据&#39;
+    else:
+        return re.findall(r&#39;\d+&#39;,s)
+
+print(&#39;---清洗完数据预览---&#39;)
+
+for line in f.readlines()[:6] :
+        cm_n=comment_number(line.split(&#39;,&#39;)[2])
+        print(cm_n)
+</code></pre>
+
+<pre><code class="language-text">---原始数据预览---
+comment
+我要点评
+74                    条点评
+265                    条点评
+2748                    条点评
+5                    条点评
+---清洗完数据预览---
+[]
+无数据
+[&#39;74&#39;]
+[&#39;265&#39;]
+[&#39;2748&#39;]
+[&#39;5&#39;]
+</code></pre>
+
+<h3 id="toc_2">清洗价格数据</h3>
+
+<pre><code class="language-python">f.seek(0,0)
+
+print(&#39;---原始数据预览---&#39;)
+data(4)
+
+def pri(s):
+    if &#39;-&#39; in s:
+        return &#39;无数据&#39;
+    else:
+        return re.findall(r&#39;\d+&#39;,s)
+
+print(&#39;---清洗完数据预览---&#39;)
+
+for line in f.readlines()[:6] :
+        pr=pri(line.split(&#39;,&#39;)[4])
+        print(pr)
+</code></pre>
+
+<pre><code class="language-text">---原始数据预览---
+price
+人均                                        ￥125
+人均                                        ￥48
+人均                                        ￥21
+人均                                        ￥142
+人均                                    -
+---清洗完数据预览---
+[]
+[&#39;125&#39;]
+[&#39;48&#39;]
+[&#39;21&#39;]
+[&#39;142&#39;]
+无数据
+</code></pre>
+
+<h3 id="toc_3">清洗评论数据</h3>
+
+<pre><code class="language-python">f.seek(0,0)
+
+print(&#39;---原始数据预览---&#39;)
+data(-1)
+
+def comment(s):
+    if len(s)&lt;3:
+        return &#39;无数据&#39;
+    else:
+        return re.findall(r&#39;\d+\.\d&#39;,s)#提取小数
+
+
+print(&#39;---清洗完数据预览---&#39;)
+
+for line in f.readlines()[:6] :
+        cm=comment(line.split(&#39;,&#39;)[-1])
+        print(cm)
+</code></pre>
+
+<pre><code class="language-text">---原始数据预览---
+commentlist
+
+口味8.3                                环境8.4                                服务8.5
+
+口味7.4                                环境7.6                                服务7.4
+
+口味7.0                                环境7.2                                服务7.2
+
+口味8.9                                环境8.5                                服务8.4
+
+口味7.5                                环境6.8                                服务7.5
+
+---清洗完数据预览---
+[]
+[&#39;8.3&#39;, &#39;8.4&#39;, &#39;8.5&#39;]
+[&#39;7.4&#39;, &#39;7.6&#39;, &#39;7.4&#39;]
+[&#39;7.0&#39;, &#39;7.2&#39;, &#39;7.2&#39;]
+[&#39;8.9&#39;, &#39;8.5&#39;, &#39;8.4&#39;]
+[&#39;7.5&#39;, &#39;6.8&#39;, &#39;7.5&#39;]
+</code></pre>
+
+<h3 id="toc_4">汇总数据</h3>
+
+<pre><code class="language-python">#数据清洗
+import csv
+csvfile=open(&#39;清洗完数据.csv&#39;,&#39;w&#39;)
+writer = csv.writer(csvfile)
+writer.writerow([&#39;classify&#39;,&#39;name&#39;,&#39;comment&#39;,&#39;star&#39;,&#39;price&#39;,&#39;address&#39;,&#39;quality&#39;,&#39;environment&#39;,&#39;service&#39;])
+
+f.seek(0,0)
+
+for line in f.readlines()[1:10] :#删除第一个数据
+    s=line.split(&#39;,&#39;)   
+    classify=s[0]
+    name=s[1]
+    comment_1=comment_number(s[2])[0]#获取列表下数字
+    star=s[3]
+    price=pri(s[4])[0]
+    address=s[5]
+    quality=comment(s[-1])[0]
+    environment=comment(s[-1])[1]
+    service=comment(s[-1])[2]
+#预览查看    
+    print(classify,name,comment_1,star,price,address,quality,environment,service)
+    
+#删除缺失数据   
+    if &#39;无数据&#39;not in [classify,name,comment_1,star,price,address,quality,environment,service]:
+        writer.writerow([classify,name,comment_1,star,price,address,quality,environment,service])
+        
+csvfile.close()
+f.close()
+</code></pre>
+
+<pre><code class="language-text">美食 望蓉城老坛酸菜鱼(合生汇店) 无 该商户暂无星级 125 翔殷路1099号合生汇5F 8.3 8.4 8.5
+美食 泰国街边料理 74 准四星商户 48 黄兴路合生汇B2美食集市内 7.4 7.6 7.4
+美食 壹面如故(苏宁生活广场店) 265 准四星商户 21 邯郸路585号苏宁生活广场B1层 7.0 7.2 7.2
+美食 鮨谷•Aburiya(合生汇店) 2748 准五星商户 142 翔殷路1099号合生广场5楼23、28铺位 8.9 8.5 8.4
+美食 我们的烤肉我们的馕 5 准四星商户 无 邯郸路399-D3号 7.5 6.8 7.5
+美食 麦当劳(万达店) 785 准四星商户 24 邯郸路600号万达商业广场B1楼A05号铺 7.4 7.2 7.2
+美食 蒸年青STEAMYOUNG(百联又一城购物中心店) 3779 准五星商户 70 淞沪路8号百联又一城购物中心7层 8.6 8.6 8.6
+美食 丸来玩趣(百联又一城购物中心店) 458 准四星商户 14 淞沪路8号百联又一城购物中心B1层 7.0 6.5 6.5
+美食 韩国雪冰(合生汇店) 1280 四星商户 47 翔殷路1099号合生汇4F 7.7 7.5 7.6
+</code></pre>
+
+<h2 id="toc_5">代码汇总</h2>
+
+<pre><code class="language-python"># 1.导入数据
+f=open(&#39;商铺数据.csv&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)
+#2. 定义函数
+import re
+
+def comment_number(s):
+    if &#39;我要点评&#39; in s:
+        return &#39;无数据&#39;
+    else:
+        return re.findall(r&#39;\d+&#39;,s)
+    
+def pri(s):
+    if &#39;-&#39; in s:
+        return &#39;无数据&#39;
+    else:
+        return re.findall(r&#39;\d+&#39;,s)
+    
+def comment(s):
+    if len(s)&lt;3:
+        return &#39;无数据&#39;
+    else:
+        return re.findall(r&#39;\d+\.\d&#39;,s)#提取小数
+    
+# 3.计算清洗数据&amp;导出csv
+
+import csv
+csvfile=open(&#39;清洗完数据.csv&#39;,&#39;w&#39;)
+writer = csv.writer(csvfile)
+writer.writerow([&#39;classify&#39;,&#39;name&#39;,&#39;comment&#39;,&#39;star&#39;,&#39;price&#39;,&#39;address&#39;,&#39;quality&#39;,&#39;environment&#39;,&#39;service&#39;])
+
+f.seek(0,0)
+n=0 #计数变量
+for line in f.readlines()[1:] :#删除第一个数据
+    s=line.split(&#39;,&#39;)   
+    classify=s[0]
+    name=s[1]
+    comment_1=comment_number(s[2])[0]#获取列表下数字
+    star=s[3]
+    price=pri(s[4])[0]
+    address=s[5]
+    quality=comment(s[-1])[0]
+    environment=comment(s[-1])[1]
+    service=comment(s[-1])[2]
+    
+#删除缺失数据   
+    if &#39;无数据&#39;not in [classify,name,comment_1,star,price,address,quality,environment,service]:
+        n+=1
+        writer.writerow([classify,name,comment_1,star,price,address,quality,environment,service])
+        
+print(&#39;导出成功，合计&#39;+str(n)+&#39;条数据&#39;)
+csvfile.close()
+f.close()
+</code></pre>
+
+<pre><code class="language-text">导出成功，合计1265条数据
+</code></pre>
+
+<p><img src="media/15822327224405/2019-11-03-133621.png" alt=""/></p>
+
+<p><a href="media/15822327224405/%E6%B8%85%E6%B4%97%E5%AE%8C%E6%95%B0%E6%8D%AE.csv">清洗完数据</a></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E9%A1%B9%E7%9B%AE.html'>项目</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327224453.html">
+                
+                  <h1>当当图书爬虫</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<pre><code class="language-python"># 爬取当当网图书
+import requests
+from pyquery import PyQuery
+import csv
+import time
+
+class DDSider(object):
+    def __init__(self,key):
+        self.key = key
+        self.headers = {
+            &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36&#39;
+        }
+        self.base_url = &#39;http://search.dangdang.com/?key=&#39;+key+&#39;&amp;act=input&amp;page_index={}&#39;
+    # 获取界面内容 
+    def get_pageInfo(self):
+        
+        num_page = 0
+        while True:
+            num_page += 1 
+            page_url = self.base_url.format(num_page)
+            res = requests.get(page_url,headers=self.headers)
+#             print(res.content.decode(&#39;GBK&#39;))
+            
+            # 解析
+            self.parse_pageInfo(res.content.decode(&#39;GBK&#39;))
+            time.sleep(1)
+            if num_page == 1:
+                break
+                
+    def parse_pageInfo(self,html):
+        doc = PyQuery(html)
+        
+        book_ul = doc(&#39;#component_59 li&#39;).items()
+        
+        for one_li in book_ul:
+#             print(one_li)
+            # 图片的链接
+            if one_li(&#39;.pic img&#39;).attr(&#39;data-original&#39;):
+                img_url = one_li(&#39;.pic img&#39;).attr(&#39;data-original&#39;)
+                
+            else:
+                img_url = one_li(&#39;.pic img&#39;).attr(&#39;src&#39;)
+            
+            # 标题
+            title = one_li(&#39;.name a&#39;).attr(&#39;title&#39;)
+
+            # 价格
+            price = one_li(&#39;.price .search_now_price&#39;).text()
+
+            # 获取评价数
+            comments = one_li(&#39;.search_star_line .search_comment_num&#39;).text()
+            
+            #search_star_black
+#             stars = one_li(&#39;.search_star_black span&#39;).attr(&#39;style&#39;).split(&#39;:&#39;)[-1].strip(&#39;%;&#39;)
+            stars = float(one_li(&#39;.search_star_black span&#39;).attr(&#39;style&#39;).split(&#39;:&#39;)[-1].strip(&#39;%;&#39;))/20
+#             print(stars)
+
+if __name__ == &quot;__main__&quot;:
+    dd = DDSider(&#39;python&#39;)
+    dd.get_pageInfo()
+</code></pre>
+
+<pre><code class="language-text">5.0
+4.5
+4.5
+4.5
+4.5
+4.5
+4.5
+5.0
+4.5
+4.5
+5.0
+4.5
+5.0
+3.0
+4.5
+4.5
+5.0
+5.0
+5.0
+4.5
+5.0
+4.5
+4.5
+4.5
+4.5
+0.0
+4.5
+4.5
+4.5
+4.0
+4.5
+5.0
+4.0
+5.0
+4.5
+4.5
+4.5
+5.0
+3.0
+5.0
+5.0
+5.0
+5.0
+4.5
+4.5
+0.0
+5.0
+5.0
+4.5
+5.0
+4.0
+5.0
+4.5
+5.0
+4.5
+0.5
+4.5
+4.5
+4.0
+5.0
+</code></pre>
+
+<pre><code class="language-python">import time
+import requests
+import json
+# 时间戳： 1970-01-01 00：00：00 到当前时间的的秒数(10位数)或者是毫秒数（13位）
+# timestamp = 1559223244110
+# timearray = time.localtime(float(timestamp/1000))
+# tt = time.strftime(&#39;%Y--%m--%d %H:%M:%S&#39;,timearray)
+# print(tt)
+
+# 把当前时间转成时间戳的格式
+
+# timestamp = int(time.time())*1000
+# timearray = time.localtime(float(timestamp/1000))
+# tt = time.strftime(&#39;%Y--%m--%d %H:%M:%S&#39;,timearray)
+# print(tt)
+# 动态界面的爬取
+base_url = &#39;https://careers.tencent.com/tencentcareer/api/post/Query?timestamp={}&amp;keyword=Python&amp;pageIndex=1&amp;pageSize=10&amp;language=zh-cn&amp;area=cn&#39;
+
+timestamp = int(time.time())*1000
+headers = {
+            &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36&#39;
+        }
+url = base_url.format(timestamp)
+print(url)
+
+res = requests.get(url=url,headers=headers)
+# print(res.content.decode(&#39;utf-8&#39;))
+
+# 将数据转化成Python对象
+conntent_dict = json.loads(res.content.decode(&#39;utf-8&#39;))
+
+Data_dict = conntent_dict[&#39;Data&#39;]
+# posts_list 里面存的就是我们想要的数据
+posts_list = Data_dict[&#39;Posts&#39;]
+
+# 拿到每一条数据
+for value_dict in posts_list:
+    
+    RecruitPostName = value_dict[&#39;RecruitPostName&#39;]
+    print(RecruitPostName)
+    LastUpdateTime = value_dict[&#39;LastUpdateTime&#39;]
+    print(LastUpdateTime)
+
+
+
+
+
+</code></pre>
+
+<pre><code class="language-text">https://careers.tencent.com/tencentcareer/api/post/Query?timestamp=1559224906000&amp;keyword=Python&amp;pageIndex=1&amp;pageSize=10&amp;language=zh-cn&amp;area=cn
+25923-监控系统开发工程师（Python）（深圳）
+2019年05月30日
+31504-AI机器人后台开发工程师（python）
+2019年05月29日
+CSIG16-python高级研发工程师
+2019年05月25日
+TME-腾讯音乐python开发工程师
+2019年05月17日
+25923-Python高级工程师（上海）
+2019年04月19日
+25923-Python高级工程师（深圳）
+2019年04月19日
+25923-数据分析平台开发工程师（Python）（深圳）
+2019年03月21日
+PCG04-安全测试专家（后台服务/客户端）
+2019年05月30日
+30359-大数据高级开发工程师（深圳）
+2019年05月30日
+31504-腾讯云监控高级运维工程师
+2019年05月30日
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E9%A1%B9%E7%9B%AE.html'>项目</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   <a href="all_6.html">&laquo; Prev Page</a>  
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			 <a href="all_8.html">&raquo; Next Page</a> 
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

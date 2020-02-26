@@ -1,0 +1,1215 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  爬虫 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15822327224673.html">
+                
+                  <h1>3. 正则表达式</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><a href="media/15822327224673/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE.ipynb">正则表达</a></p>
+
+<h2 id="toc_0">正则表达式的介绍</h2>
+
+<p>正则表达式是对字符串操作的一种逻辑公式，就是用实现定义好的一些特定的字符、及这些特定的字符的组合，组成  一个“规则字符串“，这个“规则字符串“用来表达对字符串的一种过滤逻辑。</p>
+
+<p><strong>注意：</strong> 正则表达式并不是Python独有的，Python中使用re模块实现。</p>
+
+<h2 id="toc_1">常见匹配模式<a href="http://deerchao.net/tutorials/regex/regex-1.htm"><strong>参考链接</strong></a></h2>
+
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\w</td>
+<td>匹配字母数字及下划线</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配非字母数字下划线</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意的空白符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任意非空白符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配任意非数字的字符</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除换行符以外的任意字符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串的开始</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串的结束</td>
+</tr>
+<tr>
+<td>*</td>
+<td>重复零次或更多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>重复一次或更多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td>重复零次或一次</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>重复n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>重复n次或更多次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>重复n到m次</td>
+</tr>
+<tr>
+<td>a|b</td>
+<td>匹配a或b</td>
+</tr>
+<tr>
+<td>()</td>
+<td>匹配括号内的表达式，也表示一个组</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_2">re.match()</h2>
+
+<p>尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配的话，match（）就会返回None 语法： re.match(正则表达式，要匹配的字符串,匹配方式)</p>
+
+<h3 id="toc_3">常用匹配方式</h3>
+
+<p>re.I 使匹配对大小写不敏感 re.S 使 . 匹配包括换行在内的所有字符</p>
+
+<pre><code class="language-python">str1 = &#39;www.kaikeba.com&#39; 
+result = re.match(&#39;www&#39;,str1)
+
+# 获取匹配的结果
+print(result.group())
+
+# 获取匹配字符串的长度范围
+print(result.span())
+
+# 不在起始位置匹配,返回None
+print(re.match(&#39;kaikeba&#39;,str1))
+
+# 默认大小写是敏感的
+print(re.match(&#39;WWW&#39;,str1))
+
+# 设置匹配模式，忽略大小写
+print(re.match(&#39;WWW&#39;,str1,re.I))
+</code></pre>
+
+<h3 id="toc_4">多种匹配方式</h3>
+
+<pre><code class="language-python">str2 = &#39;abc 123 def&#39;
+
+# 常规匹配
+
+print(re.match(&#39;^abc\s\d\d\d\sdef$&#39;,str2).group()) print(re.match(&#39;^abc\s\d{3}\sdef$&#39;,str2).group())
+
+# 范匹配
+print(re.match(&#39;^abc\s.*\sdef$&#39;,str2).group())
+
+ 
+# 获取指定的字符
+print(re.match(&#39;^abc\s(.*)\sdef$&#39;,str2).group(1))
+# 通过re.group()获得结果后，如果正则表达式中有括号，则re.group(1)获取的就是第一个括号中匹配的结果
+</code></pre>
+
+<h3 id="toc_5">贪婪和非贪婪</h3>
+
+<pre><code class="language-python"># 贪婪匹配
+content= &quot;hello 1234567 World Demo&quot;
+result= re.match(&#39;^hello.*(\d+).*Demo&#39;,content) 
+print(result)
+print(result.group(1))
+# 这种情况的原因是前面的.* 给匹配掉了， .*在这里会尽可能的匹配多的内容，也就是我们所说的贪婪匹配
+result= re.match(&#39;^hello.*?(\d+).*Demo&#39;,content)
+print(result) 
+print(result.group(1))
+</code></pre>
+
+<h3 id="toc_6">匹配模式</h3>
+
+<pre><code class="language-python"># 很多时候匹配的内容是存在换行的问题的，这个时候的就需要用到匹配模式re.S来匹配换行的内容
+
+content = &quot;&quot;&quot;hello 123456 world demo&quot;&quot;&quot;
+
+result =re.match(&#39;^he.*?(\d+).*?demo$&#39;,content,re.S) 
+print(result)
+print(result.group()) 
+print(result.group(1))
+</code></pre>
+
+<h3 id="toc_7">转义</h3>
+
+<pre><code class="language-python"># 当我们要匹配的内容中存在特殊字符的时候，就需要用到转移符号\ 
+content= &quot;price is $5.00&quot;
+result = re.match(&#39;price is \$5\.00&#39;,content) 
+print(result)
+print(result.group())
+</code></pre>
+
+<h2 id="toc_8">re.search()</h2>
+
+<p>re.search扫描整个字符串返回第一个成功匹配的结果</p>
+
+<pre><code class="language-python">import re
+
+html = &#39;&#39;&#39;&lt;div id=&quot;songs-list&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;经典老歌&lt;/h2&gt;
+    &lt;p class=&quot;introduction&quot;&gt;
+        经典老歌列表
+    &lt;/p&gt;
+    &lt;ul id=&quot;list&quot; class=&quot;list-group&quot;&gt;
+        &lt;li data-view=&quot;2&quot;&gt;一路上有你&lt;/li&gt;
+        &lt;li data-view=&quot;7&quot;&gt;
+            &lt;a href=&quot;/2.mp3&quot; singer=&quot;任贤齐&quot;&gt;沧海一声笑&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li data-view=&quot;4&quot; class=&quot;active&quot;&gt;
+            &lt;a href=&quot;/3.mp3&quot; singer=&quot;齐秦&quot;&gt;往事随风&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li data-view=&quot;6&quot;&gt;&lt;a href=&quot;/4.mp3&quot; singer=&quot;beyond&quot;&gt;光辉岁月&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-view=&quot;5&quot;&gt;&lt;a href=&quot;/5.mp3&quot; singer=&quot;陈慧琳&quot;&gt;记事本&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-view=&quot;5&quot;&gt;
+            &lt;a href=&quot;/6.mp3&quot; singer=&quot;邓丽君&quot;&gt;但愿人长久&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;&#39;&#39;&#39;
+
+result = re.search(&#39;&lt;li.*?active.*?singer=&quot;(.*?)&quot;&gt;(.*?)&lt;/a&gt;&#39;,html,re.S) 
+print(result)
+print(result.groups()) 
+print(result.group(1)) 
+print(result.group(2))
+
+# 所以为了匹配方便，我们会更多的用search，不用match,match必须匹配头部，所以很多时候不是特别方便
+</code></pre>
+
+<h2 id="toc_9">re.findall()</h2>
+
+<p>搜索字符串，以列表的形式返回全部能匹配的子串</p>
+
+<pre><code class="language-python">import re
+html =  &#39;&#39;&#39;&lt;div id=&quot;songs-list&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;经典老歌&lt;/h2&gt;
+    &lt;p class=&quot;introduction&quot;&gt;
+        经典老歌列表
+    &lt;/p&gt;
+    &lt;ul id=&quot;list&quot; class=&quot;list-group&quot;&gt;
+        &lt;li data-view=&quot;2&quot;&gt;一路上有你&lt;/li&gt;
+        &lt;li data-view=&quot;7&quot;&gt;
+            &lt;a href=&quot;/2.mp3&quot; singer=&quot;任贤齐&quot;&gt;沧海一声笑&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li data-view=&quot;4&quot; class=&quot;active&quot;&gt;
+            &lt;a href=&quot;/3.mp3&quot; singer=&quot;齐秦&quot;&gt;往事随风&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li data-view=&quot;6&quot;&gt;&lt;a href=&quot;/4.mp3&quot; singer=&quot;beyond&quot;&gt;光辉岁月&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-view=&quot;5&quot;&gt;&lt;a href=&quot;/5.mp3&quot; singer=&quot;陈慧琳&quot;&gt;记事本&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-view=&quot;5&quot;&gt;
+            &lt;a href=&quot;/6.mp3&quot; singer=&quot;邓丽君&quot;&gt;但愿人长久&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;&#39;&#39;&#39;
+
+ 
+
+results = re.findall(&#39;&lt;li.*?href=&quot;(.*?)&quot;.*?singer=&quot;(.*?)&quot;&gt;(.*?)&lt;/a&gt;&#39;, html, re.S) 
+print(results)
+print(type(results)) 
+for result in results:
+    print(result)
+    print(result[0], result[1], result[2])
+</code></pre>
+
+<h2 id="toc_10">re.compile()</h2>
+
+<p>将正则字符串编译成正则表达式对象，以便于复用该匹配模式。</p>
+
+<pre><code class="language-python">import re
+html = &#39;&#39;&#39;&lt;div id=&quot;songs-list&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;经典老歌&lt;/h2&gt;
+    &lt;p class=&quot;introduction&quot;&gt;
+        经典老歌列表
+    &lt;/p&gt;
+    &lt;ul id=&quot;list&quot; class=&quot;list-group&quot;&gt;
+        &lt;li data-view=&quot;2&quot;&gt;一路上有你&lt;/li&gt;
+        &lt;li data-view=&quot;7&quot;&gt;
+            &lt;a href=&quot;/2.mp3&quot; singer=&quot;任贤齐&quot;&gt;沧海一声笑&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li data-view=&quot;4&quot; class=&quot;active&quot;&gt;
+            &lt;a href=&quot;/3.mp3&quot; singer=&quot;齐秦&quot;&gt;往事随风&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li data-view=&quot;6&quot;&gt;&lt;a href=&quot;/4.mp3&quot; singer=&quot;beyond&quot;&gt;光辉岁月&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-view=&quot;5&quot;&gt;&lt;a href=&quot;/5.mp3&quot; singer=&quot;陈慧琳&quot;&gt;记事本&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-view=&quot;5&quot;&gt;
+            &lt;a href=&quot;/6.mp3&quot; singer=&quot;邓丽君&quot;&gt;但愿人长久&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;&#39;&#39;&#39;
+
+pattern = re.compile(&#39;&lt;li.*?href=&quot;(.*?)&quot;.*?singer=&quot;(.*?)&quot;&gt;(.*?)&lt;/a&gt;&#39;,re.S) 
+results = re.findall(pattern, html)
+print(results) 
+print(type(results)) 
+for result in results:
+    print(result)
+    print(result[0], result[1], result[2])
+</code></pre>
+
+<h2 id="toc_11">拓展（re.sub）</h2>
+
+<p>替换字符串中每一个匹配的子串后返回替换后的字符串 </p>
+
+<p><strong>语法：</strong>re.sub(正则表达式，替换成的字符串，原字符串)</p>
+
+<pre><code class="language-python">import re
+content = &quot;hello 123456 World&quot;
+# content = re.sub(&#39;\d+&#39;,&#39;&#39;,content) # print(content)
+#有些情况下我们替换字符的时候，还想获取我们匹配的字符串，然后在后面添加一些内容
+#需要注意的一个问题是\1是获取第一个匹配的结果，为了防止转义字符的问题，我们需要在前面加上r
+content = re.sub(&#39;(\d+)&#39;,r&#39;\1 7890&#39;,content) 
+print(content)
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E7%88%AC%E8%99%AB.html'>爬虫</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327224705.html">
+                
+                  <h1>4. python解析库的使用</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">BeautifulSoup库的基本使用</h2>
+
+<h3 id="toc_1">简介</h3>
+
+<p><strong>正则表达式</strong>对于我们来说用起来是不方便的，而且需要记很多规则，所以用起来不是特别熟练。  <strong>BeautifulSoup</strong>库一个灵活又方便的网页解析库，处理高效，支持多种解析器。  利用它就不用编写正则表达式也能方便的实现网页信息的抓取。</p>
+
+<p><a href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/">中文参考文档</a></p>
+
+<h3 id="toc_2">安装</h3>
+
+<p><img src="media/15822327224705/1575944860399-28e6c7a1-1be8-4972-beea-ce502764f94d.png" alt="image.png"/></p>
+
+<h3 id="toc_3">基础使用</h3>
+
+<pre><code class="language-text">from bs4 import BeautifulSoup 
+html = &#39;&#39;&#39;
+    &lt;body&gt;
+    &lt;header id=&quot;header&quot;&gt;
+        &lt;h3 id=&quot;name&quot;&gt;小强也可爱&lt;/h3&gt;
+        &lt;title&gt;标题&lt;/title&gt;
+    &lt;div class=&quot;sns&quot;&gt;
+        &lt;a href=&quot;http://www.kaikeba.com/feed/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; title=&quot;RSS&quot;&gt;&lt;i class=&quot;fa fa-rss&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a href=&quot;http://kaikeba.com/kaikeba&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; title=&quot;Weibo&quot;&gt;&lt;i class=&quot;fa fa-weibo&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;https://www.kaikeba.com/in/kaikeba&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; title=&quot;Linkedin&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;mailto:kaikeba@gmail.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; title=&quot;envelope&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+    &lt;div class=&quot;nav&quot;&gt;
+        &lt;ul&gt;&lt;li class=&quot;current-menu-item&quot;&gt;&lt;a [href=&quot;http://www.kaikeb](http://www.kaikeba.com/)a.com/&quot;&gt;hello&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a [href=&quot;http://www.kaikeba.com/about-me/&quot;&gt;word](http://www.kaikeba.com/about-me/)
+    &lt;li&gt;&lt;a [href=&quot;http://www.kaikeba.com/post-search/&quot;&gt;nihao&gt;
+    &lt;li&gt;&lt;a [href=&quot;http://www.kaikeba.com/wp-login.php&quot;&gt;kkb](http://www.kaikeba.com/wp-login.php)
+    &lt;/ul&gt; &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;/body&gt; &#39;&#39;&#39;
+
+soup = BeautifulSoup(html,&#39;lxml&#39;)
+
+# 格式化输出 soup 对象的内容
+print(soup.prettify())
+
+# 根据标签名获取整个标签(但是拿出的是第一个) print(soup.li)
+# 获取标签的名字
+print(soup.title.name)
+
+# 获取标签中的文本
+print(soup.title.string)
+
+# 获取标签title的父标标签
+print(soup.title.parent.name)
+
+ 
+
+# 获取li标签的子标签
+print(soup.li.contents)
+
+ 
+
+# 获取便签的属性值的两种方式
+print(soup.li[&quot;class&quot;]) print(soup.li.attrs[&#39;class&#39;])
+
+# 使用select，css选择器
+print(soup.select(&#39;li&#39;))
+
+# 类 名 前 加 .，id 名 前 加 # 
+print(soup.select(&#39;.current-menu-item&#39;))
+
+# 获取内容
+print(soup.select(&#39;.current-menu-item&#39;)[0].get_text())
+
+# 获取属性值
+print(soup.select(&#39;.current-menu-item&#39;)[0].attrs[&#39;class&#39;])
+
+
+# 获取li标签下面的子标签
+print(soup.select(&#39;li &gt; a&#39;)[1].get_text())
+
+# 使用find和findall进行查找
+print(soup.find(&#39;li&#39;,attrs={&#39;class&#39;:&#39;current-menu-item&#39;}))
+print(soup.find_all(&#39;li&#39;,attrs={&quot;class&quot;:&quot;current-menu-item&quot;})[0])
+</code></pre>
+
+<h2 id="toc_4">Xpath的基本使用</h2>
+
+<h3 id="toc_5">简介</h3>
+
+<p><strong>XPath</strong> 是一门在 XML 文档中查找信息的语言。 使用路径表达式来选取 XML 文档中的节点或者节点集。<strong>注意</strong>： xpath速度比较快，是爬虫在网页定位中的较优选择，但是很多网页前端代码混乱难以定位。</p>
+
+<p>安装：pip install lxml</p>
+
+<h3 id="toc_6">语法</h3>
+
+<p><a href="https://docs.microsoft.com/zh-cn/previous-versions/dotnet/netframework-2.0/ms256471(v%3dvs.80)">xpath的更多语法</a></p>
+
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>nodename</td>
+<td>选取此节点的所有子节点。</td>
+</tr>
+<tr>
+<td>/</td>
+<td>从根节点选取。</td>
+</tr>
+<tr>
+<td>//</td>
+<td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点。</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性。</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*</td>
+<td>匹配任何元素节点。</td>
+</tr>
+<tr>
+<td>@*</td>
+<td>匹配任何属性节点。</td>
+</tr>
+<tr>
+<td>node()</td>
+<td>匹配任何类型的节点。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_7">基础使用</h3>
+
+<pre><code class="language-text"># 导入lxml的etree库
+from lxml import etree
+
+
+data_str = &quot;&quot;&quot;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;first item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;second item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-inactive&quot;&gt;&lt;a href=&quot;link3.html&quot;&gt;third item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link4.html&quot;&gt;fourth item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link5.html&quot;&gt;fifth item&lt;/a&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt; 
+    &quot;&quot;&quot;
+# 注意： 该数据中缺少了一个li标签的闭合标签
+# 利用etree.HTML可以将字符串或者bytes转化为Element python对象，这个对象具有Xpath的方法
+html = etree.HTML(data_str)
+# print(html)
+
+# etree.tostring(html)可以自动修正HTML代码，补全了缺胳膊少腿的标签
+# 使用为了观察修改以后的html样子，根据修改后的HTML去写Xpath
+result = etree.tostring(html) 
+print(result.decode(&quot;utf-8&quot;))
+
+
+# 获取class =item-1 的 a标签的href属性
+result = html.xpath(&#39;//li[@class=&quot;item-1&quot;]/a/@href&#39;) 
+print(result)
+
+# 获取class =item-1 的 a标签的文本值
+result = html.xpath(&#39;//li[@class=&quot;item-1&quot;]/a/text()&#39;) 
+print(result)
+</code></pre>
+
+<h2 id="toc_8">PyQuery的使用</h2>
+
+<h3 id="toc_9">简介</h3>
+
+<p><strong>pyquery</strong>库是jQuery的Python实现，能够以jQuery的语法来操作解析 HTML 文档， 易用性和解析速度都很好，和它差不多的还有BeautifulSoup，都是用来解析的。</p>
+
+<p><a href="http://pyquery.readthedocs.io/">官方文档</a></p>
+
+<h3 id="toc_10">安装</h3>
+
+<p>终端执行： pip install pyquery</p>
+
+<p>文件中测试： import pyquery</p>
+
+<h3 id="toc_11">初始化pyquery对象</h3>
+
+<pre><code class="language-text">#将字符串初始化
+
+html = &quot;&quot;&quot;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;PyQuery&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul id=&quot;container&quot;&gt;
+            &lt;li class=&quot;o1&quot;&gt;MM&lt;/li&gt;
+            &lt;li class=&quot;o2&quot;&gt;MN&lt;/li&gt;
+            &lt;li class=&quot;o3&quot;&gt;GN&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt; &quot;&quot;&quot;
+
+from pyquery import PyQuery as pq
+
+#初始化为PyQuery对象
+doc = pq(html)
+
+print(type(doc)) 
+print(doc)
+
+# 将HTML文件初始化
+doc = pq(filename = &#39;./pyquery_demo.html&#39;) 
+print(type(doc))
+print(doc)
+
+ 
+
+#  对网址响应进行初始化
+
+doc = pq(url=&#39;http://www.baidu.com&#39;) 
+print(type(doc))
+print(doc)
+</code></pre>
+
+<h3 id="toc_12">常用css选择器获取标签</h3>
+
+<pre><code class="language-text">html = &quot;&quot;&quot;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;PyQuery&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul id=&quot;container&quot;&gt;
+            &lt;li class=&quot;o1&quot;&gt;MM&lt;/li&gt;
+            &lt;li class=&quot;o2 active&quot;&gt;MN&lt;a class=&#39;o22&#39;&gt;fad&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;o3&quot;&gt;GN&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt; 
+&quot;&quot;&quot;
+
+from pyquery import PyQuery as pq
+#用css选择器来实现，如果要选id前面加#，如果选class，前面加.，如果选标签名，什么也不加
+doc = pq(html)
+# 根据标签
+# print(doc(&#39;title&#39;))
+# print(doc(&#39;#container&#39;)) 
+#print(doc(&#39;.o1&#39;))
+# 组合标签
+print(doc(&#39;.o2.active&#39;))#空格表示里面，没有空格表示整体
+print(doc(&#39;.o2 .o22&#39;))#空格表示里面，没有空格表示整体
+
+# 伪类选择器
+# print(doc(&#39;li:nth-child(2)&#39;))
+
+# 根据标签内容获取标签
+# print(doc(&quot;li:contains(&#39;MM&#39;)&quot;))
+
+#利用find方法
+# print(doc.find(&#39;li&#39;))
+
+# 也可以用.children()查找直接子元素
+# container = doc.find(&#39;#container&#39;) 
+# print(container.children())
+
+#.parent()查找对象的父元素
+# object_2 = doc.find(&#39;.o2&#39;) 
+# print(object_2.parent())
+
+#.parents（）祖先节点
+# object_2 = doc.find(&#39;.o2&#39;)
+# parent = object_2.parents(&#39;#container&#39;)#当然也可以传入参数# print(parent)
+
+#.siblings()兄弟元素，即同级别的元素，不包括自己 
+# object_2 = doc.find(&#39;.o2&#39;)
+# print(object_2.siblings())
+
+ 
+
+# 遍 历
+# doc = pq(html)
+# lis = doc(&#39;li&#39;).items()#.items会是一个生成器
+# print(type(lis))
+# for li in lis: #   print(li)
+
+# 5.filter() ——根据类名、id名得到指定元素，例：
+# d=pq(&quot;&lt;div&gt;&lt;p id=&#39;1&#39;&gt;test 1&lt;/p&gt;&lt;p class=&#39;2&#39;&gt;test 2&lt;/p&gt;&lt;/div&gt;&quot;) 
+# d(&#39;p&#39;).filter(&#39;#1&#39;) #返回[&lt;p#1&gt;]
+# d(&#39;p&#39;).filter(&#39;.2&#39;) #返回[&lt;p.2&gt;]
+
+# 6.eq(index) ——根据给定的索引号得到指定元素
+# 接上例，若想得到第二个p标签内的内容，则可以：
+# print d(&#39;p&#39;).eq(1).html() #返回test 2
+</code></pre>
+
+<h3 id="toc_13">获取标签信息</h3>
+
+<pre><code class="language-text">html = &quot;&quot;&quot;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;PyQuery&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul id=&quot;container&quot;&gt;
+            &lt;li class=&quot;o1&quot;&gt;MM&lt;/li&gt;
+            &lt;li class=&quot;o2 active&quot;&gt;MN&lt;a class=&#39;o22&#39;&gt;fad&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;o3&quot;&gt;GN&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt; 
+&quot;&quot;&quot;
+from pyquery import PyQuery as pq 
+doc = pq(html)
+
+# 获取属性值
+# o2 = doc.find(&#39;.o2&#39;)
+# print(o2.attr(&#39;class&#39;))
+
+#  获取文本值
+o2 = doc.find(&#39;.o2&#39;)
+print(o2.text())
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E7%88%AC%E8%99%AB.html'>爬虫</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   <a href="爬虫.html">&laquo; Prev Page</a>  
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

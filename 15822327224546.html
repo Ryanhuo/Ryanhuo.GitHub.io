@@ -1,0 +1,733 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  1. 网络爬虫简介 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>1. 网络爬虫简介</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E7%88%AC%E8%99%AB.html'>爬虫</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p><a href="media/15822327224546/python%E7%88%AC%E8%99%AB.ipynb">python爬虫</a></p>
+
+<h2 id="toc_0">什么是爬虫？</h2>
+
+<p><strong>请求</strong>网站并<strong>提取</strong>数据的自动化程序。</p>
+
+<h2 id="toc_1">爬虫的基本流程</h2>
+
+<ul>
+<li><p>发起请求<br/>
+通过HTTP库目标站点发起请求，即发送一个Request，请求可以包含额外的headers等信息，等待服务器响应。</p></li>
+<li><p>获取响应内容<br/>
+如果服务器能够正常响应，会得到一个Response，Response的内容便是所要获取的页面内容，类型可能有HTML，Json字符串，二进制数据（如图片视频）等类型。</p></li>
+<li><p>解析内容<br/>
+得到的内容可能是HTML，可以用正则表达式，网页解析库进行解析。可能是Json，可以直接转为Json对象解 析，可能是二进制数据，可以做保存或者进一步的处理。</p></li>
+<li><p>保存数据<br/>
+保存形式多样，可以存为文本，也可以保存至数据库，或者保存特定格式的文件。</p></li>
+</ul>
+
+<h2 id="toc_2">Request和Response</h2>
+
+<p><img src="media/15822327224546/20191129165152.png" alt=""/></p>
+
+<ul>
+<li>浏览器发送消息给给该网址所在的服务器，这个过程叫做HTTP Request。</li>
+<li>服务器收到浏览器发送的消息后，能够根据浏览器发送消息的内容，做响应处理，然后把消息回传给浏览器。 这个过程叫做HTTP Response。</li>
+<li>浏览器收到服务器的Response信息后，会对信息进行响应处理，然后展示。</li>
+</ul>
+
+<p>查看浏览器的请求和响应：<br/>
+<img src="media/15822327224546/20191129165436.png" alt=""/></p>
+
+<p><img src="media/15822327224546/20191129165451.png" alt=""/></p>
+
+<h3 id="toc_3">Request</h3>
+
+<p><strong>Request</strong>是请求,在浏览器输入地址,回车,就是一个请求。</p>
+
+<ul>
+<li><p>请求方式<br/>
+主要有get、post两种类型，另外还有HEAD、PUT、DELETE、OPTIONS等。</p></li>
+<li><p>请求的URL<br/>
+URL 全称统一资源定位符，如一个网页的文档、一张图片、一个视频等都可以用URL来确定。</p></li>
+<li><p>请求头<br/>
+包含请求时的头部信息，如User-Agent、host、Cookies等信息</p></li>
+<li><p>请求体<br/>
+请求时额外携带的数据如表单提交时的表单数据。</p></li>
+</ul>
+
+<h3 id="toc_4">Response</h3>
+
+<p><strong>Response</strong>是响应,服务器根据请求,返回数据到浏览器显示,就是一个响应。</p>
+
+<ul>
+<li><p>响应状态<br/>
+有多种响应状态，如200代表成功、301跳转、404找不到页面、502服务器错误。</p></li>
+<li><p>响应头<br/>
+如内容类型、内容长度、服务器信息、设置Cookie等等。</p></li>
+<li><p>响应体<br/>
+最主要的部分，包含了请求资源的内容，如网页HTML、图片二进制数据等。</p></li>
+</ul>
+
+<p>例如：</p>
+
+<pre><code class="language-python"># 导入网络请求模块（该模块需要使用pip install requests 安装）
+import requests
+
+# 创建请求头
+headers = {
+&quot;User-Agent&quot;:&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36&#39;
+}
+
+# 发送网络请求
+response = requests.get(url=&#39;http://www.baidu.com&#39;,headers = headers)
+
+ # 获取请求的内容
+print(response.content.decode(&#39;utf-8&#39;)) print(response.text)
+
+# 获取响应头
+print(response.headers)
+
+# 状态码
+print(response.status_code)
+</code></pre>
+
+<h2 id="toc_5">能抓取什么样的数据？</h2>
+
+<ul>
+<li><p>网页文本<br/>
+如HTML文档、Json格式的文本等。</p></li>
+<li><p>图片<br/>
+获取到的是二进制文件，保存为图片格式。</p></li>
+<li><p>视频<br/>
+获取到的是二进制文件，保存为视频格式。</p></li>
+</ul>
+
+<p>例如： 获取图片</p>
+
+<pre><code class="language-python">import requests
+ 
+# 创建请求头
+
+headers = {
+&quot;User-Agent&quot;:&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36&#39;
+}
+
+# 发送网络请求
+response = requests.get(url=[&#39;https://www.baidu.com/img/bd_logo1.png&#39;](http://www.baidu.com/img/bd_logo1.png&#39;%2Cheaders),headers = headers)
+
+
+# 将获取的二进制内容进行保存
+with open(&#39;./baidu.png&#39;,&#39;wb&#39;) as f: f.write(response.content)
+</code></pre>
+
+<h2 id="toc_6">网页的解析方式</h2>
+
+<ul>
+<li><p>直接处理<br/>
+例如： 请求回来的就是一段字符串，我们可以简单处理后直接保存</p></li>
+<li><p>Json解析<br/>
+例如： Ajax请求回来的一般都是json格式的数据，我们就需要从json中拿出我们想要的数据。</p></li>
+<li><p>正则表达式</p></li>
+<li><p>BeautifulSoup</p></li>
+<li><p>PyQuery </p></li>
+<li><p>XPath</p></li>
+</ul>
+
+<p>解析库的选择可以根据爬取的网页具体情况酌情选择。</p>
+
+<h2 id="toc_7">我们抓到的网页和浏览器中看到的不一样</h2>
+
+<p>情况：  有时候我们抓取到的内容都是HTML代码，css链接以及JavaScript的链接，真正网页中的数据并不会出现在我们抓却到的内容中。</p>
+
+<p>原因：是因为有些内容的链接是放在JavaScript代码中的，所有说我们抓取到的只是HTML网页中的JavaScript外链，  并不是真正的网页显示的内容。</p>
+
+<p>解决： 我们需要找到真正的内容链接就好了。</p>
+
+<p>例如： 我们请求一下头条</p>
+
+<pre><code class="language-python">import requests
+
+# 创建请求头
+
+headers = {
+&quot;User-Agent&quot;:&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36&#39;
+}
+
+# 发送网络请求
+
+response = requests.get(url=[&#39;https://www.toutiao.com/&#39;](http://www.toutiao.com/&#39;%2Cheaders),headers = headers) print(response.text)
+</code></pre>
+
+<p>实际内容在下面的链接里：</p>
+
+<p><img src="media/15822327224546/20191129170112.png" alt=""/></p>
+
+<h2 id="toc_8">解决动态网页的渲染问题</h2>
+
+<ol>
+<li><p>如上面的方法，分析Ajax请求，拿到请求链接，再次发送请求，获取内容。</p></li>
+<li><p>使用selenium/webdriver (自动化的测试工具)，就像浏览器一样加载网页。</p></li>
+</ol>
+
+<pre><code class="language-python">from selenium import webdriver chrome = webdriver.Chrome() chrome.get(&#39;https://www.baidu.com&#39;)
+</code></pre>
+
+<h2 id="toc_9">保存</h2>
+
+<ul>
+<li>文本</li>
+<li>数据库</li>
+<li>二进制文件（图片，视频 ，音频）</li>
+</ul>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="%E9%A4%90%E9%A5%AE%E4%B8%9A%E6%97%A5%E9%94%80%E5%94%AE%E6%83%85%E5%86%B5%E8%A1%A8.html" 
+          title="Previous Post: 餐饮业日销售情况表">&laquo; 餐饮业日销售情况表</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327224593.html" 
+          title="Next Post: 2. 网页基本组成与结构">2. 网页基本组成与结构 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

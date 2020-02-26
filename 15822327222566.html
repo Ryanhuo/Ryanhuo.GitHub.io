@@ -1,0 +1,1285 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  5.python面向对象 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>5.python面向对象</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <h2 id="toc_0">匿名函数</h2>
+
+<p>顾名思义就是函数没有名字，使用lambda关键字定义的函数就是匿名函数,简化代码，增加运行效率。 特点： 匿名函数只适合做一下简单的操作，返回值不需要加上return。</p>
+
+<pre><code class="language-python">#普通函数
+def func(a,b,c):
+    return a+b+c
+print(func(1,3,4))
+</code></pre>
+
+<pre><code class="language-text">8
+</code></pre>
+
+<pre><code class="language-python">#匿名函数
+result=(lambda a,b,c:a+b+c)(1,3,4)
+# 匿名函数也是函数
+print(result)
+</code></pre>
+
+<pre><code class="language-text">8
+</code></pre>
+
+<pre><code class="language-python"># 对字典列表排序的时候还可以使用匿名函数
+my_list={&#39;age&#39;:23,&#39;name&#39;:&#39;张三&#39;}
+def get_value(item):
+    return item[&#39;age&#39;]
+
+get_value(my_list)
+
+# my_list.sort(key=get_value,reverse=True)print(my_list)
+</code></pre>
+
+<pre><code class="language-text">23
+</code></pre>
+
+<h2 id="toc_1">面向对象的编程</h2>
+
+<p>面向对象编程——Object Oriented Programming，简称<strong>OOP</strong>，是一种程序设计思想。OOP把对象作为程序的<strong>基本单元</strong>，一个对象包含了数据和操作数据的函数。</p>
+
+<p><strong>面向过程</strong>的程序设计把计算机程序视为一系列的命令集合，即一组函数的顺序执行。为了简化程序设计，面向过程把函数继续切分为子函数，即把大块函数通过切割成小块函数来降低系统的复杂度。</p>
+
+<p>而<strong>面向对象</strong>的程序设计把计算机程序视为一组对象的集合，而每个对象都可以接收其他对象发过来的消息，并处理这些消息，计算机程序的执行就是一系列消息在各个对象之间传递。</p>
+
+<p>在Python中，<strong>所有数据类型都可以视为对象</strong>，当然也可以自定义对象。自定义的对象数据类型就是面向对象中的类（Class）的概念。</p>
+
+<p>我们以一个例子来说明面向过程和面向对象在程序流程上的不同之处。</p>
+
+<p>假设我们要处理学生的成绩表，为了表示一个学生的成绩，面向过程的程序可以用一个dict表示：</p>
+
+<pre><code class="language-python">std1 = { &#39;name&#39;: &#39;Curry&#39;, &#39;score&#39;: 98 }
+std2 = { &#39;name&#39;: &#39;James&#39;, &#39;score&#39;: 81 }
+</code></pre>
+
+<p>而处理学生成绩可以通过函数实现，比如打印学生的成绩：</p>
+
+<pre><code class="language-python">def print_score(std):
+    print(&#39;%s: %s&#39; % (std[&#39;name&#39;], std[&#39;score&#39;]))
+</code></pre>
+
+<p>如果采用<strong>面向对象的程序设计思想</strong>，我们首选思考的不是程序的执行流程，而是Student这种数据类型应该被视为一个对象，这个对象拥有name和score这两个<strong>属性</strong>（Property）。如果要打印一个学生的成绩，首先必须创建出这 个学生对应的对象，然后，给对象发一个print_score消息，让对象自己把自己的数据打印出来。</p>
+
+<pre><code class="language-python">class Student(object):
+    def init (self, name, score): 
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print(&#39;%s: %s&#39; % (self.name, self.score))
+</code></pre>
+
+<p>给对象发消息实际上就是调用对象对应的关联函数，我们称之为对象的<strong>方法</strong>（Method）。面向对象的程序写出来就像这样：</p>
+
+<pre><code class="language-text">bart = Student(&#39;Bart Simpson&#39;, 59) 
+lisa = Student(&#39;Lisa Simpson&#39;, 87) 
+bart.print_score() 
+lisa.print_score()
+</code></pre>
+
+<p>面向对象的设计思想是从自然界中来的，因为在自然界中，<strong>类</strong>（Class）和<strong>实例</strong>（Instance）的概念是很自然的。</p>
+
+<p>Class是一种抽象概念，比如我们定义的Class——Student，是指学生这个概念，而<strong>实例（</strong><strong>Instance</strong><strong>）</strong>则是一个个具  体的Student，比如，Bart Simpson和Lisa Simpson是两个具体的Student。</p>
+
+<p>所以，面向对象的设计思想是抽象出Class，根据Class创建Instance。</p>
+
+<p>面向对象的抽象程度又比函数要高，因为一个Class既包含数据，又包含操作数据的方法。</p>
+
+<h2 id="toc_2">类和对象</h2>
+
+<p><strong>面向对象编程</strong>的2个非常重要的概念：<strong>类和对象</strong></p>
+
+<p><strong>对象</strong>是面向对象编程的核心，在使用对象的过程中，为了将具有共同特征和行为的一组对象抽象定义，提出了另外一个新的概念——<strong>类</strong></p>
+
+<p><strong>类</strong>就相当于制造飞机时的图纸，用它来进行创建的飞机就相当于<strong>对象</strong>。</p>
+
+<blockquote>
+<p><strong>补充：</strong></p>
+
+<ul>
+<li>需求：做一道西红柿炒鸡蛋</li>
+</ul>
+
+<p><strong>方法1</strong>：按步骤一步一步制作（面向过程）——<strong>[将每个过程打包成函数，需要时依次调用]</strong></p>
+
+<p><strong>方法2</strong>：制作一台机器人，告诉机器人炒菜（面向对象）——<strong>[打包成类与对象]</strong></p>
+
+<p><strong>类</strong>作为母版制作出很多<strong>对象</strong></p>
+</blockquote>
+
+<h3 id="toc_3">类</h3>
+
+<p>人以类聚物以群分。 具有相似内部状态和运动规律的实体的集合(或统称为抽象)。 具有相同<strong>属性</strong>和<strong>行为</strong>事物的统称类是抽象的,在使用的时候通常会找到这个类的一个具体的存在,使用这个具体的存在。<strong>一个类可以找到多个对象</strong></p>
+
+<p><img src="media/15822327222566/1.13.jpg" alt=""/></p>
+
+<h3 id="toc_4">对象</h3>
+
+<p>某一个具体事物的存在 ,在现实世界中可以是看得见摸得着的。 可以是直接使用的</p>
+
+<p><img src="media/15822327222566/1.14.jpg" alt=""/></p>
+
+<h3 id="toc_5">类和对象之间的关系</h3>
+
+<p><img src="media/15822327222566/1.15.jpg" alt=""/></p>
+
+<h3 id="toc_6">定义类和创建对象</h3>
+
+<p>定义一个类，格式如下：</p>
+
+<pre><code class="language-text">class 类名:
+
+方法列表
+
+# class Hero: # 经典类（旧式类）定义形式
+# class Hero():
+
+class Hero(object): # 新式类定义形式
+    def info(self): 
+        print(&quot;hero&quot;)
+</code></pre>
+
+<p><strong>说明：</strong></p>
+
+<ul>
+<li><p>定义类时有2种形式：<strong>新式类和经典类</strong>，上面代码中的Hero为新式类，前两行注释部分则为经典类；</p></li>
+<li><p>object 是Python 里所有类的最顶级父类； 类名 的命名规则按照&quot;大驼峰命名法&quot;；</p></li>
+<li><p>info 是一个实例方法，第一个参数一般是self，表示实例对象本身，当然了可以将self换为其它的名字，其作用是一个变量 这个变量指向了实例对象.</p></li>
+<li><p>python中，可以根据已经定义的类去创建出一个或多个对象。</p></li>
+</ul>
+
+<p><strong>创建对象的格式为</strong></p>
+
+<p>对象名1 = 类名() </p>
+
+<p>对象名2 = 类名() </p>
+
+<p>对象名3 = 类名()</p>
+
+<pre><code class="language-python">class Hero(object): # 新式类定义形式
+    &#39;&#39;&#39;info 是一个实例方法，类对象可以调用实例方法，实例方法的第一个参数一定是self&#39;&#39;&#39;
+    def info(self):
+        &#39;&#39;&#39;当对象调用实例方法时，Python会自动将对象本身的引用做为参数， 传递到实例方法的第一个参数self里&#39;&#39;&#39;
+        print(self)
+        print(&quot;self各不同，对象是出处。&quot;)
+
+# Hero这个类 实例化了一个对象
+hero = Hero()
+
+# 对象调用实例方法info()，执行info()里的代码
+# . 表示选择属性或者方法
+hero.info()
+print(hero) # 打印对象，则默认打印对象在内存的地址，结果等同于info里的print(self)
+</code></pre>
+
+<pre><code class="language-text">&lt;__main__.Hero object at 0x0000000005413EF0&gt;
+self各不同，对象是出处。
+&lt;__main__.Hero object at 0x0000000005413EF0&gt;
+</code></pre>
+
+<h3 id="toc_7">补充：类与对象</h3>
+
+<pre><code class="language-python">#类的使用
+class 成绩单():
+    @classmethod#类的方法（函数）同类的属性（变量）结合
+    #类的属性作为类方法的参数
+    def 录入成绩单(cls):
+        cls.学生姓名=input(&#39;请输入学生姓名：&#39;)
+        cls.语文_成绩=int(input(&#39;请输入语文成绩：&#39;))
+        cls.数学_成绩=int(input(&#39;请输入数学成绩：&#39;))
+    @classmethod
+    def 打印成绩单(cls):
+        print(cls.学生姓名+&#39;的成绩如下：&#39;)
+        print(&#39;语文成绩：&#39;+str(cls.语文_成绩))
+        print(&#39;语文成绩：&#39;+str(cls.语文_成绩))
+    
+成绩单.录入成绩单()
+成绩单.打印成绩单()
+</code></pre>
+
+<pre><code class="language-text">请输入学生姓名：Ryan
+请输入语文成绩：100
+请输入数学成绩：99
+Ryan的成绩如下：
+语文成绩：100
+语文成绩：100
+</code></pre>
+
+<pre><code class="language-python">#实例化
+class 成绩单():
+    #①
+    def 录入成绩单(self):#②
+        self.学生姓名=input(&#39;请输入学生姓名：&#39;)
+        self.语文_成绩=int(input(&#39;请输入语文成绩：&#39;))
+        self.数学_成绩=int(input(&#39;请输入数学成绩：&#39;))
+#③
+    def 打印成绩单(self):
+        print(self.学生姓名+&#39;的成绩如下：&#39;)
+        print(&#39;语文成绩：&#39;+str(self.语文_成绩))
+        print(&#39;语文成绩：&#39;+str(self.语文_成绩))
+
+#④
+成绩单1=成绩单()#实例化得到成绩单1
+#调用实例化变量
+成绩单1.录入成绩单()
+成绩单1.打印成绩单()
+</code></pre>
+
+<pre><code class="language-text">请输入学生姓名：Ryan
+请输入语文成绩：34
+请输入数学成绩：53
+Ryan的成绩如下：
+语文成绩：34
+语文成绩：34
+</code></pre>
+
+<p><strong>对比分析</strong>：</p>
+
+<ul>
+<li><p>①是空着的，意思是这里不再需要@classmethod的声明</p></li>
+<li><p>第②处，把cls替换成了 self.</p></li>
+<li><p>实例化后再使用的格式，需要先赋值然后再调用(第③处)在第④步骤， 我们需要用实例名=类(的方式(实例名其实就是任取一个变量名)，为类创建一个实例， 然后再使用实例名函数0的方式调用对应的方法。</p></li>
+</ul>
+
+<h2 id="toc_8">对象的属性和方法</h2>
+
+<h3 id="toc_9">添加和获取对象的属性</h3>
+
+<pre><code class="language-python">class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot; 
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;正在前往事发地点...&quot;)
+# 实例化了一个英雄对象
+
+hero = Hero()
+# 给对象添加属性，以及对应的属性值
+hero.name = &quot;德玛西亚&quot; # 姓名
+hero.hp = 2600 # 生 命 值
+# 通过.成员选择运算符，获取对象的属性值
+print(&quot;英雄 %s 的生命值 :%d&quot; % (hero.name, hero.hp))
+
+# 通过.成员选择运算符，获取对象的实例方法
+hero.move()
+
+</code></pre>
+
+<pre><code class="language-text">英雄 德玛西亚 的生命值 :2600
+正在前往事发地点...
+</code></pre>
+
+<h3 id="toc_10">通过self获取对象属性</h3>
+
+<pre><code class="language-python"> class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;正在前往事发地点...&quot;)
+
+    def info(self):
+        &quot;&quot;&quot;在类的实例方法中，通过self获取该对象的属性&quot;&quot;&quot;
+        print(&quot;英雄 %s 的生命值 :%d&quot; % (self.name, self.hp))
+
+# 实例化了一个英雄对象
+ hero = Hero()
+
+# 给对象添加属性，以及对应的属性值
+hero.name = &quot;德玛西亚&quot; # 姓名
+hero.hp = 2600 # 生 命 值
+
+# 通过.成员选择运算符，获取对象的实例方法
+
+hero.info() # 只需要调用实例方法info()，即可获取英雄的属性
+hero.move()
+
+</code></pre>
+
+<pre><code class="language-text">英雄 德玛西亚 的生命值 :2600
+正在前往事发地点...
+</code></pre>
+
+<h3 id="toc_11">init魔法方法</h3>
+
+<h4 id="toc_12">init方法</h4>
+
+<pre><code class="language-text">class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;
+#Python 的类里提供的，两个下划线开始，两个下划线结束的方法，就是魔法方法， init ()就是一个魔法方法， 通常用来做属性初始化 或 赋值 操作。
+
+# 如果类面没有写__init__方法，Python会自动创建，但是不执行任何操作，
+
+# 如果为了能够在完成自己想要的功能，可以自己定义__init__方法，
+
+# 所以一个类里无论自己是否编写 __init__方法 一定有__init__方法。
+
+    def __init__(self):
+        &quot;&quot;&quot; 方法，用来做变量初始化 或 赋值 操作，在类实例化对象的时候，会被自动调用&quot;&quot;&quot; 
+        self.name = &quot;hero&quot; # 姓 名
+        self.hp = 2600 # 生命值
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;正在前往事发地点...&quot;)
+
+
+# 实例化了一个英雄对象，并自动调用 init ()方法
+hero = Hero()
+
+# 通过.成员选择运算符，获取对象的实例方法
+hero.info() # 只需要调用实例方法info()，即可获取英雄的属性
+hero.move()
+
+</code></pre>
+
+<p><strong>总结</strong></p>
+
+<ul>
+<li>__init__()方法，在创建一个对象时默认被调用，不需要手动调用</li>
+<li>__init__(self)中的self参数，不需要开发者传递，python解释器会自动把当前的对象引用传递过去。</li>
+</ul>
+
+<h4 id="toc_13">有参数的init（）方法</h4>
+
+<pre><code class="language-python">class Hero(object):
+    &quot;&quot;&quot;定义了一个英雄类，可以移动和攻击&quot;&quot;&quot;
+    def __init__(self, name, hp):
+        &quot;&quot;&quot; init () 方法，用来做变量初始化 或 赋值操作&quot;&quot;&quot;
+# 英雄名
+        self.name = name
+# 生命值：
+        self.hp = hp
+
+    def move(self):
+        &quot;&quot;&quot;实例方法&quot;&quot;&quot;
+        print(&quot;%s 正在前往事发地点...&quot; % self.name)
+    def info(self):
+        print(&quot;英雄 %s 的生命值 :%d&quot; % (self.name, self.hp))
+
+
+
+#实例化英雄对象时，参数会传递到对象的 init()方法里
+blind = Hero(&#39;瞎哥&#39;,2600) 
+gailun = Hero(&quot;盖伦&quot;,4200)
+
+#print(gailun)
+
+#print(blind)
+
+  
+
+# 不同对象的属性值的单独保存
+print(id(blind.name)) 
+print(id(gailun.name))
+
+# 同一个类的不同对象，实例方法共享
+print(id(blind.move())) 
+print(id(gailun.move()))
+
+
+</code></pre>
+
+<pre><code class="language-text">87554072
+87555744
+瞎哥 正在前往事发地点...
+2004853904
+盖伦 正在前往事发地点...
+2004853904
+</code></pre>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+<li>通过一个类，可以创建多个对象，就好比 通过一个模具创建多个实体一样</li>
+<li>__init__(self)中，默认有1个参数名字为self，如果在创建对象时传递了2个实参，那么init (self)中出了self作为第一个形参外还需要2个形参，例如 init (self,x,y)</li>
+<li>在类内部获取 属性 和 实例方法，通过self获取；</li>
+<li>在类外部获取 属性 和 实例方法，通过对象名获取。</li>
+<li>如果一个类有多个对象，每个对象的属性是各自保存的，都有各自独立的地址；</li>
+<li>但是实例方法是所有对象共享的，只占用一份内存空间。类会通过self来判断是哪个对象调用了实例方法。</li>
+</ul>
+
+<h2 id="toc_14">继承</h2>
+
+<ul>
+<li>在程序中，<strong>继承</strong>描述的是多个类之间的所属关系。</li>
+<li>如果一个类A里面的属性和方法可以复用，则可以通过继承的方式，<strong>传递</strong>到类B里。 </li>
+<li>那么类A就是<strong>基类</strong>，也叫做<strong>父类</strong>；类B就是<strong>派生类</strong>，也叫做<strong>子类</strong>。</li>
+</ul>
+
+<pre><code class="language-python"># 父 类
+class A(object):
+    def __init__(self):
+        self.num = 10
+        
+    def print_num(self):
+        print(self.num + 10)
+
+# 子 类
+class B(A): 
+    pass
+
+b = B()
+print(b.num) 
+b.print_num()
+
+</code></pre>
+
+<pre><code class="language-text">10
+20
+</code></pre>
+
+<h3 id="toc_15">单继承</h3>
+
+<p>子类只能继承一个父类</p>
+
+<pre><code class="language-python">#定义一个Person类
+class Person(object): 
+    def __init__(self):
+# 属 性
+        self.name = &quot;女娲&quot;
+
+    # 实例方法
+    def make_person(self):
+        print(&quot; &lt;%s&gt; 造了一个人...&quot; % self.name)
+
+# 定义Teacher类，继承了 Person，则Teacher是子类，Person是父类。
+class Teacher(Person):
+# 子类可以继承父类所有的属性和方法，哪怕子类没有自己的属性和方法，也可以使用父类的属性和方法。
+    pass
+
+panda = Teacher() 
+    # 创建子类实例对象
+print(panda.name) 
+    # 子类对象可以直接使用父类的属性
+panda.make_person() 
+    # 子类对象可以直接使用父类的方法
+    
+
+</code></pre>
+
+<pre><code class="language-text">女娲
+ &lt;女娲&gt; 造了一个人...
+</code></pre>
+
+<p><strong>总结</strong></p>
+
+<ul>
+<li>虽然子类没有定义 init 方法初始化属性，也没有定义实例方法，但是父类有。所以只要创建子类的对象，就默认执行了那个继承过来的 init 方法</li>
+<li>子类在继承的时候，在定义类时，小括号()中为父类的名字</li>
+<li>父类的<strong>属性、方法</strong>，会被继承给子类</li>
+</ul>
+
+<h3 id="toc_16">多继承</h3>
+
+<p>子类继承多个父类</p>
+
+<pre><code class="language-python">class Women(object): 
+    def __init__(self):
+        self.name = &quot;女娲&quot; # 实例变量，属性
+
+    def make_person(self):          # 实例方法，方法
+        print(&quot; &lt;%s&gt; 造了一个人...&quot; % self.name)
+    
+    def move(self):
+        print(&quot;移动..&quot;)
+
+class Man(object):
+    def __init__(self):
+        self.name = &quot;亚当&quot;
+
+    def make_person(self):
+        print(&quot;&lt;%s&gt; 造了一个人...&quot; % self.name)
+
+    def run(self):
+        print(&quot;跑..&quot;)
+
+class Person(Women, Man): # 多继承，继承了多个父类
+    pass
+
+ls = Person() 
+print(ls.name) 
+ls.make_person()
+
+# 子类的魔法属性 mro 决定了属性和方法的查找顺序
+print(Person. mro)
+
+</code></pre>
+
+<pre><code class="language-text">女娲
+ &lt;女娲&gt; 造了一个人...
+&lt;built-in method mro of type object at 0x0000000004376698&gt;
+</code></pre>
+
+<p><strong>结论：</strong></p>
+
+<ul>
+<li><p>多继承可以继承多个父类，也继承了所有父类的属性和方法</p></li>
+<li><p><strong>注意：</strong>如果多个父类中有同名的 属性和方法，则默认使用第一个父类的属性和方法（根据类的魔法属性mro 的顺序来查找）</p></li>
+<li><p>多个父类中，不重名的属性和方法，不会有任何影响。</p></li>
+</ul>
+
+<h3 id="toc_17">重写父类方法</h3>
+
+<p>子类继承父类，父类的方法满足不了子类的需要可以对父类的方法进行重写</p>
+
+<p>**重写的特点: **</p>
+
+<ol>
+<li>继承关系，</li>
+<li>方法名相同</li>
+</ol>
+
+<pre><code class="language-python">class Person(object): 
+    def run(self):
+        print(&quot;跑起来了&quot;)
+
+class Student(Person):
+    def __init__(self, name, age): 
+        self.name = name
+        self.age = age
+
+# 因为父类的方法满足不了子类的需要，对其进行重写
+    def run(self):
+        print(&quot;%s跑起来了&quot; % self.name)
+
+stu = Student(&quot;王五&quot;, 10)
+
+# 调用方法的时候先从本类去找，如果本来没有再去父类去找，会遵循mro的特点
+
+stu.run()
+
+</code></pre>
+
+<pre><code class="language-text">王五跑起来了
+</code></pre>
+
+<h3 id="toc_18">属性方法</h3>
+
+<h4 id="toc_19">类属性和实例属性</h4>
+
+<p><strong>类属性</strong>就是类对象所拥有的属性，它被所有类对象的实例对象所共有，在内存中只存在一个副本，这个和C++中类的静态成员变量有点类似。对于公有的类属性，在类外可以通过类对象和实例对象访问</p>
+
+<pre><code class="language-python">class People(object):
+    name = &#39;Tom&#39;# 公有的类属性
+    __age = 12# 私有的类属性
+
+p = People() 
+print(p.name)   # 正 确
+print(People.name)  # 正 确
+# print(p.__age)    # 错误，不能在类外通过实例对象访问私有的类属性
+# print(People.__age) # 错误，不能在类外通过类对象访问私有的类属性实例属性(对象属性)
+
+class People(object):
+    address = &#39;山东&#39;  # 类属性
+    def __init__(self):
+        self.name = &#39;xiaowang&#39;  # 实例属性
+        self.age = 20   # 实例属性
+
+p = People()
+p.age = 12  # 实例属性
+print(p.address)    # 正 确
+print(p.name)       # 正 确
+print(p.age)    # 正 确
+print(People.address)   # 正 确
+#print(People.name)     # 错 误
+#print(People.age)  # 错 误
+
+#通过实例(对象)去修改类属性
+class People(object):
+    country = &#39;china&#39; #类属性
+
+    
+print(People.country) 
+p = People() 
+print(p.country) 
+
+p.country = &#39;japan&#39;
+print(p.country)    # 实例属性会屏蔽掉同名的类属性
+print(People.country)
+
+del p.country # 删除实例属性
+print(p.country)
+
+</code></pre>
+
+<pre><code class="language-text">Tom
+Tom
+山东
+xiaowang
+12
+山东
+china
+china
+japan
+china
+china
+</code></pre>
+
+<p><strong>总结</strong><br/>
+如果需要在类外修改类属性，必须通过类对象去引用然后进行修改。如果通过实例对象去引用，会产生一个同名的实例属性，这种方式修改的是实例属性，不会影响到类属性，并且之后如果通过实例对象去引用该名称的属性，实例属性会强制屏蔽掉类属性，即引用的是实例属性，除非删除了该实例属性。</p>
+
+<h4 id="toc_20">静态方法和类方法</h4>
+
+<p><strong>1.类方法</strong></p>
+
+<p>是类对象所拥有的方法，需要用修饰器@classmethod来标识其为类方法，对于类方法，第一个参数必须是类对象，  一般以cls作为第一个参数（当然可以用其他名称的变量作为其第一个参数，但是大部分人都习惯以&#39;cls&#39;作为第一个参数的名字，就最好用&#39;cls&#39;了），能够通过实例对象和类对象去访问。</p>
+
+<pre><code class="language-python">class People(object): 
+    country = &#39;china&#39;
+#类方法，用classmethod来进行修饰
+    @classmethod
+    def get_country(cls): 
+        return cls.country
+
+p = People()
+print(p.get_country())  #可以用过实例对象引用print(People.get_country())  #可以通过类对象引用类方法还有一个用途就是可以对类属性进行修改：
+
+class People(object): 
+    country = &#39;china&#39;
+#类方法，用classmethod来进行修饰
+    @classmethod
+    def get_country(cls): 
+        return cls.country
+
+    @classmethod
+    def set_country(cls,country): 
+        cls.country = country
+
+p = People()
+print(p.get_country())  #可以用过实例对象访问print(People.get_country())  #可以通过类访问
+
+p.set_country(&#39;japan&#39;)
+
+print(p.get_country()) 
+print(People.get_country())
+#结果显示在用类方法对类属性修改之后，通过类对象和实例对象访问都发生了改变
+
+</code></pre>
+
+<pre><code class="language-text">china
+china
+japan
+japan
+</code></pre>
+
+<p><strong>2. 静态方法</strong></p>
+
+<p>需要通过修饰器@staticmethod来进行修饰，静态方法不需要多定义参数，可以通过对象和类来访问。</p>
+
+<pre><code class="language-python">class People(object): 
+    country = &#39;china&#39;
+    @staticmethod #静态方法
+    def get_country():
+        return People.country
+
+p = People()
+# 通过对象访问静态方法
+p.get_country()
+# 通过类访问静态方法
+print(People.get_country())
+
+</code></pre>
+
+<pre><code class="language-text">china
+</code></pre>
+
+<p><strong>总结</strong><br/>
+从类方法和实例方法以及静态方法的定义形式就可以看出来，类方法的第一个参数是类对象cls，那么通过cls引用的   必定是类对象的属性和方法；  实例方法的第一个参数是实例对象self，那么通过self引用的可能是类属性、也有可能是实例属性（这个需要具体分析），不过在存在相同名称的类属性和实例属性的情况下，实例属性优先级更高。  静态方法中不需要额外定义参数，因此在静态方法中引用类属性的话，必须通过类实例对象来引用</p>
+
+<h2 id="toc_21">多态</h2>
+
+<ul>
+<li>多态, 不同的子类对象调用相同的父类方法，产生不同的执行结果，可以增加代码的外部调用灵活度</li>
+<li>多态以继承和重写父类方法为前提</li>
+<li>多态是调用方法的技巧，不会影响到类的内部设计</li>
+</ul>
+
+<pre><code class="language-python">class Animal(object): 
+    def run(self):
+        print(&#39;Animal is running...&#39;) 
+
+        
+class Dog(object):
+    def run(self):
+        print(&#39;Dog is running...&#39;) 
+    
+    
+class Cat(object):
+    def run(self):
+        print(&#39;Cat is running...&#39;)
+
+# 定义一个方法
+def run_twice(animal): 
+    animal.run() 
+    animal.run()
+
+dog = Dog() 
+cat = Cat()
+
+run_twice(dog) 
+run_twice(cat)
+
+</code></pre>
+
+<pre><code class="language-text">Dog is running...
+Dog is running...
+Cat is running...
+Cat is running...
+</code></pre>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327222539.html" 
+          title="Previous Post: 3. python数据类型">&laquo; 3. python数据类型</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327222611.html" 
+          title="Next Post: 4. python函数">4. python函数 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

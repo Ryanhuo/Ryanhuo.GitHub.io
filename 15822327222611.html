@@ -1,0 +1,1445 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  4. python函数 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>4. python函数</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <h2 id="toc_0">函数的简介</h2>
+
+<p>如果在开发程序时，需要某块代码多次，但是为了提高编写的效率以及代码的重用，所以把具有独立功能的代码块组织为一个小模块，这就是函数。你已经知道Python提供了许多内建函数，比如print()。但你也可以自己创建函数，这被叫做用户自定义函数。</p>
+
+<p>例如：我们知道圆的面积计算公式为：\(S = πr^2\)</p>
+
+<p>当我们知道半径r的值时，就可以根据公式计算出面积。假设我们需要计算3个不同大小的圆的面积：</p>
+
+<pre><code class="language-text">r1 = 12.34
+r2 = 9.08
+r3 = 73.1
+s1 = 3.14 * r1 * r1 s2 = 3.14 * r2 * r2 s3 = 3.14 * r3 * r3
+</code></pre>
+
+<p>当代码出现有规律的重复的时候，你就需要当心了，每次写3.14 * x * x不仅很麻烦，而且，如果要把3.14改成3.14159265359的时候，得全部替换。</p>
+
+<p>有了函数，我们就不再每次写s = 3.14 * x * x，而是写成更有意义的函数调用s = area_of_circle(x)， 而函数area_of_circle本身只需要写一次，就可以多次调用。</p>
+
+<p>基本上所有的高级语言都支持函数，Python也不例外。Python不但能非常灵活地定义函数，而且本身内置了很多有用的函数，可以直接调用。</p>
+
+<h2 id="toc_1">函数定义和调用</h2>
+
+<h3 id="toc_2">定义函数</h3>
+
+<pre><code class="language-text">def 函数名(): 代码
+# 定义一个函数，能够完成打印信息的功能
+def printInfo():
+print(&#39; &#39;)
+print(&#39; 人生苦短，我用Python&#39;)
+print(&#39; &#39;)
+</code></pre>
+
+<h3 id="toc_3">调用函数</h3>
+
+<p>定义了函数之后，就相当于有了一个具有某些功能的代码，想要让这些代码能够执行，需要调用它调用函数很简单的，通过 函数名() 即可完成调用</p>
+
+<pre><code class="language-text"># 定义完函数后，函数是不会自动执行的，需要调用它才可以
+printInfo()
+</code></pre>
+
+<p><strong>注意:</strong></p>
+
+<ul>
+<li>每次调用函数时，函数都会从头开始执行，当这个函数中的代码执行完毕后，意味着调用结束了<br/></li>
+<li>当然了如果函数中执行到了return也会结束函数</li>
+</ul>
+
+<h2 id="toc_4">函数的文档说明</h2>
+
+<pre><code class="language-python">def test(a,b):
+    &#39;&#39;&#39;用来完成对2个数求和&#39;&#39;&#39;
+    print(&quot;%d&quot;%(a+b))
+
+test(11,22) 
+
+help(test)
+</code></pre>
+
+<pre><code class="language-text">33
+Help on function test in module __main__:
+
+test(a, b)
+    用来完成对2个数求和
+</code></pre>
+
+<p>还可以用test. doc 直接查看文档说明</p>
+
+<pre><code class="language-python">def test(a,b):
+    &quot;用来完成对2个数求和&quot;
+    print(&quot;%d&quot;%(a+b))
+
+    print(test. doc )
+</code></pre>
+
+<p>来完成对两个数的求和</p>
+
+<h2 id="toc_5">函数的参数</h2>
+
+<p>Python的函数定义非常简单，但灵活度却非常大。除了正常定义的必选参数外，还可以使用默认参数、可变参数和关   键字参数，使得函数定义出来的接口，不但能处理复杂的参数，还可以简化调用者的代码。</p>
+
+<h3 id="toc_6">位置参数</h3>
+
+<p>我们先写一个计算x<sup>2</sup> 的函数：</p>
+
+<pre><code class="language-python">def power(x):
+    return x * x
+</code></pre>
+
+<p>对于power(x)函数，参数x就是一个位置参数。<br/>
+当我们调用power函数时，必须传入有且仅有的一个<strong>参数x</strong>：</p>
+
+<pre><code class="language-python">power(5)
+</code></pre>
+
+<pre><code class="language-text">25
+</code></pre>
+
+<p>现在，如果我们要计算\(x^3\)怎么办？可以再定义一个power3函数，但是如果要计算 \(x^4\) 、 \(x^5\) ……怎么办？我们不可能定义无限多个函数。<br/>
+你也许想到了，可以把power(x)修改为power(x, n)，用来计\(x^n\) ，说干就干：</p>
+
+<pre><code class="language-python">def power(x, n): 
+    s = 1
+    while n &gt; 0:
+        n = n - 1 
+        s = s * x
+    return s
+</code></pre>
+
+<p>对于这个修改后的power(x, n)函数，可以计算任意n次方：</p>
+
+<pre><code class="language-python">power(5,2)
+</code></pre>
+
+<pre><code class="language-text">25
+</code></pre>
+
+<p>修改后的power(x, n)函数有两个参数：x和n，这两个参数都是位置参数，调用函数时，传入的两个值按照位置顺序依次赋给参数x和n。</p>
+
+<h3 id="toc_7">默认参数</h3>
+
+<p>新的power(x, n)函数定义没有问题，但是，旧的调用代码失败了，原因是我们增加了一个参数，导致旧的代码因为缺少一个参数而无法正常调用：</p>
+
+<pre><code class="language-python">power(5)
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-89-4cd340f296c6&gt; in &lt;module&gt;()
+----&gt; 1 power(5)
+
+
+TypeError: power() missing 1 required positional argument: &#39;n&#39;
+</code></pre>
+
+<p>Python的错误信息很明确：调用函数power()缺少了一个位置参数n。<br/>
+这个时候，默认参数就排上用场了。由于我们经常计算 x<sup>2</sup> ，所以，完全可以把第二个参数n的默认值设定为2：</p>
+
+<pre><code class="language-python">def power(x, n=2): 
+    s = 1
+    while n &gt; 0:
+        n = n - 1 
+        s = s * x
+    return s
+</code></pre>
+
+<p>这样，当我们调用power(5)时，相当于调用power(5, 2)：</p>
+
+<pre><code class="language-python">power(5)
+
+</code></pre>
+
+<pre><code class="language-text">25
+</code></pre>
+
+<p>而对于n &gt; 2的其他情况，就必须明确地传入n，比如power(5, 3)。</p>
+
+<pre><code class="language-python">power(5,3)
+
+</code></pre>
+
+<pre><code class="language-text">125
+</code></pre>
+
+<p>从上面的例子可以看出，默认参数可以简化函数的调用。设置默认参数时，有几点要注意： </p>
+
+<ul>
+<li>一是必选参数在前，默认参数在后，否则Python的解释器会报错；</li>
+<li>二是当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。</li>
+</ul>
+
+<h3 id="toc_8">使用默认参数有什么好处？</h3>
+
+<p>举个例子，我们写个一年级小学生注册的函数，需要传入name和gender两个参数：</p>
+
+<pre><code class="language-python">def enroll(name, gender): 
+    print(&#39;name:&#39;, name) 
+    print(&#39;gender:&#39;, gender)
+
+</code></pre>
+
+<pre><code class="language-python"># 调用
+enroll(&#39;张三&#39;,&#39;M&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">name: 张三
+gender: M
+</code></pre>
+
+<p>如果要继续传入年龄、城市等信息怎么办？这样会使得调用函数的复杂度大大增加。 我们可以把年龄和城市设为默认参数：</p>
+
+<pre><code class="language-python">def enroll(name, gender,city=&#39;amoy&#39;): 
+    print(&#39;name:&#39;, name) 
+    print(&#39;gender:&#39;, gender)
+    print(&#39;city:&#39;, city)
+    
+enroll(&#39;李四&#39;,&#39;F&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">name: 李四
+gender: F
+city: amoy
+</code></pre>
+
+<p>这样，大多数学生注册时不需要提供年龄和城市，只提供必须的两个参数,只有与默认参数不符的学生才需要提供额外的信息.</p>
+
+<pre><code class="language-python">enroll(&#39;李四&#39;,&#39;F&#39;,&#39;chengdu&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">name: 李四
+gender: F
+city: chengdu
+</code></pre>
+
+<p>可见，默认参数降低了<strong>函数调用的难度</strong>，而一旦需要更复杂的调用时，又可以传递更多的参数来实现。无论是简单调用还是复杂调用，函数只需要定义一个。</p>
+
+<p>有多个默认参数时，调用的时候，既可以按顺序提供默认参数，比如调用enroll(&#39;Bob&#39;, &#39;M&#39;,  7)，意思是，除了name，gender这两个参数外，最后1个参数应用在参数age上，city参数由于没有提供，仍然使用默认值。</p>
+
+<p>也可以不按顺序提供部分默认参数。当不按顺序提供部分默认参数时，需要把参数名写上。比如调用enroll(&#39;Adam&#39;, &#39;M&#39;,  city=&#39;Tianjin&#39;)，意思是，city参数用传进去的值，其他默认参数继续使用默认值。</p>
+
+<p><strong>注意</strong>：默认参数有个最大的坑，演示如下：</p>
+
+<p>先定义一个函数，传入一个list，添加一个END再返回：</p>
+
+<pre><code class="language-python">def add_end(L=[]): 
+    L.append(&#39;END&#39;)
+    return L
+
+#调用
+add_end([1,24,4])
+
+</code></pre>
+
+<pre><code class="language-text">[1, 24, 4, &#39;END&#39;]
+</code></pre>
+
+<pre><code class="language-python">#默认参数调用的时候
+add_end()
+add_end()
+add_end()
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;END&#39;, &#39;END&#39;, &#39;END&#39;, &#39;END&#39;]
+</code></pre>
+
+<p>很多初学者很疑惑，默认参数是[]，但是函数似乎每次都“记住了”上次添加了&#39;END&#39;后的list。 原因解释如下：</p>
+
+<p>Python函数在定义的时候，默认参数L的值就被计算出来了，即[]，因为默认参数L也是一个变量，它指向对象[]，  每次调用该函数，如果改变了L的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的[]了。</p>
+
+<p>定义默认参数要牢记一点：<strong>默认参数必须指向不变对象！</strong></p>
+
+<p>要修改上面的例子，我们可以用None这个不变对象来实现：</p>
+
+<pre><code class="language-python">def add_end(L=None): 
+    if L is None:
+        L = []
+    L.append(&#39;END&#39;) 
+    return L
+#调用
+add_end()
+add_end()
+add_end()
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;END&#39;]
+</code></pre>
+
+<p>为什么要设计str、None这样的不变对象呢？因为不变对象一旦创建，对象内部的数据就不能修改，这样就减少了由于修改数据导致的错误。此外，由于对象不变，多任务环境下同时读取对象不需要加锁，同时读一点问题都没有。我们在编写程序时，如果可以设计一个不变对象，那就尽量设计成不变对象。</p>
+
+<h3 id="toc_9">可变参数</h3>
+
+<p>在Python函数中，还可以定义可变参数。顾名思义，可变参数就是传入的参数个数是可变的，可以是1个、2个到任意个，还可以是0个。<br/>
+我们以数学题为例子，给定一组数字a，b，c……，请计算\(a^2 + b^2 + c^2 +....\)。</p>
+
+<p>要定义出这个函数，我们必须确定输入的参数。由于参数个数不确定，我们首先想到可以把a，b，c……作为一个list或tuple传进来，这样，函数可以定义如下：</p>
+
+<pre><code class="language-python">def calc(numbers): 
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n 
+    return sum
+
+#调用
+calc([1,3,5])
+
+</code></pre>
+
+<pre><code class="language-text">35
+</code></pre>
+
+<p>所以，我们把函数的参数改为可变参数：</p>
+
+<pre><code class="language-python">def calc(*numbers): 
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n 
+    return sum
+
+</code></pre>
+
+<p>定义可变参数和定义一个list或tuple参数相比，仅仅在参数前面加了一个号。在函数内部，参数numbers接收到的是一个tuple，因此，函数代码完全不变。但是，调用该函数时，可以传入任意个参数，包括0个参数：</p>
+
+<pre><code class="language-python">calc(1,2)
+
+</code></pre>
+
+<pre><code class="language-text">5
+</code></pre>
+
+<pre><code class="language-python">calc()
+
+</code></pre>
+
+<pre><code class="language-text">0
+</code></pre>
+
+<p>如果已经有一个list或者tuple，要调用一个可变参数怎么办？可以这样做：</p>
+
+<pre><code class="language-python">nums = [1, 2, 3]
+calc(nums[0], nums[1], nums[2])
+
+</code></pre>
+
+<pre><code class="language-text">14
+</code></pre>
+
+<p>这种写法当然是可行的，问题是太繁琐，所以Python允许你在list或tuple前面加一个*号，把list或tuple的元素变成可变参数传进去：</p>
+
+<pre><code class="language-python">nums=[1,2,3]
+calc(*nums)
+
+</code></pre>
+
+<pre><code class="language-text">14
+</code></pre>
+
+<p>*nums表示把nums这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。</p>
+
+<h3 id="toc_10">命名关键字参数</h3>
+
+<p>对于关键字参数，函数的调用者可以传入任意不受限制的关键字参数。至于到底传入了哪些，就需要在函数内部通过kw检查。</p>
+
+<p>仍以person()函数为例，我们希望检查是否有city和job参数：</p>
+
+<pre><code class="language-python">def person(name, age, **kw): 
+    if &#39;city&#39; in kw:# 有city参数
+        pass
+    if &#39;job&#39; in kw:# 有job参数
+        pass
+    print(&#39;name:&#39;, name, &#39;age:&#39;, age, &#39;other:&#39;, kw)
+
+</code></pre>
+
+<p>但是调用者仍可以传入不受限制的关键字参数：</p>
+
+<pre><code class="language-python">person(&#39;Jack&#39;, 24, city=&#39;Beijing&#39;, addr=&#39;Chaoyang&#39;, zipcode=123456)
+
+</code></pre>
+
+<pre><code class="language-text">name: Jack age: 24 other: {&#39;city&#39;: &#39;Beijing&#39;, &#39;addr&#39;: &#39;Chaoyang&#39;, &#39;zipcode&#39;: 123456}
+</code></pre>
+
+<p>如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收city和job作为关键字参数。这种方式定义的函数如下：</p>
+
+<pre><code class="language-python">def person(name, age, *, city, job): 
+    print(name, age, city, job)
+
+</code></pre>
+
+<p>和关键字参数kw不同，命名关键字参数需要一个特殊分隔符<em>，</em>后面的参数被视为命名关键字参数。调用方式如下：</p>
+
+<pre><code class="language-python"> person(&#39;Jack&#39;, 24, city=&#39;Beijing&#39;, job=&#39;Engineer&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">Jack 24 Beijing Engineer
+</code></pre>
+
+<p>如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*了：</p>
+
+<pre><code class="language-python">def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
+
+</code></pre>
+
+<p>命名关键字参数必须传入参数名，这和位置参数不同。如果没有传入参数名，调用将报错：</p>
+
+<pre><code class="language-python"> person(&#39;Jack&#39;, 24, &#39;Beijing&#39;,&#39;Engineer&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-17-7465e072842a&gt; in &lt;module&gt;()
+----&gt; 1 person(&#39;Jack&#39;, 24, &#39;Beijing&#39;,&#39;Engineer&#39;)
+
+
+
+TypeError: person() missing 2 required keyword-only arguments: &#39;city&#39; and &#39;job&#39;
+</code></pre>
+
+<p>由于调用时缺少参数名city和job，Python解释器把这4个参数均视为位置参数，但person()函数仅接受2个位置参数。</p>
+
+<p>命名关键字参数可以有缺省值，从而简化调用：</p>
+
+<pre><code class="language-python">def person(name, age, *, city=&#39;Beijing&#39;, job): 
+    print(name, age, city, job)
+   
+
+# 利用默认值，调用时可以不用传入
+person(&#39;Jack&#39;, 24, job=&#39;Engineer&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">Jack 24 Beijing Engineer
+</code></pre>
+
+<p>使用命名关键字参数时，要特别注意，如果没有可变参数，就必须加一个<em>作为特殊分隔符。如果缺少</em>，Python解释器将无法识别位置参数和命名关键字参数：</p>
+
+<pre><code class="language-text">def person(name, age, city, job):
+
+# 缺少 *，city和job被视为位置参数 pass
+
+</code></pre>
+
+<h3 id="toc_11">参数组合</h3>
+
+<p>在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。但是请注意，参数定义的顺序必须是：<strong>必选参数</strong>、<strong>默认参数</strong>、<strong>可变参数</strong>、<strong>命名关键字参数</strong>和<strong>关键字参数</strong>。</p>
+
+<p>比如定义一个函数，包含上述若干种参数：</p>
+
+<pre><code class="language-python">def f1(a, b, c=0, *args, **kw):
+    print(&#39;a =&#39;, a, &#39;b =&#39;, b, &#39;c =&#39;, c, &#39;args =&#39;, args, &#39;kw =&#39;, kw)
+    
+def f2(a, b, c=0, *, d, **kw):
+    print(&#39;a =&#39;, a, &#39;b =&#39;, b, &#39;c =&#39;, c, &#39;d =&#39;, d, &#39;kw =&#39;, kw)
+
+#调用
+f1(1,2)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 0 args = () kw = {}
+</code></pre>
+
+<pre><code class="language-python">f1(1,2,c=3)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = () kw = {}
+</code></pre>
+
+<pre><code class="language-python">f1(1,2,3,&#39;a&#39;,&#39;b&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = (&#39;a&#39;, &#39;b&#39;) kw = {}
+</code></pre>
+
+<pre><code class="language-python">f1(1,2,3,&#39;a&#39;,&#39;b&#39;,x=99)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = (&#39;a&#39;, &#39;b&#39;) kw = {&#39;x&#39;: 99}
+</code></pre>
+
+<pre><code class="language-python">f2(1, 2, d=99, ext=None)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 0 d = 99 kw = {&#39;ext&#39;: None}
+</code></pre>
+
+<p>最神奇的是通过一个tuple和dict，你也可以调用上述函数：</p>
+
+<pre><code class="language-python">args = (1, 2, 3, 4)
+kw = {&#39;d&#39;: 99, &#39;x&#39;: &#39;#&#39;}
+f1(*args, **kw)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 args = (4,) kw = {&#39;d&#39;: 99, &#39;x&#39;: &#39;#&#39;}
+</code></pre>
+
+<pre><code class="language-python">args = (1, 2, 3)
+kw = {&#39;d&#39;: 88, &#39;x&#39;: &#39;#&#39;}
+f2(*args, **kw)
+
+</code></pre>
+
+<pre><code class="language-text">a = 1 b = 2 c = 3 d = 88 kw = {&#39;x&#39;: &#39;#&#39;}
+</code></pre>
+
+<p>所以，对于任意函数，都可以通过类似func(<em>args, *</em>kw)的形式调用它，无论它的参数是如何定义的。虽然可以组合多达5种参数，但不要同时使用太多的组合，否则函数接口的可理解性很差。</p>
+
+<h2 id="toc_12">函数返回值</h2>
+
+<h3 id="toc_13">“返回值”介绍</h3>
+
+<ul>
+<li>现实生活中的场景:</li>
+</ul>
+
+<p>我给儿子10块钱，让他给我买包烟。这个例子中，10块钱是我给儿子的，就相当于调用函数时传递到参数，让儿子买烟这个事情最终的目标是，让他把烟给你带回来然后给你对么，此时烟就是返回值</p>
+
+<ul>
+<li>开发中的场景：</li>
+</ul>
+
+<p>定义了一个函数，完成了获取室内温度，想一想是不是应该把这个结果给调用者，只有调用者拥有了这个返回值，才能够根据当前的温度做适当的调整所谓“<strong>返回值</strong>”，就是程序中函数完成一件事情后，最后给调用者的结果</p>
+
+<h3 id="toc_14">带有返回值的函数</h3>
+
+<p>想要在函数中把结果返回给调用者，需要在函数中使用return如下示例:</p>
+
+<pre><code class="language-python">   def add2num(a, b): 
+   c = a+b
+   return c
+
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-text">   def add2num(a, b): 
+   return a+b
+
+</code></pre>
+
+<h3 id="toc_15">保存函数的返回值</h3>
+
+<p>在“买烟”的例子中，最后儿子给你烟时，你一定是从儿子手中接过来 对么，程序也是如此，如果一个函数返回了一个数据，那么想要用这个数据，那么就需要保存.</p>
+
+<p>保存函数的返回值示例如下:</p>
+
+<pre><code class="language-python">#定义函数
+
+def add2num(a, b):
+    return a+b
+#调用函数，顺便保存函数的返回值 
+
+result = add2num(100,98)
+print(result)
+
+</code></pre>
+
+<pre><code class="language-text">198
+</code></pre>
+
+<h3 id="toc_16">如何返回多个值</h3>
+
+<h4 id="toc_17">多个ruturn？</h4>
+
+<pre><code class="language-python">def create_nums(): 
+    print(&quot;---1---&quot;)
+    return 1 # 函数中下面的代码不会被执行，因为return除了能够将数据返回之外，还有一个隐藏的功能：结束函数
+    print(&quot;---2---&quot;) 
+    return 2
+    print(&quot;---3---&quot;)
+
+</code></pre>
+
+<p><strong>总结1</strong>一个函数中可以有多个return语句，但是只要有一个return语句被执行到，那么这个函数就会结束了，因此后面的return没有什么用处 如果程序设计为如下，是可以的因为不同的场景下执行不同的return</p>
+
+<pre><code class="language-python">def create_nums(num): 
+    print(&quot;---1---&quot;) 
+    if num == 100:
+        print(&quot;---2---&quot;)
+        return num+1 # 函数中下面的代码不会被执行，因为return除了能够将数据返回之外，还有一个隐藏的功能：结束函数
+    else:
+        print(&quot;---3---&quot;) 
+        return num+2
+    print(&quot;---4---&quot;)
+
+
+
+result1 = create_nums(100)
+print(result1) # 打印101 
+result2 = create_nums(200) 
+print(result2) # 打印202
+
+</code></pre>
+
+<pre><code class="language-text">---1---
+---2---
+101
+---1---
+---3---
+202
+</code></pre>
+
+<h4 id="toc_18">一个函数返回多个数据的方式</h4>
+
+<pre><code class="language-python">def divid(a, b):
+    shang = a//b 
+    yushu = a%b
+    return shang, yushu #默认是元组
+
+
+result = divid(5, 2) 
+print(result) # 输 出 (2, 1)
+
+</code></pre>
+
+<pre><code class="language-text">(2, 1)
+</code></pre>
+
+<p><strong>总结2</strong>： return后面可以是元组，列表、字典等，只要是能够存储多个数据的类型，就可以一次性返回多个数据</p>
+
+<pre><code class="language-python">def function():
+# return [1, 2, 3]
+# return (1, 2, 3)
+    return {&quot;num1&quot;: 1, &quot;num2&quot;: 2, &quot;num3&quot;: 3}
+
+</code></pre>
+
+<p>如果return后面有多个数据，那么默认是元组</p>
+
+<pre><code class="language-text">In [1]: a = 1, 2
+
+In [2]: a
+
+Out[2]: (1, 2)
+
+
+
+In [3]:
+
+In [3]: b = (1, 2)
+
+In [4]: b
+
+Out[4]: (1, 2)
+
+
+</code></pre>
+
+<h2 id="toc_19">递归函数</h2>
+
+<p>在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是<strong>递归函数</strong>。</p>
+
+<p>举个例子，我们来计算阶乘n! = 1 x 2 x 3 x ... x n，用函数fact(n)表示，可以看出：</p>
+
+<p>\(fact(n) = n! = 1 x 2 x 3 x ... x (n-1) x n = (n-1)! x n = fact(n-1) x n\)</p>
+
+<p>所以，fact(n)可以表示为n x fact(n-1)，只有n=1时需要特殊处理。于是，fact(n)用递归的方式写出来就是：</p>
+
+<pre><code class="language-python">def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n - 1)
+
+</code></pre>
+
+<pre><code class="language-python">fact(2)
+
+</code></pre>
+
+<pre><code class="language-text">2
+</code></pre>
+
+<pre><code class="language-python">fact(4)
+
+</code></pre>
+
+<pre><code class="language-text">24
+</code></pre>
+
+<pre><code class="language-python">fact(1)
+
+</code></pre>
+
+<pre><code class="language-text">1
+</code></pre>
+
+<p>递归函数的<strong>优点</strong>是定义简单，逻辑清晰。理论上，所有的递归函数都可以写成循环的方式，但循环的逻辑不如递归清晰。</p>
+
+<p>使用递归函数需要<strong>注意</strong>防止栈溢出。在计算机中，函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出。可以试试</p>
+
+<pre><code class="language-python">fact(10000)
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+RecursionError                            Traceback (most recent call last)
+
+&lt;ipython-input-37-0b1842e84853&gt; in &lt;module&gt;()
+----&gt; 1 fact(10000)
+
+
+
+&lt;ipython-input-32-6cee500c0290&gt; in fact(n)
+      2     if n==1:
+      3         return 1
+----&gt; 4     return n * fact(n - 1)
+
+
+
+... last 1 frames repeated, from the frame below ...
+
+
+
+&lt;ipython-input-32-6cee500c0290&gt; in fact(n)
+      2     if n==1:
+      3         return 1
+----&gt; 4     return n * fact(n - 1)
+
+
+
+RecursionError: maximum recursion depth exceeded in comparison
+</code></pre>
+
+<p>解决递归调用栈溢出的方法是通过<strong>尾递归</strong>优化，事实上尾递归和循环的效果是一样的，所以，把循环看成是一种特殊的尾递归函数也是可以的。</p>
+
+<p><strong>尾递归</strong>是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。</p>
+
+<p>上面的fact(n)函数由于return n * fact(n - 1)引入了乘法表达式，所以就不是尾递归了。要改成尾递归方式，需要多一点代码，主要是要把每一步的乘积传入到递归函数中：</p>
+
+<pre><code class="language-python">def fact(n):
+    return fact_iter(n, 1)
+
+def fact_iter(num, product): 
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)
+
+</code></pre>
+
+<p>可以看到，return fact_iter(num - 1, num * product)仅返回递归函数本身，num - 1和num*product在函数调用前就会被计算，不影响函数调用。</p>
+
+<p>尾递归调用时，如果做了优化，栈不会增长，因此，无论多少次调用也不会导致栈溢出。</p>
+
+<p>遗憾的是，大多数编程语言没有针对尾递归做优化，Python解释器也没有做优化，所以，即使把上面的fact(n)函数改成尾递归方式，也会导致栈溢出<br/>
+<strong>小结</strong></p>
+
+<ul>
+<li><p>使用递归函数的优点是逻辑简单清晰，缺点是过深的调用会导致栈溢出。</p></li>
+<li><p>针对尾递归优化的语言可以通过尾递归防止栈溢出。尾递归事实上和循环是等价的，没有循环语句的编程语言只能通过尾递归实现循环。</p></li>
+<li><p>Python标准的解释器没有针对尾递归做优化，任何递归函数都存在栈溢出的问题。</p></li>
+</ul>
+
+<h2 id="toc_20">局部变量</h2>
+
+<ul>
+<li> 局部变量，就是在函数内部定义的变量。</li>
+<li> <strong>作用范围</strong>是这个函数内部，即只能在这个函数中使用，在函数的外部是不能使用的。因为其作用范围只是在自己的函数内部，所以不同的函数可以定义相同名字的局部变量（打个比方，把你、我是当做成函数，把局部变量理解为每个人手里的手机，你可有个iPhone8，我当然也可以有个iPhone8了， 互不相关）</li>
+<li> 局部变量的作用，为了临时保存数据需要在函数中定义变量来进行存储。</li>
+<li> 当函数调用时，局部变量被创建，当函数调用完成后这个变量就不能够使用了。函数调用时，局部变量被创建，当函数调用完成后这个变量就不能够使用了。</li>
+</ul>
+
+<pre><code class="language-python">def show():
+# 局部变量
+    score = 100
+    print(&quot;分数:&quot;, score) 
+show()
+
+</code></pre>
+
+<pre><code class="language-text">分数: 100
+</code></pre>
+
+<pre><code class="language-python">print(score)
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-41-4405d376f933&gt; in &lt;module&gt;()
+----&gt; 1 print(score)
+
+
+
+NameError: name &#39;score&#39; is not defined
+</code></pre>
+
+<h2 id="toc_21">全局变量</h2>
+
+<p>如果一个变量，既能在一个函数中使用，也能在其他的函数中使用，这样的变量就是<strong>全局变量</strong>。</p>
+
+<p><strong>例如</strong>：有2个兄弟 各自都有手机，各自有自己的小秘密在手机里，不让另外一方使用（可以理解为<strong>局部变量</strong>）；但是家里的电话是2个兄弟都可以随便使用的（可以理解为<strong>全局变量</strong>）</p>
+
+<pre><code class="language-python"># 定义全局变量
+
+a = 100
+
+def test1():
+
+    print(a) # 虽然没有定义变量a但是依然可以获取其数据
+
+
+
+def test2():
+
+    print(a) # 虽然没有定义变量a但是依然可以获取其数据
+
+# 调用函数
+
+test1()
+test2()
+
+</code></pre>
+
+<pre><code class="language-text">100
+100
+</code></pre>
+
+<p><strong>总结</strong>:</p>
+
+<ul>
+<li>在函数外边定义的变量叫做全局变量</li>
+<li>全局变量能够在所有的函数中进行访问</li>
+</ul>
+
+<h3 id="toc_22">全局变量和局部变量名字相同问题</h3>
+
+<pre><code class="language-python"># 定义全局变量
+a = 100
+def test1():
+# 定义局部变量
+    a = 300
+    print(&#39;---test1---%d&#39;%a)
+test1()
+#修改
+a = 200
+print(&#39;修改后的%d&#39;%a)
+
+def test2():
+    print(&#39;a = %d&#39;%a)
+
+test2()
+
+</code></pre>
+
+<pre><code class="language-text">---test1---300
+修改后的200
+a = 200
+</code></pre>
+
+<p><strong>总结</strong>:</p>
+
+<ul>
+<li>当函数内出现局部变量和全局变量相同名字时，函数内部中的 变量名 = 数据 此时理解为定义了一个局部变量，而不是修改全局变量的值</li>
+</ul>
+
+<h3 id="toc_23">修改全局变量</h3>
+
+<p>函数中进行使用<strong>全局变量</strong>时可否进行修改呢？</p>
+
+<pre><code class="language-python"># 定义全局变量
+a = 100
+def test1():
+# 定义局部变量
+    global a
+    print(&#39;修改之前：%d&#39;%a)
+
+#修改
+a = 200
+print(&#39;修改后的%d&#39;%a)
+
+
+def test2():
+    print(&#39;a = %d&#39;%a)
+
+test1() 
+test2()
+
+</code></pre>
+
+<pre><code class="language-text">修改后的200
+修改之前：200
+a = 200
+</code></pre>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327222566.html" 
+          title="Previous Post: 5.python面向对象">&laquo; 5.python面向对象</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15822327222638.html" 
+          title="Next Post: 0.Python 速查">0.Python 速查 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

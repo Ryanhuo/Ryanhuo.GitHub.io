@@ -1,0 +1,2798 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  python - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15822327222447.html">
+                
+                  <h1>2. python语法入门</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">注释</h2>
+
+<p>对代码的解释和说明， 可以提供代码的可读性。</p>
+
+<blockquote>
+<p>注释分为单行注释和多行注释<br/>
+单行注释是以 # 开始<br/>
+多行注释，可以使用三个双引号或者三个单引号&quot;&quot;&quot; &quot;&quot;&quot; &#39;&#39;&#39; &#39;&#39;&#39;</p>
+</blockquote>
+
+<pre><code class="language-python"># 定义字符串变量name
+&#39;&#39;&#39;
+我是多行注释
+我是多行注释
+我是多行注释
+&#39;&#39;&#39;
+age=19
+&quot;&quot;&quot;
+我是多行注释
+我是多行注释
+我是多行注释
+&quot;&quot;&quot;
+
+sex=&#39;男&#39;
+</code></pre>
+
+<p>注意： ctr + / -&gt; 单⾏行注释快捷键</p>
+
+<h2 id="toc_1">变量的定义</h2>
+
+<p><strong>变量：</strong> 通俗理解就是存储程序数据的容器。</p>
+
+<p><strong>变量定义的格式</strong>：变量名 = 数据 (变量名尽量有含义，方便理解 )</p>
+
+<pre><code class="language-python">score=100 #定义一个变量名字叫score，存储的数据是100
+print(score)
+
+name=&#39;张三&#39;
+print(name)
+
+pi=3.14
+print(pi)
+
+is_ok =True
+print(is_ok)
+
+#提示：在python里面不需要指定数据的类型，会根据数据自动推导出数据类型
+
+#通过type查看变量类型
+score_type=type(score)
+print(score_type)
+
+name_type=type(name)
+print(name_type)
+
+pi_type=type(pi)
+print(pi_type)
+
+print(type(is_ok))
+</code></pre>
+
+<p><strong>总结：</strong> 常用的数据类型 int，str, ﬂoat, bool, list, tuple, dict,set</p>
+
+<h2 id="toc_2">变量的命名规则</h2>
+
+<p><strong>变量名：</strong>是由字母，数字，下划线组成的，注意只有这三种，但不能以数字开头</p>
+
+<p>错误的使用：</p>
+
+<pre><code class="language-python">3name=&#39;李四&#39;
+print(3name)
+name!age=18
+</code></pre>
+
+<blockquote>
+<p>变量命名方式： 驼峰命名法 和 下划线命名法<br/>
+驼峰命名法: 小驼峰和大驼峰 小驼峰: 第一个单词首字母要小写，其它单词首字母都大写 大驼峰: 每个单词首字母都大写<br/>
+下划线命名： 单词都使用小写字母，单词之间使用下划线进行分割, 比如: my_name</p>
+</blockquote>
+
+<pre><code class="language-python">my_name=&#39;李四&#39; #下划线命名
+myName=&#39;李四&#39; #小驼峰
+MyName=&#39;李四&#39; #大驼峰
+</code></pre>
+
+<h2 id="toc_3">关键字</h2>
+
+<p><strong>关键字：</strong> 在python里面具有特殊功能的标识符（理解成变量名、函数名）， 关键字不能作为变量名使用。</p>
+
+<pre><code class="language-text">[&#39;False&#39;, &#39;None&#39;, &#39;True&#39;, &#39;and&#39;, &#39;as&#39;,
+ &#39;assert&#39;, &#39;break&#39;, &#39;class&#39;, &#39;continue&#39;, &#39;def&#39;, 
+&#39;del&#39;, &#39;elif&#39;, &#39;else&#39;, &#39;except&#39;, &#39;finally&#39;,
+ &#39;for&#39;, &#39;from&#39;, &#39;global&#39;, &#39;if&#39;, &#39;import&#39;,
+ &#39;in&#39;, &#39;is&#39;, &#39;lambda&#39;, &#39;nonlocal&#39;, &#39;not&#39;, 
+&#39;or&#39;, &#39;pass&#39;, &#39;raise&#39;, &#39;return&#39;, &#39;try&#39;,
+&#39;while&#39;, &#39;with&#39;, &#39;yield&#39;]
+</code></pre>
+
+<h2 id="toc_4">常用的数据类型转换</h2>
+
+<table>
+<thead>
+<tr>
+<th><strong>函数</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>int(x [,base ])</td>
+<td>将x转换为一个整数</td>
+</tr>
+<tr>
+<td>ﬂoat(x )</td>
+<td>将x转换为一个浮点数</td>
+</tr>
+<tr>
+<td>complex(real [,imag ])</td>
+<td>创建一个复数，real为实部，imag为虚部</td>
+</tr>
+<tr>
+<td>str(x )</td>
+<td>将对象 x 转换为字符串串</td>
+</tr>
+<tr>
+<td>repr(x )</td>
+<td>将对象 x 转换为表达式字符串串</td>
+</tr>
+<tr>
+<td>eval(str )</td>
+<td>用来计算在字符串串中的有效Python表达式,并返回一个对象</td>
+</tr>
+<tr>
+<td>tuple(s )</td>
+<td>将序列列 s 转换为一个元组</td>
+</tr>
+<tr>
+<td>list(s )</td>
+<td>将序列列 s 转换为一个列列表</td>
+</tr>
+<tr>
+<td>chr(x )</td>
+<td>将一个整数转换为一个Unicode字符</td>
+</tr>
+<tr>
+<td>ord(x )</td>
+<td>将一个字符转换为它的ASCII整数值</td>
+</tr>
+<tr>
+<td>hex(x )</td>
+<td>将一个整数转换为一个十六进制字符串串</td>
+</tr>
+<tr>
+<td>oct(x )</td>
+<td>将一个整数转换为一个八进制字符串串</td>
+</tr>
+<tr>
+<td>bin(x )</td>
+<td>将一个整数转换为一个二进制字符串串</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_5">输入和输出</h2>
+
+<p>生活中无时无刻其实都存在输入和输出的例子,我们先举例看一下生活中有哪些输入输出的情况,在来对比Python中的输入输出和生活中的有什么相同和不同之处。</p>
+
+<h3 id="toc_6">生活中的输出</h3>
+
+<p>我们经常会去电影院看电影,我们从电影院屏幕中获取影片的内容来观看影片,而影片的放映室经过投影仪&quot;&quot;照射&quot;&quot;到大屏幕,同样的也可以说是投影仪把影片输出到大荧幕上来供我们观看,这就是生活中最简单的输出方式。</p>
+
+<h3 id="toc_7">Python中的输出</h3>
+
+<p>Python中的输出和生活中的输出是一样的原理理，只不不过Python中的输出，特指是在控制台中输出,或  者是将你准备要输出的内容相应的输出到你的设备上，如你在手机上看到的文字、图片、视频等数据,其 实本质上也是我们敲打代码输出到手机上的.那我们先来看一下第一种，如何将你想要输出文字输出到控制台.</p>
+
+<p>例如我们将一段文字&quot;Hello World&quot;输出到控制台，这里面利用的 print() 函数进行输出,以后我们会讲到函数的概念，先暂时知道print()可以帮助我们进行输出。</p>
+
+<pre><code class="language-python">print(&#39;hello world&#39;)
+</code></pre>
+
+<p>右键点击选择 Run 和你对应的要运⾏行的⽂文件名字就可以运⾏行刚刚的输出代码<br/>
+<img src="media/15822327222447/1.10.png" alt=""/></p>
+
+<p>我们在图⽚片最下方看见的输出结果为hello world 输出的位置就是控制台</p>
+
+<p><img src="media/15822327222447/1.11.png" alt=""/></p>
+
+<p>我们可以试试输出100+100会是什什么结果</p>
+
+<pre><code class="language-python">print(100+100)
+</code></pre>
+
+<h3 id="toc_8">生活中的输入</h3>
+
+<p>生活中的输入无处不在，例如你需要在各种软件中输入的账号密码，去ATM机器取钱也同样需要输入密码。</p>
+
+<p><img src="media/15822327222447/1.12.png" alt=""/></p>
+
+<h3 id="toc_9">Python中的输入</h3>
+
+<p>和输出同理理我们也可用到控制台来记录输入结果,同样用到一个函数 input() ，我们可以利用这段代码在控制台输入，然后在利用刚刚学的 print() 函数把你输入的结果在输出来。</p>
+
+<pre><code class="language-python">name=input()
+print(name)
+</code></pre>
+
+<blockquote>
+<p>当你运行完毕 name = input () 代码并将鼠标光标移动到控制台，Python交互式命令就在等你的输入了,你可以输入任意字符,然后按回车完成输入。</p>
+</blockquote>
+
+<h2 id="toc_10">格式化输出</h2>
+
+<pre><code class="language-pyhton"># 格式化符号：%s，%d，%f，%x
+# %s:输出字符串
+# %d:输出int类型数字
+# %f:输出浮点数
+# %x:输出16进制数据
+
+score=100
+print(&#39;python成绩为：%d&#39;% sore)
+</code></pre>
+
+<h2 id="toc_11">if语句</h2>
+
+<p>计算机之所以能做很多⾃自动化的任务，因为它可以自己做条件判断。</p>
+
+<p>比如，输入用户年龄，根据年龄打印不同的内容，在Python程序中，用 if 语句实现：</p>
+
+<pre><code class="language-python">age=20
+if age &gt;=18:
+    print(&#39;your age is&#39;,age)
+    print(&#39;adult&#39;)
+</code></pre>
+
+<p>根据Python的缩进规则，如果 if 语句判断是 True ，就把缩进的两行print语句执行了，否则，什么也不做。</p>
+
+<p>也可以给 if 添加一个 else 语句，意思是，如果 if 判断是 False ，不要执行 if 的内容，去把 else 执行了：</p>
+
+<pre><code class="language-python">age = 3
+if age &gt;= 18:
+    print(&#39;your age is&#39;, age) 
+    print(&#39;adult&#39;)
+else:
+    print(&#39;your age is&#39;, age) 
+    print(&#39;teenager&#39;)
+</code></pre>
+
+<p>注意不不要少写了冒号: 。</p>
+
+<p>当然上面的判断是很粗略的，完全可以用 elif 做更细致的判断：</p>
+
+<pre><code class="language-python">age = 3
+if age &gt;= 18:
+    print(&#39;adult&#39;) 
+elif age &gt;= 6:
+    print(&#39;teenager&#39;) 
+else:
+    print(&#39;kid&#39;)
+
+</code></pre>
+
+<p>elif 是else if 的缩写，完全可以有多个 elif ，所以 if 语句的完整形式就是：</p>
+
+<pre><code class="language-python">if &lt;条件判断1&gt;:
+    &lt;执行1&gt;
+elif &lt;条件判断2&gt;:
+    &lt;执行2&gt;
+elif &lt;条件判断3&gt;:
+    &lt;执行3&gt;
+else:
+    &lt;执行4&gt;
+</code></pre>
+
+<p>if 语句执行有个特点，它是从上往下判断，如果在某个判断上是 True ，把该判断对应的语句执行后， 就忽略掉剩下的elif 和 else ，所以，请测试并解释为什么下面的程序打印的是 teenager ：</p>
+
+<pre><code class="language-python">age = 20
+if age &gt;= 6:
+    print(&#39;teenager&#39;) 
+elif age &gt;= 18:
+    print(&#39;adult&#39;) 
+else:
+    print(&#39;kid&#39;)
+</code></pre>
+
+<h2 id="toc_12">运算符</h2>
+
+<h3 id="toc_13">算数运算符</h3>
+
+<p>Python支持以下几种运算符:</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>运算符</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>实例</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>+</td>
+<td>加</td>
+<td>两个对象相加 a + b 输出结果 30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减</td>
+<td>得到负数或是一个数减去另一个数  a - b 输出结果 -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘</td>
+<td>两个数相乘或是返回一个被重复若⼲干次的字符串串 a * b 输出结果 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>除</td>
+<td>b / a 输出结果  2</td>
+</tr>
+<tr>
+<td>//</td>
+<td>取整除</td>
+<td>返回商的整数部分 9//2 输出结果 4 , 9.0//2.0 输出结果 4.0</td>
+</tr>
+<tr>
+<td>%</td>
+<td>取余</td>
+<td>返回除法的余数 b % a 输出结果 0</td>
+</tr>
+<tr>
+<td>**</td>
+<td>指数</td>
+<td>a**b 为10的20次方，  输出结果 100000000000000000000</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>混合运算时，优先级顺序为：(*<em>)高于(</em>)(/)(%)(//)高于(+)(-) 为了避免歧义，建议使用 () 来处理运算符优先级。并且，不同类型的数字在进行混合运算时，整数将会转换成浮点数进行运算。</p>
+</blockquote>
+
+<h3 id="toc_14">赋值运算符</h3>
+
+<table>
+<thead>
+<tr>
+<th><strong>运算符</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>实例</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>=</td>
+<td>赋值运算符</td>
+<td>把 = 号右边的结果 赋给 左边的变量，如 num = 1  + 2 * 3，结果num的值为7</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-python"># 单个变量赋值
+num = 10
+
+# 多个变量赋值
+num1, num2, f1, str1 = 100, 200, 3.14, &quot;hello&quot;
+
+</code></pre>
+
+<h3 id="toc_15">复合赋值运算符</h3>
+
+<table>
+<thead>
+<tr>
+<th><strong>运算符</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>实例例</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>+=</td>
+<td>加法赋值运算符</td>
+<td>c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>减法赋值运算符</td>
+<td>c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>乘法赋值运算符</td>
+<td>c *= a 等效于 c = c * a</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>除法赋值运算符</td>
+<td>c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>取模赋值运算符</td>
+<td>c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td>**=</td>
+<td>幂赋值运算符</td>
+<td>c** <strong>= a</strong> <strong>等效于</strong>  <strong>c = c</strong> a</td>
+</tr>
+<tr>
+<td>//=</td>
+<td>取整除赋值运算符</td>
+<td>c //= a 等效于 c = c // a</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_16">循环</h2>
+
+<p>我们来试想这样一种情况,现在让你们在控制台输出100条hello world ,本质上,我们写一百条 print 函数输出就可以了,但是如果一千条一万条呢.这就要用到循环语句了.</p>
+
+<h3 id="toc_17">while循环</h3>
+
+<p>while循环语句语法</p>
+
+<pre><code class="language-python">while 条件:
+    条件满足时，做的事情1 
+    条件满足时，做的事情2 
+    条件满足时，做的事情3
+</code></pre>
+
+<p>例例如输出100条 hello world</p>
+
+<pre><code class="language-python">i = 100
+whiel i &lt;=100:
+    print(&#39;hello world&#39;)
+    i + 1
+</code></pre>
+
+<p>相对应,在while循环语句里面,每执行一次循环语句, i 就会加1,直到i 等于101时不满足 i&lt;=100 的条件,循环就结束了</p>
+
+<h3 id="toc_18">for循环</h3>
+
+<p>for循环和while一样同样可以进行循环,并且是运用最多的循环方式,而且它有一项非常厉害的功能——遍历 ,在Python中  for 循环可以遍历任何序列项目,如字符串,或者今后会学到的列表,例如我们遍历字符串,就特指将字符串的所有字符全部访问一遍</p>
+
+<pre><code class="language-python">names = [&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;] 
+for name in names:
+    print(name)
+</code></pre>
+
+<p>执行这段代码，会依次打印 names 的每一个元素：</p>
+
+<pre><code class="language-python">Michael 
+Bob 
+Tracy
+</code></pre>
+
+<p>所以for x in ... 循环就是把每个元素代入变量x ，然后执行缩进块的语句。再比如我们想计算1-10的整数之和，可以用一个 sum 变量做累加：</p>
+
+<pre><code class="language-python">sum = 0
+for x in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+    sum = sum + x 
+    print(sum)
+
+</code></pre>
+
+<p>Python还提供了一个range()函数,可以配合我们的for循环使用,例如:</p>
+
+<pre><code class="language-python">for i in range(5): 
+    print(i)
+
+#效果等同于 while 循环的：
+
+i = 0
+while i &lt; 5:
+    print(i) 
+    i += 1
+
+</code></pre>
+
+<p>我们在来学习两个关键字 breake continue ,这两个关键字是我们循环语句的好帮手</p>
+
+<h3 id="toc_19">break</h3>
+
+<p>在循环中， break 语句可以提前退出循环。例如，本来要循环打印1～100的数字：</p>
+
+<pre><code class="language-python">n = 1
+while n &lt;= 100: 
+    print(n)
+    n = n + 1 
+print(&#39;END&#39;)
+</code></pre>
+
+<p>上面的代码可以打印出1~100。</p>
+
+<p>如果要提前结束循环，可以用 break 语句：</p>
+
+<pre><code class="language-python">n = 1
+while n &lt;= 100:
+    if n &gt; 10: # 当n = 11时，条件满足，执行break语句
+        break # break语句会结束当前循环
+    print(n) 
+    n = n + 1
+print(&#39;END&#39;)
+</code></pre>
+
+<p>执行上面的代码可以看到，打印出1~10后，紧接着打印 END ，程序结束。可见 break 的作用是提前结束循环。</p>
+
+<h3 id="toc_20">continue</h3>
+
+<p>在循环过程中，也可以通过 continue 语句，跳过当前的这次循环，直接开始下一次循环。</p>
+
+<pre><code class="language-python">n = 0
+while n &lt; 10:
+    n = n + 1 
+    print(n)
+</code></pre>
+
+<p>上面的程序可以打印出1～10。但是，如果我们想只打印奇数，可以用 continue 语句跳过某些循环：</p>
+
+<pre><code class="language-python">n = 0
+while n &lt; 10:
+    n = n + 1
+    if n % 2 == 0: # 如果n是偶数，执行continue语句
+        continue # continue语句会直接继续下⼀一轮循环，后续的print()语句不不会执行
+    print(n)
+
+</code></pre>
+
+<p>执行上面的代码可以看到，打印的不再是1～10，而是1，3，5，7，9。    可见 continue 的作用是提前结束本轮循环，并直接开始下一轮循环。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327222510.html">
+                
+                  <h1>6. python包的使用及读写</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">捕获异常</h2>
+
+<p>一旦出错，还要一级一级上报，直到某个函数可以处理该错误（比如，给用户输出一个错误信息）。所以高级语言通常都内置了一套try...except...finally...的错误处理机制，Python也不例外。  让我们用一个例子来看看try的机制：</p>
+
+<pre><code class="language-python">try:
+    print(&#39;try...&#39;)
+    r = 10 / 0
+    print(&#39;result:&#39;, r)
+except ZeroDivisionError as e: 
+    print(&#39;except:&#39;, e)
+finally:
+    print(&#39;finally...&#39;) 
+print(&#39;END&#39;)
+</code></pre>
+
+<pre><code class="language-text">try...
+except: division by zero
+finally...
+END
+</code></pre>
+
+<p>当我们认为某些代码可能会出错时，就可以用try来运行这段代码，如果执行出错，则后续代码不会继续执行，而是  直接跳转至错误处理代码，即except语句块，执行完except后，如果有finally语句块，则执行finally语句块，至此，执行完毕。</p>
+
+<p>上面的代码在计算10 / 0时会产生一个除法运算错误：</p>
+
+<pre><code class="language-text">try...
+except: division by zero finally...
+END
+</code></pre>
+
+<p>从输出可以看到，当错误发生时，后续语句print(&#39;result:&#39;, r)不会被执行，except由于捕获到ZeroDivisionError，因此被执行。最后，finally语句被执行。然后，程序继续按照流程往下走。</p>
+
+<p>如果把除数0改成2，则执行结果如下：</p>
+
+<pre><code class="language-text">try...
+result: 5 
+finally... 
+END
+</code></pre>
+
+<p>由于没有错误发生，所以except语句块不会被执行，但是finally如果有，则一定会被执行（可以没有finally语句）。</p>
+
+<p>你还可以猜测，错误应该有很多种类，如果发生了不同类型的错误，应该由不同的except语句块处理。没错，可以 有多个except来捕获不同类型的错误：</p>
+
+<pre><code class="language-text">try:
+    print(&#39;try...&#39;) 
+    r = 10 / int(&#39;a&#39;)
+    print(&#39;result:&#39;, r) 
+except ValueError as e:
+    print(&#39;ValueError:&#39;, e) 
+except ZeroDivisionError as e:
+    print(&#39;ZeroDivisionError:&#39;, e) 
+finally:
+    print(&#39;finally...&#39;) 
+print(&#39;END&#39;)
+</code></pre>
+
+<p>int()函数可能会抛出ValueError，所以我们用一个except捕获ValueError，用另一个except捕获ZeroDivisionError。</p>
+
+<p>此外，如果没有错误发生，可以在except语句块后面加一个else，当没有错误发生时，会自动执行else语句：</p>
+
+<pre><code class="language-text">try:
+    print(&#39;try...&#39;) 
+    r = 10 / int(&#39;2&#39;)
+    print(&#39;result:&#39;, r) 
+except ValueError as e:
+    print(&#39;ValueError:&#39;, e) 
+except ZeroDivisionError as e:
+    print(&#39;ZeroDivisionError:&#39;, e) 
+else:
+    print(&#39;no error!&#39;) 
+finally:
+    print(&#39;finally...&#39;) 
+print(&#39;END&#39;)
+</code></pre>
+
+<p>Python的错误其实也是class，所有的错误类型都继承自BaseException，所以在使用except时需要注意的是，  它不但捕获该类型的错误，还把其子类也“一网打尽”。比如：</p>
+
+<pre><code class="language-text">try:
+    foo()
+except ValueError as e: 
+    print(&#39;ValueError&#39;)
+except UnicodeError as e: 
+    print(&#39;UnicodeError&#39;)
+</code></pre>
+
+<p>第二个except永远也捕获不到UnicodeError，因为UnicodeError是ValueError的子类，如果有，也被第一个except给捕获了。</p>
+
+<p>Python所有的错误都是从BaseException类派生的，<a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">常见的错误类型和继承关系</a></p>
+
+<p>使用try...except捕获错误还有一个巨大的好处，就是可以跨越多层调用，比如函数main()调用foo()，foo() 调用bar()，结果bar()出错了，这时，只要main()捕获到了，就可以处理：</p>
+
+<pre><code class="language-text">def foo(s):
+    return 10 / int(s)
+
+def bar(s):
+    return foo(s) * 2
+
+def main():
+    try:
+        bar(&#39;0&#39;)
+    except Exception as e: 
+        print(&#39;Error:&#39;, e)
+    finally:
+        print(&#39;finally...&#39;)
+</code></pre>
+
+<p>也就是说，不需要在每个可能出错的地方去捕获错误，只要在合适的层次去捕获错误就可以了。这样一来，就大大减少了写try...except...finally的麻烦。</p>
+
+<p><strong>python所有的标准异常类：</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>异常名称</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>BaseException</td>
+<td>所有异常的基类</td>
+</tr>
+<tr>
+<td>SystemExit</td>
+<td>解释器请求退出</td>
+</tr>
+<tr>
+<td>KeyboardInterrupt</td>
+<td>用户中断执行(通常是输入<sup>C)</sup></td>
+</tr>
+<tr>
+<td>Exception</td>
+<td>常规错误的基类</td>
+</tr>
+<tr>
+<td>StopIteration</td>
+<td>迭代器没有更多的值</td>
+</tr>
+<tr>
+<td>GeneratorExit</td>
+<td>生成器(generator)发生异常来通知退出</td>
+</tr>
+<tr>
+<td>SystemExit</td>
+<td>Python 解释器请求退出</td>
+</tr>
+<tr>
+<td>StandardError</td>
+<td>所有的内建标准异常的基类</td>
+</tr>
+<tr>
+<td>ArithmeticError</td>
+<td>所有数值计算错误的基类</td>
+</tr>
+<tr>
+<td>FloatingPointError</td>
+<td>浮点计算错误</td>
+</tr>
+<tr>
+<td>OverflowError</td>
+<td>数值运算超出最大限制</td>
+</tr>
+<tr>
+<td>ZeroDivisionError</td>
+<td>除(或取模)零 (所有数据类型)</td>
+</tr>
+<tr>
+<td>AssertionError</td>
+<td>断言语句失败</td>
+</tr>
+<tr>
+<td>AttributeError</td>
+<td>对象没有这个属性</td>
+</tr>
+<tr>
+<td>EOFError</td>
+<td>没有内建输入,到达EOF 标记</td>
+</tr>
+<tr>
+<td>EnvironmentError</td>
+<td>操作系统错误的基类</td>
+</tr>
+<tr>
+<td>IOError</td>
+<td>输入/输出操作失败</td>
+</tr>
+<tr>
+<td>OSError</td>
+<td>操作系统错误</td>
+</tr>
+<tr>
+<td>WindowsError</td>
+<td>系统调用失败</td>
+</tr>
+<tr>
+<td>ImportError</td>
+<td>导入模块/对象失败</td>
+</tr>
+<tr>
+<td>KeyboardInterrupt</td>
+<td>用户中断执行(通常是输入<sup>C)</sup></td>
+</tr>
+<tr>
+<td>LookupError</td>
+<td>无效数据查询的基类</td>
+</tr>
+<tr>
+<td>IndexError</td>
+<td>序列中没有没有此索引(index)</td>
+</tr>
+<tr>
+<td>KeyError</td>
+<td>映射中没有这个键</td>
+</tr>
+<tr>
+<td>MemoryError</td>
+<td>内存溢出错误(对于Python 解释器不是致命的)</td>
+</tr>
+<tr>
+<td>NameError</td>
+<td>未声明/初始化对象 (没有属性)</td>
+</tr>
+<tr>
+<td>UnboundLocalError</td>
+<td>访问未初始化的本地变量</td>
+</tr>
+<tr>
+<td>ReferenceError</td>
+<td>弱引用(Weak  reference)试图访问已经垃圾回收了的对象</td>
+</tr>
+<tr>
+<td>RuntimeError</td>
+<td>一般的运行时错误</td>
+</tr>
+<tr>
+<td>NotImplementedError</td>
+<td>尚未实现的方法</td>
+</tr>
+<tr>
+<td>SyntaxError</td>
+<td>Python 语法错误</td>
+</tr>
+<tr>
+<td>IndentationError</td>
+<td>缩进错误</td>
+</tr>
+<tr>
+<td>TabError</td>
+<td>Tab 和空格混用</td>
+</tr>
+<tr>
+<td>SystemError</td>
+<td>一般的解释器系统错误</td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td>对类型无效的操作</td>
+</tr>
+<tr>
+<td>ValueError</td>
+<td>传入无效的参数</td>
+</tr>
+<tr>
+<td>UnicodeError</td>
+<td>Unicode 相关的错误</td>
+</tr>
+<tr>
+<td>UnicodeDecodeError</td>
+<td>Unicode 解码时的错误</td>
+</tr>
+<tr>
+<td>UnicodeEncodeError</td>
+<td>Unicode 编码时错误</td>
+</tr>
+<tr>
+<td>UnicodeTranslateError</td>
+<td>Unicode 转换时错误</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>警告的基类</td>
+</tr>
+<tr>
+<td>DeprecationWarning</td>
+<td>关于被弃用的特征的警告</td>
+</tr>
+<tr>
+<td>FutureWarning</td>
+<td>关于构造将来语义会有改变的警告</td>
+</tr>
+<tr>
+<td>OverflowWarning</td>
+<td>旧的关于自动提升为长整型(long)的警告</td>
+</tr>
+<tr>
+<td>PendingDeprecationWarning</td>
+<td>关于特性将会被废弃的警告</td>
+</tr>
+<tr>
+<td>RuntimeWarning</td>
+<td>可疑的运行时行为(runtime  behavior)的警告</td>
+</tr>
+<tr>
+<td>SyntaxWarning</td>
+<td>可疑的语法的警告</td>
+</tr>
+<tr>
+<td>UserWarning</td>
+<td>用户代码生成的警告</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_1">模块</h2>
+
+<p>模块：通俗理解一个.py文件就是一个模块，模块是管理功能代码的。</p>
+
+<p>内置模块：就是python自己内部自带的不需要我们去下载的模块， 比如：time, random等。</p>
+
+<h3 id="toc_2">自定义模块的使用</h3>
+
+<p><strong>注意：</strong>自定义模块名字和变量名的定义很类似，都是由字母、数字、下划线组成，但是不能以数字开头，否则无法导入该模块。</p>
+
+<h4 id="toc_3">创建名为first_module的自定义模块</h4>
+
+<pre><code class="language-python">__all__= [&quot;g_num&quot;, &quot;show&quot;]
+# 指定 all 表示 from 模块名 import * 只能使用指定的功能代码，而不是所有的功能代码
+# 定义全局变量
+g_num = 10
+# 定义函数 
+def show():
+    print(&quot;我是一个函数&quot;)
+# 定义类
+class Student(object):
+    def init (self, name, age): 
+        self.name = name
+        self.age = age 
+    
+    def show_msg(self):
+        print(self.name, self.age)
+# 解决导入的模块中方法没有调用就会执行
+if __name__== &#39;__main__&#39;: 
+    show()
+</code></pre>
+
+<pre><code class="language-text">我是一个函数
+</code></pre>
+
+<h4 id="toc_4">使用自定义的模块</h4>
+
+<pre><code class="language-text"># 导入模块
+import first_module
+# 使用模块中的功能代码
+print(first_module.g_num) first_module.show()
+stu = first_module.Student(&quot;李四&quot;, 20)
+stu.show_msg()
+</code></pre>
+
+<p><strong>注意：</strong>使用 name 查看模块名，执行哪个文件，哪个文件中的__name__输出__main__ , 其他导入模块中的__name__结果就是模块名字。</p>
+
+<p>模块导入的注意点：</p>
+
+<ol>
+<li> 自定义的模块名不要和系统的模块名重名，</li>
+<li> 导入的功能代码不要在当前模块定义否则使用不了导入模块的功能代码</li>
+</ol>
+
+<h2 id="toc_5">包的介绍</h2>
+
+<p><strong>包：</strong>通俗理解包就是一个文件夹，只不过文件夹里面有一个init.py文件，包是管理模块的， 模块是管理功能代码的。</p>
+
+<pre><code class="language-text"># -----import导入包里面的模块----
+import first_package.first
+
+#-----import导入包里面的模块设置别名----
+import first_package.first as one
+
+#----from导入包名 import 模块名----
+from first_package import second
+
+#--- from 包名.模块名 import 功能代码----
+from first_package.first import show    # 需要保证当前模块没有导入模块的功能代码
+# --- from 包名 import *, 默认不会导入包里面的所有模块，需要在init文件里面使用   all  去指定导入的模块
+from first_package import *
+
+__init__文件写法
+# 如果外界使用from 包名 import * 不会导入包里面的所有模块，需要使用 all 指定
+     all    = [&quot;first&quot;, &quot;second&quot;]
+# 从当前包导入对应的模块
+from . import first from . import second
+</code></pre>
+
+<h2 id="toc_6">文件基础操作</h2>
+
+<h3 id="toc_7">文件简介</h3>
+
+<p>文件包括文本文件和二进制文件（声音，图像，视频) 从存储方式来说，文件在磁盘上的存储方式都是二进制形式， 所以，文本文件其实也应该算二进制文件。先从他们的区别来说，虽然都是二进制文件，但是二进制代表的意思不一   样。打个比方，一个人，我们可以叫他的大名，以叫他的小名，但其实都是代表这个人。二进制读写是将内存里面的数据直接读写入文本中，而文本呢，则是将数据先转换成了字符串，再写入到文本中。</p>
+
+<h3 id="toc_8">读文件</h3>
+
+<p>要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符：</p>
+
+<pre><code class="language-text">f = open(&#39;/Users/michael/test.txt&#39;, &#39;r&#39;)
+</code></pre>
+
+<p>标示符&#39;r&#39;表示读，这样，我们就成功地打开了一个文件。</p>
+
+<p>如果文件不存在，open()函数就会抛出一个IOError的错误，并且给出错误码和详细的信息告诉你文件不存在：</p>
+
+<pre><code class="language-python">f=open(&#39;/Users/michael/notfound.txt&#39;, &#39;r&#39;)
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+FileNotFoundError                         Traceback (most recent call last)
+
+&lt;ipython-input-115-56fe20145a26&gt; in &lt;module&gt;()
+----&gt; 1 f=open(&#39;/Users/michael/notfound.txt&#39;, &#39;r&#39;)
+
+
+FileNotFoundError: [Errno 2] No such file or directory: &#39;/Users/michael/notfound.txt&#39;
+</code></pre>
+
+<p>如果文件打开成功，接下来，调用read()方法可以一次读取文件的全部内容，Python把内容读到内存，用一个str 对象表示：</p>
+
+<pre><code class="language-text">f.read() &#39;Hello, world!&#39;
+</code></pre>
+
+<p><strong>最后一步</strong>是调用close()方法关闭文件。文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操  作系统同一时间能打开的文件数量也是有限的：</p>
+
+<pre><code class="language-text">f.close()
+</code></pre>
+
+<p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try ... finally来实现：</p>
+
+<pre><code class="language-text">try:
+    f = open(&#39;/path/to/file&#39;, &#39;r&#39;) 
+    print(f.read())
+finally:
+    if f:
+        f.close()
+</code></pre>
+
+<p>但是每次都这么写实在太繁琐，所以，Python引入了with语句来自动帮我们调用close()方法：</p>
+
+<pre><code class="language-text">with open(&#39;/path/to/file&#39;, &#39;r&#39;) as f:
+    print(f.read())
+</code></pre>
+
+<p>这和前面的try ... finally是一样的，但是代码更佳简洁，并且不必调用f.close()方法。</p>
+
+<p>调用read()会一次性读取文件的全部内容，如果文件有10G，内存就爆了，所以，要保险起见，可以反复调用read(size)方法，每次最多读取size个字节的内容。另外，调用readline()可以每次读取一行内容，调用readlines()一次读取所有内容并按行返回list。因此，要根据需要决定怎么调用。</p>
+
+<p>如果<strong>文件很小</strong>，read()一次性读取最方便；如果不能确定文件大小，反复调用read(size)比较保险；如果是配置文件，调用readlines()<strong>最方便</strong>：</p>
+
+<pre><code class="language-text">for line in f.readlines():
+    print(line.strip()) # 把末尾的&#39;\n&#39;删掉
+</code></pre>
+
+<h3 id="toc_9">文件的打开方式</h3>
+
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>r</td>
+<td>以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。</td>
+</tr>
+<tr>
+<td>rb</td>
+<td>以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>打开一个文件用于读写。文件指针将会放在文件的开头。</td>
+</tr>
+<tr>
+<td>rb+</td>
+<td>以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。</td>
+</tr>
+<tr>
+<td>w</td>
+<td>打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该 文件不存在，创建新文件。</td>
+</tr>
+<tr>
+<td>wb</td>
+<td>以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td>
+</tr>
+<tr>
+<td>wb+</td>
+<td>以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td>
+</tr>
+<tr>
+<td>a</td>
+<td>打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入 到已有内容之后。如果该文件不存在，创建新文件进行写入。</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。</td>
+</tr>
+<tr>
+<td>ab+</td>
+<td>以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_10">字符编码</h3>
+
+<p>要读取非UTF-8编码的文本文件，需要给open()函数传入encoding参数，例如，读取GBK编码的文件：</p>
+
+<pre><code class="language-text"> f = open(&#39;/Users/michael/gbk.txt&#39;, &#39;r&#39;, encoding=&#39;gbk&#39;)
+ f.read()
+&#39;测试&#39;
+</code></pre>
+
+<p>遇到有些编码不规范的文件，你可能会遇到UnicodeDecodeError，因为在文本文件中可能夹杂了一些非法编码的   字符。遇到这种情况，open()函数还接收一个errors参数，表示如果遇到编码错误后如何处理。最简单的方式是直接忽略：</p>
+
+<pre><code class="language-text">f = open(&#39;/Users/michael/gbk.txt&#39;, &#39;r&#39;, encoding=&#39;gbk&#39;, errors=&#39;ignore&#39;)
+</code></pre>
+
+<h4 id="toc_11">写文件</h4>
+
+<p>写文件和读文件是一样的，唯一区别是调用open()函数时，传入标识符&#39;w&#39;或者&#39;wb&#39;表示写文本文件或写二进制文件：</p>
+
+<pre><code class="language-text">f = open(&#39;/Users/michael/test.txt&#39;, &#39;w&#39;)
+f.write(&#39;Hello, world!&#39;)
+f.close()
+</code></pre>
+
+<p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不  会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。</p>
+
+<p>所以，还是用with语句来得保险：</p>
+
+<pre><code class="language-text">with open(&#39;/Users/michael/test.txt&#39;, &#39;w&#39;) as f: f.write(&#39;Hello, world!&#39;)
+</code></pre>
+
+<p>要写入特定编码的文本文件，请给open()函数传入encoding参数，将字符串自动转换成指定编码。</p>
+
+<p>注意：以&#39;w&#39;模式写入文件时，如果文件已存在，会直接覆盖（相当于删掉后新写入一个文件）。如果我们希望追加到文件末尾怎么办？可以传入&#39;a&#39;以追加（append）模式写入。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15822327222539.html">
+                
+                  <h1>3. python数据类型</h1>
+                 <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">字符串（str）</h2>
+
+<h3 id="toc_1">字符串的定义</h3>
+
+<p>我们在介绍数据类型的时候,简单介绍了一下字符串类型.因为字符串是Python语言中特别重要的概念(不仅是Python,在其他语言中也有着举重若轻的位置),我们详细的讲解一下字符串的用法。</p>
+
+<p>我们已经知道了,单引号,双引号,包括三引号包围的字符组,就是字符串,例如</p>
+
+<pre><code class="language-python">str = &#39;hello&#39;#定义字符串变量
+str = &quot;helo&quot;#定义字符串变量
+str = &quot;&quot;&quot;hello
+hello&quot;&quot;&quot;#定义多行字符串变量
+</code></pre>
+
+<h3 id="toc_2">下标和切片</h3>
+
+<h4 id="toc_3">下标索引</h4>
+
+<p>下标在Python中的概念就是编号的意思, 字符串 元组 列表 都会经常用到下标的概念,我们可以根据下标找到它们所对应的元素.就好像生活中你要准备去看电影,电影票上的座位号找到对应的位置。</p>
+
+<p>我们现在考虑这样⼀一个问题,例例如我们创建了一个字符串name = zhang ,我现在想取到名为 name 字符串里面的a字符.如何去取呢?,其实我们可以通过我们讲过的for循环来遍历这个字符串,通过这种方法来取出字符串里的字符,但是 Python 给我们提供了了更为简便的方法,我们就可以用下标来取出a 字符</p>
+
+<pre><code class="language-python">name=&#39;zhangsan&#39;
+print(name[2])
+</code></pre>
+
+<pre><code class="language-text">a
+</code></pre>
+
+<h4 id="toc_4">切片</h4>
+
+<p>我们可以利用下表索引取到字符串里面对应的一个元素,但如果想要截取一段元素就要用到切片。</p>
+
+<p>切片是指对操作的对象截取其中一部分的操作。<strong>字符串、列表、元组</strong>都支持切片操作。 <strong>切片的语法: [起始:结束:步长]</strong><br/>
+我们以字符串为例例讲解。</p>
+
+<p>如果取出一部分，则可以在中括号 [] 中，使用:</p>
+
+<pre><code class="language-python">name = &#39;abcdef&#39;
+print(name[0:3]) # 取 下标0~2 的字符
+print(name[3:5]) # 取 下标为3、4 的字符
+print(name[2:]) # 取 下标为2开始到最后的字符
+#支持负数
+name = &#39;abcdef&#39;
+print(name[1:-1]) # 取  下标为1开始  到  最后第2个 之间的字符
+</code></pre>
+
+<pre><code class="language-text">abc
+de
+cdef
+bcde
+</code></pre>
+
+<h3 id="toc_5">字符串的常见操作</h3>
+
+<p>如有字符串mystr = &#39;hello world kkb&#39; ，以下是常见的操作</p>
+
+<pre><code class="language-python">mystr = &#39;hello world kkb&#39;
+</code></pre>
+
+<h4 id="toc_6">find</h4>
+
+<p>检测  是否包含在 mystr中，如果是返回开始的索引值，否则返回-1</p>
+
+<pre><code class="language-text">mystr.find(str, start=0, end=len(mystr))
+
+</code></pre>
+
+<pre><code class="language-python">mystr.find(&#39;kkb&#39;)
+</code></pre>
+
+<pre><code class="language-text">12
+</code></pre>
+
+<pre><code class="language-python">mystr.find(&#39;kkb&#39;,0,10)#在mstr字符串串0-10下标范围查询
+</code></pre>
+
+<pre><code class="language-text">-1
+</code></pre>
+
+<h4 id="toc_7">index</h4>
+
+<p>跟 find() 方法一样，只不过如果 str 不在 mystr中会报一个异常.</p>
+
+<pre><code class="language-python">mystr.index(str, start=0, end=len(mystr))
+
+</code></pre>
+
+<pre><code class="language-python">mystr.index(&#39;ab&#39;)
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-9-46892962653f&gt; in &lt;module&gt;()
+----&gt; 1 mystr.index(&#39;ab&#39;)
+
+
+ValueError: substring not found
+</code></pre>
+
+<h4 id="toc_8">count</h4>
+
+<p>返回str在start和end之间在mystr里面出现的次数。</p>
+
+<pre><code class="language-python">mystr.count(str,start,end=len(mystr))
+</code></pre>
+
+<pre><code class="language-python">mystr.count(&#39;kkb&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">1
+</code></pre>
+
+<h4 id="toc_9">replce</h4>
+
+<p>把mystr中的str1替换成str2 ,如果count指定，则替换不超过count次。</p>
+
+<pre><code class="language-python">mystr.replace(str1,str2,mystr.count(str1))
+
+</code></pre>
+
+<h4 id="toc_10">split</h4>
+
+<p>以str为分隔符切片 mystr，如果maxsplit有指定值，则仅分隔maxsplit个子字符串。</p>
+
+<pre><code class="language-text">mystr.split(str=&quot; &quot;, 2)
+
+</code></pre>
+
+<h4 id="toc_11">capitallize</h4>
+
+<p>把字符串的第一个字母大写</p>
+
+<pre><code class="language-python">mystr.capitalize()
+
+</code></pre>
+
+<pre><code class="language-text">&#39;Hello world kkb&#39;
+</code></pre>
+
+<h4 id="toc_12">title</h4>
+
+<p>首字母大写</p>
+
+<pre><code class="language-python">mystr.title()
+
+</code></pre>
+
+<pre><code class="language-text">&#39;Hello World Kkb&#39;
+</code></pre>
+
+<h4 id="toc_13">startswith</h4>
+
+<p>检查字符串是否是以hello开头, 是则返回True，否则返False</p>
+
+<pre><code class="language-python">mystr.startswith(&#39;hello&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">True
+</code></pre>
+
+<h4 id="toc_14">endswith</h4>
+
+<p>检查字符串是否以obj结尾，如果是则返回True，否则返False</p>
+
+<pre><code class="language-python">mystr.endswith(&#39;obj&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">False
+</code></pre>
+
+<h4 id="toc_15">lower</h4>
+
+<p>转换mystr中所有大写字符为小写</p>
+
+<pre><code class="language-text">mystr.lower()
+
+</code></pre>
+
+<h4 id="toc_16">upper</h4>
+
+<p>转换mystr中所有小写字符为大写</p>
+
+<pre><code class="language-text">mystr.upper()
+
+</code></pre>
+
+<h4 id="toc_17">ljust</h4>
+
+<p>返回一个原字符串左对齐,并使用空格填充至长度width的新字符串</p>
+
+<pre><code class="language-python">width=32
+mystr.ljust(width)
+
+</code></pre>
+
+<pre><code class="language-text">&#39;hello world kkb                 &#39;
+</code></pre>
+
+<h4 id="toc_18">rjust</h4>
+
+<p>返回一个原字符串右对齐,并使用空格填充至长度width的新字符串</p>
+
+<pre><code class="language-python">mystr.rjust(width)
+
+</code></pre>
+
+<h4 id="toc_19">center</h4>
+
+<p>返回一个原字符串居中对齐,并使用空格填充至长度width的新字符串</p>
+
+<pre><code class="language-python">mystr.center()
+
+</code></pre>
+
+<h4 id="toc_20">lstrip</h4>
+
+<p>删除mystr左边的空白字符串</p>
+
+<pre><code class="language-python">mystr.lstrip()
+
+</code></pre>
+
+<h4 id="toc_21">rstrip</h4>
+
+<p>删除mystr右边的空白字符串</p>
+
+<pre><code class="language-python">mystr.rstrip()
+
+</code></pre>
+
+<h4 id="toc_22">strip</h4>
+
+<p>删除mystr两端的空白字符串</p>
+
+<pre><code class="language-python">mystr.strip()
+
+</code></pre>
+
+<pre><code class="language-python">a = &quot;\n\t kkb \t\n&quot; 
+print(a)
+a.strip()
+
+</code></pre>
+
+<pre><code class="language-text">     kkb    
+
+
+
+&#39;kkb&#39;
+</code></pre>
+
+<h4 id="toc_23">rfind</h4>
+
+<p>类似于 find() 函数，不不过是从右边开始查找.</p>
+
+<pre><code class="language-python">mystr.find(str, start=0,end=len(mystr))
+
+</code></pre>
+
+<h4 id="toc_24">rindex</h4>
+
+<p>类似于 index() ，不不过是从右边开始.</p>
+
+<pre><code class="language-python">mystr.rindex(str, start=0,end=len(mystr))
+
+</code></pre>
+
+<h4 id="toc_25">partition</h4>
+
+<p>把 mystr以str分割成三部分, str前， str和str后</p>
+
+<pre><code class="language-text">mystr.partition(str)
+
+</code></pre>
+
+<h4 id="toc_26">rpartition</h4>
+
+<p>类似于 partition()函数,不不过是从右边开始.</p>
+
+<pre><code class="language-python">mystr.rpartition(str)
+
+</code></pre>
+
+<h4 id="toc_27">splitlines</h4>
+
+<p>按照行分隔，返回一个包含各行作为元素的列表</p>
+
+<pre><code class="language-python">mystr.splitlines()
+
+</code></pre>
+
+<h4 id="toc_28">join</h4>
+
+<p>mystr中每个元素后面插入 str ,构造出⼀一个新的字符串</p>
+
+<pre><code class="language-python">mystr.jion(str)
+
+</code></pre>
+
+<h2 id="toc_29">列表（list）</h2>
+
+<h3 id="toc_30">列表简介</h3>
+
+<p>Python内置的一种数据类型是列表： list 。 list 是一种有序的集合，可以随时添加和删除其中的元素，写在方括号之间、用逗号分隔开的数值列表。列表内的项目不必全是相同的类型。</p>
+
+<p>例如：</p>
+
+<pre><code class="language-python">list1= [&#39;spam&#39;,&#39;eggs&#39;,&#39;12&#39;,123]
+
+</code></pre>
+
+<p>注意：比C语言的数组强大的地方在于列表中的元素可以是<strong>不同类型的。</strong></p>
+
+<h3 id="toc_31">列表的常见操作</h3>
+
+<h4 id="toc_32">列表的长度</h4>
+
+<pre><code class="language-python">#⽤用len()函数可以获得list元素的个数：
+namesList = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;] 
+len(namesList)
+
+</code></pre>
+
+<pre><code class="language-text">3
+</code></pre>
+
+<h4 id="toc_33">列表的访问</h4>
+
+<p>用索引来访问 list 中每一个位置的元素，记得索引是<strong>从0开始的</strong>：</p>
+
+<pre><code class="language-python">namesList = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;] 
+print(namesList[0])
+print(namesList[1]) 
+print(namesList[2]) 
+print(namesList[3])
+
+</code></pre>
+
+<pre><code class="language-text">xiaoWang
+xiaoZhang
+xiaoHua
+
+
+
+
+---------------------------------------------------------------------------
+
+IndexError                                Traceback (most recent call last)
+
+&lt;ipython-input-42-c578a48b9b76&gt; in &lt;module&gt;()
+      3 print(namesList[1])
+      4 print(namesList[2])
+----&gt; 5 print(namesList[3])
+
+
+
+IndexError: list index out of range
+</code></pre>
+
+<p>注意：当索引超出了范围时，Python会报一个 IndexError 错误，所以，要确保索引不要越界，记得最后一个元素的索引是len(classmates) - 1 </p>
+
+<p>如果要取最后一个元素，除了了计算索引位置外，还可以用-1做索引，直接获取最后一个元素：</p>
+
+<pre><code class="language-python">print(namesList[-1])
+#以此类推，可以获取倒数第2个、倒数第3个：
+print(namesList[-2])
+print(namesList[-3])
+
+</code></pre>
+
+<pre><code class="language-text">xiaoHua
+xiaoZhang
+xiaoWang
+</code></pre>
+
+<h4 id="toc_34">列表的切片</h4>
+
+<p>切片: 根据下标的范围获取一部分数据，⽐比如: 列表，字符串可以使用切片。</p>
+
+<p><strong>切片的使用格式</strong></p>
+
+<p>数据[起始下标:结束下标:步长]</p>
+
+<p>提示： 起始下标默认0， 结束下标是不包含， 步长默认是1</p>
+
+<pre><code class="language-python"># 使用切片的方式获取一部分数据
+my_str=[&#39;zhangsan&#39;,&#39;lisi&#39;,&#39;wangwu&#39;,45,781,&#39;erf&#39;]
+result = my_str[1:4:1]
+print(result)
+
+#前三个
+result = my_str[0:3] 
+print(result)
+result = my_str[:3] 
+print(result)
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;lisi&#39;, &#39;wangwu&#39;, 45]
+[&#39;zhangsan&#39;, &#39;lisi&#39;, &#39;wangwu&#39;]
+[&#39;zhangsan&#39;, &#39;lisi&#39;, &#39;wangwu&#39;]
+</code></pre>
+
+<h4 id="toc_35">添加元素( append , extend , insert )</h4>
+
+<p>通过 append 可以向列列表添加元素</p>
+
+<pre><code class="language-python">#定义变量量A，默认有3个元素
+A = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;]
+
+print(&quot;-----添加之前，列列表A的数据    &quot;)
+
+for tempName in A: 
+    print(tempName)
+#提示、并添加元素
+temp = input(&#39;请输入要添加的学生姓名:&#39;) 
+A.append(temp)
+
+print(&quot;-----添加之后，列列表A的数据    &quot;)
+for tempName in A:
+    print(tempName)
+
+
+</code></pre>
+
+<pre><code class="language-text">-----添加之前，列列表A的数据   
+xiaoWang
+xiaoZhang
+xiaoHua
+请输入要添加的学生姓名:huohuo
+-----添加之后，列列表A的数据   
+xiaoWang
+xiaoZhang
+xiaoHua
+huohuo
+</code></pre>
+
+<p>通过 extend 可以将另⼀一个集合中的元素逐⼀一添加到列列表中</p>
+
+<pre><code class="language-python">a = [1, 2]
+b = [3, 4]
+a.append(b)
+print(a)
+print(&#39;-----&#39;)
+a.extend(b)
+print(a)
+print(&#39;-----&#39;)
+# insert(index,object)` 在指定位置`index`前插入元素`object
+
+a = [0, 1, 2]
+a.insert(1, 3)
+print(a)
+
+</code></pre>
+
+<pre><code class="language-text">[1, 2, [3, 4]]
+-----
+[1, 2, [3, 4], 3, 4]
+-----
+[0, 3, 1, 2]
+</code></pre>
+
+<h4 id="toc_36">修改元素</h4>
+
+<p>修改元素的时候，要通过<strong>下标</strong>来确定要修改的是哪个元素，然后才能进行修改</p>
+
+<pre><code class="language-python">#定义变量量A，默认有3个元素
+A = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;]
+
+print(&quot;-----修改之前，列列表A的数据    &quot;)
+for tempName in A: print(tempName)
+
+#修改元素
+A[1] = &#39;xiaoLu&#39;
+
+print(&quot;-----修改之后，列列表A的数据    &quot;)
+for tempName in A: print(tempName)
+
+
+</code></pre>
+
+<pre><code class="language-text">-----修改之前，列列表A的数据   
+xiaoWang
+xiaoZhang
+xiaoHua
+-----修改之后，列列表A的数据   
+xiaoWang
+xiaoLu
+xiaoHua
+</code></pre>
+
+<h4 id="toc_37">查找元素</h4>
+
+<p>所谓的查找，就是看看指定的元素是否存在。</p>
+
+<p>python中查找的常用方法为：</p>
+
+<ul>
+<li><p>in （存在）,如果存在那么结果为 true ，否则为 false</p></li>
+<li><p>not in （不存在），如果不存在那么结果为 true ，否则 false</p></li>
+</ul>
+
+<pre><code class="language-python">#待查找的列表
+nameList = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;]
+
+#获取用户要查找的名字
+findName = input(&#39;请输入要查找的姓名:&#39;)
+
+#查找是否存在
+if findName in nameList:
+    print(&#39;在字典中找到了了相同的名字&#39;)
+else:
+    print(&#39;没有找到&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">请输入要查找的姓名:Ryan
+没有找到
+</code></pre>
+
+<p>index 和 count 与字符串中的用法相同</p>
+
+<pre><code class="language-python">a = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;]
+a.index(&#39;a&#39;, 1, 3) # 注意左闭右开区间
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-2-5317aed0f6cc&gt; in &lt;module&gt;()
+      1 a = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;]
+----&gt; 2 a.index(&#39;a&#39;, 1, 3) # 注意左闭右开区间
+
+
+
+ValueError: &#39;a&#39; is not in list
+</code></pre>
+
+<pre><code class="language-python">a.index(&#39;a&#39;,1,4)
+
+</code></pre>
+
+<pre><code class="language-text">3
+</code></pre>
+
+<pre><code class="language-python">a.count(&#39;b&#39;)
+
+</code></pre>
+
+<pre><code class="language-text">2
+</code></pre>
+
+<h4 id="toc_38">删除元素</h4>
+
+<p>列表元素的常用删除方法有：</p>
+
+<ul>
+<li><p>del：根据下标进行删除pop：</p></li>
+<li><p>删除最后一个元素remove：</p></li>
+<li><p>根据元素的值进行删除</p></li>
+</ul>
+
+<ol>
+<li>del</li>
+</ol>
+
+<pre><code class="language-python">list1 = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;]
+
+print(&#39;------删除之前&#39;)
+for tempName in list1:
+    print(tempName)
+
+movieName=list1  
+del movieName[2]
+
+print(&#39;------ 删除之后 &#39;)
+for tempName in list1:
+    print(tempName)
+
+</code></pre>
+
+<pre><code class="language-text">------删除之前
+a
+b
+c
+d
+e
+f
+------ 删除之后 
+a
+b
+d
+e
+f
+</code></pre>
+
+<ol>
+<li>pop</li>
+</ol>
+
+<pre><code class="language-python">list2 = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;]
+
+print(&#39;------删除之前   &#39;)
+for tempName in list2:
+    print(tempName)
+
+movieName=list2  
+movieName.pop()
+
+
+print(&#39;------删除之后   &#39;)
+for tempName in list2:
+    print(tempName)
+
+
+</code></pre>
+
+<pre><code class="language-text">------删除之前  
+a
+b
+c
+d
+e
+f
+------删除之后  
+a
+b
+c
+d
+e
+</code></pre>
+
+<ol>
+<li>remove</li>
+</ol>
+
+<pre><code class="language-python">list2 = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;]
+
+print(&#39;------删除之前   &#39;)
+for tempName in list2:
+    print(tempName)
+
+movieName=list2  
+movieName.remove(&#39;e&#39;)
+
+
+print(&#39;------删除之后   &#39;)
+for tempName in list2:
+    print(tempName)
+
+</code></pre>
+
+<pre><code class="language-text">------删除之前  
+a
+b
+c
+d
+e
+f
+------删除之后  
+a
+b
+c
+d
+f
+</code></pre>
+
+<ol>
+<li><p>排序<br/>
+sort 方法是将 list 按特定顺序重新排列，默认为由小到大，参数 reverse=True 可改为倒序，由大到小。</p>
+<p>reverse 方法是将 list 逆置。</p></li>
+</ol>
+
+<pre><code class="language-python">a=[1,4,3,2]
+print(a)
+a.sort()
+print(a)
+
+</code></pre>
+
+<pre><code class="language-text">[1, 4, 3, 2]
+[1, 2, 3, 4]
+</code></pre>
+
+<pre><code class="language-python">a=[1,4,3,2]
+print(a)
+a.reverse()
+print(a)
+
+</code></pre>
+
+<pre><code class="language-text">[1, 4, 3, 2]
+[2, 3, 4, 1]
+</code></pre>
+
+<pre><code class="language-python">a=[1,4,3,2]
+print(a)
+print(&#39;-----&#39;)
+a.sort(reverse=True)
+print(a)
+print(&#39;-----&#39;)
+a.sort(reverse=False)
+print(a)
+
+</code></pre>
+
+<pre><code class="language-text">[1, 4, 3, 2]
+-----
+[4, 3, 2, 1]
+-----
+[1, 2, 3, 4]
+</code></pre>
+
+<h3 id="toc_39">列表的遍历</h3>
+
+<h4 id="toc_40">使用for循环</h4>
+
+<p>为了更有效率的输出<strong>列表的每个数据</strong>，可以使用循环来完成</p>
+
+<pre><code class="language-python">namesList = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;] 
+for name in namesList:
+    print(name)
+
+</code></pre>
+
+<pre><code class="language-text">xiaoWang
+xiaoZhang
+xiaoHua
+</code></pre>
+
+<h4 id="toc_41">使用while循环</h4>
+
+<p>为了更有效率的输出<strong>列表的每个数据</strong>，可以使用循环来完成</p>
+
+<pre><code class="language-python">namesList = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;] 
+lenth=len(namesList)
+i=0
+while i &lt; lenth:
+    print(namesList[i])
+    i+=1
+
+</code></pre>
+
+<pre><code class="language-text">xiaoWang
+xiaoZhang
+xiaoHua
+</code></pre>
+
+<h2 id="toc_42">元组（tuple）</h2>
+
+<p>另一种有序列列表叫元组：tuple。 tuple和list非常类似，但是 tuple一旦初始化就不能修改，比如同样是列出同学的名字：</p>
+
+<pre><code class="language-python">classmates = (&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;)
+
+</code></pre>
+
+<p>现在， classmates这个tuple不能变了，它也没有append()，insert( )这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用 classmates[0] ， classmates[-1] ，但不能赋值成另外的元素。</p>
+
+<p>不可变的tuple有什什么意义？因为tuple不不可变，所以代码更安全。如果可能，能用tuple代list就尽量用tuple。</p>
+
+<p>如果要定义一个空的tuple，可以写成()：</p>
+
+<pre><code class="language-python">t=()
+print(t,type(t))
+
+</code></pre>
+
+<pre><code class="language-text">() &lt;class &#39;tuple&#39;&gt;
+</code></pre>
+
+<p>但是，要定义一个只有1个元素的tuple ，如果你这么定义：</p>
+
+<pre><code class="language-python">t=(1)
+print(t,type(t))
+
+</code></pre>
+
+<pre><code class="language-text">1 &lt;class &#39;int&#39;&gt;
+</code></pre>
+
+<p>定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这 就产生了了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。</p>
+
+<p>所以，只有1个元素的tuple定义时必须加一个逗号，来消除歧义：</p>
+
+<pre><code class="language-python">t=(1,)
+print(t,type(t))
+
+</code></pre>
+
+<pre><code class="language-text">(1,) &lt;class &#39;tuple&#39;&gt;
+</code></pre>
+
+<p>Python在显示只有1个元素的tuple时，也会加一个逗号，以免你误解成数学计算意义上的括号。</p>
+
+<pre><code class="language-python">t = (&#39;a&#39;, &#39;b&#39;, [&#39;A&#39;, &#39;B&#39;])
+t[2][0] = &#39;X&#39;
+t[2][1] = &#39;Y&#39;
+t
+
+</code></pre>
+
+<pre><code class="language-text">(&#39;a&#39;, &#39;b&#39;, [&#39;X&#39;, &#39;Y&#39;])
+</code></pre>
+
+<p>最后来看一个<strong>“可变的”</strong>tuple</p>
+
+<h2 id="toc_43">字典（dict）</h2>
+
+<h3 id="toc_44">字典简介</h3>
+
+<p>字典是另一种可变容器器模型，且可存储任意类型对象。</p>
+
+<p>字典的每个键值(<strong>key=&gt;value</strong>)对用冒号(:)分割，每个对之间用逗号(,)分割，整个字典包括在花括号{}中</p>
+
+<p>举个例子，假设要根据同学的名字查找对应的成绩，如果用 list 实现，需要两个 list ：</p>
+
+<pre><code class="language-text">names = [&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;]
+scores = [95, 75, 85]
+
+</code></pre>
+
+<p>给定一个名字，要查找对应的成绩，就先要在 names 中找到对应的位置，再从 scores 取出对应的成绩， list 越长，耗时越长。</p>
+
+<p>如果用 dict 实现，只需要一个“名字”-“成绩”的对照表，直接根据名字查找成绩，无论这个表有多大， 查找速度都不不会变慢。用Python写一个 dict 如下：</p>
+
+<pre><code class="language-python">d = {&#39;Michael&#39;: 95, &#39;Bob&#39;: 75, &#39;Tracy&#39;: 85}
+d[&#39;Michael&#39;]
+
+</code></pre>
+
+<pre><code class="language-text">95
+</code></pre>
+
+<p>由于一个 key 只能对应⼀一个 value ，所以，多次对一个 key 放入 value ，后面的值会把前面的值冲掉：</p>
+
+<pre><code class="language-python">d[&#39;Ryan&#39;]=100
+d[&#39;Ryan&#39;]
+
+</code></pre>
+
+<pre><code class="language-text">100
+</code></pre>
+
+<pre><code class="language-python">d[&#39;Ryan&#39;]=99
+d[&#39;Ryan&#39;]
+
+</code></pre>
+
+<pre><code class="language-text">99
+</code></pre>
+
+<p>如果key不不存在，dict就会报错：</p>
+
+<pre><code class="language-python">d[&#39;Thomas&#39;]
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-40-bf27a9c462ee&gt; in &lt;module&gt;()
+----&gt; 1 d[&#39;Thomas&#39;]
+
+
+
+KeyError: &#39;Thomas&#39;
+</code></pre>
+
+<h3 id="toc_45">字典的常见操作</h3>
+
+<h4 id="toc_46">修改元素</h4>
+
+<p>字典的每个元素中的数据是可以修改的，只要通过 key 找到，即可修改</p>
+
+<pre><code class="language-python">info = {&#39;name&#39;:&#39;kkb&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;中国北北京&#39;}
+new_id = input(&#39;请输入新的学号:&#39;)
+info[&#39;id&#39;] = int(new_id)
+print(&#39;修改之后的id为: %d&#39; % info[&#39;id&#39;])
+
+</code></pre>
+
+<pre><code class="language-text">请输入新的学号:12
+修改之后的id为: 12
+</code></pre>
+
+<h4 id="toc_47">添加元素</h4>
+
+<ol>
+<li>访问不不存在的元素</li>
+</ol>
+
+<pre><code class="language-python">info = {&#39;name&#39;:&#39;kkb&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;中国北北京&#39;}
+print(&#39;id为:%d&#39; % info[&#39;id&#39;])
+
+</code></pre>
+
+<pre><code class="language-text">---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-43-0f8e22620be6&gt; in &lt;module&gt;()
+      1 #访问不不存在的元素
+      2 info = {&#39;name&#39;:&#39;kkb&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;中国北北京&#39;}
+----&gt; 3 print(&#39;id为:%d&#39; % info[&#39;id&#39;])
+
+
+
+KeyError: &#39;id&#39;
+</code></pre>
+
+<p>如果在使用变量量名[&#39;键&#39;] = 数据 时，这个“键”在字典中，不存在，那么就会新增这个元素。</p>
+
+<ol>
+<li>添加新的元素</li>
+</ol>
+
+<pre><code class="language-python">info = {&#39;name&#39;:&#39;kkb&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;中国北北京&#39;}
+# print(&#39;id为:%d&#39;%info[&#39;id&#39;])#程序会终端运⾏行行，因为访问了了不不存在的键
+newId = input(&#39;请输入新的学号：&#39;)
+info[&#39;id&#39;] =int(newId)
+
+print(&#39;添加之后的id为:%d&#39; % info[&#39;id&#39;])
+
+</code></pre>
+
+<pre><code class="language-text">请输入新的学号：345
+添加之后的id为:345
+</code></pre>
+
+<ol>
+<li><p>删除元素<br/>
+对字典进行删除操作，有以一下几种：</p></li>
+</ol>
+
+<ul>
+<li>del</li>
+<li>clear()</li>
+</ul>
+
+<p><strong>del删除指定的元素</strong></p>
+
+<pre><code class="language-python">info = {&#39;name&#39;:&#39;kkb&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;中国北北京&#39;}
+
+print(&#39;删除前,%s&#39; % info[&#39;name&#39;])
+
+del info[name]
+
+print(&#39;删除后,%s&#39; % info[&#39;name&#39;])
+#删除后不存在name字段
+
+</code></pre>
+
+<pre><code class="language-text">删除前,kkb
+
+
+---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-55-02d163400996&gt; in &lt;module&gt;()
+      3 print(&#39;删除前,%s&#39; % info[&#39;name&#39;])
+      4 
+----&gt; 5 del info[name]
+      6 
+      7 print(&#39;删除后,%s&#39; % info[&#39;name&#39;])
+
+
+
+KeyError: &#39;xiaoHua&#39;
+</code></pre>
+
+<p><strong>del删除整个字典</strong></p>
+
+<pre><code class="language-text">info = {&#39;name&#39;:&#39;monitor&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;}
+print(&#39;删除前,%s&#39; % info)
+del info
+print(&#39;删除后,%s&#39; % info)
+
+</code></pre>
+
+<p><strong>clear清空整个字典</strong></p>
+
+<pre><code class="language-text">info = {&#39;name&#39;:&#39;monitor&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;}
+print(&#39;清空前,%s&#39; % info)
+info.clear()
+print(&#39;删除后,%s&#39; % info)
+
+</code></pre>
+
+<p><strong>keys</strong></p>
+
+<p>返回一个包含字典所有key的列列表</p>
+
+<pre><code class="language-python">d1 = {&#39;name&#39;:&#39;abc&#39;,&#39;age&#39;:&#39;18&#39;, &#39;class&#39;:&#39;cnh&#39;} 
+print(list(d1.keys()))
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;name&#39;, &#39;age&#39;, &#39;class&#39;]
+</code></pre>
+
+<p><strong>values</strong></p>
+
+<p>返回一个包含字典所有value的列表</p>
+
+<pre><code class="language-python">d1 = {&#39;name&#39;:&#39;abc&#39;,&#39;age&#39;:&#39;18&#39;, &#39;class&#39;:&#39;cnh&#39;} 
+print(list(d1.values()))
+
+</code></pre>
+
+<pre><code class="language-text">[&#39;abc&#39;, &#39;18&#39;, &#39;cnh&#39;]
+</code></pre>
+
+<p><strong>items</strong><br/>
+返回一个包含<strong>所有（值，键）</strong>元祖的列表</p>
+
+<pre><code class="language-python">d1 = {&#39;name&#39;:&#39;abc&#39;,&#39;age&#39;:&#39;18&#39;, &#39;class&#39;:&#39;cnh&#39;} 
+print(list(d1.items()))
+
+</code></pre>
+
+<pre><code class="language-text">[(&#39;name&#39;, &#39;abc&#39;), (&#39;age&#39;, &#39;18&#39;), (&#39;class&#39;, &#39;cnh&#39;)]
+</code></pre>
+
+<h2 id="toc_48">集合（set）</h2>
+
+<p>集合（set）是一个无序的<strong>不重复元素</strong>序列。<br/>
+可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不不是 { }，因为 { }是用来创建⼀一个空字典。</p>
+
+<pre><code class="language-python">my_set = {1, 4, &#39;abc&#39;, &#39;hello&#39;}
+# 不支持下标赋值和取值
+# my_set[0] = 3
+# value = my_set[0] # print(value)
+# print(value)
+
+#支持通过遍历获取数据
+for value in my_set:
+    print(value)
+
+</code></pre>
+
+<pre><code class="language-text">1
+hello
+4
+abc
+</code></pre>
+
+<pre><code class="language-python">my_set2={1,4,7}
+for index,value in enumerate(my_set2):
+    print(index,value)
+
+</code></pre>
+
+<pre><code class="language-text">0 1
+1 4
+2 7
+</code></pre>
+
+<pre><code class="language-python"># 定义空的集合的时候不能直接使用{}
+my_set = set()
+my_set.add(1) 
+my_set.add(1)
+print(my_set, type(my_set))
+
+# 集合可以对容器器类型数据去重
+my_list = [1, 1, 3, 5, 3]
+# 把列列表转成集合，会把数据去重
+my_set = set(my_list)
+print(my_set)
+
+# 列列表，元组， 集合 三者之间可以相互转换
+my_tuple = (5, 3)
+print(my_tuple, type(my_tuple))
+
+
+</code></pre>
+
+<pre><code class="language-text">{1} &lt;class &#39;set&#39;&gt;
+{1, 3, 5}
+(5, 3) &lt;class &#39;tuple&#39;&gt;
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/02/21</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80.html'>基础</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			 <a href="python_1.html">&raquo; Next Page</a> 
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>

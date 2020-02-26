@@ -1,0 +1,755 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Shortcut Icon" href="asset/css/huo.ico" type="image/x-icon">
+    <title>
+    
+  当当图书爬虫 - Ryanhuo
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="Ryanhuo" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:ryanhuo.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+
+</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">主页</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">目录</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+ <!--<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>-->
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Ryanhuo</span>
+  </a>
+</nav>
+
+
+<section id="header">
+  <div class="inner">
+    <span class="icon major fa-cloud"></span>
+    <img src="asset/img/火.png" alt="logo">
+    <h1>Hi, I'm <strong>Ryan</strong><br /></h1>
+    <p><a href="ryanhuo.github.io">我的主页</a></p>
+    <p>我是黑暗里中大雪纷飞的人哪，<br />
+    你再不来，我要下雪来</p>
+    <ul class="actions">
+      <li><a href="rfile:///Users/ryan/Library/Containers/com.coderforart.MWeb3/Data/Documents/themes/Site/Ryanhuo.GitHub.io/jian-lixing-ming-lei-yanqiu-zh.html" class="button scrolly">About Me</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">主页</a></li>
+        
+        <li><a target="_self" href="archives.html">目录</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html">数据分析</a></li>
+        
+            <li><a href="ML&DL.html">ML&DL</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="row">
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>当当图书爬虫</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/02/21</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E9%A1%B9%E7%9B%AE.html'>项目</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <pre><code class="language-python"># 爬取当当网图书
+import requests
+from pyquery import PyQuery
+import csv
+import time
+
+class DDSider(object):
+    def __init__(self,key):
+        self.key = key
+        self.headers = {
+            &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36&#39;
+        }
+        self.base_url = &#39;http://search.dangdang.com/?key=&#39;+key+&#39;&amp;act=input&amp;page_index={}&#39;
+    # 获取界面内容 
+    def get_pageInfo(self):
+        
+        num_page = 0
+        while True:
+            num_page += 1 
+            page_url = self.base_url.format(num_page)
+            res = requests.get(page_url,headers=self.headers)
+#             print(res.content.decode(&#39;GBK&#39;))
+            
+            # 解析
+            self.parse_pageInfo(res.content.decode(&#39;GBK&#39;))
+            time.sleep(1)
+            if num_page == 1:
+                break
+                
+    def parse_pageInfo(self,html):
+        doc = PyQuery(html)
+        
+        book_ul = doc(&#39;#component_59 li&#39;).items()
+        
+        for one_li in book_ul:
+#             print(one_li)
+            # 图片的链接
+            if one_li(&#39;.pic img&#39;).attr(&#39;data-original&#39;):
+                img_url = one_li(&#39;.pic img&#39;).attr(&#39;data-original&#39;)
+                
+            else:
+                img_url = one_li(&#39;.pic img&#39;).attr(&#39;src&#39;)
+            
+            # 标题
+            title = one_li(&#39;.name a&#39;).attr(&#39;title&#39;)
+
+            # 价格
+            price = one_li(&#39;.price .search_now_price&#39;).text()
+
+            # 获取评价数
+            comments = one_li(&#39;.search_star_line .search_comment_num&#39;).text()
+            
+            #search_star_black
+#             stars = one_li(&#39;.search_star_black span&#39;).attr(&#39;style&#39;).split(&#39;:&#39;)[-1].strip(&#39;%;&#39;)
+            stars = float(one_li(&#39;.search_star_black span&#39;).attr(&#39;style&#39;).split(&#39;:&#39;)[-1].strip(&#39;%;&#39;))/20
+#             print(stars)
+
+if __name__ == &quot;__main__&quot;:
+    dd = DDSider(&#39;python&#39;)
+    dd.get_pageInfo()
+</code></pre>
+
+<pre><code class="language-text">5.0
+4.5
+4.5
+4.5
+4.5
+4.5
+4.5
+5.0
+4.5
+4.5
+5.0
+4.5
+5.0
+3.0
+4.5
+4.5
+5.0
+5.0
+5.0
+4.5
+5.0
+4.5
+4.5
+4.5
+4.5
+0.0
+4.5
+4.5
+4.5
+4.0
+4.5
+5.0
+4.0
+5.0
+4.5
+4.5
+4.5
+5.0
+3.0
+5.0
+5.0
+5.0
+5.0
+4.5
+4.5
+0.0
+5.0
+5.0
+4.5
+5.0
+4.0
+5.0
+4.5
+5.0
+4.5
+0.5
+4.5
+4.5
+4.0
+5.0
+</code></pre>
+
+<pre><code class="language-python">import time
+import requests
+import json
+# 时间戳： 1970-01-01 00：00：00 到当前时间的的秒数(10位数)或者是毫秒数（13位）
+# timestamp = 1559223244110
+# timearray = time.localtime(float(timestamp/1000))
+# tt = time.strftime(&#39;%Y--%m--%d %H:%M:%S&#39;,timearray)
+# print(tt)
+
+# 把当前时间转成时间戳的格式
+
+# timestamp = int(time.time())*1000
+# timearray = time.localtime(float(timestamp/1000))
+# tt = time.strftime(&#39;%Y--%m--%d %H:%M:%S&#39;,timearray)
+# print(tt)
+# 动态界面的爬取
+base_url = &#39;https://careers.tencent.com/tencentcareer/api/post/Query?timestamp={}&amp;keyword=Python&amp;pageIndex=1&amp;pageSize=10&amp;language=zh-cn&amp;area=cn&#39;
+
+timestamp = int(time.time())*1000
+headers = {
+            &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36&#39;
+        }
+url = base_url.format(timestamp)
+print(url)
+
+res = requests.get(url=url,headers=headers)
+# print(res.content.decode(&#39;utf-8&#39;))
+
+# 将数据转化成Python对象
+conntent_dict = json.loads(res.content.decode(&#39;utf-8&#39;))
+
+Data_dict = conntent_dict[&#39;Data&#39;]
+# posts_list 里面存的就是我们想要的数据
+posts_list = Data_dict[&#39;Posts&#39;]
+
+# 拿到每一条数据
+for value_dict in posts_list:
+    
+    RecruitPostName = value_dict[&#39;RecruitPostName&#39;]
+    print(RecruitPostName)
+    LastUpdateTime = value_dict[&#39;LastUpdateTime&#39;]
+    print(LastUpdateTime)
+
+
+
+
+
+</code></pre>
+
+<pre><code class="language-text">https://careers.tencent.com/tencentcareer/api/post/Query?timestamp=1559224906000&amp;keyword=Python&amp;pageIndex=1&amp;pageSize=10&amp;language=zh-cn&amp;area=cn
+25923-监控系统开发工程师（Python）（深圳）
+2019年05月30日
+31504-AI机器人后台开发工程师（python）
+2019年05月29日
+CSIG16-python高级研发工程师
+2019年05月25日
+TME-腾讯音乐python开发工程师
+2019年05月17日
+25923-Python高级工程师（上海）
+2019年04月19日
+25923-Python高级工程师（深圳）
+2019年04月19日
+25923-数据分析平台开发工程师（Python）（深圳）
+2019年03月21日
+PCG04-安全测试专家（后台服务/客户端）
+2019年05月30日
+30359-大数据高级开发工程师（深圳）
+2019年05月30日
+31504-腾讯云监控高级运维工程师
+2019年05月30日
+</code></pre>
+
+
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15822327224405.html" 
+          title="Previous Post: 商铺数据加载及存储">&laquo; 商铺数据加载及存储</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="%E9%A4%90%E9%A5%AE%E4%B8%9A%E6%97%A5%E9%94%80%E5%94%AE%E6%83%85%E5%86%B5%E8%A1%A8.html" 
+          title="Next Post: 餐饮业日销售情况表">餐饮业日销售情况表 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>分类目录</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"><strong>数据分析</strong></a>
+        
+            <a href="ML&DL.html"><strong>ML&DL</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>最近文章</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15822402376673.html">2.2 补充梯度下降理解</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822402376778.html">1.1 机器学习</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822394457187.html">淘宝用户行为分析</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822375587081.html">4. excel常见函数</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15822373698224.html">1. 认识excel</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+              <div class="side-header">
+                <h2>联系我</h2>
+              </div>
+            </div>
+
+            <div id="site-info" class="site-info">
+              
+               
+                <!--
+                     <h1>Ryanhuo</h1> 
+                     <div class="site-des">My Blog 2.0</div>-->
+                <div class="social">
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <a target="_blank" class="github" target="_blank" href="https://github.com/Ryanhuo" title="GitHub">GitHub</a>
+     <a target="_blank" class="email" href="mailto:ryan97916@outlook.com" title="Email">Email</a>
+       <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+       
+      </div>
+       <div class="social">  
+                <img src="asset/img/公众号.jpg" alt="公众号二维码">
+              </div>
+              </div>
+
+            
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2020
+Powered by <a target="_blank" href="http://ryanhuo.github.io">Ryan</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>
